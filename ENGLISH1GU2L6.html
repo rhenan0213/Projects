@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 6</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arvo', serif;
+    }
+
+    body {
+      font-family: 'montserrat', sans-serif;
+      background: #e1f9d0;
+      background-size: cover;
+      height: 100%;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .container {
+      max-width: 1080px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    /* SECTION 1 */
+
+    .section-one {
+      background: url('https://drive.google.com/uc?export=view&id=1KxJz69vUD2WCrUW9Gloaiu_PyBuZO7qt');
+    }
+    .section-one .hero {
+      background: url('https://drive.google.com/uc?export=view&id=1smxGXHhejEtPJ66vgHfSluXJSp-D0Wib');
+      background-size: contain;
+      width: 100%;
+      height: 597px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding-top: 150px;
+      color: #fff;
+    }
+    .d-flex {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .flex-row-reverse {
+      flex-direction: row-reverse;
+    }
+    h1 {
+      font-size: 120px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    h2 {
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    h3 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 41px;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    /* SECTION 2 */
+    
+    .section-two .container {
+      position: relative;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      background: #fff;
+      height: 607px;
+      width: 100%;
+      padding-left: 60px;
+      padding-right: 30px;
+    }
+    .section-two img {
+      right: 0;
+      bottom: 0;
+      width: 518px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    .section-two .article {
+      margin-top: 60px;
+      width: 605px;
+    }
+    .section-two p {
+      font-size: 30px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    /* SECTION 3 */
+    .section-three .container {
+      padding-top: 70px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    h4, h5 {
+      text-align: center;
+      color: #30b862;
+    }
+    h4 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 80px;
+      font-weight: 700;
+    }
+    h5 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 61px;
+      font-weight: 700;
+    }
+    h6 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+    .cont_green {
+      width: 100%;
+      padding-left: 30px;
+      padding-right: 30px;
+      background: #c0f496;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      gap: 10px;
+    }
+    .cont_white {
+      width: 100%;
+      padding-left: 30px;
+      padding-right: 30px;
+      background: #fff;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      gap: 10px;
+    }
+    .cont_green .vocabulary {
+      width: 500px;
+      padding-left: 10px;
+    }
+    .cont_white .vocabulary {
+      width: 500px;
+      padding-right: 10px;
+    }
+    .vocabulary p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 25px;
+      font-weight: 400;
+    }
+  </style>
+
+</head>
+<body>
+<div class="lesson_8">
+  <section class="section-one" >
+    <div class="container hero">
+      <h1>ENGLISH</h1>
+      <h2>VOCABULARY</h2>
+      <h3>Mango Street, Part 2</h3>
+    </div>
+  </section>    
+  <section class="section-two" >
+    <div class="container d-flex">
+      <img src="https://drive.google.com/uc?export=view&id=1-SDhDXqwe9dk0pkQEUOefvTvGRIoLlXn" alt=""> 
+      <div class="article">
+        <h3 style="color: #30b862;">THE HOUSE ON MANGO STREET</h3>
+        <p class="author" style="color: #30b862; margin-bottom: 28px;">written by Sandra Cisneros</p>
+        <p class="content">Here is the vocabulary list for this unit's vocabulary study. Read each word and its definition. Also, be sure to practice and use these words in your everyday written and <br>oral language. It's the best way to learn new vocabulary, especially in preparation for the SAT.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section-three" >
+    <div class="container">
+      <h4>House on Mango Street,</h4>
+      <h5 style="margin-bottom: 70px;">Part 2 Vocabulary</h5>
+      <div class="cont_green d-flex"> 
+        <iframe width="510" height="286" src="https://drive.google.com/uc?export=view&id=1VaWr2lzqN3V5itA4lyj-IFhdcs39hjdj"></iframe> 
+        <div class="vocabulary">
+          <h6>Salamander</h6>
+          <p>(n) An amphibian similar to a lizard but without scales and covered with a soft moist skin and breath by gills in the larval stage; a portable stove, a cooking device with an overhead heat source</p>
+        </div>
+      </div>
+      <div class="cont_white d-flex flex-row-reverse"> 
+        <iframe width="510" height="286" src="https://drive.google.com/uc?export=view&id=1VaWr2lzqN3V5itA4lyj-IFhdcs39hjdj"></iframe> 
+        <div class="vocabulary">
+          <h6>Canteen</h6>
+          <p>(n) A flask for carrying liquids; a bar at a military post or camp; a general store at a military post; an institution that serves as an informal social club; a small cafeteria or snack bar; a portable chest with compartments for carrying bottles or eating utensils</p>
+        </div>
+      </div>
+      <div class="cont_green d-flex"> 
+        <iframe width="510" height="286" src="https://drive.google.com/uc?export=view&id=1VaWr2lzqN3V5itA4lyj-IFhdcs39hjdj"></iframe> 
+        <div class="vocabulary">
+          <h6>Anemic</h6>
+          <p>(adj) Relating to or affected with anemia; pale and not looking well; lacking force, vitality, or spirit; deficient interest or savor; deficient in substance or quantity</p>
+        </div>
+      </div>
+      <div class="cont_white d-flex flex-row-reverse"> 
+        <iframe width="510" height="286" src="https://drive.google.com/uc?export=view&id=1VaWr2lzqN3V5itA4lyj-IFhdcs39hjdj"></iframe> 
+        <div class="vocabulary">
+          <h6>Holler</h6>
+          <p>(v) To cry out, as to attract attention or in pain; scream; gripe; complain</p>
+        </div>
+      </div>
+      <div class="cont_green d-flex"> 
+        <iframe width="510" height="286" src="https://drive.google.com/uc?export=view&id=1VaWr2lzqN3V5itA4lyj-IFhdcs39hjdj"></iframe> 
+        <div class="vocabulary">
+          <h6>Naphtha</h6>
+          <p>(n) A clear colorless flammable mixture of light hydrocarbons used chiefly as solvents and diluents</p>
+        </div>
+      </div>
+      <div class="cont_white d-flex flex-row-reverse"> 
+        <iframe width="510" height="286" src="https://drive.google.com/uc?export=view&id=1VaWr2lzqN3V5itA4lyj-IFhdcs39hjdj"></iframe> 
+        <div class="vocabulary">
+          <h6>Sire</h6>
+          <p>(n) Father; male ancestor; a man of position or authority (i.e. lord); an elderly man; (v) to father offspring, especially animals</p>
+        </div>
+      </div>
+      <div class="cont_green d-flex"> 
+        <iframe width="510" height="286" src="https://drive.google.com/uc?export=view&id=1VaWr2lzqN3V5itA4lyj-IFhdcs39hjdj"></iframe> 
+        <div class="vocabulary">
+          <h6>Scuff</h6>
+          <p>(v) To walk without lifting the feet, shuffle; to poke or shuffle a foot in exploration or embarrassment; to become scratched, chipped, or roughened by wear; to scrape (the feet) along a surface while walking or back and forth while standing; to jab at with the toe; to scratch, gouge, or wear away the surface of</p>
+        </div>
+      </div>
+      <div class="cont_white d-flex flex-row-reverse"> 
+        <iframe width="510" height="286" src="https://drive.google.com/uc?export=view&id=1VaWr2lzqN3V5itA4lyj-IFhdcs39hjdj"></iframe> 
+        <div class="vocabulary">
+          <h6>Insipid</h6>
+          <p>(adj) Lacking flavor; dull; not at all stimulating</p>
+        </div>
+      </div>
+      <div class="cont_green d-flex"> 
+        <iframe width="510" height="286" src="https://drive.google.com/uc?export=view&id=1VaWr2lzqN3V5itA4lyj-IFhdcs39hjdj"></iframe> 
+        <div class="vocabulary">
+          <h6>Extraneous</h6>
+          <p>(adj) Inessential; not constituting a vital part</p>
+        </div>
+      </div>
+      <div class="cont_white d-flex flex-row-reverse"> 
+        <iframe width="510" height="286" src="https://drive.google.com/uc?export=view&id=1VaWr2lzqN3V5itA4lyj-IFhdcs39hjdj"></iframe> 
+        <div class="vocabulary">
+          <h6>Coerce</h6>
+          <p>(v) To force by using pressure, intimidation, or threats</p>
+        </div>
+      </div>
+    </div>
+  </section>
+   <style>
+        #last_section{}
+        #last_section .container {padding-left: 0; padding-right: 0;}
+         #last_section{ font-size: 1.8rem; }
+        .last_section_inner{}
+        .last_section_inner li{ background: none; padding: 0; border: none; margin-bottom: 2rem; }
+        .last_section_inner_list{ position: relative; }
+        .last_section_inner_list::before{ position: absolute; content: attr(data-number); top: 0; left: 0; font-size: 3.5rem; font-weight: 700; display: flex;
+        justify-content: end; align-items: flex-end; height: 100%; line-height: 1; }
+        .last_section_inner_list_qs{ display: flex; padding-left: 3.5rem; }
+        .last_section_inner_list_qs.correct,
+        .last_section_inner_list_qs.incorrect{ position: relative; }
+        .last_section_inner_list_qs.correct::after{ position: absolute; left: -21px; bottom: -10px; content: ""; height: 67%; width: 67px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3E%3C/svg%3E"); }
+        .last_section_inner_list_qs.incorrect::after{ position: absolute; left: -21px; bottom: -10px; content: ""; height: 67%; width: 67px;  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none' stroke='%23dc3545'%3E%3Ccircle cx='6' cy='6' r='4.5'/%3E%3Cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3E%3Ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3E%3C/svg%3E"); }
+        .last_section_inner_list_qs_ans{ background: #c8e5bf; border: 3px solid #97c091; margin-right: 1rem; }
+        .last_section_inner_list_qs_ans_wrap{ padding: 1rem 2rem; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .last_section_inner_list_qs span.subject{ color: #2b3c26; font-size: 2rem; font-weight: 700; font-family: var(--font-two); border-bottom: 2px solid #2b3c26; }
+        .last_section_inner_list_qs span.topic{ color: #2b3c26; margin-top: .8rem; font-size: 1.3rem; }
+        .last_section_inner_list_qs span{ line-height: 1; pointer-events: none; }
+        #last_section .font-sans {font-family: var(--font-one);}
+        #last_section .font-sans strong {font-weight: 600;}
+        .heading_box {
+          background: #30b862;
+          color: #fff;
+          padding-top: 68px;
+          padding-bottom: 68px;
+        }
+        .heading_box h2 {
+          color: #fff;
+          font-size: 50px;
+          font-family: 'Roboto', sans-serif;
+        }
+        #last_section h2, #last_section p, #last_section label, #last_section strong {
+          font-family: 'Roboto', sans-serif;
+        }
+        #last_section p, #last_section label {
+          font-size: 25px;
+        }
+        label {
+          pointer-events: none;
+        }
+    </style>
+    <section id="last_section">
+        <div class="container pb-5">
+            <div class="pb-5" style="background: #ffffff;">
+                <div class="heading_box">
+                  <h2 class="text-center">ASSIGNMENT</h2>
+                </div>
+                <div class="last_section_inner ps-5 pe-5">
+                    <p class="text-left mt-5 mb-5" style="font-size: 36px; line-height: 1.2;">
+                        Based on the words seen previously, read each sentence and select the word that makes sense in the blank space. Choose the correct answer.
+                    </p>
+                    <div class="mb-4">
+                        <p>1. This gilled ______________ generally remains in the water, with its aquatic organs of respiration, and also propagates itself there.</p>
+                        <div class="form-check fs-5">
+                            <input class="form-check-input" type="checkbox" data-value="yes" id="practice2">
+                            <label class="form-check-label" for="practice2">a. Salamander</label>
+                        </div>
+                        <div class="form-check fs-5">
+                            <input class="form-check-input" type="checkbox" data-value="no" id="practice2">
+                            <label class="form-check-label" for="practice2">b. Canteen</label>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p>2. If the blood is ____________, or thin, then both lips and nails are pale and dull.</p>
+                        <div class="form-check fs-5">
+                            <input class="form-check-input" type="checkbox" data-value="yes" id="practice2">
+                            <label class="form-check-label" for="practice2">a. Anemic</label>
+                        </div>
+                        <div class="form-check fs-5">
+                            <input class="form-check-input" type="checkbox" data-value="no" id="practice2">
+                            <label class="form-check-label" for="practice2">b. Holler</label>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p>3. It can only be preserved in ________, rock oil, or some other fluid hydrocarbon.</p>
+                        <div class="form-check fs-5">
+                            <input class="form-check-input" type="checkbox" data-value="yes" id="practice2">
+                            <label class="form-check-label" for="practice2">a. Napth</label>
+                        </div>
+                        <div class="form-check fs-5">
+                            <input class="form-check-input" type="checkbox" data-value="no" id="practice2">
+                            <label class="form-check-label" for="practice2">b. Sire</label>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p>4. I ___________ and stamp the snow away and pull it open with difficulty.</p>
+                        <div class="form-check fs-5">
+                            <input class="form-check-input" type="checkbox" data-value="yes" id="practice2">
+                            <label class="form-check-label" for="practice2">a. Scuff</label>
+                        </div>
+                        <div class="form-check fs-5">
+                            <input class="form-check-input" type="checkbox" data-value="no" id="practice2">
+                            <label class="form-check-label" for="practice2">b. Insipid</label>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p>5. Have I cropped the photo to eliminate _________ detail and focus the viewer's attention?</p>
+                        <div class="form-check fs-5">
+                            <input class="form-check-input" type="checkbox" data-value="yes" id="practice2">
+                            <label class="form-check-label" for="practice2">a. Extraneous</label>
+                        </div>
+                        <div class="form-check fs-5">
+                            <input class="form-check-input" type="checkbox" data-value="no" id="practice2">
+                            <label class="form-check-label" for="practice2">b. Coerce</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+		<!-- Assessment Quiz -->
+        <table style="display:none;width: 710px; height: auto; margin-left: auto; margin-right: auto;" border="1" cellpadding="20">
+            <tbody>
+            <tr>
+            <td style="background-color: white; width: 710px; ">
+            <b><span style="font-family: arial,helvetica,sans-serif;">&nbsp;  Answer the following questions.</span> </b>
+            <p><a:question index="1" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="2" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="3" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="4" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="5" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="6" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="7" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="8" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="9" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="10" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="11" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="12" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="13" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="14" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="15" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="16" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="17" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="18" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="19" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="20" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            </td>
+            </tr>
+            </tbody>
+        </table>
+            <!-- Assessment Quiz -->
+
+    <!-- audio player -->
+    <div id="audio_holder"></div>
+</div>
+
+    <script>
+        
+        // load first audio on the list as default
+        window.addEventListener("DOMContentLoaded", (event) => {
+            const pauseAudio8 = document.querySelector(".play_list_1 button");
+            //console.log(pauseAudio);
+            const audio_file8= 'Https://m.fyioc.com/Spanish2/Lesson8/'+pauseAudio8.getAttribute('data-audio')+'.mp3';
+            //console.log(audio_file);
+            audioLoad(audio_file8);
+        });
+
+        const btnContainer8 = document.querySelector(".lesson_8");
+        const btnPlay8 = btnContainer8.querySelectorAll("button");
+
+        btnPlay8.forEach(function(item, index) {
+
+            item.addEventListener("click", (event) => {
+
+                // get the button id ( btnPause,  btnPlayTone)
+                const id = event.target.id;
+                
+                // load audio file every click
+                const audio_file8 = 'Https://m.fyioc.com/Spanish2/Lesson8/'+event.target.getAttribute('data-audio')+'.mp3';
+                audioLoad(audio_file8);
+
+                // get audio id
+                const audioPlay8 = document.getElementById("audioPlay");
+                //console.log(audioPlay);
+                // audio play
+                if(id === "btnPlayTone"){
+                    event.target.classList.add("playing");
+                    btnContainer8.classList.add("audio_playing");
+                    audioPlay8.play();
+                    item.innerHTML = '<span class="material-icons d-flex">pause</span>';
+
+                    event.target.setAttribute("id", "btnPause");
+                }
+
+                // audio pause
+                if(id === "btnPause"){
+                    event.target.classList.remove("playing");
+                    audioPlay8.pause();
+                    btnContainer8.classList.remove("audio_playing");
+                    item.innerHTML = '<span class="material-icons d-flex">volume_up</span>';
+
+                    event.target.setAttribute("id", "btnPlayTone");
+                }
+            
+                // audio end
+                audioPlay8.onended = (event) => {    
+                    item.classList.remove("playing");
+                    audioPlay8.pause()
+                    btnContainer8.classList.remove("audio_playing");
+                    item.innerHTML = '<span class="material-icons d-flex">volume_up</span>';
+                }
+            
+            });
+
+        });
+
+        // load audio
+        function audioLoad(audio_url){
+            const audio_file8 = '<audio id="audioPlay" src="'+audio_url+'"></audio>';
+            document.getElementById("audio_holder").innerHTML = audio_file8;
+        }
+
+        // // practice Uno
+
+        // const practiceUno8 = document.querySelectorAll("#forth2_section_list_wrap_drag");
+
+        // practiceUno8.forEach( drag => {
+
+        //     drag.addEventListener("dragstart", (event) => {
+        //         event.dataTransfer.setData("src", event.target.id)
+        //     }, false)
+
+        //     drag.addEventListener("dragenter", (event) => {
+        //         event.target.classList.add("enter");
+        //     }, false)
+
+        //     drag.addEventListener("dragleave", (event) => {
+        //         event.target.classList.remove("enter");
+        //     }, false)
+
+        //     drag.addEventListener("dragover", (event) => {
+        //         event.preventDefault()
+        //     }, false)
+
+        //     drag.addEventListener("drop", (event) => {
+        //         event.preventDefault()
+
+        //         const dragSrc8 = document.getElementById(event.dataTransfer.getData("src"));
+        //         const srcParent8 = dragSrc8.parentNode;
+        //         const targetPath8 = event.currentTarget.firstElementChild;
+
+        //         event.currentTarget.replaceChild(dragSrc8, targetPath8);
+        //         srcParent8.appendChild(targetPath8);
+
+        //         const correctAnswers8 = ['¡Peztoso!', 'Sacamoko', '¡La salsa!', 'Me  voy a dar la vuelta a la manzana', '¡La naranjajajaja!'].toString();
+        //         // const currentAnswerOrder8 = [].slice.call(document.querySelectorAll('.forth2_section_list_wrap_box')).map((element) => element.id).toString();
+        //         // const currentAnswerOrder8 = document.querySelectorAll('.forth2_section_list_wrap_box').id;
+        //         const currentAnswerOrder8 = document.querySelectorAll(".forth2_section_list_wrap .forth2_section_list_wrap_box");
+        //         const alert8 = document.querySelector("#error_check2");
+        //         alert8.classList.remove('d-none');
+                
+        //         console.log(dragSrc8);
+        //         console.log(document.getElementById((event.currentTarget.id)).querySelectorAll(".todrop"));
+        //         if(correctAnswers8 == currentAnswerOrder8){
+        //             alert8.className = 'alert alert-success mt-5';
+        //             alert8.innerHTML = 'Great Job! <span class="material-icons">verified</span>';
+        //         } else {
+        //             alert8.className = 'alert alert-danger mt-5';
+        //             alert8.innerHTML = 'Try Again! <span class="material-icons">cancel</span>';
+        //         }
+
+        //         event.target.classList.remove("enter");
+
+        //     }, false)
+
+        // })
+
+        // practice 2
+
+        const checkList10 = document.querySelectorAll("#practice2");
+
+        checkList10.forEach(function(elem, index){
+
+            elem.addEventListener("click", function(event){
+
+                if(elem.checked){
+
+                    if(event.target.getAttribute('data-value') == "yes"){
+                        elem.classList.remove('is-invalid');
+                        elem.classList.add('is-valid');
+                    }
+
+                    if(event.target.getAttribute('data-value') == "no"){
+                        elem.classList.remove('is-valid');
+                        elem.classList.add('is-invalid');
+                    }
+
+                } else {
+                    elem.classList.remove('is-valid');
+                    elem.classList.remove('is-invalid');
+                }
+
+            });
+
+        });
+
+        // practice dos
+
+        const practiceDos8 = document.querySelectorAll(".last_section_inner_list_qs_ans");
+
+        practiceDos8.forEach( match => {
+
+            // let dragParentId;
+
+            match.addEventListener("dragstart", (event) => {
+                event.dataTransfer.setData("src", event.target.id)
+                // dragParentId = event.target.parentElement.parentElement.id;
+            }, false)
+
+            match.addEventListener("dragover", (event) => {
+                event.preventDefault()
+            }, false)
+
+            match.addEventListener("drop", (event) => {
+                event.preventDefault()
+
+                const dragParentId8 = event.target.parentElement.parentElement.id
+
+                // console.log("#" + dragParentId + " .last_section_inner_list_qs_ans_wrap");
+
+                const dragSrc28 = document.getElementById(event.dataTransfer.getData("src"))
+                const srcParent28 = dragSrc28.parentNode
+                const targetPath28 = event.currentTarget.firstElementChild
+
+                event.currentTarget.replaceChild(dragSrc28, targetPath28)
+                srcParent28.appendChild(targetPath28)
+
+                const toArr8 = event.target.parentElement.parentElement.getAttribute("data-order").split(",")
+
+                const correctAnswers8 = toArr8.toString();
+                const currentAnswerOrder8 = [].slice.call(document.querySelectorAll("#" + dragParentId8 + " .last_section_inner_list_qs_ans_wrap")).map((element) => element.id).toString();
+
+                // console.log(currentAnswerOrder)
+
+                if(correctAnswers8 == currentAnswerOrder8){
+                    event.target.parentElement.parentElement.className = "last_section_inner_list_qs correct"
+                } else {
+                    event.target.parentElement.parentElement.className = "last_section_inner_list_qs incorrect"
+                }
+
+            }, false)
+
+        })
+
+
+        // DRAG AND SWAP SCRIPT
+        const toDrag = document.querySelectorAll(".swap_drop")
+        const toDrop = document.querySelectorAll(".swap_drop")
+
+        toDrag.forEach((elem) => {
+            elem.addEventListener("dragstart", (event) => {
+                event.dataTransfer.setData("answer", elem.id)
+            })
+        })
+
+        toDrop.forEach((elem) => {
+            this.dragValidation(elem)
+        })
+
+        function dragValidation(elem) {
+            elem.addEventListener("dragover", (event) => {
+                event.preventDefault()
+            })
+            elem.addEventListener("drop", (event) => {
+                event.preventDefault()
+                const answer = event.dataTransfer.getData("answer")
+                const correctAnswer = event.currentTarget.getAttribute("data-ans")
+                const dataText = event.currentTarget.getAttribute("data-text")
+
+                let adj1 = event.currentTarget.parentElement.parentElement.parentElement.querySelector('.swap_drop')
+                let adj2 = document.getElementById(answer).parentElement.parentElement.querySelector('.swap_drop')
+                
+                let getFromSwap = adj1.getAttribute("data-text")
+                let getToSwap = adj2.getAttribute("data-text")
+
+                adj1.setAttribute("data-text", getToSwap);
+                adj2.setAttribute("data-text", getFromSwap);
+
+                adj1.setAttribute("data-isdrag", "true");
+                adj2.setAttribute("data-isdrag", "true");
+
+                
+                this.dragCheckMatch();
+            })
+        }
+
+        function dragCheckMatch(){
+            toDrag.forEach((elem) => {
+                // console.log(elem.getAttribute("data-ans"));
+                // console.log(elem.getAttribute("data-text"));
+                if(elem.getAttribute("data-ans") == elem.getAttribute("data-text")){
+                    document.getElementById(elem.id).parentElement.querySelector('.practice-result-label').innerHTML = '<span class="material-icons fs-1">verified</span>';
+                    document.getElementById(elem.id).parentElement.querySelector('.practice-result-label').style.color = '#198754'
+                }else{
+                    if(elem.getAttribute("data-isdrag")){
+                        document.getElementById(elem.id).parentElement.querySelector('.practice-result-label').innerHTML = '<span class="material-icons fs-1">cancel</span>';
+                        document.getElementById(elem.id).parentElement.querySelector('.practice-result-label').style.color = '#dc3545'
+                    }
+                }
+            });
+        }
+       
+    </script>
+</body>
+</html>
