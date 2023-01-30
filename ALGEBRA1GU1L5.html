@@ -193,94 +193,117 @@
             gap: 25px;
         }        
 
-        /* forth_section */
-        #forth_section{
-            padding-bottom: 10rem;
+        /* section-five */
+        .example p {
+            font-size: 27px;
+            letter-spacing: 1.4px;
+            line-height: 2;
         }
-        #forth_section h2{
-            font-size: 2.8rem;
-            font-weight: 500;
-            position: relative;
+        .example ul {
+            list-style-type: none;
         }
-        #forth_section h2::after{
-            position: absolute;
-            content: '';
-            background: #ffe478;
-            height: 5px;
-            width: 10%;
-            bottom: -30%;
-            left: 41%;
-            transform: translate(41%, -30%);
+        .example li {
+            font-size: 20px;
+            line-height: 2;
+            margin-left: 30px;
+            text-indent: -30px;
         }
-        #forth_section p{ 
+        .example li::before {
+            content: "";
+            width: 13px;
+            display: inline-block;
+            height: 13px;
+            background: #121212;
+            margin-right: 14px;
+        }
+        .div_line {
+            width: 100%;
+            height: 2px;
+            background: #121212;
+        }
+
+        /* section-six */
+        #section-six h1, #section-six h2, #section-six h3, #section-six h4, #section-six h5, #section-six h6, #section-six li, #section-six div, #section-six input, #section-six label {
+            font-family: 'Roboto', sans-serif;
+        }
+        #section-six h3{
+            letter-spacing: 2px;
+        }
+        #section-six h4{
+            font-size: 27px;
+            color: #151515;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+        #section-six p{ 
             font-size: 1.7rem;
             font-weight: 500;
         }
-        #forth_section_inner .forth_section_inner_list{
-            background: #59b1cc;
-            padding-top: 1.5rem;
-            padding-bottom: 1.5rem;
+        #section-six_inner .section-six_inner_list {
+            width: 700px;
         }
-        #forth_section_inner .forth_section_inner_list ul{}
-        #forth_section_inner .forth_section_inner_list ul li{
+        #section-six_inner .section-six_inner_list ul{}
+        #section-six_inner .section-six_inner_list ul li{
             border: none;
             padding: 0;
             background: none;
-            padding-bottom: 1rem;
-            padding-bottom: 2.5rem;
-            padding-top: 2rem;
         }
-        #forth_section_inner .forth_section_inner_list ul li:nth-child(odd){
-            background: #7ec9e0;
+        #section-six_inner .section-six_inner_list ul li .left_side {
+            background: #c1cad6;
+            border: 1px solid #fff  ;
+            height: 60px;
+            padding: 10px 7px;
         }
-        #forth_section_inner .forth_section_inner_list ul li:nth-child(even){
-            background: #59b1cc;
+        #section-six_inner .section-six_inner_list ul li .right_side {
+            background: #d3dae2;
+            height: 60px;
+            padding: 10px 7px;
+            border: 1px solid #fff  ;
         }
-        #forth_section_inner .forth_section_inner_list ul li .forth_section_inner_list_box,
-        #forth_section_inner .forth_section_inner_list ul li .forth_section_inner_list_box_right{
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box,
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box_right{
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            padding-left: 1rem;
             height: 100%;
         }
-        #forth_section_inner .forth_section_inner_list ul li .forth_section_inner_list_box input{
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box input{
             width: 8rem;
             /* margin-right: 1rem; */
             /* border-radius: 50px; */
-            border: 2px solid #000;
+            border: 1px solid #39393946;
             font-size: 1.1rem;
             font-weight: 600;
             padding-left: 10px;
             padding-right: 10px;
-            border-radius: 50rem 0px 0px 50rem;
+            border-radius: 10px 0px 0px 10px;
         }
-        #forth_section_inner .forth_section_inner_list ul li .forth_section_inner_list_box button[data-qs_count]{
-            border-radius: 0px 50rem 50rem 0px!important;
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box button[data-qs_count]{
+            border-radius: 0px 10px 10px 0px!important;
             font-weight: 600;
             text-transform: uppercase;
         }
-        #forth_section_inner .forth_section_inner_list ul li .forth_section_inner_list_box button[data-qs_count].glow-on-hover-success{
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box button[data-qs_count].glow-on-hover-success{
             background: #20c997!important;
         }
-        #forth_section_inner .forth_section_inner_list ul li .forth_section_inner_list_box button[data-qs_count].glow-on-hover-wrong{
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box button[data-qs_count].glow-on-hover-wrong{
             background: #ff5756!important;
         }
-        #forth_section_inner .forth_section_inner_list ul li .forth_section_inner_list_box span.error_mes {
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box span.error_mes {
             font-size: 14px;
             top: 37px;
             z-index: 2;
         }
-        #forth_section_inner .forth_section_inner_list ul li .forth_section_inner_list_box input.is-valid{
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box input.is-valid{
             border-color: #198754!important;
         }
-        #forth_section_inner .forth_section_inner_list ul li .forth_section_inner_list_box input.is-invalid{
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box input.is-invalid{
             border-color: #dc3545!important;
         }
-        #forth_section_inner .forth_section_inner_list ul li .forth_section_inner_list_box_right .forth_section_inner_list_text_ans,
-        #forth_section_inner .forth_section_inner_list ul li .forth_section_inner_list_box .forth_section_inner_list_text{
-            font-size: 1.3rem;
-            font-weight: 600;
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box_right .section-six_inner_list_text_ans,
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box .section-six_inner_list_text{
+            font-size: 20px;
+            font-weight: 400;
         }
         .audio_playing button{
         pointer-events: none;
@@ -298,7 +321,6 @@
         .fw-medium {
             font-weight: 500 !important;
         }
-        
     </style>
 </head>
 
@@ -411,8 +433,14 @@
                     </div>
                 </div>
                 <div class="row_4 mt-4 d-flex justify-content-start align-items-start">
-                    <iframe width="450" height="253" src="./AlgebraU1L15_Video1.mp4" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-                    <iframe width="450" height="253" src="./AlgebraU1L15_Video1.mp4" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                    <!-- <iframe width="450" height="253" src="./AlgebraU1L15_Video1.mp4" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  -->
+                    <!-- <iframe width="450" height="253" src="./AlgebraU1L15_Video1.mp4" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  -->
+                    <video width="450" height="253" controls>
+                        <source src="./AlgebraU1L15_Video1.mp4" type="video/mp4" autostart="false">
+                    </video>
+                    <video width="450" height="253" controls>
+                        <source src="./AlgebraU1L15_Video1.mp4" type="video/mp4" autostart="false">
+                    </video>
                 </div>
             </div>
         </div>
@@ -426,17 +454,20 @@
             <div class="text_content">
                 <p class="text-center" style="letter-spacing: 1.5px;">Pay close attention to the following video and it will help you understand how you can express numbers in either form.</p>
             </div>
-             <div class="d-flex justify-content-center align-items-center m-auto mb-5" style="gap:40px;">
-                <p style="font-size: 84px;width: 350px;color:#4b6587;">4500</p>
+             <div class="d-flex justify-content-center align-items-center m-auto mb-5" style="gap:35px;">
+                <p style="text-align: center;font-size: 78px;width: 350px;color:#4b6587;">4500</p>
                 <img src="./AlgebraU1L15_arrow.png" width="250" alt="">
-                <p style="font-size: 84px;width: 330px;color:#4b6587;">5 x 10<sup>2</sup></p>
+                <p style="text-align: center;font-size: 78px;width: 330px;color:#4b6587;">4.5 x 10<sup>4</sup></p>
             </div>
-             <div class="d-flex justify-content-center align-items-center m-auto mb-5" style="gap:40px;">
-                <p style="font-size: 84px;width: 350px;color:#4b6587;">7.6 x 10<sup>-4</sup></p>
+             <div class="d-flex justify-content-center align-items-center m-auto mb-5" style="gap:35px;">
+                <p style="text-align: center;font-size: 78px;width: 350px;color:#4b6587;">7.6 x 10<sup>-4</sup></p>
                 <img src="./AlgebraU1L15_arrow.png" width="250" alt="">
-                <p style="font-size: 84px;width: 350px;color:#4b6587;">5 x 10<sup>2</sup></p>
+                <p style="text-align: center;font-size: 78px;width: 350px;color:#4b6587;">0.00076</p>
             </div>
-            <iframe width="895" height="505" src="./AlgebraU1L15_Video1.mp4" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+            <!-- <iframe width="895" height="505" src="./AlgebraU1L15_Video1.mp4" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  -->
+            <video width="895" height="505" controls>
+                <source src="./AlgebraU1L15_Video1.mp4" type="video/mp4" autostart="false">
+            </video>
         </div>
     </section>
 
@@ -445,123 +476,248 @@
     <section id="section-four">
         <div class="container d-flex flex-column align-items-center justify-content-start pxy" style="background: #ffffffb3;">
             <h3>EVALUATING EXPRESSIONS</h3>
-            <div class="text_content">
+            <div class="text_content mb-3">
                 <p class="text-center" style="letter-spacing: 1.5px;">You can also use these numbers to evaluate expressions.</p>
+            </div>
+            <div class="example d-flex flex-column align-items-start justify-content-start w-100">
+                <h3 class="mb-5" style="font-size: 33px;color: #121212;">Example 1:</h3>
+                <p>(5.3 x 10<sup>-6</sup>)(3.1 x 10<sup>4</sup>)</p>
+                <p>(5.3)(3.1)(10<sup>-6</sup> x 10<sup>4</sup>)</p>
+                <p>(16.43)(10<sup>-2</sup>)</p>
+                <p>(1.643)(10<sup>-1</sup>)</p>
+                <p class="mb-5">(0.1643)</p>
+                <h3 class="mb-4" style="font-size: 33px;color: #121212;">Steps</h3>
+                <ul class="mb-5">
+                    <li>Set up the product of the decimals separate from the exponent part.</li>
+                    <li>When multiplying, keep the base (10) and <strong>ADD</strong> the exponents</li>
+                    <p style="font-size:34px; margin-left: 30px;">-6 + 4 = -2, hence 10<sup>-2</sup> </p>
+                    <li>To change to scientific notation, change the decimal to a number less than 10.</li>
+                    <li>16.43 now converts to 1.643, hence the point is moved 1 to the left, so 1 is ADDED to the exponent portion  
+                    <span style="display:inline-block;font-size:34px; margin-left: 40px;font-family: 'Roboto', sans-serif;">-2 + 1 = -1 hence 10<sup>-1</sup> </span></li>
+                    <li>0.1643 is the standard form of the number.</li>
+                </ul>
+                <h3 class="mb-5" style="font-size: 33px;color: #121212;">Example 2:</h3>
+                <div class="divide d-flex flex-column justify-content-center align-items-center mb-3">
+                    <p>1.3516 x 10<sup>5</sup></p>
+                    <div class="div_line"></div>
+                    <p>6.2 x 10<sup>-3</sup></p>
+                </div>
+                <div class="divide d-flex flex-row justify-content-center align-items-center gap-2">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <p>1.3516</p>
+                        <div class="div_line"></div>
+                        <p>6.2</p>  
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <p></p>
+                        <p>x</p>  
+                        <p></p>  
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-start">
+                        <p>10<sup>5</sup></p>
+                        <div class="div_line"></div>
+                        <p>10<sup>-3</sup></p>  
+                    </div>
+                </div>
+                <p>0.218 x 10<sup>8</sup></p>
+                <p>2.18 x 10<sup>7</sup></p>
+                <p class="mb-5">21, 800, 000</p>
+                <h3 class="mb-4" style="font-size: 33px;color: #121212;">Steps</h3>
+                <ul class="mb-3">
+                    <li>Set up the quotient of the decimals separate from the exponent part.</li>
+                    <li>When dividing, keep the base (10) and subtract the exponents</li>
+                    <p style="font-size:34px; margin-left: 30px;">5 - (-3) = 5 + 3 = 8, hence 10<sup>8</sup> </p>
+                    <li>To change to scientific notation, change the decimal to a number less than 10 but greater than 1. Therefore, 0.218 now converts to 2.18, hence the point is moved 1 to the right, so 1 is subtracted from the exponent portion <span style="display:inline-block;font-size:34px; margin-left: 40px;font-family: 'Roboto', sans-serif;">(8 - 1 = 7, hence 10<sup>7</sup>)</span></li>
+                    <li>21, 800, 000 is the standard form of the number.</li>
+                </ul>
             </div>
         </div>
     </section>
 
-     <!-- forth section -->
-     <section id="forth_section">
-        <div class="container" style="background: #fff;">
-                <h2 class="text-center">Practice 2</h2>
-                <div id="forth_section_inner" class="mt-5">
-                    
-                    <div>
-                        <p class="text-start mb-5">Match each verb ending -ar with its past verb.</p>
-                        <div class="forth_section_inner_list">
-                            <ul class="list-group">
-                                <li class="list-group-item">
-                                    <div class="row">
-                                        <div class="col-lg-8">
-                                            <div class="forth_section_inner_list_box">
-                                                <div class="input-group w-50 me-3">
-                                                    <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer1" data-ans="Caminé">
-                                                    <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="1" id="quiz-2-answer1btn" onclick="checkInputs(this)" type="button">Check</button>
-                                                    <span id="answer-text1" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+     <!-- section-six -->
+     <section id="section-six">
+        <div class="container pb-5" style="background: #fff; padding-left: 0; padding-right: 0;">
+                <div class="section_six_header d-flex flex-column justify-content-center align-self-center p-4 m-0 mb-5" style="background: #4b6587;">
+                    <h3 class="text-center" style="color: #fff;">PRACTICE</h3>
+                    <p class="text-center py-4 px-5" style="color: #fff;line-height:1.4;font-size: 27px;font-weight: 400;">Try the following exercises to practice scientific notation and standard notation. We've supplied it in WORD and PDF format. Use whichever works best for you.</p>
+                </div>
+                <div class="container">
+                    <h4>Scientific Notation Practice</h4>
+                    <h4>Express the following in scientific notation:</h4>
+                    <div id="section-six_inner" class="mt-3" style="width: 700px;">
+                        <div style="width: 700px;">
+                            <div class="section-six_inner_list">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <div class="col-6 left_side">
+                                                <div class="section-six_inner_list_box_right">
+                                                    <div class="section-six_inner_list_text_ans" id="item-1">1. 1, 000</div>
                                                 </div>
-                                                <div class="forth_section_inner_list_text">1.Caminar</div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="forth_section_inner_list_box_right">
-                                                <div class="forth_section_inner_list_text_ans" id="Examiné">Examiné</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="list-group-item">
-                                    <div class="row">
-                                        <div class="col-lg-8">
-                                            <div class="forth_section_inner_list_box">
-                                                <div class="input-group w-50 me-3">
-                                                    <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer2" data-ans="Bailé">
-                                                    <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="2" id="quiz-2-answer2btn" onclick="checkInputs(this)" type="button">Check</button>
-                                                    <span id="answer-text2" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                            <div class="col-6 right_side">
+                                                <div class="section-six_inner_list_box">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer1" data-ans="1x10^3">
+                                                        <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="1" id="quiz-2-answer1btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                        <span id="answer-text1" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                    </div>
                                                 </div>
-                                                <div class="forth_section_inner_list_text">2.Bailar</div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4">
-                                            <div class="forth_section_inner_list_box_right">
-                                                <div class="forth_section_inner_list_text_ans" id="Estudié">cambió</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="list-group-item">
-                                    <div class="row">
-                                        <div class="col-lg-8">
-                                            <div class="forth_section_inner_list_box">
-                                                <div class="input-group w-50 me-3">
-                                                    <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer3" data-ans="cambió">
-                                                    <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="3" id="quiz-2-answer3btn" onclick="checkInputs(this)" type="button">Check</button>
-                                                    <span id="answer-text3" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <div class="col-6 left_side">
+                                                <div class="section-six_inner_list_box_right">
+                                                    <div class="section-six_inner_list_text_ans" id="item-2">2. 0.0001</div>
                                                 </div>
-                                                <div class="forth_section_inner_list_text">3.Cambiar</div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="forth_section_inner_list_box_right">
-                                                <div class="forth_section_inner_list_text_ans" id="Jugué">patinó</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="list-group-item">
-                                    <div class="row">
-                                        <div class="col-lg-8">
-                                            <div class="forth_section_inner_list_box">
-                                                <div class="input-group w-50 me-3">
-                                                    <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer4" data-ans="Examiné">
-                                                    <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="4" id="quiz-2-answer4btn" onclick="checkInputs(this)" type="button">Check</button>
-                                                    <span id="answer-text4" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                            <div class="col-6 right_side">
+                                                <div class="section-six_inner_list_box">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer2" data-ans="1x10^-3">
+                                                        <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="2" id="quiz-2-answer2btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                        <span id="answer-text2" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                    </div>
                                                 </div>
-                                                <div class="forth_section_inner_list_text">4.Examinar</div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4">
-                                            <div class="forth_section_inner_list_box_right">
-                                                <div class="forth_section_inner_list_text_ans" id="Caminé">Caminé</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="list-group-item">
-                                    <div class="row">
-                                        <div class="col-lg-8">
-                                            <div class="forth_section_inner_list_box">
-                                                <div class="input-group w-50 me-3">
-                                                    <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer5" data-ans="patinó">
-                                                    <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="5" id="quiz-2-answer5btn" onclick="checkInputs(this)" type="button">Check</button>
-                                                    <span id="answer-text5" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <div class="col-6 left_side">
+                                                <div class="section-six_inner_list_box_right">
+                                                    <div class="section-six_inner_list_text_ans" id="item-3">3. 10, 000</div>
                                                 </div>
-                                                <div class="forth_section_inner_list_text">5.Patinar</div>
+                                            </div>
+                                            <div class="col-6 right_side">
+                                                <div class="section-six_inner_list_box">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer3" data-ans="1x10^4">
+                                                        <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="3" id="quiz-2-answer3btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                        <span id="answer-text3" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4">
-                                            <div class="forth_section_inner_list_box_right">
-                                                <div class="forth_section_inner_list_text_ans" id="Bailé">Bailé</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="mt-5">Express the following in scientific notation:</h4>
+                    <div id="section-six_inner" class="mt-3" style="width: 700px;">
+                        <div style="width: 700px;">
+                            <div class="section-six_inner_list">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <div class="col-6 left_side">
+                                                <div class="section-six_inner_list_box_right">
+                                                    <div class="section-six_inner_list_text_ans" id="item-15">1. 1, 000</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 right_side">
+                                                <div class="section-six_inner_list_box">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer15" data-ans="1x10^3">
+                                                        <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="15" id="quiz-2-answer15btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                        <span id="answer-text15" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                            </ul>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <div class="col-6 left_side">
+                                                <div class="section-six_inner_list_box_right">
+                                                    <div class="section-six_inner_list_text_ans" id="item-16">2. 0.0001</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 right_side">
+                                                <div class="section-six_inner_list_box">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer16" data-ans="1x10^-3">
+                                                        <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="16" id="quiz-2-answer16btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                        <span id="answer-text16" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <div class="col-6 left_side">
+                                                <div class="section-six_inner_list_box_right">
+                                                    <div class="section-six_inner_list_text_ans" id="item-17">3. 10, 000</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 right_side">
+                                                <div class="section-six_inner_list_box">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer17" data-ans="1x10^4">
+                                                        <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="17" id="quiz-2-answer17btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                        <span id="answer-text17" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="mt-5">Express the following in scientific notation:</h4>
+                    <div id="section-six_inner" class="mt-3" style="width: 700px;">
+                        <div style="width: 700px;">
+                            <div class="section-six_inner_list">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <div class="col-6 left_side">
+                                                <div class="section-six_inner_list_box_right">
+                                                    <div class="section-six_inner_list_text_ans" id="item-31">1. 1, 000</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 right_side">
+                                                <div class="section-six_inner_list_box">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer31" data-ans="1x10^3">
+                                                        <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="31" id="quiz-2-answer31btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                        <span id="answer-text31" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <div class="col-6 left_side">
+                                                <div class="section-six_inner_list_box_right">
+                                                    <div class="section-six_inner_list_text_ans" id="item-32">2. 0.0001</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 right_side">
+                                                <div class="section-six_inner_list_box">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer32" data-ans="1x10^-3">
+                                                        <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="32" id="quiz-2-answer32btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                        <span id="answer-text32" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
         </div>                
     </section>
+
     <!-- fifth section -->
 		<!-- Assessment Quiz -->
         <table style="display:none;width: 710px; height: auto; margin-left: auto; margin-right: auto;" border="1" cellpadding="20">
