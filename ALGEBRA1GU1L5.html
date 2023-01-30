@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 20</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style type="text/css">
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            background: #aacfe2;
+            background-size: cover;
+        }
+
+        section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        }
+
+        .container {
+            max-width: 1080px;
+            padding-left: 45px;
+            padding-right: 45px;
+        }
+
+        .pxy {
+            padding-top: 66px;
+            padding-bottom: 53px;
+        }
+
+        h1, h2, h3, h4, h5, h6{
+            font-family: 'Arvo', serif;
+            margin: 0;
+            line-height: 1;
+        }
+
+        
+        p {
+            margin: 0;
+            font-size: 20px;
+            color: #1c1c1c;
+            font-weight: 400;
+            font-family: 'Roboto', sans-serif;
+            text-align: left;
+        }
+
+        h1,
+        h2, h3 {
+            font-weight: 700;
+        }
+
+        h3 {
+            font-family: 'Roboto', sans-serif;
+            color: #4b6587;
+            font-size: 40px;
+        }
+
+        table {
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+        }
+
+        table, th, td {
+            border: 1px solid #fff;
+        }
+        /* top_content */
+
+        #section-one {
+            background: #4b6587;
+        }
+        #section-one .hero {
+            background: url('./AlgebraU1L15_hero.png') no-repeat;
+            background-size: contain;
+            width: 100%;
+            height: 595px;
+            padding-top: 150px;
+        }
+        .hero h1 {
+            font-size: 108px;
+        }
+        .hero h3 {
+            font-size: 49px;
+        }
+        .hero h3, .hero h1 {
+            color: #fff;
+        }
+        h5 {
+            font-size: 27px;
+            font-weight: 400;
+            font-family: 'Roboto', sans-serif;
+            color: #151515;
+            line-height: 37px;
+        }
+        h6 {
+            font-size: 24px;
+            font-weight: 700;
+            font-family: 'Roboto', sans-serif;
+            color: #151515;
+            text-decoration: underline;            
+        }
+
+        /* section-two  */
+        #section-two .container {
+            gap: 25px;
+        }        
+        .text_content {
+            gap: 25px;
+        }
+        #section-two th {
+            height: 135px;
+            font-size: 27px;
+            width: 328px;
+            padding: 30px;
+            vertical-align: middle;
+        }
+        #section-two td {
+            background: #c1cad6;
+            padding: 30px;
+            font-size: 20px;
+            font-weight: 700;
+            vertical-align: top;
+        }
+        #section-two tr th:first-child {
+            background: #4b6587;
+        }
+        #section-two tr th:nth-child(2), #section-two  tr td:nth-child(1) {
+            background: #8193ab;
+        }
+        #section-two tr th:nth-child(3), #section-two  tr td:nth-child(2) {
+            background: #a7b3c4;
+        }
+        #section-two td ul {
+            list-style-type: square;
+        }
+        #section-two td ul li {
+            font-size: 16px;
+            font-weight: 400;
+            margin-top: 10px;
+        }
+        #section-two td ul li::marker {
+            font-size: 27px;
+        }
+        
+        /* section-three */
+        #section-three .container {
+            gap: 25px;
+        }        
+        #section-three table {
+            color: #242323;
+        }
+        #section-three th, #section-three td {
+            height: 82px;
+            font-size: 33px;
+            width: 475px;
+            padding: 30px;
+            vertical-align: middle;
+            background: #8193ab;
+        }
+        #section-three td {
+            background: #c1cad6;
+            font-size: 33px;
+        }
+        #section-three table tbody tr:nth-child(2) td {
+            background: #dbe5ec;
+        }
+        .white_box {
+            width: 450px;
+            background: #fff;
+            height: 205px;
+            padding: 10px;
+        }
+        .row_3, .row_4 {
+            width: 100%;
+            gap: calc(50% - 450px)
+        }
+        .white_box p {
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        /* section-four */
+        #section-four .container {
+            gap: 25px;
+        }        
+
+        /* forth_section */
+        #forth_section{
+            padding-bottom: 10rem;
+        }
+        #forth_section h2{
+            font-size: 2.8rem;
+            font-weight: 500;
+            position: relative;
+        }
+        #forth_section h2::after{
+            position: absolute;
+            content: '';
+            background: #ffe478;
+            height: 5px;
+            width: 10%;
+            bottom: -30%;
+            left: 41%;
+            transform: translate(41%, -30%);
+        }
+        #forth_section p{ 
+            font-size: 1.7rem;
+            font-weight: 500;
+        }
+        #forth_section_inner .forth_section_inner_list{
+            background: #59b1cc;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+        #forth_section_inner .forth_section_inner_list ul{}
+        #forth_section_inner .forth_section_inner_list ul li{
+            border: none;
+            padding: 0;
+            background: none;
+            padding-bottom: 1rem;
+            padding-bottom: 2.5rem;
+            padding-top: 2rem;
+        }
+        #forth_section_inner .forth_section_inner_list ul li:nth-child(odd){
+            background: #7ec9e0;
+        }
+        #forth_section_inner .forth_section_inner_list ul li:nth-child(even){
+            background: #59b1cc;
+        }
+        #forth_section_inner .forth_section_inner_list ul li .forth_section_inner_list_box,
+        #forth_section_inner .forth_section_inner_list ul li .forth_section_inner_list_box_right{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 1rem;
+            height: 100%;
+        }
+        #forth_section_inner .forth_section_inner_list ul li .forth_section_inner_list_box input{
+            width: 8rem;
+            /* margin-right: 1rem; */
+            /* border-radius: 50px; */
+            border: 2px solid #000;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 50rem 0px 0px 50rem;
+        }
+        #forth_section_inner .forth_section_inner_list ul li .forth_section_inner_list_box button[data-qs_count]{
+            border-radius: 0px 50rem 50rem 0px!important;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        #forth_section_inner .forth_section_inner_list ul li .forth_section_inner_list_box button[data-qs_count].glow-on-hover-success{
+            background: #20c997!important;
+        }
+        #forth_section_inner .forth_section_inner_list ul li .forth_section_inner_list_box button[data-qs_count].glow-on-hover-wrong{
+            background: #ff5756!important;
+        }
+        #forth_section_inner .forth_section_inner_list ul li .forth_section_inner_list_box span.error_mes {
+            font-size: 14px;
+            top: 37px;
+            z-index: 2;
+        }
+        #forth_section_inner .forth_section_inner_list ul li .forth_section_inner_list_box input.is-valid{
+            border-color: #198754!important;
+        }
+        #forth_section_inner .forth_section_inner_list ul li .forth_section_inner_list_box input.is-invalid{
+            border-color: #dc3545!important;
+        }
+        #forth_section_inner .forth_section_inner_list ul li .forth_section_inner_list_box_right .forth_section_inner_list_text_ans,
+        #forth_section_inner .forth_section_inner_list ul li .forth_section_inner_list_box .forth_section_inner_list_text{
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        .audio_playing button{
+        pointer-events: none;
+        opacity: 1;
+        }
+        .audio_playing button.playing{
+            pointer-events: visible!important;
+        }
+        
+        #btnPause span,
+        #btnPlayTone span{
+            pointer-events: none;
+        }
+
+        .fw-medium {
+            font-weight: 500 !important;
+        }
+        
+    </style>
+</head>
+
+<body>
+<div class="lesson_20">
+    <!-- section one -->
+    <section id="section-one">
+        <div class="container hero">
+            <h1>ALGEBRA</h1>
+            <h3>SCIENTIFIC NOTATION</h3>
+        </div>
+    </section>
+
+    <!-- section two -->
+    <section id="section-two">
+        <div class="container d-flex flex-column align-items-center justify-content-start pxy" style="background: #fff;">
+            <h3>SPACE TRAVEL</h3>
+            <img src="./AlgebraU1L15_section2img1.png" width="990" alt="">
+            <div class="text_content d-flex flex-column align-items-start justify-content-start mb-5">
+                <p>Have you ever wondered how many millions of miles away the Earth is from the sun? How far must you travel through space in a space shuttle or spaceship to reach another planet?</p>
+                <p>Astronomers work with large numbers to express these distances. Sometimes the numbers are so large they must use abbreviations to express them. How would you abbreviate the following number:</p>
+                <p class="mx-auto" style="font-size:34px;">6,020,000,000,000,000,000,000,000?</p>
+                <p>Wouldn't you get tired of writing this number many times?   Later in the lesson, you will see how this is done.</p>
+            </div>
+            <table style="width:990px;">
+                <thead>
+                    <tr class="text-center">
+                        <th>WHAT YOU SHOULD KNOW</th>
+                        <th>LESSON EXPECTATIONS</th>
+                        <th>LESSON KEYWORDS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Before you begin, you should:
+                            <ul>
+                                <li>Understand powers and exponents</li>
+                            </ul>
+                        </td>
+                        <td>By the end of this lesson, you should be able to:
+                            <ul>
+                                <li>Write numbers in scientific	notation and/or standard notation</li>
+                                <li>Evaluate expressions that involve scientific notation</li>
+                            </ul> 
+                        </td>
+                        <td class="text-center">SCIENTIFIC NOTATION <br><br>STANDARD NOTATION</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- section three -->
+    <section id="section-three">
+        <div class="container d-flex flex-column align-items-center justify-content-start pxy" style="background: #ffffffb3;">
+            <h3>WRITING IN SCIENTIFIC NOTATION</h3>
+            <div class="text_content">
+                <p>A number is in scientific notation if it can be written  n × 10m,  where 1 &#60; |n| &#60; 10  and m is an integer. Notice the difference in <strong>scientific</strong> and <strong>notation</strong> for each number in this table below.</p>
+            </div>
+            <table class="text-center" style="width:990px;">
+                <thead>
+                    <tr>
+                        <th>SCIENTIFIC NOTATION</th>
+                        <th>STANDARD NOTATION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2.35 x 10<sup>3</sup></td>
+                        <td>2350</td>
+                    </tr>
+                    <tr>
+                        <td>3.12 x 10<sup>-4</sup></td>
+                        <td>0.000312</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="text_content">
+                <p>Let’s take a look at a few examples of how to convert from scientific notation to standard (decimal) notation and vice versa by watching these two videos:</p>
+            </div>
+            <div class="d-flex flex-column justify-content-start align-items-center" style="gap: 25px;">
+                <div class="row_1 d-flex justify-content-start align-items-start">
+                    <h5 class="col-6 mb-3">How Do You Convert from Scientific Notation to Decimal Notation?</h5>
+                    <h5 class="col-6 mb-3">How Do You Convert from Decimal Notation to Scientific Notation?</h5>
+                </div>
+                <div class="row_2 d-flex justify-content-start align-items-start">    
+                    <div class="col-6 text_content">
+                        <p>This lesson explains how to convert a number in scientific notation into decimal form.</p>
+                    </div>                
+                    <div class="col-6 pe-5 text_content">
+                        <p>In this video we will learn how to convert a number from standard notation to scientific notation. We will go from very large numbers to very small numbers.</p>
+                    </div>   
+                </div>
+                <div class="row_3 d-flex justify-content-start align-items-start">
+                    <div class="white_box d-flex flex-column align-items-start justify-content-start">
+                        <h6>Scientific Notation to Decimal Notation</h6>
+                        <div class="d-flex justify-content-center align-items-center gap-3 m-auto">
+                            <p>5 x 10<sup>2</sup></p>
+                            <img src="./AlgebraU1L15_arrow.png" width="175" alt="">
+                            <p>500</p>
+                        </div>
+                    </div>
+                    <div class="white_box d-flex flex-column align-items-start justify-content-start">
+                        <h6>Decimal Notation to Scientific Notation</h6>
+                        <div class="d-flex justify-content-center align-items-center gap-3 m-auto">
+                            <p>500</p>
+                            <img src="./AlgebraU1L15_arrow.png" width="175" alt="">
+                            <p>5 x 10<sup>2</sup></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row_4 mt-4 d-flex justify-content-start align-items-start">
+                    <iframe width="450" height="253" src="./AlgebraU1L15_Video1.mp4" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                    <iframe width="450" height="253" src="./AlgebraU1L15_Video1.mp4" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section-four -->
+    
+    <section id="section-four">
+        <div class="container d-flex flex-column align-items-center justify-content-start pxy" style="background: #fff;">
+            <h3>WRITING IN SCIENTIFIC NOTATION</h3>
+            <div class="text_content">
+                <p class="text-center" style="letter-spacing: 1.5px;">Pay close attention to the following video and it will help you understand how you can express numbers in either form.</p>
+            </div>
+             <div class="d-flex justify-content-center align-items-center m-auto mb-5" style="gap:40px;">
+                <p style="font-size: 84px;width: 350px;color:#4b6587;">4500</p>
+                <img src="./AlgebraU1L15_arrow.png" width="250" alt="">
+                <p style="font-size: 84px;width: 330px;color:#4b6587;">5 x 10<sup>2</sup></p>
+            </div>
+             <div class="d-flex justify-content-center align-items-center m-auto mb-5" style="gap:40px;">
+                <p style="font-size: 84px;width: 350px;color:#4b6587;">7.6 x 10<sup>-4</sup></p>
+                <img src="./AlgebraU1L15_arrow.png" width="250" alt="">
+                <p style="font-size: 84px;width: 350px;color:#4b6587;">5 x 10<sup>2</sup></p>
+            </div>
+            <iframe width="895" height="505" src="./AlgebraU1L15_Video1.mp4" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+        </div>
+    </section>
+
+    <!-- section-five -->
+    
+    <section id="section-four">
+        <div class="container d-flex flex-column align-items-center justify-content-start pxy" style="background: #ffffffb3;">
+            <h3>EVALUATING EXPRESSIONS</h3>
+            <div class="text_content">
+                <p class="text-center" style="letter-spacing: 1.5px;">You can also use these numbers to evaluate expressions.</p>
+            </div>
+        </div>
+    </section>
+
+     <!-- forth section -->
+     <section id="forth_section">
+        <div class="container" style="background: #fff;">
+                <h2 class="text-center">Practice 2</h2>
+                <div id="forth_section_inner" class="mt-5">
+                    
+                    <div>
+                        <p class="text-start mb-5">Match each verb ending -ar with its past verb.</p>
+                        <div class="forth_section_inner_list">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <div class="forth_section_inner_list_box">
+                                                <div class="input-group w-50 me-3">
+                                                    <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer1" data-ans="Caminé">
+                                                    <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="1" id="quiz-2-answer1btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                    <span id="answer-text1" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                </div>
+                                                <div class="forth_section_inner_list_text">1.Caminar</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="forth_section_inner_list_box_right">
+                                                <div class="forth_section_inner_list_text_ans" id="Examiné">Examiné</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <div class="forth_section_inner_list_box">
+                                                <div class="input-group w-50 me-3">
+                                                    <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer2" data-ans="Bailé">
+                                                    <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="2" id="quiz-2-answer2btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                    <span id="answer-text2" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                </div>
+                                                <div class="forth_section_inner_list_text">2.Bailar</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="forth_section_inner_list_box_right">
+                                                <div class="forth_section_inner_list_text_ans" id="Estudié">cambió</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <div class="forth_section_inner_list_box">
+                                                <div class="input-group w-50 me-3">
+                                                    <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer3" data-ans="cambió">
+                                                    <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="3" id="quiz-2-answer3btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                    <span id="answer-text3" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                </div>
+                                                <div class="forth_section_inner_list_text">3.Cambiar</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="forth_section_inner_list_box_right">
+                                                <div class="forth_section_inner_list_text_ans" id="Jugué">patinó</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <div class="forth_section_inner_list_box">
+                                                <div class="input-group w-50 me-3">
+                                                    <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer4" data-ans="Examiné">
+                                                    <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="4" id="quiz-2-answer4btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                    <span id="answer-text4" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                </div>
+                                                <div class="forth_section_inner_list_text">4.Examinar</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="forth_section_inner_list_box_right">
+                                                <div class="forth_section_inner_list_text_ans" id="Caminé">Caminé</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <div class="forth_section_inner_list_box">
+                                                <div class="input-group w-50 me-3">
+                                                    <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer5" data-ans="patinó">
+                                                    <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="5" id="quiz-2-answer5btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                    <span id="answer-text5" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                </div>
+                                                <div class="forth_section_inner_list_text">5.Patinar</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="forth_section_inner_list_box_right">
+                                                <div class="forth_section_inner_list_text_ans" id="Bailé">Bailé</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>                
+    </section>
+    <!-- fifth section -->
+		<!-- Assessment Quiz -->
+        <table style="display:none;width: 710px; height: auto; margin-left: auto; margin-right: auto;" border="1" cellpadding="20">
+            <tbody>
+            <tr>
+            <td style="background-color: white; width: 710px; ">
+            <b><span style="font-family: arial,helvetica,sans-serif;">&nbsp;  Answer the following questions.</span> </b>
+            <p><a:question index="1" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="2" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="3" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="4" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="5" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="6" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="7" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="8" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="9" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="10" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="11" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="12" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="13" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="14" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="15" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="16" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="17" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="18" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="19" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="20" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            </td>
+            </tr>
+            </tbody>
+        </table>
+            <!-- Assessment Quiz -->
+
+    <div id="audio_holder"></div>
+</div>
+
+    <script>
+
+        // load first audio on the list as default
+        window.addEventListener("DOMContentLoaded", (event) => {
+            const pauseAudio20 = document.querySelector(".play_list_1 button");
+            //console.log(pauseAudio);
+            const audio_file20 = 'https://m.fyioc.com/Spanish2/Lesson20/'+pauseAudio20.getAttribute('data-audio')+'.mp3';
+            //console.log(audio_file);
+            audioLoad(audio_file20);
+        });
+
+        const container20 = document.querySelector(".lesson_20")
+        const btnContainer20 = document.querySelector(".lesson_20");
+        const btnPlay20 = btnContainer20.querySelectorAll("button[data-audio]");
+
+        btnPlay20.forEach(function(item, index) {
+
+            item.addEventListener("click", (event) => {
+
+                // get the button id ( btnPause,  btnPlayTone)
+                const id = event.target.id;
+                
+                // load audio file every click
+                const audio_file20 = 'https://m.fyioc.com/Spanish2/Lesson20/'+event.target.getAttribute('data-audio')+'.mp3';
+                audioLoad(audio_file20);
+
+                // get audio id
+                const audioPlay20 = document.getElementById("audioPlay");
+                //console.log(audioPlay);
+                // audio play
+                if(id === "btnPlayTone"){
+                    event.target.classList.add("playing");
+                    btnContainer20.classList.add("audio_playing");
+                    audioPlay20.play();
+                    item.innerHTML = '<span class="material-icons d-flex">pause</span>';
+
+                    event.target.setAttribute("id", "btnPause");
+                }
+
+                // audio pause
+                if(id === "btnPause"){
+                    event.target.classList.remove("playing");
+                    audioPlay20.pause();
+                    btnContainer20.classList.remove("audio_playing");
+                    item.innerHTML = '<span class="material-icons d-flex">volume_up</span>';
+
+                    event.target.setAttribute("id", "btnPlayTone");
+                }
+            
+                // audio end
+                audioPlay20.onended = (event) => {    
+                    item.classList.remove("playing");
+                    audioPlay20.pause()
+                    btnContainer20.classList.remove("audio_playing");
+                    item.innerHTML = '<span class="material-icons d-flex">volume_up</span>';
+                }
+            
+            });
+
+        });
+
+        function audioLoad(audio_url){
+            const audio_file20 = '<audio id="audioPlay" src="'+audio_url+'"></audio>';
+            document.getElementById("audio_holder").innerHTML = audio_file20;
+        }
+
+        const checkList20 = document.querySelectorAll("#practice1");
+
+        checkList20.forEach(function(elem, index){
+
+            elem.addEventListener("click", function(event){
+
+                if(elem.checked){
+
+                    if(event.target.getAttribute('data-value') == "yes"){
+                        elem.classList.remove('is-invalid');
+                        elem.classList.add('is-valid');
+                    }
+
+                    if(event.target.getAttribute('data-value') == "no"){
+                        elem.classList.remove('is-valid');
+                        elem.classList.add('is-invalid');
+                    }
+
+                } else {
+                    elem.classList.remove('is-valid');
+                    elem.classList.remove('is-invalid');
+                }
+
+            });
+
+        });
+
+        // New Validation Function
+        function checkInputs(){
+            const answerNumber = event.target.dataset.qs_count
+            const triesRemaining = event.target.dataset.error_counter
+            const selectorString = `quiz-2-answer${answerNumber}`
+            const selectorStringButton = `quiz-2-answer${answerNumber}btn`
+            const selectorStringAnswer = `answer-text${answerNumber}`
+            const quizTwoAnswer = document.getElementById(selectorString);
+            const quizTwoAnswerButton = document.getElementById(selectorStringButton)
+            const quizTwoAnswerText = document.getElementById(selectorStringAnswer)
+            const answer = quizTwoAnswer.getAttribute('data-ans')
+            const userAnswer = quizTwoAnswer.value.toLowerCase()
+            const correctAnswer = userAnswer === answer.toLowerCase() ? true : false
+            const backToGlow = (quizTwoAnswer, quizTwoAnswerButton) => {
+                quizTwoAnswerButton.classList.remove("glow-on-hover-success")
+                quizTwoAnswerButton.classList.remove("glow-on-hover-wrong")
+                quizTwoAnswerButton.classList.add('glow-on-hover')
+                quizTwoAnswerButton.innerText = 'Check'
+            }
+            if(correctAnswer){
+                quizTwoAnswer.classList.remove("is-invalid")
+                quizTwoAnswer.classList.add("is-valid")
+                quizTwoAnswerButton.innerText = 'Correct!'
+                quizTwoAnswerButton.classList.add("glow-on-hover-success")
+                quizTwoAnswerButton.classList.remove("glow-on-hover")
+                quizTwoAnswerButton.classList.remove('glow-on-hover-wrong')
+                quizTwoAnswerText.classList.remove('bg-danger')
+                quizTwoAnswerText.classList.add('bg-success')
+            } else {
+                quizTwoAnswerText.classList.remove('bg-success') 
+                quizTwoAnswerText.classList.add('bg-danger')
+                quizTwoAnswer.classList.remove("is-valid")
+                quizTwoAnswer.classList.add("is-invalid")
+                quizTwoAnswerButton.classList.remove("glow-on-hover-success")
+                quizTwoAnswerButton.classList.remove("glow-on-hover")
+                quizTwoAnswerButton.classList.add('glow-on-hover-wrong')
+                quizTwoAnswerButton.innerText = 'Wrong'
+                setTimeout(() => backToGlow(quizTwoAnswer,quizTwoAnswerButton), 1500);
+                let updateTries = ''
+                if(quizTwoAnswerButton.getAttribute('data-error_counter') == 0){
+                    updateTries = 0;
+                } else {
+                    updateTries = Number(triesRemaining) - 1;
+                }
+                document.getElementById(selectorStringButton).setAttribute('data-error_counter', updateTries)
+                if(quizTwoAnswerButton.getAttribute('data-error_counter') == 0 ){
+                    quizTwoAnswerText.innerHTML = `Answer: ${quizTwoAnswer.getAttribute('data-ans')}`
+                    quizTwoAnswerText.classList.remove('hidden')
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>
