@@ -321,6 +321,21 @@
         .fw-medium {
             font-weight: 500 !important;
         }
+        .list-group-item {
+            position: relative;
+            display: block;
+            padding: 0px;
+            color: #212529;
+            text-decoration: none;
+            background-color: #fff;
+            border: 0px solid rgba(0,0,0,.125);
+        }
+        label {
+            pointer-events: none;
+        }
+        .section-six_inner_list_text_ans {
+            padding-left: 20px;
+        }
     </style>
 </head>
 
@@ -493,7 +508,7 @@
                     <p style="font-size:34px; margin-left: 30px;">-6 + 4 = -2, hence 10<sup>-2</sup> </p>
                     <li>To change to scientific notation, change the decimal to a number less than 10.</li>
                     <li>16.43 now converts to 1.643, hence the point is moved 1 to the left, so 1 is ADDED to the exponent portion  
-                    <span style="display:inline-block;font-size:34px; margin-left: 40px;font-family: 'Roboto', sans-serif;">-2 + 1 = -1 hence 10<sup>-1</sup> </span></li>
+                    <span style="display:inline-block;font-size:34px; margin-left: 40px;font-family: 'Roboto', sans-serif;">-2 + 1 = -1, hence 10<sup>-1</sup> </span></li>
                     <li>0.1643 is the standard form of the number.</li>
                 </ul>
                 <h3 class="mb-5" style="font-size: 33px;color: #121212;">Example 2:</h3>
@@ -602,11 +617,209 @@
                                             </div>
                                         </div>
                                     </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <div class="col-6 left_side">
+                                                <div class="section-six_inner_list_box_right">
+                                                    <div class="section-six_inner_list_text_ans" id="item-4">4. 0.0000024</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 right_side">
+                                                <div class="section-six_inner_list_box">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer4" data-ans="2.4x10^-6">
+                                                        <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="4" id="quiz-2-answer4btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                        <span id="answer-text4" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <div class="col-6 left_side">
+                                                <div class="section-six_inner_list_box_right">
+                                                    <div class="section-six_inner_list_text_ans" id="item-5">5. 0.0000001</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 right_side">
+                                                <div class="section-six_inner_list_box">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer5" data-ans="1x10^-7">
+                                                        <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="5" id="quiz-2-answer5btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                        <span id="answer-text5" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <div class="col-6 left_side">
+                                                <div class="section-six_inner_list_box_right">
+                                                    <div class="section-six_inner_list_text_ans" id="item-6">6. 10, 000, 000</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 right_side">
+                                                <div class="section-six_inner_list_box">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer6" data-ans="1x10^7">
+                                                        <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="6" id="quiz-2-answer6btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                        <span id="answer-text6" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <div class="col-6 left_side">
+                                                <div class="section-six_inner_list_box_right">
+                                                    <div class="section-six_inner_list_text_ans" id="item-7">7. 13, 000</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 right_side">
+                                                <div class="section-six_inner_list_box">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer7" data-ans="1.3x10^4">
+                                                        <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="7" id="quiz-2-answer7btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                        <span id="answer-text7" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <div class="col-6 left_side">
+                                                <div class="section-six_inner_list_box_right">
+                                                    <div class="section-six_inner_list_text_ans" id="item-8">8. 640, 000</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 right_side">
+                                                <div class="section-six_inner_list_box">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer8" data-ans="6.4x10^5">
+                                                        <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="8" id="quiz-2-answer8btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                        <span id="answer-text8" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <div class="col-6 left_side">
+                                                <div class="section-six_inner_list_box_right">
+                                                    <div class="section-six_inner_list_text_ans" id="item-9">9. 0.089</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 right_side">
+                                                <div class="section-six_inner_list_box">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer9" data-ans="8.9x10^-2">
+                                                        <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="9" id="quiz-2-answer9btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                        <span id="answer-text9" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <div class="col-6 left_side">
+                                                <div class="section-six_inner_list_box_right">
+                                                    <div class="section-six_inner_list_text_ans" id="item-10">10. 66, 000</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 right_side">
+                                                <div class="section-six_inner_list_box">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer10" data-ans="6.6x10^4">
+                                                        <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="10" id="quiz-2-answer10btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                        <span id="answer-text10" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <div class="col-6 left_side">
+                                                <div class="section-six_inner_list_box_right">
+                                                    <div class="section-six_inner_list_text_ans" id="item-11">11. 0.0000403</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 right_side">
+                                                <div class="section-six_inner_list_box">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer11" data-ans="4.03x10^-5">
+                                                        <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="11" id="quiz-2-answer11btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                        <span id="answer-text11" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <div class="col-6 left_side">
+                                                <div class="section-six_inner_list_box_right">
+                                                    <div class="section-six_inner_list_text_ans" id="item-12">12. 104, 000</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 right_side">
+                                                <div class="section-six_inner_list_box">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer12" data-ans="1.04x10^5">
+                                                        <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="12" id="quiz-2-answer12btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                        <span id="answer-text12" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <div class="col-6 left_side">
+                                                <div class="section-six_inner_list_box_right">
+                                                    <div class="section-six_inner_list_text_ans" id="item-13">13. 90, 000</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 right_side">
+                                                <div class="section-six_inner_list_box">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer13" data-ans="9x10^4">
+                                                        <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="13" id="quiz-2-answer13btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                        <span id="answer-text13" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <div class="col-6 left_side">
+                                                <div class="section-six_inner_list_box_right">
+                                                    <div class="section-six_inner_list_text_ans" id="item-14">14. 0.0000764</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 right_side">
+                                                <div class="section-six_inner_list_box">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer14" data-ans="7.64x10^-5">
+                                                        <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="14" id="quiz-2-answer14btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                        <span id="answer-text14" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <h4 class="mt-5">Express the following in scientific notation:</h4>
+                    <h4 class="mt-5">Express the following in standard notation:</h4>
                     <div id="section-six_inner" class="mt-3" style="width: 700px;">
                         <div style="width: 700px;">
                             <div class="section-six_inner_list">
@@ -615,13 +828,13 @@
                                         <div class="d-flex justify-content-center align-items-center">
                                             <div class="col-6 left_side">
                                                 <div class="section-six_inner_list_box_right">
-                                                    <div class="section-six_inner_list_text_ans" id="item-15">1. 1, 000</div>
+                                                    <div class="section-six_inner_list_text_ans" id="item-15">15. 10<sup>4</sup></div>
                                                 </div>
                                             </div>
                                             <div class="col-6 right_side">
                                                 <div class="section-six_inner_list_box">
                                                     <div class="input-group">
-                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer15" data-ans="1x10^3">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer15" data-ans="10,000">
                                                         <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="15" id="quiz-2-answer15btn" onclick="checkInputs(this)" type="button">Check</button>
                                                         <span id="answer-text15" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
                                                     </div>
@@ -633,13 +846,13 @@
                                         <div class="d-flex justify-content-center align-items-center">
                                             <div class="col-6 left_side">
                                                 <div class="section-six_inner_list_box_right">
-                                                    <div class="section-six_inner_list_text_ans" id="item-16">2. 0.0001</div>
+                                                    <div class="section-six_inner_list_text_ans" id="item-16">16. 10<sup>-6</sup></div>
                                                 </div>
                                             </div>
                                             <div class="col-6 right_side">
                                                 <div class="section-six_inner_list_box">
                                                     <div class="input-group">
-                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer16" data-ans="1x10^-3">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer16" data-ans="0.00001">
                                                         <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="16" id="quiz-2-answer16btn" onclick="checkInputs(this)" type="button">Check</button>
                                                         <span id="answer-text16" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
                                                     </div>
@@ -651,15 +864,33 @@
                                         <div class="d-flex justify-content-center align-items-center">
                                             <div class="col-6 left_side">
                                                 <div class="section-six_inner_list_box_right">
-                                                    <div class="section-six_inner_list_text_ans" id="item-17">3. 10, 000</div>
+                                                    <div class="section-six_inner_list_text_ans" id="item-17">17. 10<sup>2</sup></div>
                                                 </div>
                                             </div>
                                             <div class="col-6 right_side">
                                                 <div class="section-six_inner_list_box">
                                                     <div class="input-group">
-                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer17" data-ans="1x10^4">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer17" data-ans="100">
                                                         <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="17" id="quiz-2-answer17btn" onclick="checkInputs(this)" type="button">Check</button>
                                                         <span id="answer-text17" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <div class="col-6 left_side">
+                                                <div class="section-six_inner_list_box_right">
+                                                    <div class="section-six_inner_list_text_ans" id="item-18">18. 10<sup>7</sup></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 right_side">
+                                                <div class="section-six_inner_list_box">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer18" data-ans="10,000,000">
+                                                        <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="18" id="quiz-2-answer18btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                        <span id="answer-text18" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -715,6 +946,49 @@
                         </div>
                     </div>
                 </div>
+        </div>                
+    </section>
+
+     <!-- section-seven -->
+     <section id="section-seven">
+        <div class="container pb-5" style="background: #fff; padding-left: 0; padding-right: 0;">
+            <div style="background: #f0f0f0;">
+                <h2 class="text-center">Practice 1</h2>
+                <p class="text-center" style="color: #343434">
+                    Choose the correct answer.
+                </p>
+
+                <div id="section-seven_inner">
+                    <div id="error_check" class="alert d-none"></div>
+
+                    <div class="section-seven_inner_list">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <div class="third_section_inner_wrap_list">
+                                    <div class="third_section_inner_wrap_list_title">
+                                        <span>1. <input type="text" readonly> es de prever, si a algo que se quema se le echa combustible, el fuego se hará mayor.</span>
+                                    </div>
+                                    <div class="third_section_inner_wrap_list_ans">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" data-value="no" id="practice2">
+                                            <label class="form-check-label" for="practice2">Tal pues</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" data-value="yes" id="practice2">
+                                            <label class="form-check-label" for="practice2">Tal como</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" data-value="no" id="practice2">
+                                            <label class="form-check-label" for="practice2">Tal cual</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
         </div>                
     </section>
 
@@ -918,6 +1192,33 @@
                 }
             }
         }
+
+        const checkList19 = document.querySelectorAll("#practice2");
+
+        checkList19.forEach(function(elem, index){
+
+            elem.addEventListener("click", function(event){
+
+                if(elem.checked){
+
+                    if(event.target.getAttribute('data-value') == "yes"){
+                        elem.classList.remove('is-invalid');
+                        elem.classList.add('is-valid');
+                    }
+
+                    if(event.target.getAttribute('data-value') == "no"){
+                        elem.classList.remove('is-valid');
+                        elem.classList.add('is-invalid');
+                    }
+
+                } else {
+                    elem.classList.remove('is-valid');
+                    elem.classList.remove('is-invalid');
+                }
+
+            });
+
+        });
 
     </script>
 </body>
