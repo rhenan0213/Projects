@@ -15,6 +15,7 @@
         body {
             background: #7aa19e;
             background-size: cover;
+            padding-bottom: 80px;
         }
 
         section {
@@ -51,7 +52,7 @@
             font-size: 41px;
         }
         .dark-bg {
-            background: #b5c4c4;
+            background: #e9eded;
         }
         .light-bg {
             background: #fff;
@@ -63,10 +64,10 @@
 
         /* SECTION 1 */
         #section-one {
-            background: url(./ALGEBRA1GU1L6-bg.png);
+            background: url('https://drive.google.com/uc?export=view&id=18kenxP9ocpyuc-muHDA8GacYNToAoVx8'); 
         }
         #section-one .hero {
-            background: url('./ALGEBRA1GU1L6-hero.png') no-repeat;
+            background: url('https://drive.google.com/uc?export=view&id=1tuwqBYzLutnFzrIuYiITRktBG96KLr1o') no-repeat;
             background-size: contain;
             width: 100%;
             height: 598px;
@@ -84,7 +85,7 @@
 
         /* SECTION 2 */
         #section-two .hero-below {
-            background: url('./ALGEBRA1GU1L6-img1.png') no-repeat;
+            background: url('https://drive.google.com/uc?export=view&id=1c8XXoTqGxLiUfA484SXidxFg1B3CnohY') no-repeat; 
             background-size: contain;
             width: 100%;
             height: 401px;
@@ -129,6 +130,108 @@
             border: 1px solid #000;
             color: #272727;
         }
+
+        /* SECTION 7 */
+        #section-seven table th {
+            color: #272727;
+            width: 230px;
+            height: 85px;
+        }
+
+        /* PRACTICE 1 */
+        /* section-six */
+        #section-six h3{
+            letter-spacing: 2px;
+        }
+        #section-six h4{
+            font-size: 27px;
+            color: #151515;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+        #section-six p{ 
+            font-size: 1.7rem;
+            font-weight: 500;
+        }
+        #section-six_inner .section-six_inner_list ul{}
+        #section-six_inner .section-six_inner_list ul li{
+            border: none;
+            padding: 0;
+            background: none;
+        }
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box,
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box_right{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100%;
+        }
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box input{
+            width: 8rem;
+            /* margin-right: 1rem; */
+            /* border-radius: 50px; */
+            border: 1px solid #39393946;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box button[data-qs_count]{
+            border-radius: 0px 10px 10px 0px!important;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box button[data-qs_count].glow-on-hover-success{
+            background: #20c997!important;
+        }
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box button[data-qs_count].glow-on-hover-wrong{
+            background: #ff5756!important;
+        }
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box span.error_mes {
+            font-size: 14px;
+            top: 37px;
+            z-index: 2;
+        }
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box input.is-valid{
+            border-color: #198754!important;
+        }
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box input.is-invalid{
+            border-color: #dc3545!important;
+        }
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box_right .section-six_inner_list_text_ans,
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box .section-six_inner_list_text{
+            font-size: 20px;
+            font-weight: 400;
+        }
+        .audio_playing button{
+        pointer-events: none;
+        opacity: 1;
+        }
+        .audio_playing button.playing{
+            pointer-events: visible!important;
+        }
+        
+        #btnPause span,
+        #btnPlayTone span{
+            pointer-events: none;
+        }
+
+        .fw-medium {
+            font-weight: 500 !important;
+        }
+        .list-group-item {
+            position: relative;
+            display: block;
+            padding: 0px;
+            color: #212529;
+            text-decoration: none;
+            background-color: #fff;
+            border: 0px solid rgba(0,0,0,.125);
+        }
+        label {
+            pointer-events: none;
+        }
+
     </style>
 </head>
 
@@ -244,7 +347,7 @@
                 </tr>
                 </tbody>
             </table>
-            <p class="mt-5" style="font-size:27px"><strong>Note:</strong> An estimate is not an exact answer and answers vary depending on what place value you use for rounding</p>
+            <p class="mt-5" style="font-size:27px">We are going to use the same problem.</p>
         </div>
     </section>
 
@@ -257,6 +360,328 @@
             </video>
         </div>
     </section>
+
+    <!-- section-seven -->
+    <section id="section-seven">
+        <div class="container dark-bg pxy">
+            <h2 class="mb-5 ps-4">Strategy 2: Front-end estimation</h2>
+            <p class="mt-4" style="font-size:27px">We are going to use the same problem.</p>
+            <p class="mt-4" style="font-size:27px">Robin needs supplies to stock up before Hurricane Katrina comes ashore. The lines at Home Depot are extremely long, she only has cash, and she wants to make sure she has enough money to cover the cost, not to mention lose valuable time. Her cart has 3 plywood panels, each at $11.95, 6 gallons of water at $2.59 each, 4 battery packs at $1.79 each, 1 propane gas tank at $16.28, and 2 flash lights at $2.42 each. She has $75. Does she have enough money?</p>
+            <p class="mt-4" style="font-size:27px">Front-end estimation involves using the first one or two digits in the largest place values without rounding.</p>
+            <p class="mt-4 mb-5" style="font-size:27px">Let's go back to the example and calculate Robin's bill using front-end estimation using two digits</p>
+            <table class="m-auto mb-5 text-center"> 
+                <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th style="font-size:16px;">Item Estimate <br>(using first 2 <br>non-rounded digits)</th>
+                    <th style="font-size:16px;">Calculation of Cost <br>(based on number of items needed)</th>
+                    <th>Subtotals</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Plywood</td>
+                    <td>$11.95</td>
+                    <td>$11.00</td>
+                    <td>11 x 3 = 33</td>
+                    <td>$33.00</td>
+                </tr>
+                <tr>
+                    <td>Water</td>
+                    <td>$2.59</td>
+                    <td>$2.60</td>
+                    <td>2.6 x 6 = 15.6</td>
+                    <td>$15.60</td>
+                </tr>
+                <tr>
+                    <td>Batteries</td>
+                    <td>$1.79</td>
+                    <td>$1.80</td>
+                    <td>1.8 x 4 = 7.2</td>
+                    <td>$7.20</td>
+                </tr>
+                <tr>
+                    <td>Gas Tank</td>
+                    <td>$16.28</td>
+                    <td>$16.00</td>
+                    <td>16 x 1 = 16</td>
+                    <td>$16.00</td>
+                </tr>
+                <tr>
+                    <td>Flashlights</td>
+                    <td>$2.42</td>
+                    <td>$2.40</td>
+                    <td>2.40 x 2 = 4.80</td>
+                    <td>$4.80</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Estimate</td>
+                    <td>$76.60 <br>Not enough</td>
+                </tr>
+                </tbody>
+            </table>
+            <h2 class="mb-5 ps-4">Strategy 3: Benchmark Numbers</h2>
+            <h2 class="mb-5 ps-4">Example</h2>
+            <p class="mb-5">The following diagram shows a wall that has been partly painted. It took 3/5 of a gallon to paint this part of the wall. About how much more paint would it take to finish painting the wall?</p>
+            <img class="m-auto d-block mb-5" width="478" src="https://drive.google.com/uc?export=view&id=1wUI3UuqDnX8LXQrr5iqQOf2CFV_5w0cn" alt="">    
+            <p class="mb-3">About 1/4   of the wall is painted, according to our visual benchmark reference. A calculated estimate using the benchmark reference indicates that 3/4 is not painted. Using this estimate, we understand that we will need three times the amount of paint for the remaining 3/4 of the wall as we needed to paint  1/4  of the wall. So, 3× 3/5 gallon = 9/5 gallons =1 and 4/5 =gallons to finish the wall</p>
+        </div>
+    </section>
+
+     <!-- section-six -->
+     <section id="section-six">
+        <div class="container pxy" style="background: #fff; padding-left: 0; padding-right: 0;">
+                <div class="section_six_header d-flex flex-column justify-content-center align-self-center mb-5">
+                    <h3 class="mt-3  mb-4 text-center" style="color: #272727">PRACTICE</h3>
+                </div>
+                <div class="container">
+                    <h2 class="mb-1">Check Your Estimates</h2>
+                    <p class="mb-5" style="font-size: 28px;">Let's see if your estimates are reasonable as you practice the following exercises</p>
+                    <p class="mt-4" style="font-size:27px">Benchmark Numbers and Estimation</p>
+                    <p class="mt-4" style="font-size:27px">Use front end estimation for problems 1 – 3.</p>
+                    <div id="section-six_inner" class="mt-3">
+                        <div>
+                            <div class="section-six_inner_list">
+                                <ul class="list-group">
+                                    <li class="list-group-item mt-4">
+                                        <div class="d-flex flex-column justify-content-start align-items-start">
+                                            <div class="col-12 left_side">
+                                                <div class="section-six_inner_list_box_right">
+                                                    <div class="section-six_inner_list_text_ans" id="item-1"><p class="mb-5" style="font-size:27px">1. Tina purchased 5 DVD’s: two of them were priced at $11.57, two others were priced at $14.68, and the fifth was priced at $13.99. About how much did she spend?.</p></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 right_side">
+                                                <div class="section-six_inner_list_box">
+                                                    <div class="input-group ps-3 w-75">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer1" data-ans="55">
+                                                        <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="1" id="quiz-2-answer1btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                        <span id="answer-text1" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item mt-5">
+                                        <div class="d-flex flex-column justify-content-start align-items-start">
+                                            <div class="col-12 left_side">
+                                                <div class="section-six_inner_list_box_right">
+                                                    <div class="section-six_inner_list_text_ans" id="item-2"><p class="mb-5" style="font-size:27px">2. Robert went to purchase textbooks for his college classes. The math text was $88.92, the science text was $97.02, the humanities text was $65.02, and the English text was $102.65. About how much was the cost of the books?</p></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 right_side">
+                                                <div class="section-six_inner_list_box">
+                                                    <div class="input-group ps-3 w-75">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer2" data-ans="354">
+                                                        <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="2" id="quiz-2-answer2btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                        <span id="answer-text2" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item mt-5">
+                                        <div class="d-flex flex-column justify-content-start align-items-start">
+                                            <div class="col-12 left_side">
+                                                <div class="section-six_inner_list_box_right">
+                                                    <div class="section-six_inner_list_text_ans" id="item-3"><p class="mb-5" style="font-size:27px">3. A budget for a party that Ms. Smith is having includes $6888 for food, $576 for a DJ, $1247 for centerpieces and decorations, and $65 per hour for each waiter. The party will be four hours long, and four waiters will be serving the guests. How much money should Ms. Smith budget for the party?</p></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 right_side">
+                                                <div class="section-six_inner_list_box">
+                                                    <div class="input-group ps-3 w-75">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer3" data-ans="9740">
+                                                        <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="3" id="quiz-2-answer3btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                        <span id="answer-text3" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <p class="mt-5" style="font-size:27px">Use benchmark references to estimate problems 4 – 5.</p>
+                                    <li class="list-group-item mt-5">
+                                        <div class="d-flex flex-column justify-content-start align-items-start">
+                                            <div class="col-12 left_side">
+                                                <div class="section-six_inner_list_box_right">
+                                                    <div class="section-six_inner_list_text_ans" id="item-4"><p class="mb-3" style="font-size:27px">4. A candy jar is filled to the mark with 585 jelly beans. About how many jelly beans does the jar hold?</p>
+                                                    <img class="d-block m-auto mb-5" width="70" src="https://drive.google.com/uc?export=view&id=1frG_Ze4_wuoWHzoU-6DsoDp6z7hY062c" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 right_side">
+                                                <div class="section-six_inner_list_box">
+                                                    <div class="input-group ps-3 w-75">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer4" data-ans="3000">
+                                                        <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="4" id="quiz-2-answer4btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                        <span id="answer-text4" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item mt-5">
+                                        <div class="d-flex flex-column justify-content-start align-items-start">
+                                            <div class="col-12 left_side">
+                                                <div class="section-six_inner_list_box_right">
+                                                    <div class="section-six_inner_list_text_ans" id="item-5"><p class="mb-3" style="font-size:27px">5. The Biltmore Hotel is getting retrofitted with new lawn for the golf course.  Already 100 patches of grass have been laid.  If each patch of grass costs $15.95.About how much would it cost to have the grass installed?</p>
+                                                    <img class="d-block m-auto mb-4" width="332" src="https://drive.google.com/uc?export=view&id=1YPbUHdNMBsPDI6gPPIiKSdpKA00JG5_P" alt="">
+                                                    <p class="mb-lg-5" style="font-size:27px">"Green = 100 patches"</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 right_side">
+                                                <div class="section-six_inner_list_box">
+                                                    <div class="input-group ps-3 w-75">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer5" data-ans="3000">
+                                                        <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="4" id="quiz-2-answer5btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                        <span id="answer-text5" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>                
+    </section>
+
+    <!-- section-summary -->
+    <section id="section-summary">
+        <div class="container dark-bg pxy d-flex flex-column align-items-center justify-content-center">
+            <h3 class="mb-5 text-center">SUMMARY</h3>
+            <div class="d-flex flex-column align-items-start justify-content-start w-100">
+                <h2 class="mb-4">Check Your Estimates</h2>
+                <p class="mb-4">Estimation is an educated guess that amounts to a reasonable answer.</p>
+                <ul class="ps-5">
+                    <li class="mb-4">Various strategies, such as rounding, front-end estimation, and using benchmark numbers as a reference, can be used to estimate.</li>
+                    <li class="mb-4">An estimate is not an exact answer, but instead gives you a reasonable answer and a quicker method for calculation.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- section-last -->
+    <section id="section-last">
+        <div class="container pxy" style="background: #fff; padding-left: 0; padding-right: 0;">
+                <div class="section_six_header d-flex flex-column justify-content-center align-self-center mb-5">
+                    <h3 class="mt-3  mb-2 text-center" style="color: #272727">Assignment</h3>
+                </div>
+                <div class="d-flex flex-column justify-content-start align-content-center w-100 flex-wrap text-center mb-3">
+                    <h2 class="mb-2">Algebra 1</h2>
+                    <h2 class="mb-5">Problem Solving: Estimation</h2>
+                    <p>Rounding and Estimation <br>Assessment</p>
+                </div>
+                <table class="m-auto mb-5 text-center"> 
+                    <thead>
+                    <tr>
+                        <th colspan="3">Baseball Stadium Seating Capacity</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Stadium</td>
+                        <td>City</td>
+                        <td>Capacity</td>
+                    </tr>
+                    <tr>
+                        <td>Fenway Park</td>
+                        <td>Boston</td>
+                        <td>33871</td>
+                    </tr>
+                    <tr>
+                        <td>Wrigley Field</td>
+                        <td>Chicago</td>
+                        <td>38902</td>
+                    </tr>
+                    <tr>
+                        <td>Commercial Park</td>
+                        <td>Detroit</td>
+                        <td>40000</td>
+                    </tr>
+                    <tr>
+                        <td>Kauffman Stadium</td>
+                        <td>Kansas City</td>
+                        <td>40625</td>
+                    </tr>
+                    <tr>
+                        <td>Pacific Bell Park</td>
+                        <td>San Francisco</td>
+                        <td>40800</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="container">
+                    <div id="section-six_inner" class="mt-3">
+                        <div>
+                            <div class="section-six_inner_list">
+                                <ul class="list-group">
+                                    <li class="list-group-item mt-4">
+                                        <div class="d-flex flex-column justify-content-start align-items-start">
+                                            <div class="col-12 left_side">
+                                                <div class="section-six_inner_list_box_right">
+                                                    <div class="section-six_inner_list_text_ans" id="item-6"><p class="mb-5" style="font-size:27px">1. About how many more seats does Wrigley Park have than Fenway Park? Use the Front End Estimation strategy.</p></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 right_side">
+                                                <div class="section-six_inner_list_box">
+                                                    <div class="input-group ps-3 w-75">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer6" data-ans="5000">
+                                                        <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="6" id="quiz-2-answer6btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                        <span id="answer-text6" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item mt-4">
+                                        <div class="d-flex flex-column justify-content-start align-items-start">
+                                            <div class="col-12 left_side">
+                                                <div class="section-six_inner_list_box_right">
+                                                    <div class="section-six_inner_list_text_ans" id="item-7"><p class="mb-5" style="font-size:27px">2. About how many baseball seats are in the stadiums listed above?  Use the rounding strategy to the nearest thousand.</p></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 right_side">
+                                                <div class="section-six_inner_list_box">
+                                                    <div class="input-group ps-3 w-75">
+                                                        <input type="text" class="form-control form-control-sm w-50" id="quiz-2-answer7" data-ans="19">
+                                                        <button class="btn text-white bg-black ps-2 pe-2" data-error_counter="3" data-qs_count="7" id="quiz-2-answer7btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                        <span id="answer-text7" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+    </section>
+
+    <style>
+        #section-last table {
+            font-family: 'Arvo', serif;
+        }
+        #section-last table th {
+            background: #fff;
+            color: #121212;
+        }
+        #section-last table td {
+            width: 312px;
+            background: #fff;
+        }
+        #section-last table tbody tr:first-child td {
+            font-weight: 700;
+        }
+    </style>
 
 
     <!-- fifth section -->
