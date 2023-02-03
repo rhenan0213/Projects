@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <title>Lesson 2</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round" rel="stylesheet">
+
+        <link href="https://m.fyioc.com/WhyNotScripts/css/VideoPlay.css" rel="stylesheet">
+        <link href="https://m.fyioc.com/WhyNotScripts/css/AudioPlay.css" rel="stylesheet">
+
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+        <link href="https://m.fyioc.com/WhyNotScripts/css/interactive2.css" rel="stylesheet">
+    </head>
+    <style>
+        mjx-container.MathJax {
+            pointer-events: none;
+        }
+        
+        .container{
+            color: white;
+            max-width: 1080px;
+            box-shadow: 0px -9px 11px #504b4b;
+        }
+        .section_one{
+            background: url('ACU1.L2/img_1.png') no-repeat;
+            background-size: cover;
+            background-position: left;
+            padding-top: 8rem;
+            padding-bottom: 16rem;
+            position: relative;
+        }
+        h1{
+            font-size: 6.2rem;
+            font-weight: 500;
+            line-height: 1;
+            color: #fff;
+        }
+        h2{
+            font-size: 3.5rem;
+            font-weight: 500;
+            line-height: 1;
+            color: #fff;
+            padding-left: 3rem;
+        }
+        .section_title{
+            color: #1f90bc;
+        }
+        .section_sub_title{
+            color: #555555;
+        }
+        .mjx-container[jax="CHTML"][display="true"]{
+            display: inline !important;
+        }
+        .card-body-custom{
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 0.6rem;
+            padding-right: 0.6rem;
+        }
+        .intr_two_list .intr_two_box .intr_two_box_ans span {
+            background: transparent;
+        }
+        
+    </style>
+    <body>
+        <div style="background-color: #0784b5;">
+            <div class="container">
+                <div class="row section_one">
+                    <div class="col-12">
+                        <div class="row d-flex justify-content-end">
+                            <div class="col-8 text-end pe-5">
+                                <h1>ALGEBRA</h1>
+                                <h2>Integers and Rationals</h2>
+                                <p class="fs-2">Multiplying and Dividing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="background-color: #8cccdc;">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12 text-center p-5" style="background-color: #ffffff;">
+                        <p class="fs-2 fw-bold text-uppercase section_title">Integers and Rationals</p>
+                        <p class="fs-4 section_sub_title">Multiplying and Dividing</p>
+                        <div class="card-group mt-5 text-dark">
+                            <div class="card" style="border: none;">
+                                <div class="card-body p-3" style="background-color: #84cce8;">
+                                    <p class="fs-5 fw-bold text-uppercase text-dark">What You Should <br />Know</p>
+                                </div>
+                                <div class="card-body p-3 text-start" style="background-color: #bae2f2;">
+                                    <p class="fw-bold">Before you begin, you should:</p>
+                                    <ul>
+                                        <li>Know the rules for multiplying integers</li>
+                                        <li>Know the rules for dividing integers</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card" style="border: none;">
+                                <div class="card-body p-3" style="background-color: #9dd6ed;">
+                                    <p class="fs-5 fw-bold text-uppercase text-dark">Lesson <br/>Expectations</p>
+                                </div>
+                                <div class="card-body p-3 text-start" style="background-color: #cbe9f5;">
+                                    <p class="fw-bold">By the end of this lesson, you should be able to:</p>
+                                    <ul>
+                                        <li>Multiply Rational Numbers</li>
+                                        <li>Divide Rational Numbers</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card" style="border: none;">
+                                <div class="card-body p-3" style="background-color: #b5e0f1;">
+                                    <p class="fs-5 fw-bold text-uppercase text-dark">Lesson <br />Keywords</p>
+                                </div>
+                                <div class="card-body p-3 text-center" style="background-color: #ddf1f9;">
+                                    <button class="btn text-dark" id="btnPlayTone" data-audio="L28A2-Cuarenta">
+                                        <span class="material-icons d-flex" style="font-size: 50px;">volume_up</span>
+                                    </button>
+                                    <br />
+                                    <button class="btn text-dark" id="btnPlayTone" data-audio="L28A2-Cuarenta">
+                                        <span class="material-icons d-flex" style="font-size: 50px;">volume_up</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center p-5"  style="background-color: #ddf0f5;">
+                        <p class="fs-2 fw-bold text-uppercase section_title">Review of Positive and Negative Signs When <br />Multiplying and Dividing</p>
+                        <p class="fs-4 section_sub_title">The product or quotient of two numbers having the <strong>same signs</strong> is <strong>positive</strong>:</p>
+                        <div class="row">
+                            <div class="col-6 p-1">
+                                <img src="ACU1.L2/img_3.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-6 p-1">
+                                <img src="ACU1.L2/img_5.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-6 p-1">
+                                <img src="ACU1.L2/img_4.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-6 p-1">
+                                <img src="ACU1.L2/img_6.png" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <p class="fs-4 section_sub_title my-5">The product or quotient of two numbers having <strong>different signs</strong> is <strong>negative</strong>:</p>
+                        <div class="row">
+                            <div class="col-6 p-1">
+                                <img src="ACU1.L2/img_7.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-6 p-1">
+                                <img src="ACU1.L2/img_9.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-6 p-1">
+                                <img src="ACU1.L2/img_8.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-6 p-1">
+                                <img src="ACU1.L2/img_10.png" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center p-5"  style="background-color: #ffffff;">
+                        <p class="fs-2 fw-bold text-uppercase section_title">Review Multiplying Fractions</p>
+                        <p class="fs-4 section_sub_title">Watch this video to recall how to multiply two fractions.</p>
+                        <div class="ratio ratio-16x9" style="border: 20px solid #8f542c;">
+                            <video class="video-fluid" loop controls>
+                                <source src="Https://m.fyioc.com/Spanish1/Lesson28/L28V1-REV5.mp4" type="video/mp4" />
+                            </video>
+                            <div class="play_button">
+                                <div id="play_vid">
+                                    <span class="material-icons-outlined">play_arrow</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="fs-2 fw-bold text-uppercase section_title mt-5">Review Dividing Fractions</p>
+                        <p class="fs-4 section_sub_title">Watch this video to recall how to divide two fractions.</p>
+                        <div class="ratio ratio-16x9" style="border: 20px solid #8f542c;">
+                            <video class="video-fluid" loop controls>
+                                <source src="Https://m.fyioc.com/Spanish1/Lesson28/L28V1-REV5.mp4" type="video/mp4" />
+                            </video>
+                            <div class="play_button">
+                                <div id="play_vid">
+                                    <span class="material-icons-outlined">play_arrow</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center p-5"  style="background-color: #0a99d1;">
+                        <p class="fs-2 fw-bold text-uppercase section_title text-white">PRACTICE</p>
+                        <p class="fs-4 section_sub_title text-white">Practice your multiplication and division skills by completing products and Quotients of Rational Numbers.</p>
+                    </div>
+                    <div class="col-12 text-center p-5"  style="background-color: #ffffff;">
+                        <p class="fs-2 fw-bold text-uppercase section_title">Products and Quotients of Rational Numbers</p>
+                        <div class="row">
+                            <div class="col-6 border border-white" style="background-color: #ddf0f5;">
+                                <span class="d-flex fs-2 text-dark">
+                                    \[ ({5 \over 3}) (-{2 \over 7}) = \]
+                                    <span style="margin-top: 1.7rem; margin-left: 1rem;">
+                                        <table class="table">
+                                            <tbody id="intr_12_inputs_1" style="border-bottom: transparent;">
+                                                <tr>
+                                                    <td rowspan="2" style="vertical-align: middle;">
+                                                        <input type="text" class="form-control" data-ans="-">
+                                                    </td>
+                                                    <td style="border-bottom: solid;">
+                                                        <input type="text" class="form-control" data-ans="10">
+                                                    </td>
+                                                    <td rowspan="2" style="vertical-align: middle;"><button type="button" class="btn btn-primary rounded" onClick="intr_12_CheckInputs('intr_12_inputs_1')">Check</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" class="form-control" data-ans="21">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="col-6 border border-white" style="background-color: #ddf0f5;">
+                                <span class="d-flex fs-2 text-dark mt-4">
+                                    \[ (-8.7) (-10.4) = \]
+                                    <span id="intr_12_inputs_2" style="margin-top: 1.7rem; margin-left: 1rem;">
+                                        <span class="input-group">
+                                            <input type="text" class="form-control" data-ans="90.48">
+                                            <button type="button" class="btn btn-primary rounded-right" onClick="intr_12_CheckInputs('intr_12_inputs_2')">Check</button>
+                                        </span>
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="col-6 border border-white" style="background-color: #ddf0f5;">
+                                <span class="d-flex fs-2 text-dark">
+                                    \[ (-{4 \over 5}) ({2 \over 3}) = \]
+                                    <span style="margin-top: 1.7rem; margin-left: 1rem;">
+                                        <table class="table">
+                                            <tbody id="intr_12_inputs_3" style="border-bottom: transparent;">
+                                                <tr>
+                                                    <td rowspan="2" style="vertical-align: middle;">
+                                                        <input type="text" class="form-control" data-ans="-">
+                                                    </td>
+                                                    <td style="border-bottom: solid;">
+                                                        <input type="text" class="form-control" data-ans="8">
+                                                    </td>
+                                                    <td rowspan="2" style="vertical-align: middle;"><button type="button" class="btn btn-primary rounded" onClick="intr_12_CheckInputs('intr_12_inputs_3')">Check</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" class="form-control" data-ans="15">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="col-6 border border-white" style="background-color: #ddf0f5;">
+                                <span class="d-flex fs-2 text-dark">
+                                    \[ (1{4 \over 5}) (2{1 \over 2}) = \]
+                                    <span style="margin-top: 1.7rem; margin-left: 1rem;">
+                                        <table class="table">
+                                            <tbody id="intr_12_inputs_4" style="border-bottom: transparent;">
+                                                <tr>
+                                                    <td style="border-bottom: solid;">
+                                                        <input type="text" class="form-control" data-ans="45">
+                                                    </td>
+                                                    <td rowspan="2" style="vertical-align: middle;"><button type="button" class="btn btn-primary rounded" onClick="intr_12_CheckInputs('intr_12_inputs_4')">Check</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" class="form-control" data-ans="10">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="col-6 border border-white" style="background-color: #ddf0f5;">
+                                <span class="d-flex fs-2 text-dark my-4">
+                                    \[ -32.25 \div 2.5 = \]
+                                    <span id="intr_12_inputs_5" style="margin-top: 1.7rem; margin-left: 1rem;">
+                                        <span class="input-group">
+                                            <input type="text" class="form-control" data-ans="-12.9">
+                                            <button type="button" class="btn btn-primary rounded-right" onClick="intr_12_CheckInputs('intr_12_inputs_5')">Check</button>
+                                        </span>
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="col-6 border border-white" style="background-color: #ddf0f5;">
+                                <span class="d-flex fs-2 text-dark my-4">
+                                    \[ 42.3 \div (-6) = \]
+                                    <span id="intr_12_inputs_6" style="margin-top: 1.7rem; margin-left: 1rem;">
+                                        <span class="input-group">
+                                            <input type="text" class="form-control" data-ans="-7.05">
+                                            <button type="button" class="btn btn-primary rounded-right" onClick="intr_12_CheckInputs('intr_12_inputs_6')">Check</button>
+                                        </span>
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="col-6 border border-white" style="background-color: #ddf0f5;">
+                                <span class="d-flex fs-2 text-dark">
+                                    \[ -{2 \over 3} \div {4 \over 5} = \]
+                                    <span style="margin-top: 1.7rem; margin-left: 1rem;">
+                                        <table class="table">
+                                            <tbody id="intr_12_inputs_7" style="border-bottom: transparent;">
+                                                <tr>
+                                                    <td rowspan="2" style="vertical-align: middle;">
+                                                        <input type="text" class="form-control" data-ans="-">
+                                                    </td>
+                                                    <td style="border-bottom: solid;">
+                                                        <input type="text" class="form-control" data-ans="10">
+                                                    </td>
+                                                    <td rowspan="2" style="vertical-align: middle;"><button type="button" class="btn btn-primary rounded" onClick="intr_12_CheckInputs('intr_12_inputs_7')">Check</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" class="form-control" data-ans="12">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="col-6 border border-white" style="background-color: #ddf0f5;">
+                                <span class="d-flex fs-2 text-dark my-4">
+                                    \[ -23.94 \div -10.5 = \]
+                                    <span id="intr_12_inputs_8" style="margin-top: 1.7rem; margin-left: 1rem;">
+                                        <span class="input-group">
+                                            <input type="text" class="form-control" data-ans="2.28">
+                                            <button type="button" class="btn btn-primary rounded-right" onClick="intr_12_CheckInputs('intr_12_inputs_8')">Check</button>
+                                        </span>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center p-5"  style="background-color: #ddf0f5;">
+                        <p class="fs-2 fw-bold text-uppercase section_title">A Carpenter and Rational Numbers</p>
+                        <p class="fs-5 text-start section_sub_title">In order for a carpenter to complete a task, he or she will need the essential tools. One such tool, the measuring tape, provides the carpenter with important information related to length, width and height of objects.</p>
+                        <p class="fs-5 text-start section_sub_title">Of course, in order to translate the information into useful data, the carpenter must be able to work with rational numbers.</p>
+                        <img src="ACU1.L2/img_11.png" class="img-fluid shadow" alt="">
+                        <p class="fs-2 section_sub_title fw-bold mt-5">For example</p>
+                        <p class="fs-4 text-start section_sub_title">A piece of wood that is 8 feet in length must be cut into smaller pieces that measure  15 ¼  inches each.</p>
+                        <ul class="text-start text-dark fs-5">
+                            <li>How many pieces of this length can be obtained from the 8 feet?</li>
+                        </ul>
+                        <p class="fs-2 section_sub_title fw-bold mt-5">Solution</p>
+                        
+                        <ul class="text-start text-dark fs-5">
+                            <li>8 feet equals 96 inches</li>
+                            <li>
+                                <span class="d-flex">
+                                    \[ 15 {1 \over 4} = {61 \over 4} \]
+                                    <span style="margin-top: 1.7rem; margin-left: 1rem;">(The mixed fractions turns into improper fraction)</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="d-flex">
+                                    \[ 96 \div {61 \over 4} = {384 \over 61} \]
+                                </span>
+                            </li>
+                            <li>
+                                <span class="d-flex">
+                                    \[ {384 \over 61} \approx 6.29in \]
+                                </span>
+                            </li>
+                            <li>We can obtain approximately 6.29 pieces.</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 text-center p-5" style="background-color: #ffffff;">
+                        <p class="fs-2 fw-bold text-uppercase section_title">Multiplying/Dividing rational numbers</p>
+                        <p class="fs-5 section_sub_title">The following video will demonstrate application type problems in real world scenarios. Pay particular attention to the question format: short response, extended response, drawing models, and justifying and explaining how an answer is obtained.</p>
+                        <div class="ratio ratio-16x9" style="border: 20px solid #8f542c;">
+                            <video class="video-fluid" loop controls>
+                                <source src="Https://m.fyioc.com/Spanish1/Lesson28/L28V1-REV5.mp4" type="video/mp4" />
+                            </video>
+                            <div class="play_button">
+                                <div id="play_vid">
+                                    <span class="material-icons-outlined">play_arrow</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center p-5"  style="background-color: #ddf0f5;">
+                        <p class="fs-2 fw-bold text-uppercase section_title">SUMMARY</p>
+                        <p class="fs-4 section_sub_title">In this lesson, you have covered:</p>
+                        <p class="fs-4 section_sub_title">The product or quotient of two numbers is:</p>
+                        <div class="card-group mt-5">
+                            <div class="card">
+                                <div class="card-body p-3" style="background-color: #44bbea;">
+                                    <p class="fs-5 fw-bold text-uppercase">POSITIVE</p>
+                                </div>
+                                <div class="card-body p-3 text-dark" style="background-color: #a1ddf4;">
+                                    <p>\[ a \times b = ab \]</p>
+                                </div>
+                                <div class="card-body p-3 text-dark" style="background-color: #ffffff;">
+                                    <p>\[ - a \times (- b) = ab \]</p>
+                                </div>
+                                <div class="card-body p-3 text-dark" style="background-color: #a1ddf4;">
+                                    <p>\[ a \div b = {a \over b} \]</p>
+                                </div>
+                                <div class="card-body p-3 text-dark" style="background-color: #ffffff;">
+                                    <p>\[ - a \div (-b) = {a \over b} \]</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body p-3" style="background-color: #44bbea;">
+                                    <p class="fs-5 fw-bold text-uppercase">NEGATIVE</p>
+                                </div>
+                                <div class="card-body p-3 text-dark" style="background-color: #a1ddf4;">
+                                    <p>\[ a \times (-b) = -ab \]</p>
+                                </div>
+                                <div class="card-body p-3 text-dark" style="background-color: #ffffff;">
+                                    <p>\[ - a \times -b = -ab \]</p>
+                                </div>
+                                <div class="card-body p-3 text-dark" style="background-color: #a1ddf4;">
+                                    <p>\[ a \div (-b) = -{a \over b} \]</p>
+                                </div>
+                                <div class="card-body p-3 text-dark" style="background-color: #ffffff;">
+                                    <p>\[ - a \div b = -{a \over b} \]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center p-5"  style="background-color: #0a99d1;">
+                        <p class="fs-2 fw-bold text-uppercase section_title text-white">ASSIGNMENTS</p>
+                    </div>
+                    <div class="col-12 text-center p-5"  style="background-color: #ffffff;">
+                        <p class="fs-2 fw-bold text-uppercase section_title">ASSIGNMENT 1</p>
+                        <p class="fs-4 fw-bold section_sub_title">Integers and Rationals</p>
+                        <p class="fs-4 section_sub_title">Miley purchased 5300 shares of ABC Incorporated stock.  The following table shows the closing prices of ABC stock over a one-week period.</p>
+                        <div class="card-group mt-5">
+                            <div class="card">
+                                <div class="card-body p-1" style="background-color: #9bd4e4;">
+                                    <p class="fs-3 fw-bold text-dark">Day</p>
+                                </div>
+                                <div class="card-body ps-4 text-dark fs-5 border border-white text-start" style="background-color: #c5e6ef;">
+                                    <p>1</p>
+                                </div>
+                                <div class="card-body ps-4 text-dark fs-5 border border-white text-start" style="background-color: #c5e6ef;">
+                                    <p>2</p>
+                                </div>
+                                <div class="card-body ps-4 text-dark fs-5 border border-white text-start" style="background-color: #c5e6ef;">
+                                    <p>3</p>
+                                </div>
+                                <div class="card-body ps-4 text-dark fs-5 border border-white text-start" style="background-color: #c5e6ef;">
+                                    <p>4</p>
+                                </div>
+                                <div class="card-body ps-4 text-dark fs-5 border border-white text-start" style="background-color: #c5e6ef;">
+                                    <p>5</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body p-1" style="background-color: #9bd4e4;">
+                                    <p class="fs-3 fw-bold text-dark">Price per Share</p>
+                                </div>
+                                <div class="card-body ps-4 text-dark fs-5 border border-white text-start" style="background-color: #c5e6ef;">
+                                    <p>$63.27</p>
+                                </div>
+                                <div class="card-body ps-4 text-dark fs-5 border border-white text-start" style="background-color: #c5e6ef;">
+                                    <p>$62.98</p>
+                                </div>
+                                <div class="card-body ps-4 text-dark fs-5 border border-white text-start" style="background-color: #c5e6ef;">
+                                    <p>$61.56</p>
+                                </div>
+                                <div class="card-body ps-4 text-dark fs-5 border border-white text-start" style="background-color: #c5e6ef;">
+                                    <p>$61.62</p>
+                                </div>
+                                <div class="card-body ps-4 text-dark fs-5 border border-white text-start" style="background-color: #c5e6ef;">
+                                    <p>$63.14</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="fs-4 section_sub_title mt-5">What was the change in stock value in dollars of all her stock from?</p>
+                        <div class="card-group mt-5">
+                            <div class="card">
+                                <div class="card-body ps-4 text-dark fs-5 border border-white text-start" style="background-color: #c5e6ef;">
+                                    <p>Day 2 to Day 3?</p>
+                                </div>
+                                <div class="card-body ps-4 text-dark fs-5 border border-white text-start" style="background-color: #c5e6ef;">
+                                    <p>Day 4 to Day 5?</p>
+                                </div>
+                                <div class="card-body ps-4 text-dark fs-5 border border-white text-start" style="background-color: #c5e6ef;">
+                                    <p>Day 1 to Day 5?</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body text-dark fs-5 border border-white text-start intr_two_list card-body-custom" style="background-color: #c5e6ef;">
+                                    <div class="intr_two_box">
+                                        <div class="row" style="background-color: #e1f2f7;">
+                                            <div class="col">
+                                                <div class="fs-5 intr_two_box_ans" data-ans="true">
+                                                    <span>A)</span> -1.42
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row" style="background-color: #ebf6fa;">
+                                            <div class="col">
+                                                <div class="fs-5 intr_two_box_ans" data-ans="">
+                                                    <span>B)</span> 1.42
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body text-dark fs-5 border border-white text-start intr_two_list card-body-custom" style="background-color: #c5e6ef;">
+                                    <div class="intr_two_box">
+                                        <div class="row" style="background-color: #e1f2f7;">
+                                            <div class="col">
+                                                <div class="fs-5 intr_two_box_ans" data-ans="">
+                                                    <span>A)</span> -1.52
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row" style="background-color: #ebf6fa;">
+                                            <div class="col">
+                                                <div class="fs-5 intr_two_box_ans" data-ans="true">
+                                                    <span>B)</span> 1.52
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body text-dark fs-5 border border-white text-start intr_two_list card-body-custom" style="background-color: #c5e6ef;">
+                                    <div class="intr_two_box">
+                                        <div class="row" style="background-color: #e1f2f7;">
+                                            <div class="col">
+                                                <div class="fs-5 intr_two_box_ans" data-ans="true">
+                                                    <span>A)</span> -0.13
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row" style="background-color: #ebf6fa;">
+                                            <div class="col">
+                                                <div class="fs-5 intr_two_box_ans" data-ans="">
+                                                    <span>B)</span> 0.13
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <style>
+                        .intr_11_title{
+                            background: #74d1eb;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        .intr_11_title button span{ 
+                            color: #a3a3a3;
+                            font-size: 5rem;
+                        }
+                        .intr_11_center{
+                            background: #aee3f1;
+                        }
+                        .intr_11_wrap_choice{
+                            cursor: pointer;
+                            background: #c5eaf4;
+                            position: relative;
+                        }
+                        .intr_11_choice{
+                            height: 100%;
+                        }
+                        .intr_11_choice::after{
+                            position: absolute;
+                            content: attr(data-text);
+                            color: #575757;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 100%;
+                            height: 100%;
+                            font-size: 1.5rem;
+                            font-weight: 500;
+                        }
+                        .practice-result-label{
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                        }
+                    </style>
+                    <div class="col-12 text-center p-5"  style="background-color: #e8f5f8;">
+                        <p class="fs-2 fw-bold text-uppercase section_title">Assignment 2</p>
+                        <p class="fs-4 fw-bold text-uppercase section_sub_title">Integers and Rationals</p>
+                        <p class="fs-4 section_sub_title">Multiplying/Dividing Integers <br />Assessment</p>
+                        <p class="fs-5 text-start text-dark">Match the correct answers by dragging the options from the right side to the questions of each situation.</p>
+                        <div class="row">
+                            <div class="col-3 border border-dark intr_11_title py-5">
+                                <p class="text-center text-dark fs-5 px-1">The value of a piece of art is depreciating at a rate of $250 per year.</p>
+                            </div>
+                            <div class="col-6 border border-dark intr_11_center">
+                                <div class="row" style="height: 100%;">
+                                    <div class="col-12 text-dark mt-4" style="border-bottom: solid 2px;">
+                                        A. How long will it take for the change in value to be $2000?
+                                    </div>
+                                    <div class="col-12 text-dark mt-4">
+                                        B. What is the price of a piece of art that originally cost $10500 after 10 years?
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 border border-dark">
+                                <div class="row" style="height: 100%;">
+                                    <div class="col-12 intr_11_wrap_choice" style="border-bottom: solid 2px black;">
+                                        <div id="p1_q1" class="swap_drop" data-isdrag="" draggable="true">
+                                            <div class="intr_11_choice" data-ans="310" data-text="-6"></div>
+                                            <span class="practice-result-label"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 intr_11_wrap_choice" style="padding: 0.6rem 0 1rem 0;">
+                                        <div id="p1_q2" class="swap_drop" data-isdrag="" draggable="true">
+                                            <div class="intr_11_choice" data-ans="-6" data-text="8"></div>
+                                            <span class="practice-result-label"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 border border-dark intr_11_title py-5">
+                                <p class="text-center text-dark fs-5 px-1">On a certain day, the temperature dropped at a rate of 2ºF per hour.</p>
+                            </div>
+                            <div class="col-6 border border-dark intr_11_center">
+                                <div class="row" style="height: 100%;">
+                                    <div class="col-12 text-dark mt-4" style="border-bottom: solid 2px;">
+                                        A. How long did it take for the change in temperature to be -14ºF?
+                                    </div>
+                                    <div class="col-12 text-dark mt-4">
+                                        B. If the original temperature was 4 degrees Fahrenheit, what is the temperature after 5 hours?
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 border border-dark">
+                                <div class="row" style="height: 100%;">
+                                    <div class="col-12 intr_11_wrap_choice" style="border-bottom: solid 2px black;">
+                                        <div id="p1_q3" class="swap_drop" data-isdrag="" draggable="true">
+                                            <div class="intr_11_choice" data-ans="8" data-text="8000"></div>
+                                            <span class="practice-result-label"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 intr_11_wrap_choice" style="padding: 0.6rem 0 1rem 0;">
+                                        <div id="p1_q4" class="swap_drop" data-isdrag="" draggable="true">
+                                            <div class="intr_11_choice" data-ans="2268" data-text="310"></div>
+                                            <span class="practice-result-label"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 border border-dark intr_11_title py-5">
+                                <p class="text-center text-dark fs-5 px-1">A group of hikers, starting at an elevation of 2578 feet above sea level, is descending a mountain at a rate of 378 feet per hour.</p>
+                            </div>
+                            <div class="col-6 border border-dark intr_11_center">
+                                <div class="row" style="height: 100%;">
+                                    <div class="col-12 text-dark mt-5" style="border-bottom: solid 2px;">
+                                        A. What is the change in the elevation of the hikers after 6 hours?
+                                    </div>
+                                    <div class="col-12 text-dark mt-5">
+                                        B. How far above sea level are they now?
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 border border-dark">
+                                <div class="row" style="height: 100%;">
+                                    <div class="col-12 intr_11_wrap_choice" style="border-bottom: solid 2px black;">
+                                        <div id="p1_q5" class="swap_drop" data-isdrag="" draggable="true">
+                                            <div class="intr_11_choice" data-ans="8000" data-text="7"></div>
+                                            <span class="practice-result-label"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 intr_11_wrap_choice">
+                                        <div id="p1_q6" class="swap_drop" data-isdrag="" draggable="true">
+                                            <div class="intr_11_choice" data-ans="7" data-text="2268"></div>
+                                            <span class="practice-result-label"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <table style="width: 710px; height: auto; margin-top: 1rem; margin-left: auto; margin-right: auto;" border="1" cellpadding="20">
+                <tbody>
+                <tr>
+                <td style="background-color: white; width: 710px; ">
+                <b><span style="font-family: arial,helvetica,sans-serif;">&nbsp;  Answer the following questions.</span> </b>
+                <p><a:question index="1" /></p> 
+                <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+                <p><a:question index="2" /></p>
+                <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+                <p><a:question index="3" /></p> 
+                <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+                <p><a:question index="4" /></p>
+                <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+                <p><a:question index="5" /></p>
+                <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+                <p><a:question index="6" /></p> 
+                <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+                <p><a:question index="7" /></p>
+                <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+                <p><a:question index="8" /></p> 
+                <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+                <p><a:question index="9" /></p>
+                <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+                <p><a:question index="10" /></p>
+                <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+                <p><a:question index="11" /></p> 
+                <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+                <p><a:question index="12" /></p>
+                <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+                <p><a:question index="13" /></p> 
+                <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+                <p><a:question index="14" /></p>
+                <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+                <p><a:question index="15" /></p>
+                <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+                <p><a:question index="16" /></p> 
+                <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+                <p><a:question index="17" /></p>
+                <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+                <p><a:question index="18" /></p> 
+                <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+                <p><a:question index="19" /></p>
+                <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+                <p><a:question index="20" /></p>
+                <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+                </td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </body>
+    <script> var audiolink = "https://m.fyioc.com/Spanish1/Lesson28/";</script>
+    <script src="https://m.fyioc.com/WhyNotScripts/js/VideoPlay.js"></script>
+    <script src="https://m.fyioc.com/WhyNotScripts/js/AudioPlay.js"></script>
+    <script src="https://m.fyioc.com/WhyNotScripts/js/interactive2.js"></script>
+    <script>
+
+        function intr_12_CheckInputs(parentId){
+            const inputs = document.getElementById(parentId).querySelectorAll("input");
+            inputs.forEach((elem) => {
+                let value = elem.value.toLowerCase();
+                let answer = elem.getAttribute('data-ans').toLowerCase();
+
+                elem.classList.remove("is-invalid")
+                elem.classList.remove("is-valid")
+
+                if(value == answer){
+                    elem.classList.add("is-valid")
+                }else{
+                    elem.classList.add("is-invalid")
+                }
+
+                let inputError = elem.getAttribute('data-error_counter');
+                if(!inputError){
+                        console.log("no")
+                    elem.setAttribute('data-error_counter', 1);
+                }else{
+                    if(inputError == 3){
+                        elem.placeholder = answer;
+                    }else{
+                        elem.setAttribute('data-error_counter', parseInt(inputError) + 1)
+                    }
+                }
+            })
+        }
+
+        // DRAG AND SWAP SCRIPT
+        const toDrag = document.querySelectorAll(".swap_drop")
+        const toDrop = document.querySelectorAll(".swap_drop")
+
+        toDrag.forEach((elem) => {
+            elem.addEventListener("dragstart", (event) => {
+                event.dataTransfer.setData("answer", elem.id)
+            })
+        })
+
+        toDrop.forEach((elem) => {
+            this.dragValidation(elem)
+        })
+
+        function dragValidation(elem) {
+            elem.addEventListener("dragover", (event) => {
+                event.preventDefault()
+            })
+            elem.addEventListener("drop", (event) => {
+                event.preventDefault()
+                const answer = event.dataTransfer.getData("answer")
+                const correctAnswer = event.currentTarget.getAttribute("data-ans")
+                const dataText = event.currentTarget.getAttribute("data-text")
+
+                let adj1 = event.currentTarget
+                let adj2 = document.getElementById(answer)
+
+                let getFromSwap = adj1.parentElement.querySelector('.intr_11_choice').getAttribute("data-text")
+                let getToSwap = adj2.parentElement.querySelector('.intr_11_choice').getAttribute("data-text")
+
+                adj1.parentElement.querySelector('.intr_11_choice').setAttribute("data-text", getToSwap);
+                adj2.parentElement.querySelector('.intr_11_choice').setAttribute("data-text", getFromSwap);
+
+                adj1.setAttribute("data-isdrag", "true");
+                adj2.setAttribute("data-isdrag", "true");
+
+                this.dragCheckMatch();
+            })
+        }
+
+        function dragCheckMatch(){
+            toDrag.forEach((elem) => {
+                if(elem.querySelector('.intr_11_choice').getAttribute("data-ans") == elem.querySelector('.intr_11_choice').getAttribute("data-text")){
+                    document.getElementById(elem.id).parentElement.querySelector('.practice-result-label').innerHTML = '<span class="material-icons fs-1">verified</span>';
+                    document.getElementById(elem.id).parentElement.querySelector('.practice-result-label').style.color = '#198754'
+                }else{
+                    if(elem.getAttribute("data-isdrag")){
+                        document.getElementById(elem.id).parentElement.querySelector('.practice-result-label').innerHTML = '<span class="material-icons fs-1">cancel</span>';
+                        document.getElementById(elem.id).parentElement.querySelector('.practice-result-label').style.color = '#dc3545'
+                    }
+                }
+            });
+        }
+    </script>
+</html>
