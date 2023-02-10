@@ -1,0 +1,1102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 1</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="media/interactive4.css" rel="stylesheet">
+  <script src="media/jquery-3.6.1.min.js"></script>
+  
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'montserrat', sans-serif;
+      background: linear-gradient(#e7b73e 0%, 20%, #dfe1e3 50%) no-repeat;
+      background-size: cover;
+      height: 100%;
+      font-size: 16px;
+      font-weight: 400;
+      color: #434343;
+    }
+
+    /* global */
+    .audio_playing button{
+      pointer-events: none;
+      opacity: 1;
+    }
+
+    .audio_playing button.playing{
+      pointer-events: visible!important;
+    }
+
+    #btnPause span,
+    #btnPlayTone span{
+      pointer-events: none;
+    }
+
+    .dash-bottom {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .font-arvo {
+      font-family: 'arvo', serif;
+    }
+
+    .fs-title {
+      font-size: 5.5rem;
+    }
+
+    .fs-title-2 {
+      font-size: 3.5rem;
+    }
+
+    .fw-500 {
+      font-weight: 500;
+    }
+
+    .text-brown {
+      color: #a17b56;
+    }
+
+    .text-brown-light {
+      color: #d2a274;
+    }
+
+    .bg-brown {
+      background: #d2a274;
+    }
+
+    .bg-black {
+      background: #000
+    }
+
+    .text-black {
+      color: #000
+    }
+
+    .section-one {
+      background: #dfe1e3;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .section-one .hero {
+      background: url(https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOST4nJAKPcKoMTqHY7viVlBwLv8qTycoKebBWGLsgGrhd9AWob9y2O08QTPqsIAJ3QM3vsRXtO_nw9-9N_eJQVycAAk=w1310-h912) no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .section-two-content {
+      background: url(media/h2.png) no-repeat;
+      background-position: center;
+      background-size: cover;
+      padding: 0;
+    }
+
+    .section-two-content h2 {
+      font-size: 3.3rem;
+      color: #000 !important;<td style="border: 1px dashed black; text-align: -webkit-center;">
+                <div style="width: 300px; height: 200px; background-color: white; display: flex; align-items: center; justify-content: center;">
+                    <h1 class="fs-1 text-black"><b>Heritage</b></h1>
+                  </div>
+            </td>
+    }
+
+    .play_list_text {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    .play_list_top button:focus{
+      outline: none;
+      box-shadow: none;
+    }
+
+    .play_list {
+      border-radius: 20px 6px 6px 6px;
+      padding-left: 2rem !important;
+    }
+
+    .play_list .material-icons-outlined {
+      font-size: 2rem;
+    }
+
+    .section-three-content {
+      background: white;
+    }
+
+    .section-three-content .play-now {
+      width: 260px;
+      border-radius: 0rem;
+      float: right;
+    }
+
+    .section-three-content .play-now span {
+      font-size: 4rem;
+    }
+
+    .section-four-content {
+      background: #ffe8be;
+      border-radius: 0rem;
+    }
+
+    .section-five-content {
+      background: #aea6ce;
+    }
+
+    .section-five-content .conjugation-table {
+      overflow: hidden;
+      border-radius: 0rem;
+    }
+
+    .section-five-content .conjugation-row:nth-child(odd) {
+      background: #fff;
+    }
+
+    .section-five-content .conjugation-row:nth-child(even) {
+      background: #f6ece3;
+    }
+
+    .section-seven-content {
+      background: #f6ece3;
+    }
+
+    .section-seven-content .pracice-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-flow: dense;
+      column-gap: 3rem;
+    }
+
+    .section-seven-content .pracice-1 .word {
+      width: 150px;
+    }
+
+    .section-seven-content .pracice-1 input {
+      max-width: 60%;
+    }
+    .section-seven-content .pracice-1 .number {
+      width: 30px;
+    }
+
+    .section-seven-content .pracice-1 .left {
+      grid-column: 1;
+    }
+
+    .section-seven-content .pracice-1 .right {
+      grid-column: 2;
+    }
+
+    .section-eight {
+      padding-bottom: 20rem;
+    }
+    .section-seven input{
+      border-radius: 50rem 0px 0px 50rem;
+    }
+    .section-seven button[data-qs_count]{
+      border-radius: 0px 50rem 50rem 0px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .section-seven button[data-qs_count].glow-on-hover-success{
+      background: #20c997!important;
+    }
+    .section-seven button[data-qs_count].glow-on-hover-wrong{
+      background: #ff5756!important;
+    }
+    span.error_mes {
+      font-size: 13px;
+      left: 185px;
+      top: -19px;
+    }
+  </style>
+
+</head>
+<body>
+<div class="lesson_16">
+  <section class="ps-3 pe-3 section-one" >
+    <div class="container shadow-lg hero">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-8 hero-text text-end d-flex flex-column justify-content-center p-5">
+          <div class="lesson-title font-arvo pt-2 pe-5">
+            <h1 class="fs-title lh-1 text-white" style="text-align: center;">Introduction to Geography</h1>
+          </div>
+          <div class="mt-3 lh-1 pb-5 px-5 goal text-white" style="text-align: start; margin-left: 150px; padding-right: 0rem!important; padding-top: 2rem;">
+            <p class="fs-4 d-flex flex-column pb-3">By the end of this lesson you should be able to:</span></p>
+            <p class="fs-5 d-flex flex-column pb-4 mb-0">&#9679;Explain what geography is</span></p>
+            <p class="fs-5 d-flex flex-column pb-4 mb-0">&#9679;Identify the five themes of geography</span></p>
+            <p class="fs-5 d-flex flex-column pb-4 mb-0">&#9679;List various tools geographers use</span></p>
+            <p class="fs-5 d-flex flex-column pb-4 mb-0">&#9679;Identify various map projections</span></p>
+            <p class="fs-5 d-flex flex-column pb-4 mb-0">&#9679;Identify the continents and major bodies of the world</span></p>
+          </div>
+          <div class="pb-5"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ps-3 pe-3 section-two">
+    <div class="container py-2 p-5 section-two-content">
+        <div class="col" style="line-height: 10px; margin-top: 50px; margin-left: 750px;">
+            <p class="fs-1 d-flex flex-column pb-5 mb-0 text-black"><b>LESSON KEYWORDS</b></h2>
+            <p class="fs-3 d-flex flex-column pb-5 mb-0 text-black">&#9679;Absolute location</span></p>
+            <p class="fs-3 d-flex flex-column pb-5 mb-0 text-black">&#9679;Map projection</span></p>
+            <p class="fs-3 d-flex flex-column pb-5 mb-0 text-black">&#9679;Map</span></p>
+            <p class="fs-3 d-flex flex-column pb-5 mb-0 text-black">&#9679;Relative location</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ps-3 pe-3 section-three" >
+    <div class="container section-three-content">
+      <div class="row">
+        <div class="fw-500 d-flex text-center flex-column justify-content-center align-items-center pt-3 position-relative lh-2">
+          <div class="lesson-title pt-2 pe-5">
+            <h1 class="fs-2 lh-1 text-black" ><b>What is Geography?</b></h1>
+          </div>
+          <div class="mt-4 lh-1 pb-5 px-5 goal text-black" style="text-align: start;">
+            <p class="fs-4 d-flex flex-column pb-5 mb-0" style="line-height: 2.3rem;">A limited definition of geography is that it is the study of places and 
+              involves coloring maps. In this course, you will discover that geography is more about the relationship of people to their environments.
+              In addition, geography includes the study of the "state of our world." The environment is a hot-button issue that we will discuss much 
+              more throughout this course.
+            </p></span></p>
+          </div>
+          <div class="lesson-title pt-2 pe-5">
+            <h1 class="fs-2 lh-1 text-black" ><b>The Five Themes of Geography</b></h1>
+          </div>
+          <div class="mt-4 lh-1 pb-5 px-5 goal text-black" style="text-align: start;">
+            <p class="fs-4 d-flex flex-column pb-4 mb-0" style="line-height: 2.3rem;">The Five Themes of Geography are used by geographers to help explain the geographic characteristics of an area. 
+              They are Movement, Region, Location, Interaction and Place. (keep the five themes in bold type)
+              <br> </br>
+              Sometimes it is helpful to use a mnemonic device as a quick way to recall a list of members of a set.
+              <br> </br>
+              Here, the expression "Mr. Lip" (keep in bold type) is a handy mnemonic to help remember these five themes. 
+              The first letters of each theme form this expression:
+            <p class="fs-4 d-flex flex-column pb-3 mb-0 text-black">&#9679;Movement</span></p>
+            <p class="fs-4 d-flex flex-column pb-3 mb-0 text-black">&#9679;Region</span></p>
+            <p class="fs-4 d-flex flex-column pb-3 mb-0 text-black">&#9679;Location</span></p>
+            <p class="fs-4 d-flex flex-column pb-3 mb-0 text-black">&#9679;Interaction</span></p>
+            <p class="fs-4 d-flex flex-column pb-3 mb-0 text-black">&#9679;Place</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ps-3 pe-3 section-four" >
+    <div class="container section-four-content">
+      <div class="row">
+        <div class="fw-500 d-flex text-center flex-column justify-content-center align-items-center pt-3 position-relative lh-2">
+          <div class="lesson-title pt-2 pe-5">
+            <h1 class="fs-2 lh-1 text-black" ><b>The Five Themes of Geography</b></h1>
+            <br/>
+            <h1 class="fs-4 lh-2 text-black"><b>Theme 1: Movement</b></h1>
+            <h1 class="fs-5 lh-1 text-black" style="font-weight: 300;"><b>How are People and Places Connected?</b></h1>
+          </div>
+          <div class="mt-4 lh-1 pb-5 px-5 goal text-black" style="text-align: start;">
+            <p class="fs-4 d-flex flex-column pb-5 mb-0" style="line-height: 2.3rem;">Human beings occupy places unevenly across the face of the earth. Some live on farms or in the 
+              country; others live in towns, villages, or cities. Yet these people interact with each other; that is, they travel from one place to another, they communicate with 
+              each other, and they rely upon products, information, and ideas that come from beyond their immediate environment. The most visible pieces of evidence of global 
+              interdependence and the interaction of places are the transportation and communication lines that link every part of the world. These demonstrate that most people 
+              interact with other places almost every day of their lives.
+            </p></span></p>
+          </div>
+
+          <div class="lesson-title pt-2 pe-5">
+            <br/>
+            <h1 class="fs-4 lh-2 text-black"><b>Theme 2: Regions</b></h1>
+            <h1 class="fs-5 lh-1 text-black" style="font-weight: 300;"><b>What Makes and Area Similar to or Different from Others?</b></h1>
+          </div>
+          <div class="mt-4 lh-1 pb-5 px-5 goal text-black" style="text-align: start;">
+            <p class="fs-4 d-flex flex-column pb-5 mb-0" style="line-height: 2.3rem;">The simplest measure of geographic study is the region, an area with unifying
+              characteristics. We are all familiar with regions showing the extent of their boundaries such as nations, states, countries, provinces, or cities; yet there are 
+              almost countless ways to define meaningful regions. Some are defined by one characteristic such as a
+              government, a language group, a land form type, religion or even food.
+            </p></span></p>
+          </div>
+
+          <div class="lesson-title pt-2 pe-5">
+            <br/>
+            <h1 class="fs-4 lh-2 text-black"><b>Theme 3: Location</b></h1>
+            <h1 class="fs-5 lh-1 text-black" style="font-weight: 300;"><b>Where are Various Regions in the World?</b></h1>
+          </div>
+          <div class="mt-4 lh-1 pb-5 px-5 goal text-black" style="text-align: start;">
+            <p class="fs-4 d-flex flex-column pb-0 mb-0" style="line-height: 2.3rem;">Position on the earth's surface – absolute location and relative location – 
+              are two ways of describing the positions of people and places on the earth’s surface.
+          </div>
+          
+          <div class="mt-4 lh-1 pb-5 px-5 goal text-black" style="text-align: start;">
+            <p class="fs-4 d-flex flex-column pb-0 mb-0 text-black">&#9679;ABSOLUTE LOCATION</span></p>
+            <p class="fs-4 d-flex flex-column pb-0 mb-0" style="line-height: 2.3rem;">Absolute location is the latitude and longitude coordinates of a specific place on the 
+              earth. If you know the latitude and longitude coordinates of a specific city, you can find it anywhere in the world. For example Miami, Florida has the coordinates of 25° 				
+              45' 42.12 N and 80° 11' 30.48 W. Or, in decimal degrees the location is +25.7617° and - 80.1918°.
+          </div>
+          
+          <div class="mt-4 lh-1 pb-5 px-5 goal text-black" style="text-align: start;">
+            <p class="fs-4 d-flex flex-column pb-0 mb-0 text-black" style="text-align: left;">&#9679;RELATIVE LOCATION</span></p>
+            <p class="fs-4 d-flex flex-column pb-0 mb-0" style="line-height: 2.3rem;">Relative location describes a place in relation to its geography and things around it. 
+              For example, Miami became a popular location for cruise lines due to it's prime access to the Caribbean islands.
+          </div>
+
+          <div class="lesson-title pt-2 pe-5">
+            <br/>
+            <h1 class="fs-4 lh-2 text-black"><b>Theme 4: Interaction</b></h1>
+            <h1 class="fs-5 lh-1 text-black" style="font-weight: 300;"><b>How Does Environment Affect Life in a Region</b></h1>
+          </div>
+          <div class="mt-4 lh-1 pb-5 px-5 goal text-black" style="text-align: start;">
+            <p class="fs-4 d-flex flex-column pb-0 mb-0" style="line-height: 2.3rem;">All places on the earth have advantages and disadvantages for human settlement. 
+              The main idea of this theme is the relationship between people and their natural
+              environments.
+            </p></span></p>
+          </div>
+          <div class="mt-4 lh-1 pb-5 px-5 goal text-black" style="text-align: start;">
+            <p class="fs-4 d-flex flex-column pb-0 mb-0" style="line-height: 2.3rem;">High population densities have developed on flood plains, for example, where people could 
+              take advantage of fertile soils, water resources, and opportunities for river
+              transportation.
+            </p></span></p>
+          </div>
+          <div class="mt-4 lh-1 pb-5 px-5 goal text-black" style="text-align: start;">
+            <p class="fs-4 d-flex flex-column pb-0 mb-0" style="line-height: 2.3rem;">On the other hand, population densities are usually low in deserts, 
+              where these natural resources are lacking.
+            </p></span></p>
+          </div>
+
+          <div class="lesson-title pt-2 pe-5">
+            <br/>
+            <h1 class="fs-4 lh-2 text-black"><b>Theme 5: Place</b></h1>
+            <h1 class="fs-5 lh-1 text-black" style="font-weight: 300;"><b>How Does Culture Affect Life in Specific Regions?</b></h1>
+          </div>
+          <div class="mt-4 lh-1 pb-5 px-5 goal text-black" style="text-align: start;">
+            <p class="fs-4 d-flex flex-column pb-0 mb-0" style="line-height: 2.3rem;">All places on the earth have distinctive characteristics that give them meaning and 
+              character and distinguish 
+              them from other places. Geographers generally describe places by their physical or human characteristics.
+            </p></span></p>
+          </div>
+          <div class="mt-4 lh-1 pb-5 px-5 goal text-black" style="text-align: start;">
+            <p class="fs-4 d-flex flex-column pb-0 mb-0" style="line-height: 2.3rem;">For example, Colorado can be described as a mountainous state, as it is replete with 
+              these physical features. Likewise, states such as Nebraska, 
+              Kansas and Wyoming can be described as the Plains States due to their flat landscapes.
+            </p></span></p>
+          </div>
+          <div class="mt-4 lh-1 pb-5 px-5 goal text-black" style="text-align: start;">
+            <p class="fs-4 d-flex flex-column pb-0 mb-0" style="line-height: 2.3rem;">Some parts of the U.S. are also identifiable from their populations, which may include 
+              various minority groups. For example, Texas is influenced by its 
+              large population of Mexican immigrants, and San Francisco is inhabited by many Asian immigrants.
+            </p></span></p>
+          </div>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ps-3 pe-3 section-four">
+    <div class="container p-5 section-four-content">
+      <div class="font-arvo fw-500 d-flex text-center flex-column justify-content-center align-items-center pt-2 position-relative lh-2" style="background: #fff;">
+        <h1 class="fs-2 text-black"><b>ACTIVITY 1</b></h1>
+        <h2 class="fs-3 text-black"><b>Drag the correct answer from the right to the concept:</b></h2>
+        <table style="border-collapse: collapse; border: 0;">
+            <tr>
+              <td style="text-align: left; width: 50%;">
+                <div class="col ps-5 intr_four_list_todrop" data-ans="Aerial photographs" id="right" style="padding: 20px;">
+                  <h1 class="fs-3 text-black">1. Aerial photographs
+                  </h1>
+                </div>
+              </td>
+              <td style="text-align: left;">
+                <div class="col pe-5 intr_four_list_todrag" id="Maps" draggable="true" style="padding-right: 0rem!important;">
+                  <!-- <div class="intr_four_list_left" data-title="Autobiography">
+                  </div> -->
+                  <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTiY5ZGfdIGO8TjLepD_XTll2zSbxEtUvF8r29L8k2TYYh9p2C7UwCN-Jq7eBNgCmS31DJ6lW6fb2TYcLC_wpL3-5qkgw=w1310-h912" style="width: 300px">
+                    <span class="intr_four_list_reslbl"></span>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="text-align: left;">
+                <div class="col ps-5 intr_four_list_todrop" data-ans="Compass" id="right" style="padding: 20px;">
+                  <h1 class="fs-3 text-black">2. Compass
+                  </h1>
+                </div>
+              </td>
+              <td style="text-align: left;">
+                <div class="col pe-5 intr_four_list_todrag" id="Graphs and statistics" draggable="true" style="padding-right: 0rem!important;">
+                  <!-- <div class="intr_four_list_left" data-title="Biography">
+                    </div> -->
+                  <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOQ03oWOLZ-IaIet_NOkP-2OZ52zvfbM8kUr03mYCRXsUmC2VHPKyBRE_x37GA8lFgcS0lswL0xsa9QpmPIu1JKxl4Cg1Q=w1310-h912" style="width: 300px">
+                    <span class="intr_four_list_reslbl"></span>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="text-align: left;">
+                <div class="col ps-5 intr_four_list_todrop" data-ans="Geographic information systems" id="right" style="padding: 20px;">
+                  <h1 class="fs-3 text-black">3. Geographic information systems
+                  </h1>
+                </div>
+              </td>
+              <td style="text-align: left;">
+                <div class="col pe-5 intr_four_list_todrag" id="Globes" draggable="true" style="padding-right: 0rem!important;">
+                  <!-- <div class="intr_four_list_left" data-title="Ethnicity">
+                    </div> -->
+                  <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEORUa2FPcn1F_D_ZbyT-Ov3F9Fw8Q229PJ2zfE8UVhKIGznuyb32oC5532ZQD5hPrYe5oqJXgZwiZj7BTWo2Q8Fx6UkE1w=w1310-h912" style="width: 300px">
+                    <span class="intr_four_list_reslbl"></span>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="text-align: left;">
+                <div class="col ps-5 intr_four_list_todrop" data-ans="Globes" id="right" style="padding: 20px;">
+                  <h1 class="fs-3 text-black">4. Globes
+                  </h1>
+                </div>
+              </td>
+              <td style="text-align: left;">
+                <div class="col pe-5 intr_four_list_todrag" id="Geographic information systems" draggable="true" style="padding-right: 0rem!important;">
+                  <!-- <div class="intr_four_list_left" data-title="Culture">
+                    </div> -->
+                  <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOS2kfWG1KiplWqZZmccS5qnBpopxIYP3TLXkhQwAARw6IbVRzdMDW2ORM1vXuR3TWAAl2-tGU9wHGGZ5Sk-qzOP65sleA=w1310-h912" style="width: 300px">
+                    <span class="intr_four_list_reslbl"></span>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="text-align: left;">
+                <div class="col ps-5 intr_four_list_todrop" data-ans="Graphs and statistics" id="right" style="padding: 20px;">
+                  <h1 class="fs-3 text-black">5. Graphs and statistics
+                  </h1>
+                </div>
+              </td>
+              <td style="text-align: left;">
+                <div class="col pe-5 intr_four_list_todrag" id="Compass" draggable="true" style="padding-right: 0rem!important;">
+                  <!-- <div class="intr_four_list_left" data-title="Heritage">
+                    </div> -->
+                  <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOQfILH4QXzVoVr1RVBiUx-zwnjGWC1ugcHZ--YX59u7jFRELmPaJ9HGpXRVVq853CB6Wk9I5-3qBW-GNf598GqqKGGR=w1310-h912" style="width: 300px">
+                    <span class="intr_four_list_reslbl"></span>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="text-align: left;">
+                <div class="col ps-5 intr_four_list_todrop" data-ans="Maps" id="right" style="padding: 20px;">
+                  <h1 class="fs-3 text-black">6. Maps
+                  </h1>
+                </div>
+              </td>
+              <td style="text-align: left;">
+                <div class="col pe-5 intr_four_list_todrag" id="Aerial photographs" draggable="true" style="padding-right: 0rem!important;">
+                  <!-- <div class="intr_four_list_left" data-title="Heritage">
+                    </div> -->
+                  <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEORshVHXBojrISaNdIlQVYevucvQTMowgUGoAiJOm_1U2W5igEd0RlLBQF6q15JxWpwsI96_50agCefJdw33qyqIyTb-=w1310-h912" style="width: 300px">
+                    <span class="intr_four_list_reslbl"></span>
+                </div>
+              </td>
+            </tr>
+          </table>
+    </div>
+    </div>
+  </section>
+
+  <section class="ps-3 pe-3 section-four" >
+    <div class="container section-four-content">
+      <div class="row">
+        <div class="fw-500 d-flex text-center flex-column justify-content-center align-items-center pt-3 position-relative lh-2">
+          <div class="lesson-title pt-2 pe-5">
+            <h1 class="fs-2 lh-1 text-black" ><b>Azimuthal Perspective Projections</b></h1>
+            <br/>
+          </div>
+          <div class="mt-4 lh-1 pb-0 px-5 goal text-black" style="text-align: start;">
+            <p class="fs-4 d-flex flex-column pb-5 mb-0" style="line-height: 2.3rem;">Some classic azimuthal projections are perspective projections and can be produced 
+              geometrically. They can be visualized as projection of points on the sphere to the plane by shining rays of light from a light source (or point of perspective). 
+              Three projections, namely gnomonic, stereographic and orthographic can be defined based on the
+              location of the perspective point or the light source
+            </p></span></p>
+          </div>
+
+          <div class="mt-4 lh-1 pb-0 px-5 goal text-black" style="text-align: start;">
+            <p class="fs-4 d-flex flex-column pb-5 mb-0" style="line-height: 2.3rem;"><b>Gnomonic Projection (also known as Central or Gnomic Projection):</b></br>
+              The point of perspective or the light source is located at the center of the globe in
+              gnomonic projections. Great circles are the shortest distance between two points on the surface of the sphere (known as great circle route). 
+              Gnomonic projections map all great circles as straight lines, and such property makes these projections suitable for use in navigation charts.
+            </p></span></p>
+          </div>
+
+          <div class="mt-4 lh-1 pb-0 px-5 goal text-black" style="text-align: start;">
+            <p class="fs-4 d-flex flex-column pb-5 mb-0" style="line-height: 2.3rem;"><b>Stereographic Projection:</b></br>
+              In stereographic projections, the perspective point is located on the surface of globe
+              directly opposite from the point of tangency of the plane. Points close to center point show great distortion on the map. Stereographic projection is a conformal projection, 
+              that is over small areas angles and therefore shapes are preserved. It is often used for mapping Polar Regions (with the source located at the opposite pole).
+            </p></span></p>
+          </div>
+
+          <div class="mt-4 lh-1 pb-0 px-5 goal text-black" style="text-align: start;">
+            <p class="fs-4 d-flex flex-column pb-5 mb-0" style="line-height: 2.3rem;"><b>Orthographic Projection:</b></br>
+              In orthographic projections, the point of perspective is at infinite distance on the
+              opposite direction from the point of tangency. The light rays travel as parallel lines. The resulting map from this projection looks like a globe 
+              (similar to seeing Earth from deep space). There is great distortion towards the borders of the map.
+            </p></span></p>
+          </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="lesson_80">
+    <style>
+        #fifth_section{}
+        #fifth_section h2{ font-size: 3rem; font-weight: 500; color: #222323; line-height: 1;}
+        #fifth_section p{ font-size: 1.5rem; font-weight: 500; }
+        .fifth_section_inner{}
+        .fifth_section_inner_wrap{}
+        .fifth_section_inner_wrap li{ padding: 0; background: none; border: none; border-radius: 0!important; padding-bottom: 1rem; padding-top: 1rem;}
+        .fifth_section_inner_wrap li:nth-child(odd){ background: #fff;}
+        .fifth_section_inner_wrap li:nth-child(even){ background: #fff;}
+        .fifth_section_inner_wrap_list{ padding-left: 7rem;}
+        .fifth_section_inner_wrap_list.left{ padding-left: 10rem; }
+        .fifth_section_inner_wrap_qs{ font-size: 1.2rem; font-weight: 500;}
+        .fifth_section_inner_wrap_ans{ display: flex; flex-direction: column; padding-left: 4rem;}
+        .fifth_section_inner_wrap_ans span.ans_list{ font-weight: 500; position: relative; font-size: 1.1rem; cursor: pointer;}
+        .fifth_section_inner_wrap_ans span.ans_list.correct{ color: var(--bs-success); font-weight: 600; }
+        .fifth_section_inner_wrap_ans span.ans_list.incorrect{ color: var(--bs-danger); text-decoration: line-through; font-weight: 600; }
+        .fifth_section_inner_wrap_ans span.ans_list:hover{ font-weight: 600;}
+        .fifth_section_inner_wrap_ans span.ans_list::before{ font-weight: 600; position: absolute; content: attr(data-letter); left: -38px;}
+    </style>
+    <section id="fifth_section" class="ps-3 pe-3 section-three">
+        <div class="container">
+            <div class="col-lg-10 col-12 offset-lg-1 pt-5 pb-5" style="background: #fff;">
+                <div class="col" style="line-height: 10px; text-align: center; padding: 50px;background-color: #fff;">
+                  <p class="fs-1 d-flex flex-column pb-5 mb-0 text-black"><b>ACTIVITY 2</b></h2>
+                      <p class="text-black" style="font-size: 30px;">The Five Themes of Geography</p>
+      
+                </div>
+
+                <div class="fifth_section_inner">
+                    <div class="fifth_section_inner_wrap">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="fifth_section_inner_wrap_list left">
+                                            <p style="font-size: 1.2rem;">Choose the correct answer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="fifth_section_inner_wrap_list left">
+                                            <div class="fifth_section_inner_wrap_qs">1. The main idea of this theme is the relationship between people and their natural
+                                              environments.</div>
+                                            <div class="fifth_section_inner_wrap_ans">
+                                                <span class="ans_list" data-letter="A." data-ans="">Place</span>
+                                                <span class="ans_list" data-letter="B." data-ans="B">Interaction</span>
+                                                <span class="ans_list" data-letter="C." data-ans="">Regions</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="list-group-item">
+                              <div class="row">
+                                  <div class="col">
+                                      <div class="fifth_section_inner_wrap_list left">
+                                          <div class="fifth_section_inner_wrap_qs">2. Geographers generally describe _______ by their physical or human characteristics.</div>
+                                          <div class="fifth_section_inner_wrap_ans">
+                                              <span class="ans_list" data-letter="A." data-ans="A">Place</span>
+                                              <span class="ans_list" data-letter="B." data-ans="">Location</span>
+                                              <span class="ans_list" data-letter="C." data-ans="">Regions</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+
+                          <li class="list-group-item">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="fifth_section_inner_wrap_list left">
+                                        <div class="fifth_section_inner_wrap_qs">3. Position on the earth's surface:</div>
+                                        <div class="fifth_section_inner_wrap_ans">
+                                            <span class="ans_list" data-letter="A." data-ans="">Place</span>
+                                            <span class="ans_list" data-letter="B." data-ans="">Movement</span>
+                                            <span class="ans_list" data-letter="C." data-ans="C">Regions</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item">
+                          <div class="row">
+                              <div class="col">
+                                  <div class="fifth_section_inner_wrap_list left">
+                                      <div class="fifth_section_inner_wrap_qs">4. Is the latitude and longitude coordinates of a specific place on the earth.</div>
+                                      <div class="fifth_section_inner_wrap_ans">
+                                          <span class="ans_list" data-letter="A." data-ans="">Relative location</span>
+                                          <span class="ans_list" data-letter="B." data-ans="">Location</span>
+                                          <span class="ans_list" data-letter="C." data-ans="C">Absolute location</span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+
+                      <li class="list-group-item">
+                        <div class="row">
+                            <div class="col">
+                                <div class="fifth_section_inner_wrap_list left">
+                                    <div class="fifth_section_inner_wrap_qs">5. The simplest measure of geographic study</div>
+                                    <div class="fifth_section_inner_wrap_ans">
+                                        <span class="ans_list" data-letter="A." data-ans="">Movement</span>
+                                        <span class="ans_list" data-letter="B." data-ans="">Region</span>
+                                        <span class="ans_list" data-letter="C." data-ans="C">Place</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+      <!-- Assessment Quiz -->
+  <div id="audio_holder"></div>
+  <div>
+    <audio id="play_now_audio" src="https://m.fyioc.com/Spanish1/Lesson16/L16A1 - Verbos en infinitivo.mp3"></audio>
+  </div>
+</div>
+
+<script>
+  const container16 = document.querySelector(".lesson_16")
+  const btnPlay16 = document.querySelectorAll("#btnPlayTone")
+  const btnPlayNow16 = document.querySelector("#play-now")
+
+  window.addEventListener("DOMContentLoaded", (event) => {
+    const pauseAudio16 = document.querySelector(".play_list_1 button[data-audio]");
+    //console.log(pauseAudio);
+    const audio_file16 = 'https://m.fyioc.com/Spanish1/Lesson16/' + pauseAudio16.getAttribute('data-audio') + '.mp3';
+    //console.log(audio_file);
+    audioLoad(audio_file16);
+  });
+
+  btnPlay16.forEach(function (item, index) {
+    item.addEventListener("click", (event) => {
+
+      // get the button id ( btnPause,  btnPlayTone)
+      const id = event.target.id;
+
+      // load audio file every click
+      const audio_file16 = 'https://m.fyioc.com/Spanish1/Lesson16/' + event.target.getAttribute('data-audio') + '.mp3';
+      audioLoad(audio_file16);
+
+      // get audio id
+      const audioPlay16 = document.getElementById("audioPlay");
+      //console.log(audioPlay);
+      // audio play
+      if (id === "btnPlayTone") {
+        event.target.classList.add("playing");
+        container16.classList.add("audio_playing");
+        audioPlay16.play();
+        item.innerHTML = '<span class="material-icons d-flex fs-2">pause</span>';
+
+        event.target.setAttribute("id", "btnPause");
+      }
+
+      // audio pause
+      if (id === "btnPause") {
+        event.target.classList.remove("playing");
+        audioPlay16.pause();
+        container16.classList.remove("audio_playing");
+        item.innerHTML = '<span class="material-icons d-flex fs-2">volume_up</span>';
+
+        event.target.setAttribute("id", "btnPlayTone");
+      }
+
+      // audio end
+      audioPlay16.onended = (event) => {
+        item.classList.remove("playing");
+        audioPlay16.pause()
+        container16.classList.remove("audio_playing");
+        item.innerHTML = '<span class="material-icons d-flex fs-2">volume_up</span>';
+      }
+    });
+  });
+
+  function audioLoad(audio_url) {
+    const audio_file16 = '<audio id="audioPlay" src="' + audio_url + '"></audio>';
+    document.getElementById("audio_holder").innerHTML = audio_file16;
+  }
+  
+  btnPlayNow16.addEventListener('click', function (event) {
+    let audioPlay16 = document.getElementById("play_now_audio");
+
+    if(audioPlay16.paused){
+      audioPlay16.play()
+      this.querySelector('span').innerHTML= 'pause'
+    } else {
+      audioPlay16.pause()
+      audioPlay16.currentTime = 0
+      this.querySelector('span').innerHTML = 'play_circle'
+    }
+  })
+
+  // New Validation Function
+  function checkInputs(){
+    const answerNumber = event.target.dataset.qs_count
+    const triesRemaining = event.target.dataset.error_counter
+    const selectorString = `quiz-2-answer${answerNumber}`
+    const selectorStringButton = `quiz-2-answer${answerNumber}btn`
+    const selectorStringAnswer = `answer-text${answerNumber}`
+    const quizTwoAnswer = document.getElementById(selectorString);
+    const quizTwoAnswerButton = document.getElementById(selectorStringButton)
+    const quizTwoAnswerText = document.getElementById(selectorStringAnswer)
+    const answer = quizTwoAnswer.getAttribute('data-ans')
+    const userAnswer = quizTwoAnswer.value.toLowerCase()
+    const correctAnswer = userAnswer === answer.toLowerCase() ? true : false
+    const backToGlow = (quizTwoAnswer, quizTwoAnswerButton) => {
+      quizTwoAnswerButton.classList.remove("glow-on-hover-success")
+      quizTwoAnswerButton.classList.remove("glow-on-hover-wrong")
+      quizTwoAnswerButton.classList.add('glow-on-hover')
+      quizTwoAnswerButton.innerText = 'Check'
+    }
+    if(correctAnswer){
+      quizTwoAnswer.classList.remove("is-invalid")
+      quizTwoAnswer.classList.add("is-valid")
+      quizTwoAnswerButton.innerText = 'Correct!'
+      quizTwoAnswerButton.classList.add("glow-on-hover-success")
+      quizTwoAnswerButton.classList.remove("glow-on-hover")
+      quizTwoAnswerButton.classList.remove('glow-on-hover-wrong')
+      quizTwoAnswerText.classList.remove('bg-danger')
+      quizTwoAnswerText.classList.add('bg-success')
+    } else {
+      quizTwoAnswerText.classList.remove('bg-success') 
+      quizTwoAnswerText.classList.add('bg-danger')
+      quizTwoAnswer.classList.remove("is-valid")
+      quizTwoAnswer.classList.add("is-invalid")
+      quizTwoAnswerButton.classList.remove("glow-on-hover-success")
+      quizTwoAnswerButton.classList.remove("glow-on-hover")
+      quizTwoAnswerButton.classList.add('glow-on-hover-wrong')
+      quizTwoAnswerButton.innerText = 'Wrong'
+      setTimeout(() => backToGlow(quizTwoAnswer,quizTwoAnswerButton), 1500);
+      let updateTries = ''
+      if(quizTwoAnswerButton.getAttribute('data-error_counter') == 0){
+        updateTries = 0;
+      } else {
+        updateTries = Number(triesRemaining) - 1;
+      }
+      document.getElementById(selectorStringButton).setAttribute('data-error_counter', updateTries)
+      if(quizTwoAnswerButton.getAttribute('data-error_counter') == 0 ){
+        quizTwoAnswerText.innerHTML = `Answer: ${quizTwoAnswer.getAttribute('data-ans')}`
+        quizTwoAnswerText.classList.remove('hidden')
+      }
+    }
+  }
+</script>
+<script>
+
+  // load first audio on the list as default
+  window.addEventListener("DOMContentLoaded", (event) => {
+      const pauseAudio80 = document.querySelector(".play_list_1 button");
+      //console.log(pauseAudio);
+      const audio_file80 = 'Https://m.fyioc.com/Spanish1/Lesson80/'+pauseAudio80.getAttribute('data-audio')+'.mp3';
+      //console.log(audio_file);
+      audioLoad(audio_file80);
+  });
+
+  const bodyContainer80 = document.querySelector(".lesson_80");
+  const btnPlay80 = bodyContainer80.querySelectorAll("button");
+  btnPlay80.forEach(function(item, index) {
+
+      item.addEventListener("click", (event) => {
+
+          // get the button id ( btnPause,  btnPlayTone)
+          const id = event.target.id;
+          
+          // load audio file every click
+          const audio_file80 = 'Https://m.fyioc.com/Spanish1/Lesson80/'+event.target.getAttribute('data-audio')+'.mp3';
+          audioLoad(audio_file80);
+
+          // get audio id
+          const audioPlay80 = document.getElementById("audioPlay");
+          //console.log(audioPlay);
+          // audio play
+
+          if(id === "btnPlayTone"){
+              event.target.classList.add("playing");
+              bodyContainer80.classList.add("audio_playing");
+              audioPlay80.play();
+              item.innerHTML = 'pause';
+              
+              event.target.setAttribute("id", "btnPause");
+          }
+
+          // audio pause
+          if(id === "btnPause"){
+              event.target.classList.remove("playing");
+              audioPlay80.pause();
+              bodyContainer80.classList.remove("audio_playing");
+
+              // check if the button class
+              if(event.target.classList.contains('play_button')){
+                  item.innerHTML = 'play_circle_outline'
+              } else {
+                  item.innerHTML = 'volume_up'
+              }
+
+              event.target.setAttribute("id", "btnPlayTone");
+          }
+      
+          // audio end
+          audioPlay.onended = (event) => {    
+              item.classList.remove("playing");
+              audioPlay80.pause()
+              bodyContainer80.classList.remove("audio_playing");
+              item.innerHTML = 'volume_up';
+          }
+      
+      });
+
+  });
+
+  // load audio
+  function audioLoad(audio_url){
+      const audio_file80 = '<audio id="audioPlay" src="'+audio_url+'"></audio>';
+      document.getElementById("audio_holder").innerHTML = audio_file80;
+  }
+  
+  //practice uno 
+
+  const practiceUno80 = document.querySelectorAll('.fifth_section_inner_wrap_ans span[data-letter]');
+
+  practiceUno80.forEach( practice => {
+      
+      practice.addEventListener("click", event => {
+
+          if(event.target.getAttribute("data-ans") != ""){
+              event.target.classList.toggle("correct")
+          }
+
+          if(event.target.getAttribute("data-ans") === ""){
+              event.target.classList.toggle("incorrect")
+          }
+
+      })
+
+  })
+
+  // practice dos
+
+  const practiceDos80 = document.querySelectorAll(".seven_section_inner input[data-input]");
+
+  practiceDos80.forEach( input => {
+
+      input.addEventListener("keyup", (event) => {
+
+          // console.log(event.target.value);
+
+          const inputValue80 = event.target.value
+          const dataValue80 = event.target.getAttribute('data-value')
+
+          if(inputValue80.toUpperCase() === dataValue80){
+              event.target.classList.remove('is-invalid');
+              event.target.classList.add('is-valid');
+          } else {
+              event.target.classList.remove('is-valid');
+              event.target.classList.add('is-invalid');
+          }
+
+          if(inputValue === ""){
+              event.target.classList.remove('is-valid');
+              event.target.classList.remove('is-invalid');
+          }
+
+      })
+
+  })
+   // practice 1 event click
+   const practice_uno_click = document.querySelectorAll(".forth_section_inner_list_ans_list .number");
+
+practice_uno_click.forEach( function(elem, index){
+
+elem.addEventListener("click",  function(event){
+
+  if(event.target.innerHTML == event.target.attributes[1].value && event.target.attributes[1].value != ""){
+      event.target.parentElement.classList.toggle('correct');
+  }
+
+  if(event.target.attributes[1].value == ""){
+      event.target.parentElement.classList.toggle('incorrect');
+  }
+});
+
+});
+let triesRemaining = {'quiz-2-answer1': 3, 'quiz-2-answer2': 3, 'quiz-2-answer3': 3, 'quiz-2-answer4': 3, 'quiz-2-answer5': 3, 'quiz-2-answer6': 3, 'quiz-2-answer7': 3, 'quiz-2-answer8': 3, 'quiz-2-answer9': 3, 'quiz-2-answer10': 3}
+
+
+function backToGlow(quizTwoAnswer, quizTwoAnswerButton){
+
+quizTwoAnswerButton.classList.remove("glow-on-hover-success")
+quizTwoAnswerButton.classList.remove("glow-on-hover-wrong")
+quizTwoAnswerButton.classList.add('glow-on-hover')
+quizTwoAnswerButton.innerText = 'Check'
+
+}
+
+// New Validation Function
+function checkDiphthong(answerNumber){
+const selectorString = "quiz-2-answer" + answerNumber
+const selectorStringButton = "quiz-2-answer" + answerNumber + "btn"
+const selectorStringAnswer = "answer-text" + answerNumber
+const quizTwoAnswer = document.getElementById(selectorString);
+const quizTwoAnswerButton = document.getElementById(selectorStringButton)
+const quizTwoAnswerText = document.getElementById(selectorStringAnswer)
+const answer = quizTwoAnswer.getAttribute('data-ans')
+const userAnswer = quizTwoAnswer.value.toLowerCase()
+const correctAnswer = userAnswer === answer ? true : false
+if(correctAnswer){
+quizTwoAnswer.classList.remove("is-invalid")
+quizTwoAnswer.classList.add("is-valid")
+quizTwoAnswerButton.innerText = 'Correct!'
+quizTwoAnswerButton.classList.add("glow-on-hover-success")
+quizTwoAnswerButton.classList.remove("glow-on-hover")
+quizTwoAnswerButton.classList.remove('glow-on-hover-wrong')
+}
+else{
+quizTwoAnswer.classList.remove("is-valid")
+quizTwoAnswer.classList.add("is-invalid")
+quizTwoAnswerButton.classList.remove("glow-on-hover-success")
+quizTwoAnswerButton.classList.remove("glow-on-hover")
+quizTwoAnswerButton.classList.add('glow-on-hover-wrong')
+quizTwoAnswerButton.innerText = 'Wrong'
+setTimeout(() => backToGlow(quizTwoAnswer,quizTwoAnswerButton), 1500);
+triesRemaining[selectorString] -= 1
+console.log("TRIESREMANSNUM",triesRemaining[selectorString])
+if(triesRemaining[selectorString] <= 0 ){
+quizTwoAnswerText.classList.remove('hidden')
+}
+console.log("triesremaining", triesRemaining)
+}
+}
+
+// Quiz 1
+const quizOneAnswer = container2.querySelectorAll(".quiz-1-answer");
+
+quizOneAnswer.forEach(function(elem, index){
+elem.addEventListener("keyup", function(){
+const answer = this.getAttribute('data-ans')
+
+if(answer === this.value) {
+  elem.classList.remove("is-invalid")
+  elem.classList.add("is-valid")
+} else {
+  elem.classList.remove("is-valid")
+  elem.classList.add("is-invalid")
+}
+if(elem.value == "") {
+  elem.classList.remove("is-invalid")
+  elem.classList.remove("is-valid")
+}
+})
+})
+// drag and drop
+
+const containerInput4 = document.querySelector("#forth_section_inner");
+console.log(containerInput4);
+const inputList4 = containerInput4.querySelectorAll("#inputDrop");
+const textList4 = containerInput4.querySelectorAll("strong");
+
+var dragged;
+
+textList4.forEach(function(elem, index){
+  elem.addEventListener("dragstart", function(event){
+      dragged = event.target;
+  }, false);
+
+  elem.addEventListener("dragend", function(event){
+
+  }, false);
+});
+
+inputList4.forEach(function(elem, index){
+
+  elem.addEventListener('dragover', function(e){
+      event.preventDefault();
+  }, false)
+
+  elem.addEventListener('drop', function(event){
+
+      event.target.value = dragged.innerHTML;
+
+      if(event.target.getAttribute("data-ans") == dragged.innerHTML){
+          event.target.classList.remove('is-invalid');
+          event.target.classList.add('is-valid');
+      } else {
+          event.target.classList.remove('is-valid');
+          event.target.classList.add('is-invalid');
+      }
+
+  }, false)
+
+});
+
+const practiceOneChoiceContainer06 = document.querySelectorAll(".practice-1-choice-container")
+practiceOneChoiceContainer06.forEach((elem) => {
+elem.addEventListener("dragover", (event) => {
+event.preventDefault()
+})
+
+elem.addEventListener("drop", (event) => {
+event.preventDefault()
+const src06 = document.getElementById(event.dataTransfer.getData("src"))
+const srcParent06 = src06.parentNode
+const tgt06 = event.currentTarget.firstElementChild
+
+event.currentTarget.replaceChild(src06, tgt06)
+srcParent06.appendChild(tgt06)
+
+document.querySelector('.practice-1-result').classList.add('d-flex')
+
+const correctAnswers06 = ["yo", "usted", "el", "ella", "ellos", "nosotros", "vosotros", "ustedes"].toString()
+const currentAnswerOrder06 = [].slice.call(document.querySelectorAll('.practice-1-choice')).map((elem) => elem.id).toString()
+
+check(correctAnswers06, currentAnswerOrder06, '.practice-1-result')
+
+})
+
+elem.querySelector('.practice-1-choice').addEventListener("dragstart", (event) => {
+event.dataTransfer.setData("src", event.target.id)
+})
+})
+</script>
+</body>
+<script src="media/interactive4.js"></script>
+</html>

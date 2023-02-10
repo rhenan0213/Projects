@@ -1,0 +1,912 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 4</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="../InteractiveResources/css/interactive4.css" rel="stylesheet">
+  <script src="../InteractiveResources/js/jquery-3.6.1.min.js"></script>
+  
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'montserrat', sans-serif;
+      background: linear-gradient(#c6d6e6 0%, 20%, #c6d6e6 50%) no-repeat;
+      background-size: cover;
+      height: 100%;
+      font-size: 16px;
+      font-weight: 400;
+      color: #434343;
+    }
+
+    /* global */
+    .audio_playing button{
+      pointer-events: none;
+      opacity: 1;
+    }
+
+    .audio_playing button.playing{
+      pointer-events: visible!important;
+    }
+
+    #btnPause span,
+    #btnPlayTone span{
+      pointer-events: none;
+    }
+
+    .dash-bottom {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .font-arvo {
+      font-family: 'arvo', serif;
+    }
+
+    .fs-title {
+      font-size: 5.5rem;
+    }
+
+    .fs-title-2 {
+      font-size: 3.5rem;
+    }
+
+    .fw-500 {
+      font-weight: 500;
+    }
+
+    .text-brown {
+      color: #a17b56;
+    }
+
+    .text-brown-light {
+      color: #d2a274;
+    }
+
+    .bg-brown {
+      background: #d2a274;
+    }
+
+    .bg-black {
+      background: #000
+    }
+
+    .text-black {
+      color: #000
+    }
+
+    .section-one {
+      background: #9591ca;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .section-one .hero {
+      background: url(https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOSNou9O8X-vUaRwC7s1jWg9a789z22AbnCXobpiEt62NUXU1XqH4zZ4aMBMHP4bBIm-pqanQlc-4D1b6bL1FYGyP8sVFw=w1310-h912) no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .section-two-content {
+      background: url(mhttps://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOR9g0rrN0EQOxLSZW-E57EfY4BWHSGGirrx6sFCTdxGIXcnAs6_8NjlsVhqCJlowMV4wPC-hXRCWespX4alk8jnPQqugQ=w1310-h912) no-repeat;
+      background-position: center;
+      background-size: cover;
+      padding: 0;
+    }
+
+    .section-two-content h2 {
+      font-size: 3.3rem;
+      color: #000 !important;<td style="border: 1px dashed black; text-align: -webkit-center;">
+                <div style="width: 300px; height: 200px; background-color: white; display: flex; align-items: center; justify-content: center;">
+                    <h1 class="fs-1 text-black"><b>Heritage</b></h1>
+                  </div>
+            </td>
+    }
+
+    .play_list_text {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    .play_list_top button:focus{
+      outline: none;
+      box-shadow: none;
+    }
+
+    .play_list {
+      border-radius: 20px 6px 6px 6px;
+      padding-left: 2rem !important;
+    }
+
+    .play_list .material-icons-outlined {
+      font-size: 2rem;
+    }
+
+    .section-three-content {
+      background: url(media/image2.png) no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .section-three-content .play-now {
+      width: 260px;
+      border-radius: 1rem;
+      float: right;
+    }
+
+    .section-three-content .play-now span {
+      font-size: 4rem;
+    }
+
+    .section-four-content {
+      background: #d2d4d1;
+      border-radius: 1rem;
+    }
+
+    .section-five-content {
+      background: #aea6ce;
+    }
+
+    .section-five-content .conjugation-table {
+      overflow: hidden;
+      border-radius: 1rem;
+    }
+
+    .section-five-content .conjugation-row:nth-child(odd) {
+      background: #fff;
+    }
+
+    .section-five-content .conjugation-row:nth-child(even) {
+      background: #f6ece3;
+    }
+
+    .section-seven-content {
+      background: #f6ece3;
+    }
+
+    .section-seven-content .pracice-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-flow: dense;
+      column-gap: 3rem;
+    }
+
+    .section-seven-content .pracice-1 .word {
+      width: 150px;
+    }
+
+    .section-seven-content .pracice-1 input {
+      max-width: 60%;
+    }
+    .section-seven-content .pracice-1 .number {
+      width: 30px;
+    }
+
+    .section-seven-content .pracice-1 .left {
+      grid-column: 1;
+    }
+
+    .section-seven-content .pracice-1 .right {
+      grid-column: 2;
+    }
+
+    .section-eight {
+      padding-bottom: 20rem;
+    }
+    .section-seven input{
+      border-radius: 50rem 0px 0px 50rem;
+    }
+    .section-seven button[data-qs_count]{
+      border-radius: 0px 50rem 50rem 0px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .section-seven button[data-qs_count].glow-on-hover-success{
+      background: #20c997!important;
+    }
+    .section-seven button[data-qs_count].glow-on-hover-wrong{
+      background: #ff5756!important;
+    }
+    span.error_mes {
+      font-size: 13px;
+      left: 185px;
+      top: -19px;
+    }
+  </style>
+
+</head>
+<body>
+<div class="lesson_16">
+  <section class="ps-3 pe-3 section-one" >
+    <div class="container shadow-lg hero">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-8 hero-text text-end d-flex flex-column justify-content-center p-5" style="height: 700px">
+          <div class="lesson-title font-arvo pt-2 pe-5">
+            <h1 class="fs-title fw-bold lh-4 text-white">ENGLISH</h1>
+            <h3 class="fs-1 fw-bold lh-1 text-white">VOCABULARY</h3>
+            <p class="fs-2 d-flex flex-column pb-3 text-white">Mango Street, Part 3</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ps-3 pe-3 section-three" >
+    <div class="container section-three-content">
+      <div class="row">
+        <div class="col-md-8 hero-text text-end d-flex flex-column justify-content-center p-5">
+          <div class="mt-3 lh-1 pb-5 px-5 goal text-black" style="text-align: start;">
+            <h1 class="fs-1 lh-1 text-black"><b>The House on Mango Street</b></h1>
+            <p class="fs-3 lh-2 d-flex flex-column pb-5 mb-0">written by Sandra Cisneros</p>
+            <p class="fs-3 d-flex flex-column pb-5 mb-0">Here is the vocabulary list for this unit's
+                vocabulary study. Read each word and its definition. Also, be sure to practice and use 
+                these words in your everyday written and oral language. It's the best way to learn new vocabulary, 
+                especially in preparation for the SAT.
+            </p></span></p>
+          </div>
+          <div class="pb-5"></div>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ps-3 pe-3 section-four">
+    <div class="container p-5 bg-white section-four-content">
+        <div class="font-arvo fw-500 d-flex text-center flex-column justify-content-center align-items-center pt-3 position-relative lh-2">
+            <h1 class="fs-2 text-black">
+                <b>House on Mango Street</b>
+            </h1>
+
+            <p class="fs-3 lh-2 d-flex flex-column pb-5 mb-0 text-black"><b>Part 1 Vocabulary</b></p>
+
+            <div style="background-color: #abe8ff; display: flex; padding: 5rem;">
+                <div style="flex: 1;">
+                  <video src="video.mp4" controls style="width: 100%; height: 100%;"></video>
+                </div>
+                <div style="flex: 1; padding: 10px; text-align: start;">
+                  <h1 class="fs-1 lh-1 fw-bold text-black">Pillar</h1>
+                  <p class="fs-4 d-flex flex-column text-black">(n) A vertical column; a usually ornamental column or shaft, 
+                    one standing alone for a monument; mainstay of an organization; a fundamental principle; a solid mass of coal, 
+                    rock, or ore left standing to support a mine roof.</p>
+                </div>
+              </div>
+
+              <div style="background-color: white; display: flex; padding: 5rem;">
+                <div style="flex: 1; padding: 10px; text-align: start;">
+                    <h1 class="fs-1 lh-1 fw-bold text-black">Brazer</h1>
+                    <p class="fs-4 d-flex flex-column text-black">(n) The tool used to solder metals with a
+                      nonferrous alloy having a lower melting point than the metal being joined.</p>
+                </div>
+                <div style="flex: 1;">
+                  <video src="video.mp4" controls style="width: 100%; height: 100%;"></video>
+                </div>
+              </div>
+
+              <div style="background-color: #abe8ff; display: flex; padding: 5rem;">
+                <div style="flex: 1;">
+                  <video src="video.mp4" controls style="width: 100%; height: 100%;"></video>
+                </div>
+                <div style="flex: 1; padding: 10px; text-align: start;">
+                  <h1 class="fs-1 lh-1 fw-bold text-black">Ferocious</h1>
+                  <p class="fs-4 d-flex flex-column text-black">(adj) Fierce or savage; extremely intense.</p>
+                </div>
+              </div>
+
+              <div style="background-color: white; display: flex; padding: 5rem;">
+                <div style="flex: 1; padding: 10px; text-align: start;">
+                    <h1 class="fs-1 lh-1 fw-bold text-black">Hollyhocks</h1>
+                    <p class="fs-4 d-flex flex-column text-black">(n) A tall widely grown biennial or perennial herb of the mallow 
+                        family that has big, rough, round leaves and tall spikes of flashy flowers; probably of Asian origin.</p>
+                </div>
+                <div style="flex: 1;">
+                  <video src="video.mp4" controls style="width: 100%; height: 100%;"></video>
+                </div>
+              </div>
+
+              <div style="background-color: #abe8ff; display: flex; padding: 5rem;">
+                <div style="flex: 1;">
+                  <video src="video.mp4" controls style="width: 100%; height: 100%;"></video>
+                </div>
+                <div style="flex: 1; padding: 10px; text-align: start;">
+                  <h1 class="fs-1 lh-1 fw-bold text-black">Comadres</h1>
+                  <p class="fs-4 d-flex flex-column text-black">(n) From the Spanish language. Godmother of one's child; 
+                    mother of one's godchild; a neighbor, a female friend.</p>
+                </div>
+              </div>
+
+              <div style="background-color: white; display: flex; padding: 5rem;">
+                <div style="flex: 1; padding: 10px; text-align: start;">
+                    <h1 class="fs-1 lh-1 fw-bold text-black">Twangy</h1>
+                    <p class="fs-4 d-flex flex-column text-black">(adj) Callous quick ringing sounds like that of a plucked banjo string; 
+                        nasal speech or resonance; describing the typical speech of a region, locality, or group of people.</p>
+                </div>
+                <div style="flex: 1;">
+                  <video src="video.mp4" controls style="width: 100%; height: 100%;"></video>
+                </div>
+              </div>
+
+              <div style="background-color: #abe8ff; display: flex; padding: 5rem;">
+                <div style="flex: 1;">
+                  <video src="video.mp4" controls style="width: 100%; height: 100%;"></video>
+                </div>
+                <div style="flex: 1; padding: 10px; text-align: start;">
+                  <h1 class="fs-1 lh-1 fw-bold text-black">Hibiscus</h1>
+                  <p class="fs-4 d-flex flex-column text-black">(n) Any of a large genus (Hibiscus) of herbs, shrubs, or small trees of the mallow 
+                    family with large, showy flowers and often dentate leaves.</p>
+                </div>
+              </div>
+
+              <div style="background-color: white; display: flex; padding: 5rem;">
+                <div style="flex: 1; padding: 10px; text-align: start;">
+                    <h1 class="fs-1 lh-1 fw-bold text-black">Jaundiced</h1>
+                    <p class="fs-4 d-flex flex-column text-black">(adj) Prejudiced; hostile; cynical; having a medical condition in which there is yellow skin.</p>
+                </div>
+                <div style="flex: 1;">
+                  <video src="video.mp4" controls style="width: 100%; height: 100%;"></video>
+                </div>
+              </div>
+
+              <div style="background-color: #abe8ff; display: flex; padding: 5rem;">
+                <div style="flex: 1;">
+                  <video src="video.mp4" controls style="width: 100%; height: 100%;"></video>
+                </div>
+                <div style="flex: 1; padding: 10px; text-align: start;">
+                  <h1 class="fs-1 lh-1 fw-bold text-black">Meticulous</h1>
+                  <p class="fs-4 d-flex flex-column text-black">(adj) Extremely, oftentimes excessively,
+                    careful about little details; precise.</p>
+                </div>
+              </div>
+
+              <div style="background-color: white; display: flex; padding: 5rem;">
+                <div style="flex: 1; padding: 10px; text-align: start;">
+                    <h1 class="fs-1 lh-1 fw-bold text-black">Heresy</h1>
+                    <p class="fs-4 d-flex flex-column text-black">(n) The crime of holding a belief that 
+                        contradicts established doctrine.</p>
+                </div>
+                <div style="flex: 1;">
+                  <video src="video.mp4" controls style="width: 100%; height: 100%;"></video>
+                </div>
+              </div>
+        </div>
+    </div>
+  </section>
+
+  <div class="lesson_80">
+    <style>
+        #fifth_section{}
+        #fifth_section h2{ font-size: 3rem; font-weight: 500; color: #222323; line-height: 1;}
+        #fifth_section p{ font-size: 1.5rem; font-weight: 500; }
+        .fifth_section_inner{}
+        .fifth_section_inner_wrap{}
+        .fifth_section_inner_wrap li{ padding: 0; background: none; border: none; border-radius: 0!important; padding-bottom: 1rem; padding-top: 1rem;}
+        .fifth_section_inner_wrap li:nth-child(odd){ background: #fff;}
+        .fifth_section_inner_wrap li:nth-child(even){ background: #fff;}
+        .fifth_section_inner_wrap_list{ padding-left: 7rem;}
+        .fifth_section_inner_wrap_list.left{ padding-left: 10rem; }
+        .fifth_section_inner_wrap_qs{ font-size: 1.2rem; font-weight: 500;}
+        .fifth_section_inner_wrap_ans{ display: flex; flex-direction: column; padding-left: 4rem;}
+        .fifth_section_inner_wrap_ans span.ans_list{ font-weight: 500; position: relative; font-size: 1.1rem; cursor: pointer;}
+        .fifth_section_inner_wrap_ans span.ans_list.correct{ color: var(--bs-success); font-weight: 600; }
+        .fifth_section_inner_wrap_ans span.ans_list.incorrect{ color: var(--bs-danger); text-decoration: line-through; font-weight: 600; }
+        .fifth_section_inner_wrap_ans span.ans_list:hover{ font-weight: 600;}
+        .fifth_section_inner_wrap_ans span.ans_list::before{ font-weight: 600; position: absolute; content: attr(data-letter); left: -38px;}
+    </style>
+    <section id="fifth_section" class="ps-3 pe-3 section-three">
+        <div class="container">
+            <div class="col-lg-10 col-12 offset-lg-1 pt-5 pb-5" style="background: #fff;">
+                <div class="col" style="line-height: 10px; text-align: center; padding: 50px;background-color: #008ac8;">
+                  <p class="fs-1 d-flex flex-column pb-5 mb-0 text-white"><b>ASSIGNMENTS</b></h2>
+      
+                </div>
+
+                <div class="fifth_section_inner">
+                    <div class="fifth_section_inner_wrap">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="fifth_section_inner_wrap_list left">
+                                            <div class="fifth_section_inner_wrap_qs">1. The _________ of the porch provided shade for the occupants of the house on hot summer days.</div>
+                                            <div class="fifth_section_inner_wrap_ans">
+                                                <span class="ans_list" data-letter="A." data-ans="">Pillars</span>
+                                                <span class="ans_list" data-letter="B." data-ans="B">Brazer</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="list-group-item">
+                              <div class="row">
+                                  <div class="col">
+                                      <div class="fifth_section_inner_wrap_list left">
+                                          <div class="fifth_section_inner_wrap_qs">2. The __________ fire burned through the forest, destroying everything in its path.</div>
+                                          <div class="fifth_section_inner_wrap_ans">
+                                              <span class="ans_list" data-letter="A." data-ans="A">Ferocious</span>
+                                              <span class="ans_list" data-letter="B." data-ans="">Hollyhocks</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+
+                          <li class="list-group-item">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="fifth_section_inner_wrap_list left">
+                                        <div class="fifth_section_inner_wrap_qs">3. The _________ were always there for each other, no matter what.</div>
+                                        <div class="fifth_section_inner_wrap_ans">
+                                            <span class="ans_list" data-letter="A." data-ans="">Comadres</span>
+                                            <span class="ans_list" data-letter="B." data-ans="B">Twangy</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item">
+                          <div class="row">
+                              <div class="col">
+                                  <div class="fifth_section_inner_wrap_list left">
+                                      <div class="fifth_section_inner_wrap_qs">4. The ________ flowers were used to make a refreshing drink that was popular in the region.</div>
+                                      <div class="fifth_section_inner_wrap_ans">
+                                          <span class="ans_list" data-letter="A." data-ans="">Hibiscus</span>
+                                          <span class="ans_list" data-letter="B." data-ans="B">Jaundiced</span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+
+                      <li class="list-group-item">
+                        <div class="row">
+                            <div class="col">
+                                <div class="fifth_section_inner_wrap_list left">
+                                    <div class="fifth_section_inner_wrap_qs">5. The ______________ housekeeper cleaned every corner of the house, leaving no dust behind.</div>
+                                    <div class="fifth_section_inner_wrap_ans">
+                                        <span class="ans_list" data-letter="A." data-ans="A">Meticulous</span>
+                                        <span class="ans_list" data-letter="B." data-ans="">Heresy</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- Assessment Quiz -->
+  <div id="audio_holder"></div>
+  <div>
+    <audio id="play_now_audio" src="https://m.fyioc.com/Spanish1/Lesson16/L16A1 - Verbos en infinitivo.mp3"></audio>
+  </div>
+</div>
+
+<script>
+    const container16 = document.querySelector(".lesson_16")
+    const btnPlay16 = document.querySelectorAll("#btnPlayTone")
+    const btnPlayNow16 = document.querySelector("#play-now")
+  
+    window.addEventListener("DOMContentLoaded", (event) => {
+      const pauseAudio16 = document.querySelector(".play_list_1 button[data-audio]");
+      //console.log(pauseAudio);
+      const audio_file16 = 'https://m.fyioc.com/Spanish1/Lesson16/' + pauseAudio16.getAttribute('data-audio') + '.mp3';
+      //console.log(audio_file);
+      audioLoad(audio_file16);
+    });
+  
+    btnPlay16.forEach(function (item, index) {
+      item.addEventListener("click", (event) => {
+  
+        // get the button id ( btnPause,  btnPlayTone)
+        const id = event.target.id;
+  
+        // load audio file every click
+        const audio_file16 = 'https://m.fyioc.com/Spanish1/Lesson16/' + event.target.getAttribute('data-audio') + '.mp3';
+        audioLoad(audio_file16);
+  
+        // get audio id
+        const audioPlay16 = document.getElementById("audioPlay");
+        //console.log(audioPlay);
+        // audio play
+        if (id === "btnPlayTone") {
+          event.target.classList.add("playing");
+          container16.classList.add("audio_playing");
+          audioPlay16.play();
+          item.innerHTML = '<span class="material-icons d-flex fs-2">pause</span>';
+  
+          event.target.setAttribute("id", "btnPause");
+        }
+  
+        // audio pause
+        if (id === "btnPause") {
+          event.target.classList.remove("playing");
+          audioPlay16.pause();
+          container16.classList.remove("audio_playing");
+          item.innerHTML = '<span class="material-icons d-flex fs-2">volume_up</span>';
+  
+          event.target.setAttribute("id", "btnPlayTone");
+        }
+  
+        // audio end
+        audioPlay16.onended = (event) => {
+          item.classList.remove("playing");
+          audioPlay16.pause()
+          container16.classList.remove("audio_playing");
+          item.innerHTML = '<span class="material-icons d-flex fs-2">volume_up</span>';
+        }
+      });
+    });
+  
+    function audioLoad(audio_url) {
+      const audio_file16 = '<audio id="audioPlay" src="' + audio_url + '"></audio>';
+      document.getElementById("audio_holder").innerHTML = audio_file16;
+    }
+    
+    btnPlayNow16.addEventListener('click', function (event) {
+      let audioPlay16 = document.getElementById("play_now_audio");
+  
+      if(audioPlay16.paused){
+        audioPlay16.play()
+        this.querySelector('span').innerHTML= 'pause'
+      } else {
+        audioPlay16.pause()
+        audioPlay16.currentTime = 0
+        this.querySelector('span').innerHTML = 'play_circle'
+      }
+    })
+  
+    // New Validation Function
+    function checkInputs(){
+      const answerNumber = event.target.dataset.qs_count
+      const triesRemaining = event.target.dataset.error_counter
+      const selectorString = `quiz-2-answer${answerNumber}`
+      const selectorStringButton = `quiz-2-answer${answerNumber}btn`
+      const selectorStringAnswer = `answer-text${answerNumber}`
+      const quizTwoAnswer = document.getElementById(selectorString);
+      const quizTwoAnswerButton = document.getElementById(selectorStringButton)
+      const quizTwoAnswerText = document.getElementById(selectorStringAnswer)
+      const answer = quizTwoAnswer.getAttribute('data-ans')
+      const userAnswer = quizTwoAnswer.value.toLowerCase()
+      const correctAnswer = userAnswer === answer.toLowerCase() ? true : false
+      const backToGlow = (quizTwoAnswer, quizTwoAnswerButton) => {
+        quizTwoAnswerButton.classList.remove("glow-on-hover-success")
+        quizTwoAnswerButton.classList.remove("glow-on-hover-wrong")
+        quizTwoAnswerButton.classList.add('glow-on-hover')
+        quizTwoAnswerButton.innerText = 'Check'
+      }
+      if(correctAnswer){
+        quizTwoAnswer.classList.remove("is-invalid")
+        quizTwoAnswer.classList.add("is-valid")
+        quizTwoAnswerButton.innerText = 'Correct!'
+        quizTwoAnswerButton.classList.add("glow-on-hover-success")
+        quizTwoAnswerButton.classList.remove("glow-on-hover")
+        quizTwoAnswerButton.classList.remove('glow-on-hover-wrong')
+        quizTwoAnswerText.classList.remove('bg-danger')
+        quizTwoAnswerText.classList.add('bg-success')
+      } else {
+        quizTwoAnswerText.classList.remove('bg-success') 
+        quizTwoAnswerText.classList.add('bg-danger')
+        quizTwoAnswer.classList.remove("is-valid")
+        quizTwoAnswer.classList.add("is-invalid")
+        quizTwoAnswerButton.classList.remove("glow-on-hover-success")
+        quizTwoAnswerButton.classList.remove("glow-on-hover")
+        quizTwoAnswerButton.classList.add('glow-on-hover-wrong')
+        quizTwoAnswerButton.innerText = 'Wrong'
+        setTimeout(() => backToGlow(quizTwoAnswer,quizTwoAnswerButton), 1500);
+        let updateTries = ''
+        if(quizTwoAnswerButton.getAttribute('data-error_counter') == 0){
+          updateTries = 0;
+        } else {
+          updateTries = Number(triesRemaining) - 1;
+        }
+        document.getElementById(selectorStringButton).setAttribute('data-error_counter', updateTries)
+        if(quizTwoAnswerButton.getAttribute('data-error_counter') == 0 ){
+          quizTwoAnswerText.innerHTML = `Answer: ${quizTwoAnswer.getAttribute('data-ans')}`
+          quizTwoAnswerText.classList.remove('hidden')
+        }
+      }
+    }
+  </script>
+  <script>
+  
+    // load first audio on the list as default
+    window.addEventListener("DOMContentLoaded", (event) => {
+        const pauseAudio80 = document.querySelector(".play_list_1 button");
+        //console.log(pauseAudio);
+        const audio_file80 = 'Https://m.fyioc.com/Spanish1/Lesson80/'+pauseAudio80.getAttribute('data-audio')+'.mp3';
+        //console.log(audio_file);
+        audioLoad(audio_file80);
+    });
+  
+    const bodyContainer80 = document.querySelector(".lesson_80");
+    const btnPlay80 = bodyContainer80.querySelectorAll("button");
+    btnPlay80.forEach(function(item, index) {
+  
+        item.addEventListener("click", (event) => {
+  
+            // get the button id ( btnPause,  btnPlayTone)
+            const id = event.target.id;
+            
+            // load audio file every click
+            const audio_file80 = 'Https://m.fyioc.com/Spanish1/Lesson80/'+event.target.getAttribute('data-audio')+'.mp3';
+            audioLoad(audio_file80);
+  
+            // get audio id
+            const audioPlay80 = document.getElementById("audioPlay");
+            //console.log(audioPlay);
+            // audio play
+  
+            if(id === "btnPlayTone"){
+                event.target.classList.add("playing");
+                bodyContainer80.classList.add("audio_playing");
+                audioPlay80.play();
+                item.innerHTML = 'pause';
+                
+                event.target.setAttribute("id", "btnPause");
+            }
+  
+            // audio pause
+            if(id === "btnPause"){
+                event.target.classList.remove("playing");
+                audioPlay80.pause();
+                bodyContainer80.classList.remove("audio_playing");
+  
+                // check if the button class
+                if(event.target.classList.contains('play_button')){
+                    item.innerHTML = 'play_circle_outline'
+                } else {
+                    item.innerHTML = 'volume_up'
+                }
+  
+                event.target.setAttribute("id", "btnPlayTone");
+            }
+        
+            // audio end
+            audioPlay.onended = (event) => {    
+                item.classList.remove("playing");
+                audioPlay80.pause()
+                bodyContainer80.classList.remove("audio_playing");
+                item.innerHTML = 'volume_up';
+            }
+        
+        });
+  
+    });
+  
+    // load audio
+    function audioLoad(audio_url){
+        const audio_file80 = '<audio id="audioPlay" src="'+audio_url+'"></audio>';
+        document.getElementById("audio_holder").innerHTML = audio_file80;
+    }
+    
+    //practice uno 
+  
+    const practiceUno80 = document.querySelectorAll('.fifth_section_inner_wrap_ans span[data-letter]');
+  
+    practiceUno80.forEach( practice => {
+        
+        practice.addEventListener("click", event => {
+  
+            if(event.target.getAttribute("data-ans") != ""){
+                event.target.classList.toggle("correct")
+            }
+  
+            if(event.target.getAttribute("data-ans") === ""){
+                event.target.classList.toggle("incorrect")
+            }
+  
+        })
+  
+    })
+  
+    // practice dos
+  
+    const practiceDos80 = document.querySelectorAll(".seven_section_inner input[data-input]");
+  
+    practiceDos80.forEach( input => {
+  
+        input.addEventListener("keyup", (event) => {
+  
+            // console.log(event.target.value);
+  
+            const inputValue80 = event.target.value
+            const dataValue80 = event.target.getAttribute('data-value')
+  
+            if(inputValue80.toUpperCase() === dataValue80){
+                event.target.classList.remove('is-invalid');
+                event.target.classList.add('is-valid');
+            } else {
+                event.target.classList.remove('is-valid');
+                event.target.classList.add('is-invalid');
+            }
+  
+            if(inputValue === ""){
+                event.target.classList.remove('is-valid');
+                event.target.classList.remove('is-invalid');
+            }
+  
+        })
+  
+    })
+     // practice 1 event click
+     const practice_uno_click = document.querySelectorAll(".forth_section_inner_list_ans_list .number");
+  
+  practice_uno_click.forEach( function(elem, index){
+  
+  elem.addEventListener("click",  function(event){
+  
+    if(event.target.innerHTML == event.target.attributes[1].value && event.target.attributes[1].value != ""){
+        event.target.parentElement.classList.toggle('correct');
+    }
+  
+    if(event.target.attributes[1].value == ""){
+        event.target.parentElement.classList.toggle('incorrect');
+    }
+  });
+  
+  });
+  let triesRemaining = {'quiz-2-answer1': 3, 'quiz-2-answer2': 3, 'quiz-2-answer3': 3, 'quiz-2-answer4': 3, 'quiz-2-answer5': 3, 'quiz-2-answer6': 3, 'quiz-2-answer7': 3, 'quiz-2-answer8': 3, 'quiz-2-answer9': 3, 'quiz-2-answer10': 3}
+  
+  
+  function backToGlow(quizTwoAnswer, quizTwoAnswerButton){
+  
+  quizTwoAnswerButton.classList.remove("glow-on-hover-success")
+  quizTwoAnswerButton.classList.remove("glow-on-hover-wrong")
+  quizTwoAnswerButton.classList.add('glow-on-hover')
+  quizTwoAnswerButton.innerText = 'Check'
+  
+  }
+  
+  // New Validation Function
+  function checkDiphthong(answerNumber){
+  const selectorString = "quiz-2-answer" + answerNumber
+  const selectorStringButton = "quiz-2-answer" + answerNumber + "btn"
+  const selectorStringAnswer = "answer-text" + answerNumber
+  const quizTwoAnswer = document.getElementById(selectorString);
+  const quizTwoAnswerButton = document.getElementById(selectorStringButton)
+  const quizTwoAnswerText = document.getElementById(selectorStringAnswer)
+  const answer = quizTwoAnswer.getAttribute('data-ans')
+  const userAnswer = quizTwoAnswer.value.toLowerCase()
+  const correctAnswer = userAnswer === answer ? true : false
+  if(correctAnswer){
+  quizTwoAnswer.classList.remove("is-invalid")
+  quizTwoAnswer.classList.add("is-valid")
+  quizTwoAnswerButton.innerText = 'Correct!'
+  quizTwoAnswerButton.classList.add("glow-on-hover-success")
+  quizTwoAnswerButton.classList.remove("glow-on-hover")
+  quizTwoAnswerButton.classList.remove('glow-on-hover-wrong')
+  }
+  else{
+  quizTwoAnswer.classList.remove("is-valid")
+  quizTwoAnswer.classList.add("is-invalid")
+  quizTwoAnswerButton.classList.remove("glow-on-hover-success")
+  quizTwoAnswerButton.classList.remove("glow-on-hover")
+  quizTwoAnswerButton.classList.add('glow-on-hover-wrong')
+  quizTwoAnswerButton.innerText = 'Wrong'
+  setTimeout(() => backToGlow(quizTwoAnswer,quizTwoAnswerButton), 1500);
+  triesRemaining[selectorString] -= 1
+  console.log("TRIESREMANSNUM",triesRemaining[selectorString])
+  if(triesRemaining[selectorString] <= 0 ){
+  quizTwoAnswerText.classList.remove('hidden')
+  }
+  console.log("triesremaining", triesRemaining)
+  }
+  }
+  
+  // Quiz 1
+  const quizOneAnswer = container2.querySelectorAll(".quiz-1-answer");
+  
+  quizOneAnswer.forEach(function(elem, index){
+  elem.addEventListener("keyup", function(){
+  const answer = this.getAttribute('data-ans')
+  
+  if(answer === this.value) {
+    elem.classList.remove("is-invalid")
+    elem.classList.add("is-valid")
+  } else {
+    elem.classList.remove("is-valid")
+    elem.classList.add("is-invalid")
+  }
+  if(elem.value == "") {
+    elem.classList.remove("is-invalid")
+    elem.classList.remove("is-valid")
+  }
+  })
+  })
+  // drag and drop
+  
+  const containerInput4 = document.querySelector("#forth_section_inner");
+  console.log(containerInput4);
+  const inputList4 = containerInput4.querySelectorAll("#inputDrop");
+  const textList4 = containerInput4.querySelectorAll("strong");
+  
+  var dragged;
+  
+  textList4.forEach(function(elem, index){
+    elem.addEventListener("dragstart", function(event){
+        dragged = event.target;
+    }, false);
+  
+    elem.addEventListener("dragend", function(event){
+  
+    }, false);
+  });
+  
+  inputList4.forEach(function(elem, index){
+  
+    elem.addEventListener('dragover', function(e){
+        event.preventDefault();
+    }, false)
+  
+    elem.addEventListener('drop', function(event){
+  
+        event.target.value = dragged.innerHTML;
+  
+        if(event.target.getAttribute("data-ans") == dragged.innerHTML){
+            event.target.classList.remove('is-invalid');
+            event.target.classList.add('is-valid');
+        } else {
+            event.target.classList.remove('is-valid');
+            event.target.classList.add('is-invalid');
+        }
+  
+    }, false)
+  
+  });
+  
+  const practiceOneChoiceContainer06 = document.querySelectorAll(".practice-1-choice-container")
+  practiceOneChoiceContainer06.forEach((elem) => {
+  elem.addEventListener("dragover", (event) => {
+  event.preventDefault()
+  })
+  
+  elem.addEventListener("drop", (event) => {
+  event.preventDefault()
+  const src06 = document.getElementById(event.dataTransfer.getData("src"))
+  const srcParent06 = src06.parentNode
+  const tgt06 = event.currentTarget.firstElementChild
+  
+  event.currentTarget.replaceChild(src06, tgt06)
+  srcParent06.appendChild(tgt06)
+  
+  document.querySelector('.practice-1-result').classList.add('d-flex')
+  
+  const correctAnswers06 = ["yo", "usted", "el", "ella", "ellos", "nosotros", "vosotros", "ustedes"].toString()
+  const currentAnswerOrder06 = [].slice.call(document.querySelectorAll('.practice-1-choice')).map((elem) => elem.id).toString()
+  
+  check(correctAnswers06, currentAnswerOrder06, '.practice-1-result')
+  
+  })
+  
+  elem.querySelector('.practice-1-choice').addEventListener("dragstart", (event) => {
+  event.dataTransfer.setData("src", event.target.id)
+  })
+  })
+  </script>
+</body>
+<script src="InteractiveResources/js/interactive4.js"></script>
+</html>

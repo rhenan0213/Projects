@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+    <link href="https://m.fyioc.com/WhyNotScripts/css/VideoPlay.css" rel="stylesheet">
+    <link href="https://m.fyioc.com/WhyNotScripts/css/AudioPlay.css" rel="stylesheet">
+
+    <style type="text/css">
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            background: #c3a188;
+            background-size: cover;
+        }
+
+        section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        }
+
+        .container {
+            max-width: 1080px;
+            padding-left: 65px;
+            padding-right: 65px;
+        }
+
+        .pxy {
+            padding-top: 90px;
+            padding-bottom: 90px;
+        }
+
+        h1 {
+            font-family: 'Arvo', serif;
+            margin: 0;
+            line-height: 1;
+            color: #fff;
+            font-size: 85px;
+        }
+
+        h2 {
+            color: #a97956;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 41px;
+        }
+
+        h3 {
+            color: #9b775f;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 30px;
+        }
+
+        
+        p {
+            margin: 0;
+            font-size: 20.25px;
+            color: #1c1c1c;
+            font-weight: 400;
+            font-family: 'Roboto', sans-serif;
+            text-align: left;
+            line-height: 24px;
+        }
+
+        h1,
+        h2, h3 {
+            font-weight: 700;
+        }
+
+        .white_bg {
+            background: #fff;
+        }
+
+        .light_bg {
+            background: #ede3dc;
+        }
+
+        .brown_bg {
+            background: #9b775f;
+        }
+
+        /* section one */
+        #section-one {
+            background: #44332a;
+        }
+        #section-one .hero {
+            background: url('./USHISTORYU1L1_hero.png') no-repeat;
+            background-size: contain;
+            width: 100%;
+            height: 596px;
+            padding-top: 165px;
+        }
+        #section-one h6 {
+            font-size: 44px;
+            color: #121212;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .bulleted::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            display: inline-block;
+            margin-right: 10px;
+            vertical-align: middle;
+            margin-bottom: 5px;
+        }
+
+        /* section two */
+        #section-two table {
+            width: 680px;
+            margin-top: 14px;
+        }
+        #section-two table, #section-two td, #section-two th {
+            border: 1px solid #fff;
+        }
+        #section-two table th {
+            width: 340px;
+            height: 140px;
+            font-size: 27px;
+            color: #fff;
+        }
+        #section-two table td {
+            padding: 31px 31px;
+            color: #121212;
+        }
+        #section-two table p {
+            color: #121212;
+            font-size: 18px;
+        }
+        #section-two td .bulleted::before {
+            background: #121212;
+        }
+        #section-two td .bulleted {
+            margin-left: 20px;
+            text-indent: -20px;
+            font-weight: 400;
+        }
+        #section-two .container {
+            padding: 135px 22px;
+            background: #fff url("/USHISTORYU1L1_img1.png") no-repeat;
+            background-size: 746px 993px;
+            background-position-y: center;
+            background-position-x: 140%;
+        }
+        #section-two p, #section-three p {
+            line-height: 1.5;
+        }
+
+        /* section six */
+        #section-six .bulleted::before { 
+            background-color: #121212;
+        }
+       #section-six .bulleted {
+            margin-left: 20px;
+            text-indent: -20px;
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body>
+<div class="lesson_20">
+    <!-- section one -->
+    <section id="section-one">
+        <div class="container hero d-flex align-items-start justify-content-end">
+            <div class="d-flex flex-column justify-content-start align-items-start" style="width:553px;">
+                <h1>US HISTORY</h1>
+                <h6 class="mb-4">A History of Conquest</h6>
+                <p style="font-size: 23px; font-weight:700; color:#fff; text-transform: uppercase;">What You Should Know</p>
+                <p class="mb-4" style="font-size: 23px; color:#fff; ">By the end of this lesson, you should be able to:</p>
+                <p class="bulleted" style="font-size: 23px; color:#fff;">Be able to locate the "New World" on a map</p>
+                <p class="bulleted" style="font-size: 23px; color:#fff;">Be able to identify Ancient Rome</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- section two -->
+    <section id="section-two">
+        <div class="container white_bg d-flex justify-content-start align-items-center">
+            <table> 
+                <thead>
+                <tr class="text-center">
+                    <th style="background: #a97956;">LESSON <br>EXPECTATIONS</th>
+                    <th style="background: #c3a188c9;">LESSON <br>KEYWORDS</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="d-flex flex-column justify-content-start" style="background: #c3a188;">
+                        <p class="mb-4" style="font-weight:700;">By the end of this lesson, you should be able to:</p>
+                        <p class="bulleted mb-3">Identify how and when the first Native Americans arrived in America</p>
+                        <p class="bulleted mb-3">Apply the order of operations to evaluate expressions</p>
+                        <p class="bulleted mb-3">Compare the Native American views on land ownership with those of Europeans</p>
+                        <p class="bulleted mb-3">Describe the role of kinship networks such as tribes, clans and families on the welfare of individuals and trade between groups</p>
+                        <p class="bulleted">Identify factors that contributed to the downfall of the native societies upon the arrival of the Europeans</p>
+                    </td>
+                    <td style="background: #d5bdabc9; vertical-align: text-top;">
+                        <p class="mb-3 text-center" style="font-weight:700;">Bering Land Bridge/Bering</p>
+                        <p class="mb-3 text-center" style="font-weight:700;">Strait</p>
+                        <p class="mb-3 text-center" style="font-weight:700;">CE</p>
+                        <p class="mb-3 text-center" style="font-weight:700;">Kinship networks</p>
+                        <p class="mb-3 text-center" style="font-weight:700;">Mesoamerican</p>
+                        <p class="mb-3 text-center" style="font-weight:700;">Pre-Columbian</p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- section three -->
+
+    <section id="section-three">
+        <div class="container light_bg pxy d-flex justify-content-start align-items-center flex-column">
+            <h2>PRE-COLUMBIAN CIVILIZATIONS</h2>
+            <p class="mb-3" style="font-size: 27px;">DATING AND THE CALENDAR</p>
+            <img class="m-auto mb-2" src="./USHISTORYU1L1_img2.png" width="950" alt="">
+            <p class="mb-5" style="font-size: 18px;">View of the Bering Strait located just to the south of the Arctic Circle at the northern edges of the Bering Sea.</p>
+            <div class="d-flex justify-content-center align-items-center mb-3">
+                <div class="col-6">
+                    <p class="mb-3">There have been many different calendars kept by many different groups throughout history. One of the oldest is the Hebrew calendar, which dates back over 5,000 years. The Mayans, whom you will read about here, also had a calendar. It began about 600 years before ours and mysteriously ends in our year 2012. Perhaps you have seen television programs in which people refer to this. Did these ancient people have some insight into the future?</p>
+                    <p>The Europeans ignored the Native American's dating system. As a result, the calendar we use was adapted from the earlier European Christian calendar. Since Europeans, who were Christians, dated events with the life of Jesus, dates were referred to as AD or BC. These are from Latin abbreviations for after or before the birth of Jesus. It is interesting to note that modern historians have discovered more accurately when the birth of Christ was and so our calendars today are approximately five years short of what the actual year should be.</p>
+                </div>
+                <div class="col-6 d-flex justify-content-center align-items-center flex-column ps-5">
+                    <img src="./USHISTORYU1L1_img3.png" width="424" height="424" alt="" class="mb-3">
+                    <p style="font-size: 18px;">Representation of the Mayan Calendar.</p>
+                </div>
+            </div>
+            <p  class="mb-3">Today, in recognition that most of the world is not Christian, historians use the term "Common Era." As a result, you will see dates as "CE" meaning in the Common Era (We are now in the 21st Century CE) or "BCE" meaning Before the Common Era.</p>
+            <p  class="mb-3">This can be confusing if you are used to BC and AD. BCE is equivalent to BC and CE is equivalent to AD. To know how long ago an event marked BCE was, you would add that to the CE date you are looking back from. For example, if the Aztecs moved into the Andes Mountains around 1300 BCE and the Spanish conquered them around 1520 CE, we could say that they lived independently in the Andes for about 2,820 years before being conquered by the Spanish. (Add the BCE and CE years together; history sometimes moves slowly.)</p>
+            <div class="d-flex justify-content-center align-items-start">
+                <div class="col-6 d-flex justify-content-center align-items-center flex-column pe-5">
+                    <img src="./USHISTORYU1L1_img4.png" width="417" height="795" alt="" class="mb-3">
+                    <p class="pe-5" style="font-size: 18px;">Head representation of an aztec warrior</p>
+                </div>
+                <div class="col-6">
+                    <p class="mb-3 text-end">Note that most of the events in these lessons will be after CE and are sometimes referred to by the century in which they occurred. A century is 100 years. The name of a century refers to how many there have been since the year "1" CE.</p>
+                    <p class="mb-5 text-end">Remember there is no ZERO year between 1 BCE and 1 CE as you would find in mathematics when dealing with positive and negative numbers. The calendar goes from 1 BCE to 1 CE, skipping zero totally. Since the first 100 years CE were the “First Century” we would call years such as 55 CE or 98 CE part of the 1st Century. Years after 99 CE are part of the second century. Someone born in 1929 or 1989 would have been born in the 20th Century.”</p>
+                    <p class="mb-3 text-end" style="font-size: 60px; line-height: 1.2;">What century do we live in today?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section four -->
+    <section id="section-four">
+        <div class="container white_bg pxy d-flex justify-content-start align-items-center flex-column">
+            <h2 class="mb-5">PRE-COLUMBIAN CIVILIZATIONS</h2>
+            <div class="d-flex justify-content-start align-items-start flex-column w-100">
+                <h3 class="mb-4">Middle and South America</h3>
+                <p class="mb-4">For centuries, archaeologists, anthropologists, and historians have debated when humans crossed from Asia into North America. Some scientists suggest that the Americas were settled by people arriving by sea from Asia and southwestern Europe as long as 18,000 to 40,000 years ago. Other scientists and researchers ascribe to the Bering Land Bridge theory and place the timetable for migration from Asia to North America at about 13,000 to 15,000 years ago. It is the land bridge theory that most researchers believe accounts for the migration into North and South America.</p>
+            </div>
+            <img class="m-auto mb-2" src="./USHISTORYU1L1_img5.png" width="940" alt="">
+            <p class="mb-5" style="font-size: 18px;">Old Map Of the American Continent</p>
+            <div class="d-flex justify-content-start align-items-start flex-column w-100">
+                <h3 class="mb-4">The Bering Land Bridge</h3>
+                <p class="mb-4">The theory of a land bridge existing between the Eastern and Western hemispheres that connected Asia and North America first surfaced in the late 1500s. Over the centuries, scientists argued over the validity of that theory, and it wasn’t until the early 20th Century that there was finally widespread agreement that the Bering Land Bridge did in fact exist. During the last Ice Age that occurred 15,000-18,000 years ago, vast amounts of the Earth’s water froze, lowering the level of oceans and exposing land that was long hidden beneath the waters of the Bering Sea. This vast land mass, sometimes referred to as Beringia, formed a land bridge that spanned the area between eastern Siberia and Alaska, allowing people and animals to migrate from the easternmost parts of Siberia into what is now northwestern Alaska.</p>
+            </div>
+            <div class="d-flex justify-content-start align-items-start mb-3">
+                <div class="col-6 d-flex justify-content-start align-items-start flex-column">
+                    <img src="./USHISTORYU1L1_img6.png" width="432" height="289" alt="" class="">
+                </div>
+                <div class="col-6">
+                    <p class="">The current theory is that this migration took place over a great deal of time, and that the people may have lived on the land bridge for centuries. That supposition is supported by the fact that core samples of the land now under the sea confirm the presence of shrubs and insects that are present in modern Alaska. However, as the Earth’s temperature began to rise, and with it the level of the oceans, both humans and animals once again began to migrate further to the east into North America, traveling down from Alaska, south through western North America into Central and South America.</p>
+                </div>
+            </div>
+            <p class="mb-5">Scientific study confirms genetic links between those who lived in Siberia some 30,000 years ago and inhabitants of northwestern Alaska, as well as some Native American tribes that inhabit the lands of North and South America. Examination of mitochondrial DNA from Native Americans compared with the genetic material obtained from the remains of ancient populations in Siberia demonstrates that at least some of the Native American tribes found in the North and South American Native tribes are indeed descendants of people who lived in Siberia more than 30,000 years ago.</p>
+            <div class="d-flex justify-content-center align-items-center mb-3">
+                <div class="col-6 d-flex justify-content-start align-items-start flex-column">
+                    <img src="./USHISTORYU1L1_img7.png" width="432" height="289" alt="" class="">
+                </div>
+                <div class="col-6">
+                    <p class="mb-3">The discovery of spear points in Clovis, New Mexico, also supports the notion of a southern migration dating back some 13,500 years. Carbon dating places those artifacts in the timeframe supporting the land bridge theory and migration timeline. Subsequent findings of similar artifacts in other southwestern United States add additional support for the land bridge theory.</p>
+                    <p class="">As these bands migrated throughout the Americas, they began to adapt to the environment in which they lived. Many initially subsisted as hunter-gatherers, but as they reached more hospitable climates, they adapted and took advantage of the resources available to them. </p>
+                </div>
+            </div>
+            <p class="mb-5">Temperate climates allowed them to grow and harvest food, eliminating the need to move continually in response to climate and availability of food. Permanent farming villages were established in the Mexican highlands by 2000-1500 BCE. This stable lifestyle helped cultivate intricate patterns of civilization by advancing artistic culture, craft-making and social order. These permanent settlements also resulted in warfare between competing villages, particularly among the group that would come to be known as the Mayas. They were known to enslave others and practice cannibalism. As they developed, however, the Mayan civilization became extremely complex and advanced.</p>
+            <div class="d-flex justify-content-start align-items-start mb-5">
+                <div class="col-6 d-flex justify-content-start align-items-start flex-column">
+                    <img src="./USHISTORYU1L1_img8.png" width="432" height="289" alt="" class="mb-4">
+                    <p class="m-auto" style="font-size: 18px;">Tikal Mayan ruins</p>
+                </div>
+                <div class="col-6">
+                    <p class="">Massive city centers were developed by the Maya tribe in the Mesoamerican region after 300 CE and collapsed about 600 years later, primarily because of continuing civil wars within the tribe. The area was taken over by a mysterious group, one we know as the Toltecs, who themselves disappeared around 1200 CE. Subsequently, the Aztecs traveled south and populated the area in 1325 CE. At the time of the Spanish invasion of 1519, the Aztec empire may have encompassed anywhere between 5 and 20 million people under the rule of Montezuma II. Further south, the Quechuas, or Incas, built an empire of similar proportions, inhabiting a string of land along the Andes from Ecuador to Chile.</p>
+                </div>
+            </div>
+            <div class="d-flex justify-content-start align-items-start">
+                <div class="col-6 d-flex justify-content-start align-items-start flex-column">
+                    <img src="./USHISTORYU1L1_img9.png" width="432" height="289" alt="" class="mb-4">
+                    <p class="m-auto" style="font-size: 18px;">Aztec Calendar</p>
+                </div>
+                <div class="col-6">
+                    <p class="">North American Native tribes practiced many of the same beliefs as their South American counterparts, but their tribal units were generally much smaller than the complex societies established in South America. These North American tribes were also war-like, but they were not as cohesive a society as the Maya or the Aztecs. They tended to congregate in smaller units, each with its own structure and language. These North American Native tribes numbered in the hundreds, and while they exhibited many of the same types of behaviors and beliefs, they were quite distinct in their tribal identities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section five -->
+    <section id="section-five">
+        <div class="container light_bg pxy d-flex justify-content-start align-items-start flex-column">
+            <h3 class="mb-4">THE AZTECS</h3>
+            <div class="d-flex justify-content-start align-items-start mb-5">
+                <div class="col-6 d-flex justify-content-start align-items-start flex-column">
+                    <img src="./USHISTORYU1L1_img10.png" width="432" height="289" alt="" class="mb-4">
+                    <p class="text-start ps-4" style="font-size: 18px;">Close up of a Mayan Palace in Yucatán, México</p>
+                </div>
+                <div class="col-6">
+                    <p class="">The Mayans lived in the jungles of Central America. Many of their ruins can still be found in Guatemala, Belize and Mexico. They were a highly advanced civilization, and built huge cities, pyramids and public buildings. They had great architectural, mathematical and scientific skills including a great knowledge of astronomy. The early Europeans, unable to believe that non-Europeans could produce such amazing structures, mistakenly believed they must have been built by ancient Egyptians or Greeks.</p>
+                </div>
+            </div>
+            <div class="ratio ratio-16x9 mb-5" style="border: 20px solid #c3a188;">
+                <video class="video-fluid" loop controls>
+                    <source src="https://m.fyioc.com/Spanish1/Lesson28/L28V1-REV5.mp4" type="video/mp4" />
+                </video>
+                <div class="play_button">
+                    <div id="play_vid">
+                        <span class="material-icons-outlined">play_arrow</span>
+                    </div>
+                </div>
+            </div>
+            <h3 class="mb-4">THE AZTECS</h3>
+            <div class="d-flex justify-content-start align-items-start mb-5">
+                <div class="col-6 d-flex justify-content-start align-items-start flex-column">
+                    <img src="./USHISTORYU1L1_img11.png" width="432" height="289" alt="" class="mb-4">
+                    <p class="text-center" style="font-size: 18px; width: 93%;">View of Teotihuacán, México</p>
+                </div>
+                <div class="col-6">
+                    <p class="">The Spanish conquistador, Cortés, found the Aztecs and their huge city of Tenochtitlan, located on a lake near what is now Mexico City.</p>
+                </div>
+            </div>
+            <div class="ratio ratio-16x9 mb-5" style="border: 20px solid #c3a188;">
+                <video class="video-fluid" loop controls>
+                    <source src="https://m.fyioc.com/Spanish1/Lesson28/L28V1-REV5.mp4" type="video/mp4" />
+                </video>
+                <div class="play_button">
+                    <div id="play_vid">
+                        <span class="material-icons-outlined">play_arrow</span>
+                    </div>
+                </div>
+            </div>  
+            <h3 class="mb-4">THE INCAS</h3>
+            <div class="d-flex justify-content-start align-items-start mb-5">
+                <div class="col-6 d-flex justify-content-start align-items-start flex-column">
+                    <img src="./USHISTORYU1L1_img11.png" width="432" height="289" alt="" class="mb-4">
+                    <p class="text-center" style="font-size: 18px; width: 100%;">Machu Pichu ruins, Perú.</p>
+                </div>
+                <div class="col-6">
+                    <p class="">During the 15th and 16th centuries, the Incas built an advanced society high in the Andes Mountains of present day Peru. They, too, were conquered by Spanish explorers who wanted their gold.</p>
+                </div>
+            </div>
+            <div class="ratio ratio-16x9 mb-5" style="border: 20px solid #c3a188;">
+                <video class="video-fluid" loop controls>
+                    <source src="https://m.fyioc.com/Spanish1/Lesson28/L28V1-REV5.mp4" type="video/mp4" />
+                </video>
+                <div class="play_button">
+                    <div id="play_vid">
+                        <span class="material-icons-outlined">play_arrow</span>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </section>
+
+    <!-- section five -->
+    <section id="section-five">
+        <div class="container white_bg pxy d-flex justify-content-start align-items-center flex-column">
+            <h3 class="mb-4">NORTH AMERICA</h3>
+            <p class="mb-5">The natives in North America (particularly modern day United States) were not as plentiful or as technologically advanced as their Middle and South American counterparts. Archaeologists have been able to single out three important high points in the Native American culture of the region: the Adena-Hopewell culture (800 BCE – 600 CE), the Mississippian culture (600 CE – 1500), and the Pueblo-Hohokam culture (400 BCE – present).</p>
+            <img class="m-auto mb-3" src="./USHISTORYU1L1_img12.png" width="939" alt="">
+            <p class="mb-5" style="font-size: 18px;">North American Native riding a horse</p>
+            <p class="mb-4">These large cultural groups were good at adapting to an ever-changing environment due to their creation of Kinship networks. In other words, the individual was able to look to the extended family, clan or tribe for assistance with medical care, education, and other areas that we today often refer to as social services.</p>
+            <p class="mb-5">These gigantic family networks remained united through religious, political and social ceremonies. These became basic obligations because many believed if members of the family did not attend, they risked bringing diseases and other misfortunes on the entire family.</p>
+            <h3 class="mb-4">VIEWS ON TRADE AND LAND</h3>
+            <p class="mb-5">Native American family and tribal groups frequently traded with other groups. Trading was often viewed as a sign of hospitality, so trade was viewed as a respectable social custom. Many groups openly gave away their possessions. Land, however, was not viewed as a possession but as a commodity shared by everyone in the group.</p>
+            <img class="m-auto mb-3" src="./USHISTORYU1L1_img13.png" width="939" alt="">
+            <p class="mb-5" style="font-size: 18px;">Kinishba Ruins in eastern Arizona</p>
+            <p class="mb-5">The right to use land could be permitted easily, but the thought that someone could own land or buy or sell it was completely unknown. This would become a point of conflict between the Native Americans and the Europeans once the latter arrived in the New World.</p>
+            <div class="cont w-100 mb-5">
+                <p class="" style="font-size: 27px;">Europe's Ambition</p>
+            </div>
+            <p class="mb-4">Despite a number of sophisticated cultures, the Native Americans would prove no match for invading Europeans who came with a few technological advantages and a biological weapon natives didn't even know existed.</p>
+            <p class="mb-4">Shipbuilding and sailing skills had spread across Europe by the late 15th century, leading many countries to expand their territory by obtaining colonies. Trade and towns were flourishing and nation-states were beginning to be organized. Renaissance thinkers were developing new ideas which helped to end the Dark Ages. Rapidly progressing technology proved to be a key factor in the exploration and conquest of the Americas. Native Americans could not keep up with the incoming Europeans and their more advanced weaponry. Just as the Incas had no draft animals, neither did they have horses upon which soldiers could ride or oxen to pull cannons. While gunpowder originated in China, it had found its way to Europe long before European explorers looking for a shorter route to China came across America.</p>
+            <p class="mb-4">Native American cultures also lacked the communication systems necessary to warn others of danger in a timely manner. Most importantly they lacked immunity to a host of diseases which traveled with the Europeans. Measles and small pox were just two killers that traveled with the invaders, killing thousands. Many Native American groups were fragmented into rival tribes or clans that made it difficult to mount an organized defense. In fact, the natives were helpless against the European ambush.</p>
+        </div>
+    </section>
+
+    <!-- section six -->
+    <section id="section-six" class=" d-flex flex-column">
+        <div class="container brown_bg text-center" style="padding: 67.5px;">
+            <h2 style="font-size: 60px; color: #fff; font-weight: 700;">SUMMARY</h2>
+        </div>   
+        <div class="container white_bg pxy d-flex justify-content-start align-items-start flex-column">
+            <p class="mb-4" style="font-size: 27px;">In this lesson, you have covered:</p>
+            <p class="bulleted mb-3">Dating systems and the reading of historical dates</p>
+            <p class="bulleted mb-3">Pre-Columbian civilizations that inhabited the Americas before the European conquest are believed to be ancestors of tribes that either crossed the Bering Strait or traversed the Atlantic Ocean.</p>
+            <p class="bulleted mb-3">The Mayans, Aztecs and Incas proved to be dominant tribes that inhabited the Middle and South American regions of the continent.</p>
+            <p class="bulleted mb-3">The Adena-Hopewell, Mississippian and Pueblo-Hohokam cultures are three advanced groups who inhabited what is now the United States, although they were not as advanced as their southern counterparts.</p>
+            <p class="bulleted mb-3">None of these tribes/cultures, however, were sufficiently equipped to ward off the incoming Europeans, who were much stronger technologically and were therefore able to occupy the New World.</p>
+        </div>
+    </section>
+
+    <!-- section seven -->
+    <section id="section-seven" class=" d-flex flex-column">
+        <div class="container brown_bg text-center" style="padding: 67.5px;">
+            <h2 style="font-size: 60px; color: #fff; font-weight: 700;">CROSSWORD</h2>
+        </div>   
+        <div class="container white_bg pxy">
+            <div id="leftBox">
+                <table id="puzzel">
+
+                </table>
+            </div>
+            <div id="rightBox">
+                <table>
+                    <tr><td><input class="butt"  type="submit" value="Clear All" onclick="clearAllClicked()"></td>
+                    <td><input class="butt"  type="submit" value="Check" onclick="checkClicked()"></td>
+                    <td><input class="butt"  type="submit" value="Solve" onclick="solveClicked()"></td>
+                    <td><input class="butt"  type="submit" value="Clue" onclick="clueClicked()"></td></tr>
+                </table>
+            </div>
+            <table id="hintsTable">
+                <tr>
+                    <td><strong>Horizontal:</strong></td><td><strong>Vertical:</strong></td>
+                </tr>
+                <tr>
+                    <td>3. Cultural Hub (Hyderabad)</td><td>1. Education Hub (Pune)</td>
+                </tr>
+                <tr>
+                    <td>5. India's financial capital (Mumbai)</td><td>2. Information Technology Hub (Bangalore)</td>
+                </tr>
+                <tr>
+                    <td>6. Saffron region (Kashmir)</td><td>4. Capital of India (Delhi)</td>
+            </table>
+        </div>
+    </section>
+
+    <style>
+        #section-seven #cross {
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        margin: 0;
+        padding: 0;
+        border-collapse: collapse;
+        border: 1px solid white;
+        }
+        #section-seven #buttons {
+        width: 30%;
+        float: right;
+        }
+
+        #section-seven tr {
+        margin: 0;
+        padding: 0;
+        border-collapse: collapse;
+        }
+
+        #section-seven td {
+        height: 40px;
+        width: 40px;
+        border: 1px solid #fff;
+        }
+
+        #section-seven #leftBox {
+        float: left;
+        }
+
+        #section-seven #rightBox {
+        float: left;
+        clear: left;
+        }
+
+        #section-seven .butt {
+        height: 50px;
+        width: 107px;
+        }
+
+        #section-seven #puzzel {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        border-collapse: collapse;
+        border: 1px solid black;
+        }
+
+        #section-seven .inputBox {
+        width: 40px;
+        height: 40px;
+        border: 1px solid black;
+        text-align: center;
+        }
+
+        #section-seven #hintsTable {
+        width: 480px;
+        float: left;
+        clear: left;
+        }
+    </style>
+
+    <!-- fifth section -->
+		<!-- Assessment Quiz -->
+        <table style="width: 710px; height: auto; margin-left: auto; margin-right: auto;" border="1" cellpadding="20">
+            <tbody>
+            <tr>
+            <td style="background-color: white; width: 710px; ">
+            <b><span style="font-family: arial,helvetica,sans-serif;">&nbsp;  Answer the following questions.</span> </b>
+            <p><a:question index="1" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="2" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="3" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="4" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="5" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="6" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="7" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="8" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="9" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="10" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="11" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="12" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="13" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="14" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="15" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="16" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="17" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="18" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="19" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="20" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            </td>
+            </tr>
+            </tbody>
+        </table>
+            <!-- Assessment Quiz -->
+
+    <div id="audio_holder"></div>
+</div>
+
+<script>
+    // FOR CROSSWORD
+    document.getElementsByTagName('body')[0].onload = function() {initializeScreen()};
+
+    //Adds the hint numbers
+    function addHint(){
+        document.getElementById("txt_0_3").placeholder = "1";
+        document.getElementById("txt_2_6").placeholder = "2";
+        document.getElementById("txt_3_1").placeholder = "3";;
+        document.getElementById("txt_3_9").placeholder = "4";
+        document.getElementById("txt_6_2").placeholder = "5";
+        document.getElementById("txt_9_0").placeholder = "6";
+    }
+    //Stores ID of the selected cell into currentTextInput
+    function textInputFocus(txtID123){
+        currentTextInput = txtID123;
+    }
+    //Returns Array
+    function preparePuzzelArray(){
+    var items = [	
+            [0, 0, 0, 'a', 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 'r', 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 't', 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 'e', 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 'r', 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 'i', 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 'e', 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 's', 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            ];
+    return items;
+    }
+
+    //GlobalsJS
+var currentTextInput;
+var puzzelArrayData;
+//Loads the Crossword
+function initializeScreen(){
+	var puzzelTable = document.getElementById("puzzel");
+	puzzelArrayData = preparePuzzelArray();
+	for ( var i = 0; i < puzzelArrayData.length ; i++ ) {
+		var row = puzzelTable.insertRow(-1);
+		var rowData = puzzelArrayData[i];
+		for(var j = 0 ; j < rowData.length ; j++){
+			var cell = row.insertCell(-1);
+			if(rowData[j] != 0){
+				var txtID = String('txt' + '_' + i + '_' + j);
+				cell.innerHTML = '<input type="text" class="inputBox" maxlength="1" style="text-transform: lowercase" ' + 'id="' + txtID + '" onfocus="textInputFocus(' + "'" + txtID + "'"+ ')">';
+			}else{
+				cell.style.backgroundColor  = "black";
+			}
+		}
+	}
+	addHint();
+}
+
+//Clear All Button
+function clearAllClicked(){
+	currentTextInput = '';
+	var puzzelTable = document.getElementById("puzzel");
+	puzzelTable.innerHTML = '';
+    initializeScreen();
+}
+
+//Check button
+function checkClicked(){
+	for ( var i = 0; i < puzzelArrayData.length ; i++ ) {
+		var rowData = puzzelArrayData[i];
+		for(var j = 0 ; j < rowData.length ; j++){
+			if(rowData[j] != 0){
+				var selectedInputTextElement = document.getElementById('txt' + '_' + i + '_' + j);
+				if(selectedInputTextElement.value != puzzelArrayData[i][j]){
+					selectedInputTextElement.style.backgroundColor = 'red';
+
+				}else{
+					selectedInputTextElement.style.backgroundColor = 'white';
+				}
+			}
+		}
+	}
+} 
+//Clue Button
+function clueClicked(){
+	if (currentTextInput != null){
+		var temp1 = currentTextInput;
+		var token = temp1.split("_");
+		var row = token[1];
+		var column = token[2];
+		document.getElementById(temp1).value = puzzelArrayData[row][column];
+		//checkClicked();
+	}
+}
+//Solve Button
+function solveClicked(){
+	if (currentTextInput != null){
+		var temp1 = currentTextInput;
+		var token = temp1.split("_");
+		var row = token[1];
+		var column = token[2];
+
+		// Print elements on top
+		for(j = row; j >= 0; j--){
+			if(puzzelArrayData[j][column] != 0){
+				document.getElementById('txt' + '_' + j + '_' + column).value = puzzelArrayData[j][column];
+				}else break;
+		}
+		// Print elements on right
+		for(i = column; i< puzzelArrayData[row].length; i++){
+			if(puzzelArrayData[row][i] != 0){
+				document.getElementById('txt' + '_' + row + '_' + i).value = puzzelArrayData[row][i];
+				}else break;
+		}
+
+		// Print elements below
+		for(m = row; m< puzzelArrayData.length; m++){
+			if(puzzelArrayData[m][column] != 0){
+				document.getElementById('txt' + '_' + m + '_' + column).value = puzzelArrayData[m][column];
+				}else break;
+		}
+		// Print elements on left
+		for(k = column; k >= 0; k--){
+			if(puzzelArrayData[row][k] != 0){
+				document.getElementById('txt' + '_' + row + '_' + k).value = puzzelArrayData[row][k];
+				}else break;
+		}
+		// Done!
+
+	}
+}
+
+</script>
+
+    <script>
+
+        // load first audio on the list as default
+        window.addEventListener("DOMContentLoaded", (event) => {
+            const pauseAudio20 = document.querySelector(".play_list_1 button");
+            //console.log(pauseAudio);
+            const audio_file20 = 'https://m.fyioc.com/Spanish2/Lesson20/'+pauseAudio20.getAttribute('data-audio')+'.mp3';
+            //console.log(audio_file);
+            audioLoad(audio_file20);
+        });
+
+        const container20 = document.querySelector(".lesson_20")
+        const btnContainer20 = document.querySelector(".lesson_20");
+        const btnPlay20 = btnContainer20.querySelectorAll("button[data-audio]");
+
+        btnPlay20.forEach(function(item, index) {
+
+            item.addEventListener("click", (event) => {
+
+                // get the button id ( btnPause,  btnPlayTone)
+                const id = event.target.id;
+                
+                // load audio file every click
+                const audio_file20 = 'https://m.fyioc.com/Spanish2/Lesson20/'+event.target.getAttribute('data-audio')+'.mp3';
+                audioLoad(audio_file20);
+
+                // get audio id
+                const audioPlay20 = document.getElementById("audioPlay");
+                //console.log(audioPlay);
+                // audio play
+                if(id === "btnPlayTone"){
+                    event.target.classList.add("playing");
+                    btnContainer20.classList.add("audio_playing");
+                    audioPlay20.play();
+                    item.innerHTML = '<span class="material-icons d-flex">pause</span>';
+
+                    event.target.setAttribute("id", "btnPause");
+                }
+
+                // audio pause
+                if(id === "btnPause"){
+                    event.target.classList.remove("playing");
+                    audioPlay20.pause();
+                    btnContainer20.classList.remove("audio_playing");
+                    item.innerHTML = '<span class="material-icons d-flex">volume_up</span>';
+
+                    event.target.setAttribute("id", "btnPlayTone");
+                }
+            
+                // audio end
+                audioPlay20.onended = (event) => {    
+                    item.classList.remove("playing");
+                    audioPlay20.pause()
+                    btnContainer20.classList.remove("audio_playing");
+                    item.innerHTML = '<span class="material-icons d-flex">volume_up</span>';
+                }
+            
+            });
+
+        });
+
+        function audioLoad(audio_url){
+            const audio_file20 = '<audio id="audioPlay" src="'+audio_url+'"></audio>';
+            document.getElementById("audio_holder").innerHTML = audio_file20;
+        }
+
+        const checkList20 = document.querySelectorAll("#practice1");
+
+        checkList20.forEach(function(elem, index){
+
+            elem.addEventListener("click", function(event){
+
+                if(elem.checked){
+
+                    if(event.target.getAttribute('data-value') == "yes"){
+                        elem.classList.remove('is-invalid');
+                        elem.classList.add('is-valid');
+                    }
+
+                    if(event.target.getAttribute('data-value') == "no"){
+                        elem.classList.remove('is-valid');
+                        elem.classList.add('is-invalid');
+                    }
+
+                } else {
+                    elem.classList.remove('is-valid');
+                    elem.classList.remove('is-invalid');
+                }
+
+            });
+
+        });
+
+        // New Validation Function
+        function checkInputs(){
+            const answerNumber = event.target.dataset.qs_count
+            const triesRemaining = event.target.dataset.error_counter
+            const selectorString = `quiz-2-answer${answerNumber}`
+            const selectorStringButton = `quiz-2-answer${answerNumber}btn`
+            const selectorStringAnswer = `answer-text${answerNumber}`
+            const quizTwoAnswer = document.getElementById(selectorString);
+            const quizTwoAnswerButton = document.getElementById(selectorStringButton)
+            const quizTwoAnswerText = document.getElementById(selectorStringAnswer)
+            const answer = quizTwoAnswer.getAttribute('data-ans')
+            const userAnswer = quizTwoAnswer.value.toLowerCase()
+            const correctAnswer = userAnswer === answer.toLowerCase() ? true : false
+            const backToGlow = (quizTwoAnswer, quizTwoAnswerButton) => {
+                quizTwoAnswerButton.classList.remove("glow-on-hover-success")
+                quizTwoAnswerButton.classList.remove("glow-on-hover-wrong")
+                quizTwoAnswerButton.classList.add('glow-on-hover')
+                quizTwoAnswerButton.innerText = 'Check'
+            }
+            if(correctAnswer){
+                quizTwoAnswer.classList.remove("is-invalid")
+                quizTwoAnswer.classList.add("is-valid")
+                quizTwoAnswerButton.innerText = 'Correct!'
+                quizTwoAnswerButton.classList.add("glow-on-hover-success")
+                quizTwoAnswerButton.classList.remove("glow-on-hover")
+                quizTwoAnswerButton.classList.remove('glow-on-hover-wrong')
+                quizTwoAnswerText.classList.remove('bg-danger')
+                quizTwoAnswerText.classList.add('bg-success')
+            } else {
+                quizTwoAnswerText.classList.remove('bg-success') 
+                quizTwoAnswerText.classList.add('bg-danger')
+                quizTwoAnswer.classList.remove("is-valid")
+                quizTwoAnswer.classList.add("is-invalid")
+                quizTwoAnswerButton.classList.remove("glow-on-hover-success")
+                quizTwoAnswerButton.classList.remove("glow-on-hover")
+                quizTwoAnswerButton.classList.add('glow-on-hover-wrong')
+                quizTwoAnswerButton.innerText = 'Wrong'
+                setTimeout(() => backToGlow(quizTwoAnswer,quizTwoAnswerButton), 1500);
+                let updateTries = ''
+                if(quizTwoAnswerButton.getAttribute('data-error_counter') == 0){
+                    updateTries = 0;
+                } else {
+                    updateTries = Number(triesRemaining) - 1;
+                }
+                document.getElementById(selectorStringButton).setAttribute('data-error_counter', updateTries)
+                if(quizTwoAnswerButton.getAttribute('data-error_counter') == 0 ){
+                    quizTwoAnswerText.innerHTML = `Answer: ${quizTwoAnswer.getAttribute('data-ans')}`
+                    quizTwoAnswerText.classList.remove('hidden')
+                }
+            }
+        }
+
+        const checkList19 = document.querySelectorAll("#practice2");
+
+        checkList19.forEach(function(elem, index){
+
+            elem.addEventListener("click", function(event){
+
+                if(elem.checked){
+
+                    if(event.target.getAttribute('data-value') == "yes"){
+                        elem.classList.remove('is-invalid');
+                        elem.classList.add('is-valid');
+                    }
+
+                    if(event.target.getAttribute('data-value') == "no"){
+                        elem.classList.remove('is-valid');
+                        elem.classList.add('is-invalid');
+                    }
+
+                } else {
+                    elem.classList.remove('is-valid');
+                    elem.classList.remove('is-invalid');
+                }
+
+            });
+
+        });
+    </script>
+    <script src="https://m.fyioc.com/WhyNotScripts/js/VideoPlay.js"></script>
+    <script src="https://m.fyioc.com/WhyNotScripts/js/AudioPlay.js"></script>
+</body>
+</html>
