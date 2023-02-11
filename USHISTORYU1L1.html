@@ -421,13 +421,13 @@
         <div class="container brown_bg text-center" style="padding: 67.5px;">
             <h2 style="font-size: 60px; color: #fff; font-weight: 700;">CROSSWORD</h2>
         </div>   
-        <div class="container white_bg pxy">
-            <div id="leftBox">
+        <div class="container white_bg pxy d-flex flex-column align-items-center justify-content-start">
+            <div id="leftBox" class="mb-4">
                 <table id="puzzel">
 
                 </table>
             </div>
-            <div id="rightBox">
+            <div id="rightBox" class="mb-4 d-none">
                 <table>
                     <tr><td><input class="butt"  type="submit" value="Clear All" onclick="clearAllClicked()"></td>
                     <td><input class="butt"  type="submit" value="Check" onclick="checkClicked()"></td>
@@ -435,23 +435,96 @@
                     <td><input class="butt"  type="submit" value="Clue" onclick="clueClicked()"></td></tr>
                 </table>
             </div>
-            <table id="hintsTable">
-                <tr>
-                    <td><strong>Horizontal:</strong></td><td><strong>Vertical:</strong></td>
-                </tr>
-                <tr>
-                    <td>3. Cultural Hub (Hyderabad)</td><td>1. Education Hub (Pune)</td>
-                </tr>
-                <tr>
-                    <td>5. India's financial capital (Mumbai)</td><td>2. Information Technology Hub (Bangalore)</td>
-                </tr>
-                <tr>
-                    <td>6. Saffron region (Kashmir)</td><td>4. Capital of India (Delhi)</td>
-            </table>
+            <h3 class="mb-5 mt-5"><span class="maya">THE MAYA</span><span class="aztecs">THE AZTECS</span><span class="incas">THE INCAS</span></h3>
+            <div id="hintsTable" class="mt-4 d-flex justify-content-start align-items-start" style="gap:10px;">
+                <div class="col-6">
+                    <h3 class="mb-4" style="color: #121212">VERTICAL</h3>
+                    <div class="d-flex mb-5 w-100" id="ans_0_3">
+                        <button class="col-3 butt" data-error_counter ="3" id="down_0_3">Check Answer</button> 
+                        <span class="d-inline-block ms-2 col-9 incas" style="font-size: 20px;">1. In their capital at _______ or in subject cities where they wish to emphasize their presence, the Incas leave their trade mark in great slabs of stone<span id="ans_reveal_0_3" class="mt-2 answer hidden">Answer: Cuzco</span></span>
+                    </div>
+                    <div class="d-flex mb-5 w-100" id="ans_0_9">
+                        <button class="col-3 butt" data-error_counter ="3" id="down_0_9">Check Answer</button>
+                        <span class="d-inline-block ms-2 col-9 incas" style="font-size: 20px;">2. The Inca roads, the _______ of an empire, amount in all to more than 14,000 miles.<span id="ans_reveal_0_9" class="mt-2 answer hidden">Answer: Arteries</span></span>
+                    </div>
+                    <div class="d-flex mb-5 w-100" id="ans_0_11">
+                        <button class="col-3 butt" data-error_counter ="3" id="down_0_11">Check Answer</button> 
+                        <span class="d-inline-block ms-2 col-9 incas" style="font-size: 20px;">3. The modern city of Cuzco has grown upon and around its _____ origins. <span id="ans_reveal_0_11" class="mt-2 answer hidden">Answer: Inca</span></span>
+                    </div>
+                    <div class="d-flex mb-5 w-100" id="ans_1_7">
+                        <button class="col-3 butt" data-error_counter ="3" id="down_1_7">Check Answer</button> 
+                        <span class="d-inline-block ms-2 col-9 aztecs" style="font-size: 20px;">4. A few hundred _______ have taken control of the mighty Aztec empire. (Spaniards)<span id="ans_reveal_1_7" class="mt-2 answer hidden">Answer: Spaniards</span></span>
+                    </div>
+                    <div class="d-flex mb-5 w-100" id="ans_3_1">
+                        <button class="col-3 butt" data-error_counter ="3" id="down_3_1">Check Answer</button> 
+                        <span class="d-inline-block ms-2 col-9 aztecs" style="font-size: 20px;">6. The most important gods, apart from Huitzilopochtli, are the rain god Tlaloc (who has a temple beside Huitzilopochtli's on top of the great pyramid in Tenochtitlan) and _________, god of fertility and the arts.<span id="ans_reveal_3_1" class="mt-2 answer hidden">Answer: Quetzalcoatl</span></span>
+                    </div>
+                    <div class="d-flex mb-5 w-100" id="ans_6_5">
+                        <button class="col-3 butt" data-error_counter ="3" id="down_6_5">Check Answer</button> 
+                        <span class="d-inline-block ms-2 col-9 aztecs" style="font-size: 20px;">9. After two centuries of migration and warfare, the _______ finally settle within the area now covered by Mexico City.<span id="ans_reveal_6_5" class="mt-2 answer hidden">Answer: Aztecs</span></span>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <h3 class="mb-4" style="color: #121212">HORIZONTAL</h3>
+                    <div class="d-flex mb-5 w-100" id="ans_2_5">
+                        <button class="col-3 butt" data-error_counter ="3" id="across_2_5">Check Answer</button> 
+                        <span class="d-inline-block ms-2 col-9 maya" style="font-size: 20px;">4. The __________, preceding the Maya, have left the earliest surviving inscriptions, dating from about the 2nd century BC. <span id="ans_reveal_2_5" class="mt-2 answer hidden">Answer: Zapotecs</span></span>
+                    </div>
+                    <div class="d-flex mb-5 w-100" id="ans_4_0">
+                        <button class="col-3 butt" data-error_counter ="3" id="across_4_0">Check Answer</button> 
+                        <span class="d-inline-block ms-2 col-9 maya" style="font-size: 20px;">6. The Maya are already weakened by _________ diseases when the Spanish invaders first threaten them. <span id="ans_reveal_4_0" class="mt-2 answer hidden">Answer: European</span></span>
+                    </div>
+                    <div class="d-flex mb-5 w-100" id="ans_6_4">
+                        <button class="col-3 butt" data-error_counter ="3" id="across_6_4">Check Answer</button> 
+                        <span class="d-inline-block ms-2 col-9 maya" style="font-size: 20px;">8. Of the various early civilizations of central America, The _______ make the greatest use of writing.<span id="ans_reveal_6_4" class="mt-2 answer hidden">Answer: Maya</span></span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <style>
+        .answer::after {
+            content: "";
+            background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='18' height='18' fill='%23ffffff' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e") no-repeat center;
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            position: absolute;
+            right: 5px;
+        }
+        .answer {
+            font-size: 12px;
+            font-weight: 700;
+            background: #f00;
+            padding: 6px;
+            color: #fff;
+            width: 50%;
+            text-align: center;
+            position: relative;
+        }
+        .hidden {
+            display: none;
+        }
+        .incas {
+            color: #0000ff;
+            padding-right: 30px;
+        }
+        .aztecs {
+            color: #039203;
+            padding-right: 30px;
+        }
+        .maya {
+            color: #ff1717;
+            padding-right: 30px;
+        }
+        .invalid button {
+            background: red;
+        }
+        .invalid span {
+            color: red!important;
+            text-decoration: line-through;
+        }
         #section-seven #cross {
         text-align: center;
         width: 30px;
@@ -473,8 +546,8 @@
         }
 
         #section-seven td {
-        height: 40px;
-        width: 40px;
+        height: 50px;
+        width: 50px;
         border: 1px solid #fff;
         }
 
@@ -488,8 +561,14 @@
         }
 
         #section-seven .butt {
-        height: 50px;
+        height: 45px;
         width: 107px;
+        background: #ee8500;
+        border-radius: 10px;
+        border: 2px solid #daa45e;
+        font-size: 12px;
+        color: #fff;
+        margin-right: 5px;
         }
 
         #section-seven #puzzel {
@@ -501,16 +580,25 @@
         }
 
         #section-seven .inputBox {
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         border: 1px solid black;
         text-align: center;
+        font-size: 20px;
         }
 
         #section-seven #hintsTable {
-        width: 480px;
+        width: 100%;
         float: left;
         clear: left;
+        }
+        .wrong .butt {
+            background: #ff0000!important;
+            border: 2px solid #ff5656!important;
+        }
+        .correct .butt {
+            background: #08be08!important;
+            border: 2px solid #8aff8a!important;
         }
     </style>
 
@@ -577,11 +665,14 @@
     //Adds the hint numbers
     function addHint(){
         document.getElementById("txt_0_3").placeholder = "1";
-        document.getElementById("txt_2_6").placeholder = "2";
-        document.getElementById("txt_3_1").placeholder = "3";;
-        document.getElementById("txt_3_9").placeholder = "4";
-        document.getElementById("txt_6_2").placeholder = "5";
-        document.getElementById("txt_9_0").placeholder = "6";
+        document.getElementById("txt_0_9").placeholder = "2";
+        document.getElementById("txt_0_11").placeholder = "3";
+        document.getElementById("txt_1_7").placeholder = "4";
+        document.getElementById("txt_2_5").placeholder = "5";
+        document.getElementById("txt_3_1").placeholder = "6";
+        document.getElementById("txt_4_0").placeholder = "7";
+        document.getElementById("txt_6_4").placeholder = "8";
+        document.getElementById("txt_6_5").placeholder = "9";
     }
     //Stores ID of the selected cell into currentTextInput
     function textInputFocus(txtID123){
@@ -590,27 +681,28 @@
     //Returns Array
     function preparePuzzelArray(){
     var items = [	
-            [0, 0, 0, 'a', 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 'r', 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 't', 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 'e', 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 'r', 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 'i', 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 'e', 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 's', 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            [0, 0, 0, 'c', 0, 0, 0, 0, 0, 'a', 0, 'i', 0],
+            [0, 0, 0, 'u', 0, 0, 0, 's', 0, 'r', 0, 'n', 0],
+            [0, 0, 0, 'z', 0, 'z', 'a', 'p', 'o', 't', 'e', 'c', 's'],
+            [0, 'q', 0, 'c', 0, 0, 0, 'a', 0, 'e', 0, 'a', 0],
+            ['e', 'u', 'r', 'o', 'p', 'e', 'a', 'n', 0, 'r', 0, 0, 0],
+            [0, 'e', 0, 0, 0, 0, 0, 'i', 0, 'i', 0, 0, 0],
+            [0, 't', 0, 0, 'm', 'a', 'y', 'a', 0, 'e', 0, 0, 0],
+            [0, 'z', 0, 0, 0, 'z', 0, 'r', 0, 's', 0, 0, 0],
+            [0, 'a', 0, 0, 0, 't', 0, 'd', 0, 0, 0, 0, 0],
+            [0, 'l', 0, 0, 0, 'e', 0, 's', 0, 0, 0, 0, 0],
+            [0, 'c', 0, 0, 0, 'c', 0, 0, 0, 0, 0, 0, 0],
+            [0, 'o', 0, 0, 0, 's', 0, 0, 0, 0, 0, 0, 0],
+            [0, 't', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 'l', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
             ];
     return items;
     }
 
-    //GlobalsJS
+//GlobalsJS
 var currentTextInput;
 var puzzelArrayData;
+
 //Loads the Crossword
 function initializeScreen(){
 	var puzzelTable = document.getElementById("puzzel");
@@ -622,7 +714,7 @@ function initializeScreen(){
 			var cell = row.insertCell(-1);
 			if(rowData[j] != 0){
 				var txtID = String('txt' + '_' + i + '_' + j);
-				cell.innerHTML = '<input type="text" class="inputBox" maxlength="1" style="text-transform: lowercase" ' + 'id="' + txtID + '" onfocus="textInputFocus(' + "'" + txtID + "'"+ ')">';
+				cell.innerHTML = '<input autocomplete="off" type="text" class="inputBox" maxlength="1" style="text-transform: lowercase" ' + 'id="' + txtID + '" onfocus="textInputFocus(' + "'" + txtID + "'"+ ')">';
 			}else{
 				cell.style.backgroundColor  = "black";
 			}
@@ -631,80 +723,150 @@ function initializeScreen(){
 	addHint();
 }
 
-//Clear All Button
-function clearAllClicked(){
-	currentTextInput = '';
-	var puzzelTable = document.getElementById("puzzel");
-	puzzelTable.innerHTML = '';
-    initializeScreen();
-}
-
 //Check button
-function checkClicked(){
-	for ( var i = 0; i < puzzelArrayData.length ; i++ ) {
-		var rowData = puzzelArrayData[i];
-		for(var j = 0 ; j < rowData.length ; j++){
-			if(rowData[j] != 0){
-				var selectedInputTextElement = document.getElementById('txt' + '_' + i + '_' + j);
-				if(selectedInputTextElement.value != puzzelArrayData[i][j]){
+const buttonGroup = document.getElementById("hintsTable");
+
+const buttonGroupPressed = e => {
+    const triesRemaining = e.target.dataset.error_counter
+    var status = 0;
+    var token = e.target.id.split("_");
+    var answer_position = token[0];
+    var ans_row = token[1];
+    var ans_col = token[2];
+    if (answer_position == "down") {
+	    for ( var i = ans_row; i < puzzelArrayData.length ; i++ ) {
+            if (puzzelArrayData[i][ans_col] != 0) {
+                var selectedInputTextElement = document.getElementById('txt' + '_' + i + '_' + ans_col);
+				if(selectedInputTextElement.value.toLowerCase() != puzzelArrayData[i][ans_col]){
 					selectedInputTextElement.style.backgroundColor = 'red';
-
+                    status = status + 1;
 				}else{
-					selectedInputTextElement.style.backgroundColor = 'white';
+					selectedInputTextElement.style.backgroundColor = 'lime';
 				}
-			}
-		}
-	}
-} 
-//Clue Button
-function clueClicked(){
-	if (currentTextInput != null){
-		var temp1 = currentTextInput;
-		var token = temp1.split("_");
-		var row = token[1];
-		var column = token[2];
-		document.getElementById(temp1).value = puzzelArrayData[row][column];
-		//checkClicked();
-	}
+            }
+            else {
+                break;
+            }
+        }
+        if (status > 0) {
+            var item_quest = document.getElementById('ans' + '_' + ans_row + '_' + ans_col)
+            item_quest.classList.add ('invalid');
+            setTimeout(() => backToGlow(item_quest), 500);
+            const backToGlow = (item_quest) => {
+                item_quest.classList.remove('invalid');
+                for ( var i = ans_row; i < puzzelArrayData.length ; i++ ) {
+                    if (puzzelArrayData[i][ans_col] != 0) {
+                        var selectedInputTextElement = document.getElementById('txt' + '_' + i + '_' + ans_col);
+                        if(selectedInputTextElement.value.toLowerCase() != puzzelArrayData[i][ans_col]){
+                            selectedInputTextElement.style.backgroundColor = 'white';
+                            selectedInputTextElement.value = "";
+                        }else{
+                            selectedInputTextElement.style.backgroundColor = 'lime';
+                            selectedInputTextElement.setAttribute('disabled', true);
+                        }
+                    }
+                    else {
+                        break;
+                    }
+                }
+            }
+            if(document.getElementById(answer_position + '_' + ans_row + '_' + ans_col).getAttribute('data-error_counter') == 0){
+                    updateTries = 0;
+                } else {
+                    updateTries = Number(triesRemaining) - 1;
+                }
+            document.getElementById('down' + '_' + ans_row + '_' + ans_col).setAttribute('data-error_counter', updateTries);
+            if(document.getElementById(answer_position + '_' + ans_row + '_' + ans_col).getAttribute('data-error_counter') == 0 ){
+                for ( var i = ans_row; i < puzzelArrayData.length ; i++ ) {
+                    if (puzzelArrayData[i][ans_col] != 0) {
+                        var selectedInputTextElement = document.getElementById('txt' + '_' + i + '_' + ans_col);
+                        selectedInputTextElement.value = puzzelArrayData[i][ans_col];   
+                        selectedInputTextElement.setAttribute('disabled', true);
+                        document.getElementById('ans' + '_' + ans_row + '_' + ans_col).classList.add ('wrong');
+                        document.getElementById('ans_reveal' + '_' + ans_row + '_' + ans_col).classList.remove ('hidden');
+                        document.getElementById('ans_reveal' + '_' + ans_row + '_' + ans_col).classList.add ('d-block');
+                    }
+                    else {
+                        break;
+                    }
+                }
+                document.getElementById('down' + '_' + ans_row + '_' + ans_col).setAttribute('disabled', true);
+                document.getElementById('down' + '_' + ans_row + '_' + ans_col).innerHTML = "INCORRECT";
+            }
+        }
+        else if(status==0)  {
+            document.getElementById('ans' + '_' + ans_row + '_' + ans_col).classList.add ('correct');
+            document.getElementById('down' + '_' + ans_row + '_' + ans_col).innerHTML = "CORRECT";
+        }
+    }
+    else {
+	    for ( var j = ans_col; j < puzzelArrayData[ans_row].length; j++ ) {
+            if (puzzelArrayData[ans_row][j] != 0) {
+                var selectedInputTextElement = document.getElementById('txt' + '_' + ans_row + '_' + j);
+				if(selectedInputTextElement.value.toLowerCase() != puzzelArrayData[ans_row][j]){
+					selectedInputTextElement.style.backgroundColor = 'red';
+                    status = status + 1;
+				}else{
+					selectedInputTextElement.style.backgroundColor = 'lime';
+				}
+            }
+            else {
+                break;
+            }
+        }
+        if (status > 0) {
+            var item_quest = document.getElementById('ans' + '_' + ans_row + '_' + ans_col)
+            item_quest.classList.add ('invalid');
+            setTimeout(() => backToGlow(item_quest), 500);
+            const backToGlow = (item_quest) => {
+                item_quest.classList.remove('invalid');
+                for ( var j = ans_col; j < puzzelArrayData[ans_row].length ; j++ ) {
+                    if (puzzelArrayData[ans_row][j] != 0) {
+                        var selectedInputTextElement = document.getElementById('txt' + '_' + ans_row + '_' + j);
+                        if(selectedInputTextElement.value.toLowerCase() != puzzelArrayData[ans_row][j]){
+                            selectedInputTextElement.style.backgroundColor = 'white';
+                            selectedInputTextElement.value = "";
+                        }else{
+                            selectedInputTextElement.style.backgroundColor = 'lime';
+                            selectedInputTextElement.setAttribute('disabled', true);
+                        }
+                    }
+                    else {
+                        break;
+                    }
+                }
+            }
+            if(document.getElementById(answer_position + '_' + ans_row + '_' + ans_col).getAttribute('data-error_counter') == 0){
+                    updateTries = 0;
+                } else {
+                    updateTries = Number(triesRemaining) - 1;
+                }
+            document.getElementById('across' + '_' + ans_row + '_' + ans_col).setAttribute('data-error_counter', updateTries);
+            if(document.getElementById(answer_position + '_' + ans_row + '_' + ans_col).getAttribute('data-error_counter') == 0 ){
+                for ( var j = ans_col; j < puzzelArrayData[ans_row].length ; j++ ) {
+                    if (puzzelArrayData[ans_row][j] != 0) {
+                        var selectedInputTextElement = document.getElementById('txt' + '_' + ans_row + '_' + j);
+                        selectedInputTextElement.value = puzzelArrayData[ans_row][j];   
+                        selectedInputTextElement.setAttribute('disabled', true);
+                        document.getElementById('ans' + '_' + ans_row + '_' + ans_col).classList.add ('wrong');
+                        document.getElementById('ans_reveal' + '_' + ans_row + '_' + ans_col).classList.remove ('hidden');
+                        document.getElementById('ans_reveal' + '_' + ans_row + '_' + ans_col).classList.add ('d-block');
+                    }
+                    else {
+                        break;
+                    }
+                }
+                document.getElementById('across' + '_' + ans_row + '_' + ans_col).setAttribute('disabled', true);
+                document.getElementById('across' + '_' + ans_row + '_' + ans_col).innerHTML = "INCORRECT";
+            }
+        }
+        else if(status==0)  {
+            document.getElementById('ans' + '_' + ans_row + '_' + ans_col).classList.add ('correct');
+            document.getElementById('down' + '_' + ans_row + '_' + ans_col).innerHTML = "CORRECT";
+        }
+    }
 }
-//Solve Button
-function solveClicked(){
-	if (currentTextInput != null){
-		var temp1 = currentTextInput;
-		var token = temp1.split("_");
-		var row = token[1];
-		var column = token[2];
-
-		// Print elements on top
-		for(j = row; j >= 0; j--){
-			if(puzzelArrayData[j][column] != 0){
-				document.getElementById('txt' + '_' + j + '_' + column).value = puzzelArrayData[j][column];
-				}else break;
-		}
-		// Print elements on right
-		for(i = column; i< puzzelArrayData[row].length; i++){
-			if(puzzelArrayData[row][i] != 0){
-				document.getElementById('txt' + '_' + row + '_' + i).value = puzzelArrayData[row][i];
-				}else break;
-		}
-
-		// Print elements below
-		for(m = row; m< puzzelArrayData.length; m++){
-			if(puzzelArrayData[m][column] != 0){
-				document.getElementById('txt' + '_' + m + '_' + column).value = puzzelArrayData[m][column];
-				}else break;
-		}
-		// Print elements on left
-		for(k = column; k >= 0; k--){
-			if(puzzelArrayData[row][k] != 0){
-				document.getElementById('txt' + '_' + row + '_' + k).value = puzzelArrayData[row][k];
-				}else break;
-		}
-		// Done!
-
-	}
-}
-
+buttonGroup.addEventListener("click", buttonGroupPressed);
 </script>
 
     <script>
