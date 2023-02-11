@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+    <link href="https://m.fyioc.com/WhyNotScripts/css/VideoPlay.css" rel="stylesheet">
+    <link href="https://m.fyioc.com/WhyNotScripts/css/AudioPlay.css" rel="stylesheet">
+
+    <style type="text/css">
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25.31px;
+            font-weight: 400;
+            background: #9edecd;
+            background-size: cover;
+        }
+
+        section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        }
+
+        .container {
+            max-width: 1080px;
+            padding-left: 78px;
+            padding-right: 78px;
+        }
+
+        .pxy {
+            padding-top: 75px;
+            padding-bottom: 75px;
+        }
+
+        /* Background Color */
+
+        .white_bg {
+            background: #fff;
+        }
+
+        .light_bg {
+            background: #ecf8f5;
+        }
+
+        /* Typography */
+
+        h1 {
+            font-family: 'Arvo', serif;
+            margin: 0;
+            line-height: 1;
+            color: #000;
+            font-size: 85px;
+        }
+
+        h2 {
+            font-size: 40.5px;
+            font-family: 'Roboto', sans-serif;
+            color: #00bd8b;
+        }
+
+        h3 {
+            font-size: 30.76px;
+            font-family: 'Roboto', sans-serif;
+            color: #00bd8b;
+        }
+        
+        p {
+            margin: 0;
+            font-size: 25.31px;
+            color: #1c1c1c;
+            font-weight: 400;
+            font-family: 'Roboto', sans-serif;
+            text-align: left;
+            line-height: 1.3;
+        }
+
+        h1,
+        h2, h3 {
+            font-weight: 700;
+        }
+
+        /* section 1 */
+        #section-one {
+            background: #00c38f;
+        }
+        #section-one .hero {
+            background: url('./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1-hero.png') no-repeat;
+            background-size: contain;
+            width: 100%;
+            height: 597px;
+            padding-top: 165px;
+        }
+
+        /* section two */
+        .char_cont {
+            width: 845px;
+            height: 232px;
+        }
+        .char_text_box {
+            width: 420px;
+            height: 110px;
+            border-radius: 55px;
+            background: #00bd8b;
+            z-index: 10;
+            padding: 10px;
+        }
+        .char_img_box {
+            width: 420px;
+            height: 225px;
+            border-radius: 40px;
+            background: #00bd8b;
+        }
+        .left_side {
+            left: 30px;
+        }
+        .right_side {
+            right: 30px;
+        }
+        .check_cont {
+            background: #fff;
+            width: 92px;
+            height: 92px;
+            border-radius: 50%;
+        }
+        .ml-60 {
+            margin-left: 60px!important;
+        }
+        .mr-60 {
+            margin-right: 60px!important;
+        }
+
+        #section-two .emptyBox{ 
+            position: relative;
+            background: #74b7a5;
+        }
+
+        #section-two .emptyBox::after{ 
+            content: attr(data-question);
+            font-size: 30.75px;
+            font-weight: 500;
+            text-align: center;
+            color: #fff;
+        }
+
+        #error_check{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            font-family: 'Arvo', serif;
+            margin-bottom: 1rem;
+        }
+        #error_check span{ 
+            margin-left: .5rem;
+            font-size: 2rem;
+        }
+        .ans_show_incorrect {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            font-size: 12px;
+            background: #f00;
+            padding: 10px;
+            color: #fff;
+        }
+        .ans_show_correct {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            font-size: 12px;
+            background: rgb(16, 151, 16);
+            padding: 10px;
+            color: #fff;
+        }
+
+        /* section three */
+        .bulleted {
+            margin-left: 20px;
+            text-indent: -20px;
+            font-weight: 400;
+        }
+        .bulleted::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background: #000;
+            display: inline-block;
+            margin-right: 12px;
+            vertical-align: middle;
+            margin-bottom: 5px;
+        }
+        .YesNoBtn {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .YesNoBtn li {
+            color: #00bd8b;
+            font-size: 30px;
+            font-weight: 700;
+        }
+        .YesNoBtn li label {
+            border: 1px solid #00bd8b;
+            width: 160px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .YesNoBtn input[type="radio"] {
+            opacity: 0;
+            z-index: 100;
+            display: none;
+        }
+        .YesNoBtn input[type="radio"]:checked+label,
+        .checked+label {
+            background: #00bd8b;
+            color: #fff;
+            border: 0!important;
+        }
+
+        /* section four */
+        #section-four .container {
+            background: url("./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img17.png") no-repeat;
+            background-size: contain;
+            height: 735px;
+            width: 100%;
+        }
+        #section-four .bulleted {
+            margin-left: 20px;
+            text-indent: -20px;
+            font-weight: 400;
+        }
+        #section-four .bulleted::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            display: inline-block;
+            margin-right: 10px;
+            vertical-align: middle;
+            margin-bottom: 4px;
+        }
+
+        /* section five */
+        #section-five .container {
+            background: url("./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img18.png") #ecf8f5 no-repeat;
+            background-size: contain;
+            height: 711px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+<div class="lesson_20">
+    <!-- section one -->
+    <section id="section-one">
+        <div class="container hero d-flex flex-column align-items-end justify-content-start" style="padding-left: 50px; padding-right: 50px;">
+                <h1>BIOLOGY</h1>
+                <h6 style="font-size: 43px; color: #00c38f; font-weight: 700; line-height: 1;" class="text-end">WELCOME TO <br>BIOLOGY CLASS</h6>
+                <h6 style="font-size: 45px; color: #000; font-weight: 400;" class="text-end">The Journey Begins...</h6>
+        </div>
+    </section>
+    
+    <!-- section two -->
+    <section id="section-two">
+        <div class="container pxy white_bg d-flex flex-column align-self-center justify-content-start   ">
+            <p class="text-center mb-5">
+                The study of biology is the study of life. In order to understand life, we must be able to distinguish between living and nonliving things on earth.
+            </p>
+            <img class="mt-4 mb-4" src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img1.png" width="920.5" alt="">
+            <p class="text-center mb-5">
+                Biology is the study of all life and the characteristics of life. The characteristics of life are:
+            </p>
+            <h3 class="text-center mb-5 mt-3">CHARACTERISTICS</h3>
+            <div class="mb-2 ml-60 char_cont position-relative d-flex align-items-center">
+                <div class="char_text_box d-flex justify-content-between align-items-center position-absolute left_side">
+                    <p class="ms-4" style="color:#fff">Food / Nutrition</p>
+                    <div class="check_cont d-flex justify-content-center align-items-center">
+                        <img src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img7.png" width="66" height="51" alt="">
+                    </div>
+                </div>
+                <div class="char_img_box position-absolute right_side d-flex align-items-center justify-content-center">
+                    <img src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img2.png" width="395" alt="">
+                </div>
+            </div>
+            <div class="mb-2 mr-60 char_cont position-relative d-flex align-items-center">
+                <div class="char_text_box d-flex flex-row-reverse justify-content-between align-items-center position-absolute right_side">
+                    <p class="me-4" style="color:#fff">Movement</p>
+                    <div class="check_cont d-flex justify-content-center align-items-center">
+                        <img src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img7.png" width="66" height="51" alt="">
+                    </div>
+                </div>
+                <div class="char_img_box position-absolute d-flex align-items-center justify-content-center left_side">
+                    <img src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img3.png" width="395" alt="">
+                </div>
+            </div>
+            <div class="mb-2 ml-60 char_cont position-relative d-flex align-items-center">
+                <div class="char_text_box d-flex justify-content-between align-items-center position-absolute left_side">
+                    <p class="ms-4" style="color:#fff">Excretion</p>
+                    <div class="check_cont d-flex justify-content-center align-items-center">
+                        <img src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img7.png" width="66" height="51" alt="">
+                    </div>
+                </div>
+                <div class="char_img_box position-absolute right_side d-flex align-items-center justify-content-center">
+                    <img src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img4.png" width="395" alt="">
+                </div>
+            </div>
+            <div class="mb-2 mr-60 char_cont position-relative d-flex align-items-center">
+                <div class="char_text_box d-flex flex-row-reverse justify-content-between align-items-center position-absolute right_side">
+                    <p class="me-4" style="color:#fff">Synthesis <span class="d-block" style="font-size: 20px; line-height: 1;">(forming compounds)</span></p>
+                    <div class="check_cont d-flex justify-content-center align-items-center">
+                        <img src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img7.png" width="66" height="51" alt="">
+                    </div>
+                </div>
+                <div class="char_img_box position-absolute d-flex align-items-center justify-content-center left_side">
+                    <img src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img5.png" width="395" alt="">
+                </div>
+            </div>
+            <div class="mb-5 ml-60 char_cont position-relative d-flex align-items-center">
+                <div class="char_text_box d-flex justify-content-between align-items-center position-absolute left_side">
+                    <p class="ms-4" style="color:#fff">Respiration</p>
+                    <div class="check_cont d-flex justify-content-center align-items-center">
+                        <img src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img7.png" width="66" height="51" alt="">
+                    </div>
+                </div>
+                <div class="char_img_box position-absolute right_side d-flex align-items-center justify-content-center">
+                    <img src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img6.png" width="395" alt="">
+                </div>
+            </div>
+            <p class="text-center mb-5 mt-4">
+                In this course, you will experience, experiment, and learn about all the amazing characteristics of living things that inhabit this world.
+            </p>
+            <h3 class="text-center mb-0 mt-2">Here are some ideas you might come across:</h3>
+            <p class="text-center mb-4">
+                Drag the correct answer from the right to picture:
+            </p>
+                <div id="error_check" class="alert d-none"></div>
+                
+                <!-- const correctAnswers = ['img_8', 'img_9', 'img_10', 'img_11', 'img_12', 'img_13'].toString(); -->
+            <div class="d-flex flex-column align-items-center justify-content-center mt-3" style="gap:20px">
+                <div class="d-flex" style="gap:30px">
+                    <div class="">
+                        <div class="emptyBox border d-flex justify-content-center align-content-center flex-wrap" data-drag-ans="img_8" data-question="Why do (or don't) I look like my parents?" style=" height: 199px; width: 380px; padding: 0px 20px;"><span id="answerBar_img_8" class="d-none">WRONG IMAGE</span></div>
+                    </div>
+                    <div class="">
+                        <div class="border" id="dragImage">
+                            <img id="img_9" draggable="true" height="199" width="380" class="draggable" src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img9.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex" style="gap:30px">
+                    <div class="">
+                        <div class="emptyBox border d-flex justify-content-center align-content-center flex-wrap" data-drag-ans="img_9" data-question="How do plants make food?" style=" height: 199px; width: 380px; padding: 0px 20px;"><span id="answerBar_img_9" class="d-none">WRONG IMAGE</span></div>
+                    </div>
+                    <div class="">
+                        <div class="border" id="dragImage">
+                            <img id="img_11" draggable="true" height="199" width="380" class="draggable" src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img11.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex" style="gap:30px">
+                    <div class="">
+                        <div class="emptyBox border d-flex justify-content-center align-content-center flex-wrap" data-drag-ans="img_10" data-question="What do those little nutritional labels on food really mean?" style=" height: 199px; width: 380px; padding: 0px 20px;"><span id="answerBar_img_10" class="d-none">WRONG IMAGE</span></div>
+                    </div>
+                    <div class="">
+                        <div class="border" id="dragImage">
+                            <img id="img_13" draggable="true" height="199" width="380" class="draggable" src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img13.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex" style="gap:30px">
+                    <div class="">
+                        <div class="emptyBox border d-flex justify-content-center align-content-center flex-wrap" data-drag-ans="img_11" data-question="Why should I care about saving the rainforest?" style=" height: 199px; width: 380px; padding: 0px 20px;"><span id="answerBar_img_11" class="d-none">WRONG IMAGE</span></div>
+                    </div>
+                    <div class="">
+                        <div class="border" id="dragImage">
+                            <img id="img_12" draggable="true" height="199" width="380" class="draggable" src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img12.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex" style="gap:30px">
+                    <div class="">
+                        <div class="emptyBox border d-flex justify-content-center align-content-center flex-wrap" data-drag-ans="img_12" data-question="What causes cancer and why have we not found the cure?" style=" height: 199px; width: 380px; padding: 0px 20px;"><span id="answerBar_img_12" class="d-none">WRONG IMAGE</span></div>
+                    </div>
+                    <div class="">
+                        <div class="border" id="dragImage">
+                            <img id="img_8" draggable="true" height="199" width="380" class="draggable" src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img8.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex mb-4" style="gap:30px">
+                    <div class="">
+                        <div class="emptyBox border d-flex justify-content-center align-content-center flex-wrap" data-drag-ans="img_13" data-question="How does my body work?" style=" height: 199px; width: 380px; padding: 0px 20px;"><span id="answerBar_img_13" class="d-none">WRONG IMAGE</span></div>
+                    </div>
+                    <div class="">
+                        <div class="border" id="dragImage">
+                            <img id="img_10" draggable="true" height="199" width="380" class="draggable" src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img10.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section three -->
+    <section id="section-three">
+        <div class="container pxy light_bg d-flex flex-column align-items-center justify-content-center">
+            <h2 class="mb-4">WHAT YOU SHOULD KNOW?</h2>
+            <div class="mb-4 d-flex flex-column justify-content-start align-items-start w-100">
+                <h3 class="mb-4" style="color:#000; font-weight: 400;">Before you begin, you should:</h3>
+                <p class="bulleted">Have taken middle school science courses that focus on life, earth, and physicalscience concepts</p>
+            </div>
+            <img class="mb-5" src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img14.png" width="928" alt="">
+            <h2 class="mb-4" style="color:#fff; background: #00bd8b; padding: 10px 30px; border-radius: 50px;">Have you taken these courses?</h2>
+            <div class="d-flex justify-content-center align-items-center" style="gap: 20px;">
+                <ul class="YesNoBtn">
+                    <li>
+                        <input onclick="myFunction('yes')" type="radio" id="yes" name="YNButton" />
+                        <label for="yes">YES</label>
+                    </li>
+                    <li>
+                        <input onclick="myFunction('no')" type="radio" id="no" name="YNButton" />
+                        <label for="no">NO</label>
+                    </li>
+                </ul>
+            </div>
+            <img class="mt-5" width="100px" id="demo" src="" alt="">
+        </div>
+    </section>
+
+    <!-- section four -->
+    <section id="section-four">
+        <div class="container d-flex flex-column align-items-end justify-content-start" style="padding-left: 50px; padding-right: 50px; padding-top: 25px;">
+            <div class="d-flex flex-column align-items-center justify-content-start">
+                <div class="d-flex justify-content-center align-items-center" style="padding: 20px 30px; width: 333px; height: 136px; background: #00bd8bee;">
+                    <h5 class="text-center" style="margin:0;font-size: 27px; color: #fff;">LESSON EXPECTATIONS</h5>
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-start" style="padding: 20px 30px; width: 333px; background: #00bd8baa;">
+                    <p style="font-size: 20px; font-weight: 700; color: #fff;">By the end of this lesson, you should be able to:</p>
+                    <p class="mb-2 bulleted" style="font-size: 20px; font-weight: 400; color: #fff;">Describe the subfields of biology</p>
+                    <p class="mb-2 bulleted" style="font-size: 20px; font-weight: 400; color: #fff;">Identify and order the organizational levels of life</p>
+                    <p class="mb-2 bulleted" style="font-size: 20px; font-weight: 400; color: #fff;">Explain the basic classification system for organisms</p>
+                    <p class="mb-5 bulleted" style="font-size: 20px; font-weight: 400; color: #fff;">Discuss the underlying themes across different fields of biology</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section five -->
+    <section id="section-five">
+        <div class="container pxy d-flex flex-column align-items-center justify-content-start">
+            <h2 class="mb-4" style="color: #000;">LESSON KEYWORDS</h2>
+        </div>
+    </section>
+
+    <!-- section six -->
+    <section id="section-six">
+        <div class="container white_bg pxy d-flex flex-column align-items-center justify-content-start">
+            <h2 class="mb-4">WHAT IS BIOLOGY?</h2>
+            <p class="mb-3">The term biology comes from Latin and means the study of life.</p>
+            <p class="mb-3" style="font-size: 40px; font-weight: 700;"><em>Bio (Life)  Logy (Study of)</em></p>
+            <p class="mb-4 text-center">Watch the slideshow to your right. By clicking on a picture you can cause the slideshow to move to the next picture, or move through all the pictures to get back to any particular picture. Read the captions carefully. <strong> You will be able to examine some of the various fields of biology.</strong></p>
+            <p class="mb-4 text-center">As you can see, all these different fields of study within biology have valuable information to contribute to our understanding of the world. Biology can mean many different things to different people. What will it mean to you?</p>
+            <div class="mb-5 mt-5 d-flex justify-content-center align-items-start w-100" style="gap:0px;">
+                <div class="col-6">
+                    <img src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img19.png" width="432" height="324" alt="">
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-start">
+                    <h3 class="mb-4" style="color:#000">BLOOD CELLS</h3>
+                    <p>Since all living things are made of cells, it makes sense that figuring out how cells work is an important task. The cell’s life cycle and reproduction are pretty crucial knowledge for studying cancer. The role of different types of nerve cells in the function of the brain could be the key to Alzheimer’s.</p>
+                </div>
+            </div>
+            <div class="mb-5 d-flex justify-content-center align-items-start w-100" style="gap:0px;">
+                <div class="col-6">
+                    <img src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img20.png" width="432" height="324" alt="">
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-start">
+                    <h3 class="mb-4" style="color:#000">CHAMELEON</h3>
+                    <p>Evolution is the study of change over time. Much of this includes studying the ways that organisms are well-suited for their particular environment. Evolution is the common thread for all living things. Natural selection is one of the most powerful forces of nature. A topic you might study in evolution is why an antibiotic stops working over time.</p>
+                </div>
+            </div>
+            <div class="mb-5 d-flex justify-content-center align-items-start w-100" style="gap:0px;">
+                <div class="col-6">
+                    <img src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img21.png" width="432" height="324" alt="">
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-start">
+                    <h3 class="mb-4" style="color:#000">PATHOLOGY</h3>
+                    <p>Pathology is the study of diseases and how they spread. This is very important in medicine and agriculture. You might find a pathologist studying HIV, malaria, or a fungus that attacks crops.</p>
+                </div>
+            </div>
+            <div class="mb-5 d-flex justify-content-center align-items-start w-100" style="gap:0px;">
+                <div class="col-6">
+                    <img src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img22.png" width="432" height="324" alt="">
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-start">
+                    <h3 class="mb-4" style="color:#000">CORAL</h3>
+                    <p>In ecology, the key word is "interaction" – how organisms interact with each other and how they interact with the environment around them. An ecologist could be found studying things like how big the human population is and how many people the earth can really hold, or how a pollutant can affect the members of a certain ecosystem.</p>
+                </div>
+            </div>
+            <div class="mb-5 d-flex justify-content-center align-items-start w-100" style="gap:0px;">
+                <div class="col-6">
+                    <img src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img23.png" width="432" height="324" alt="">
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-start">
+                    <h3 class="mb-4" style="color:#000">DNA STRAND</h3>
+                    <p>Genetics is one of the hottest fields in biology today. The entire genetic code for humans has been mapped, and now we are learning what we can do with it. The future of medicine may rest upon our ability to figure out the genetic code.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* FOR CROSSWORD */
+        .answer::after {
+            content: "";
+            background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='18' height='18' fill='%23ffffff' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e") no-repeat center;
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            position: absolute;
+            right: 5px;
+        }
+        .answer {
+            font-size: 12px;
+            font-weight: 700;
+            background: #f00;
+            padding: 6px;
+            color: #fff;
+            width: 50%;
+            text-align: center;
+            position: relative;
+        }
+        .hidden {
+            display: none;
+        }
+        .invalid button {
+            background: red;
+        }
+        .invalid span {
+            color: red!important;
+            text-decoration: line-through;
+        }
+        #section-seven #cross {
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        margin: 0;
+        padding: 0;
+        border-collapse: collapse;
+        border: 1px solid white;
+        }
+        #section-seven #buttons {
+        width: 30%;
+        float: right;
+        }
+
+        #section-seven tr {
+        margin: 0;
+        padding: 0;
+        border-collapse: collapse;
+        }
+
+        #section-seven td {
+        height: 50px;
+        width: 50px;
+        border: 1px solid #fff;
+        }
+
+        #section-seven #leftBox {
+        float: left;
+        }
+
+        #section-seven #rightBox {
+        float: left;
+        clear: left;
+        }
+
+        #section-seven .butt {
+        height: 45px;
+        width: 107px;
+        background: #ee8500;
+        border-radius: 10px;
+        border: 2px solid #daa45e;
+        font-size: 12px;
+        color: #fff;
+        margin-right: 5px;
+        }
+
+        #section-seven #puzzel {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        border-collapse: collapse;
+        border: 1px solid black;
+        }
+
+        #section-seven .inputBox {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        text-align: center;
+        font-size: 20px;
+        }
+
+        #section-seven #hintsTable {
+        width: 100%;
+        float: left;
+        clear: left;
+        }
+        .wrong .butt {
+            background: #ff0000!important;
+            border: 2px solid #ff5656!important;
+        }
+        .correct .butt {
+            background: #08be08!important;
+            border: 2px solid #8aff8a!important;
+        }
+        .mouse_pointer {
+            pointer-events: none;
+        }
+    </style>
+
+    <!-- fifth section -->
+		<!-- Assessment Quiz -->
+        <table style="width: 710px; height: auto; margin-left: auto; margin-right: auto;" border="1" cellpadding="20">
+            <tbody>
+            <tr>
+            <td style="background-color: white; width: 710px; ">
+            <b><span style="font-family: arial,helvetica,sans-serif;">&nbsp;  Answer the following questions.</span> </b>
+            <p><a:question index="1" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="2" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="3" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="4" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="5" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="6" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="7" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="8" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="9" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="10" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="11" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="12" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="13" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="14" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="15" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="16" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="17" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="18" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="19" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="20" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            </td>
+            </tr>
+            </tbody>
+        </table>
+            <!-- Assessment Quiz -->
+
+    <div id="audio_holder"></div>
+</div>
+
+<script>
+    // FOR CROSSWORD
+    document.getElementsByTagName('body')[0].onload = function() {initializeScreen()};
+
+    //Adds the hint numbers
+    function addHint(){
+        document.getElementById("txt_0_3").placeholder = "1";
+        document.getElementById("txt_0_9").placeholder = "2";
+        document.getElementById("txt_0_11").placeholder = "3";
+        document.getElementById("txt_1_7").placeholder = "4";
+        document.getElementById("txt_2_5").placeholder = "5";
+        document.getElementById("txt_3_1").placeholder = "6";
+        document.getElementById("txt_4_0").placeholder = "7";
+        document.getElementById("txt_6_4").placeholder = "8";
+        document.getElementById("txt_6_5").placeholder = "9";
+    }
+
+    //Returns Array
+    function preparePuzzelArray(){
+    var items = [	
+            [0, 0, 0, 'c', 0, 0, 0, 0, 0, 'a', 0, 'i', 0],
+            [0, 0, 0, 'u', 0, 0, 0, 's', 0, 'r', 0, 'n', 0],
+            [0, 0, 0, 'z', 0, 'z', 'a', 'p', 'o', 't', 'e', 'c', 's'],
+            [0, 'q', 0, 'c', 0, 0, 0, 'a', 0, 'e', 0, 'a', 0],
+            ['e', 'u', 'r', 'o', 'p', 'e', 'a', 'n', 0, 'r', 0, 0, 0],
+            [0, 'e', 0, 0, 0, 0, 0, 'i', 0, 'i', 0, 0, 0],
+            [0, 't', 0, 0, 'm', 'a', 'y', 'a', 0, 'e', 0, 0, 0],
+            [0, 'z', 0, 0, 0, 'z', 0, 'r', 0, 's', 0, 0, 0],
+            [0, 'a', 0, 0, 0, 't', 0, 'd', 0, 0, 0, 0, 0],
+            [0, 'l', 0, 0, 0, 'e', 0, 's', 0, 0, 0, 0, 0],
+            [0, 'c', 0, 0, 0, 'c', 0, 0, 0, 0, 0, 0, 0],
+            [0, 'o', 0, 0, 0, 's', 0, 0, 0, 0, 0, 0, 0],
+            [0, 't', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 'l', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            ];
+    return items;
+    }
+
+//GlobalsJS
+var currentTextInput;
+var puzzelArrayData;
+
+//Loads the Crossword
+function initializeScreen(){
+	var puzzelTable = document.getElementById("puzzel");
+	puzzelArrayData = preparePuzzelArray();
+	for ( var i = 0; i < puzzelArrayData.length ; i++ ) {
+		var row = puzzelTable.insertRow(-1);
+		var rowData = puzzelArrayData[i];
+		for(var j = 0 ; j < rowData.length ; j++){
+			var cell = row.insertCell(-1);
+			if(rowData[j] != 0){
+				var txtID = String('txt' + '_' + i + '_' + j);
+				cell.innerHTML = '<input autocomplete="off" type="text" class="inputBox" maxlength="1" style="text-transform: lowercase" ' + 'id="' + txtID + '" onfocus="textInputFocus(' + "'" + txtID + "'"+ ')">';
+			}else{
+				cell.style.backgroundColor  = "black";
+			}
+		}
+	}
+	addHint();
+}
+
+//Check button
+const buttonGroup = document.getElementById("hintsTable");
+
+const buttonGroupPressed = e => {
+    const triesRemaining = e.target.dataset.error_counter
+    var status = 0;
+    var token = e.target.id.split("_");
+    var answer_position = token[0];
+    var ans_row = token[1];
+    var ans_col = token[2];
+    if (answer_position == "down") {
+	    for ( var i = ans_row; i < puzzelArrayData.length ; i++ ) {
+            if (puzzelArrayData[i][ans_col] != 0) {
+                var selectedInputTextElement = document.getElementById('txt' + '_' + i + '_' + ans_col);
+				if(selectedInputTextElement.value.toLowerCase() != puzzelArrayData[i][ans_col]){
+					selectedInputTextElement.style.backgroundColor = 'red';
+                    status = status + 1;
+				}else{
+					selectedInputTextElement.style.backgroundColor = 'lime';
+				}
+            }
+            else {
+                break;
+            }
+        }
+        if (status > 0) {
+            var item_quest = document.getElementById('ans' + '_' + ans_row + '_' + ans_col)
+            item_quest.classList.add ('invalid');
+            setTimeout(() => backToGlow(item_quest), 500);
+            const backToGlow = (item_quest) => {
+                item_quest.classList.remove('invalid');
+                for ( var i = ans_row; i < puzzelArrayData.length ; i++ ) {
+                    if (puzzelArrayData[i][ans_col] != 0) {
+                        var selectedInputTextElement = document.getElementById('txt' + '_' + i + '_' + ans_col);
+                        if(selectedInputTextElement.value.toLowerCase() != puzzelArrayData[i][ans_col]){
+                            selectedInputTextElement.style.backgroundColor = 'white';
+                            selectedInputTextElement.value = "";
+                        }else{
+                            selectedInputTextElement.style.backgroundColor = 'lime';
+                            selectedInputTextElement.setAttribute('disabled', true);
+                        }
+                    }
+                    else {
+                        break;
+                    }
+                }
+            }
+            if(document.getElementById(answer_position + '_' + ans_row + '_' + ans_col).getAttribute('data-error_counter') == 0){
+                    updateTries = 0;
+                } else {
+                    updateTries = Number(triesRemaining) - 1;
+                }
+            document.getElementById('down' + '_' + ans_row + '_' + ans_col).setAttribute('data-error_counter', updateTries);
+            if(document.getElementById(answer_position + '_' + ans_row + '_' + ans_col).getAttribute('data-error_counter') == 0 ){
+                for ( var i = ans_row; i < puzzelArrayData.length ; i++ ) {
+                    if (puzzelArrayData[i][ans_col] != 0) {
+                        var selectedInputTextElement = document.getElementById('txt' + '_' + i + '_' + ans_col);
+                        selectedInputTextElement.value = puzzelArrayData[i][ans_col];   
+                        selectedInputTextElement.setAttribute('disabled', true);
+                        document.getElementById('ans' + '_' + ans_row + '_' + ans_col).classList.add ('wrong');
+                        document.getElementById('ans_reveal' + '_' + ans_row + '_' + ans_col).classList.remove ('hidden');
+                        document.getElementById('ans_reveal' + '_' + ans_row + '_' + ans_col).classList.add ('d-block');
+                    }
+                    else {
+                        break;
+                    }
+                }
+                document.getElementById('down' + '_' + ans_row + '_' + ans_col).setAttribute('disabled', true);
+                document.getElementById('down' + '_' + ans_row + '_' + ans_col).innerHTML = "INCORRECT";
+            }
+        }
+        else if(status==0)  {
+            document.getElementById('ans' + '_' + ans_row + '_' + ans_col).classList.add ('correct');
+            document.getElementById('down' + '_' + ans_row + '_' + ans_col).innerHTML = "CORRECT";
+        }
+    }
+    else {
+	    for ( var j = ans_col; j < puzzelArrayData[ans_row].length; j++ ) {
+            if (puzzelArrayData[ans_row][j] != 0) {
+                var selectedInputTextElement = document.getElementById('txt' + '_' + ans_row + '_' + j);
+				if(selectedInputTextElement.value.toLowerCase() != puzzelArrayData[ans_row][j]){
+					selectedInputTextElement.style.backgroundColor = 'red';
+                    status = status + 1;
+				}else{
+					selectedInputTextElement.style.backgroundColor = 'lime';
+				}
+            }
+            else {
+                break;
+            }
+        }
+        if (status > 0) {
+            var item_quest = document.getElementById('ans' + '_' + ans_row + '_' + ans_col)
+            item_quest.classList.add ('invalid');
+            setTimeout(() => backToGlow(item_quest), 500);
+            const backToGlow = (item_quest) => {
+                item_quest.classList.remove('invalid');
+                for ( var j = ans_col; j < puzzelArrayData[ans_row].length ; j++ ) {
+                    if (puzzelArrayData[ans_row][j] != 0) {
+                        var selectedInputTextElement = document.getElementById('txt' + '_' + ans_row + '_' + j);
+                        if(selectedInputTextElement.value.toLowerCase() != puzzelArrayData[ans_row][j]){
+                            selectedInputTextElement.style.backgroundColor = 'white';
+                            selectedInputTextElement.value = "";
+                        }else{
+                            selectedInputTextElement.style.backgroundColor = 'lime';
+                            selectedInputTextElement.setAttribute('disabled', true);
+                        }
+                    }
+                    else {
+                        break;
+                    }
+                }
+            }
+            if(document.getElementById(answer_position + '_' + ans_row + '_' + ans_col).getAttribute('data-error_counter') == 0){
+                    updateTries = 0;
+                } else {
+                    updateTries = Number(triesRemaining) - 1;
+                }
+            document.getElementById('across' + '_' + ans_row + '_' + ans_col).setAttribute('data-error_counter', updateTries);
+            if(document.getElementById(answer_position + '_' + ans_row + '_' + ans_col).getAttribute('data-error_counter') == 0 ){
+                for ( var j = ans_col; j < puzzelArrayData[ans_row].length ; j++ ) {
+                    if (puzzelArrayData[ans_row][j] != 0) {
+                        var selectedInputTextElement = document.getElementById('txt' + '_' + ans_row + '_' + j);
+                        selectedInputTextElement.value = puzzelArrayData[ans_row][j];   
+                        selectedInputTextElement.setAttribute('disabled', true);
+                        document.getElementById('ans' + '_' + ans_row + '_' + ans_col).classList.add ('wrong');
+                        document.getElementById('ans_reveal' + '_' + ans_row + '_' + ans_col).classList.remove ('hidden');
+                        document.getElementById('ans_reveal' + '_' + ans_row + '_' + ans_col).classList.add ('d-block');
+                    }
+                    else {
+                        break;
+                    }
+                }
+                document.getElementById('across' + '_' + ans_row + '_' + ans_col).setAttribute('disabled', true);
+                document.getElementById('across' + '_' + ans_row + '_' + ans_col).innerHTML = "INCORRECT";
+            }
+        }
+        else if(status==0)  {
+            document.getElementById('ans' + '_' + ans_row + '_' + ans_col).classList.add ('correct');
+            document.getElementById('down' + '_' + ans_row + '_' + ans_col).innerHTML = "CORRECT";
+        }
+    }
+}
+buttonGroup.addEventListener("click", buttonGroupPressed);
+</script>
+
+    <script>
+
+        // load first audio on the list as default
+        window.addEventListener("DOMContentLoaded", (event) => {
+            const pauseAudio20 = document.querySelector(".play_list_1 button");
+            //console.log(pauseAudio);
+            const audio_file20 = 'https://m.fyioc.com/Spanish2/Lesson20/'+pauseAudio20.getAttribute('data-audio')+'.mp3';
+            //console.log(audio_file);
+            audioLoad(audio_file20);
+        });
+
+        const container20 = document.querySelector(".lesson_20")
+        const btnContainer20 = document.querySelector(".lesson_20");
+        const btnPlay20 = btnContainer20.querySelectorAll("button[data-audio]");
+
+        btnPlay20.forEach(function(item, index) {
+
+            item.addEventListener("click", (event) => {
+
+                // get the button id ( btnPause,  btnPlayTone)
+                const id = event.target.id;
+                
+                // load audio file every click
+                const audio_file20 = 'https://m.fyioc.com/Spanish2/Lesson20/'+event.target.getAttribute('data-audio')+'.mp3';
+                audioLoad(audio_file20);
+
+                // get audio id
+                const audioPlay20 = document.getElementById("audioPlay");
+                //console.log(audioPlay);
+                // audio play
+                if(id === "btnPlayTone"){
+                    event.target.classList.add("playing");
+                    btnContainer20.classList.add("audio_playing");
+                    audioPlay20.play();
+                    item.innerHTML = '<span class="material-icons d-flex">pause</span>';
+
+                    event.target.setAttribute("id", "btnPause");
+                }
+
+                // audio pause
+                if(id === "btnPause"){
+                    event.target.classList.remove("playing");
+                    audioPlay20.pause();
+                    btnContainer20.classList.remove("audio_playing");
+                    item.innerHTML = '<span class="material-icons d-flex">volume_up</span>';
+
+                    event.target.setAttribute("id", "btnPlayTone");
+                }
+            
+                // audio end
+                audioPlay20.onended = (event) => {    
+                    item.classList.remove("playing");
+                    audioPlay20.pause()
+                    btnContainer20.classList.remove("audio_playing");
+                    item.innerHTML = '<span class="material-icons d-flex">volume_up</span>';
+                }
+            
+            });
+
+        });
+
+        function audioLoad(audio_url){
+            const audio_file20 = '<audio id="audioPlay" src="'+audio_url+'"></audio>';
+            document.getElementById("audio_holder").innerHTML = audio_file20;
+        }
+
+        const checkList20 = document.querySelectorAll("#practice1");
+
+        checkList20.forEach(function(elem, index){
+
+            elem.addEventListener("click", function(event){
+
+                if(elem.checked){
+
+                    if(event.target.getAttribute('data-value') == "yes"){
+                        elem.classList.remove('is-invalid');
+                        elem.classList.add('is-valid');
+                    }
+
+                    if(event.target.getAttribute('data-value') == "no"){
+                        elem.classList.remove('is-valid');
+                        elem.classList.add('is-invalid');
+                    }
+
+                } else {
+                    elem.classList.remove('is-valid');
+                    elem.classList.remove('is-invalid');
+                }
+
+            });
+
+        });
+
+        // New Validation Function
+        function checkInputs(){
+            const answerNumber = event.target.dataset.qs_count
+            const triesRemaining = event.target.dataset.error_counter
+            const selectorString = `quiz-2-answer${answerNumber}`
+            const selectorStringButton = `quiz-2-answer${answerNumber}btn`
+            const selectorStringAnswer = `answer-text${answerNumber}`
+            const quizTwoAnswer = document.getElementById(selectorString);
+            const quizTwoAnswerButton = document.getElementById(selectorStringButton)
+            const quizTwoAnswerText = document.getElementById(selectorStringAnswer)
+            const answer = quizTwoAnswer.getAttribute('data-ans')
+            const userAnswer = quizTwoAnswer.value.toLowerCase()
+            const correctAnswer = userAnswer === answer.toLowerCase() ? true : false
+            const backToGlow = (quizTwoAnswer, quizTwoAnswerButton) => {
+                quizTwoAnswerButton.classList.remove("glow-on-hover-success")
+                quizTwoAnswerButton.classList.remove("glow-on-hover-wrong")
+                quizTwoAnswerButton.classList.add('glow-on-hover')
+                quizTwoAnswerButton.innerText = 'Check'
+            }
+            if(correctAnswer){
+                quizTwoAnswer.classList.remove("is-invalid")
+                quizTwoAnswer.classList.add("is-valid")
+                quizTwoAnswerButton.innerText = 'Correct!'
+                quizTwoAnswerButton.classList.add("glow-on-hover-success")
+                quizTwoAnswerButton.classList.remove("glow-on-hover")
+                quizTwoAnswerButton.classList.remove('glow-on-hover-wrong')
+                quizTwoAnswerText.classList.remove('bg-danger')
+                quizTwoAnswerText.classList.add('bg-success')
+            } else {
+                quizTwoAnswerText.classList.remove('bg-success') 
+                quizTwoAnswerText.classList.add('bg-danger')
+                quizTwoAnswer.classList.remove("is-valid")
+                quizTwoAnswer.classList.add("is-invalid")
+                quizTwoAnswerButton.classList.remove("glow-on-hover-success")
+                quizTwoAnswerButton.classList.remove("glow-on-hover")
+                quizTwoAnswerButton.classList.add('glow-on-hover-wrong')
+                quizTwoAnswerButton.innerText = 'Wrong'
+                setTimeout(() => backToGlow(quizTwoAnswer,quizTwoAnswerButton), 1500);
+                let updateTries = ''
+                if(quizTwoAnswerButton.getAttribute('data-error_counter') == 0){
+                    updateTries = 0;
+                } else {
+                    updateTries = Number(triesRemaining) - 1;
+                }
+                document.getElementById(selectorStringButton).setAttribute('data-error_counter', updateTries)
+                if(quizTwoAnswerButton.getAttribute('data-error_counter') == 0 ){
+                    quizTwoAnswerText.innerHTML = `Answer: ${quizTwoAnswer.getAttribute('data-ans')}`
+                    quizTwoAnswerText.classList.remove('hidden')
+                }
+            }
+        }
+
+        const checkList19 = document.querySelectorAll("#practice2");
+
+        checkList19.forEach(function(elem, index){
+
+            elem.addEventListener("click", function(event){
+
+                if(elem.checked){
+
+                    if(event.target.getAttribute('data-value') == "yes"){
+                        elem.classList.remove('is-invalid');
+                        elem.classList.add('is-valid');
+                    }
+
+                    if(event.target.getAttribute('data-value') == "no"){
+                        elem.classList.remove('is-valid');
+                        elem.classList.add('is-invalid');
+                    }
+
+                } else {
+                    elem.classList.remove('is-valid');
+                    elem.classList.remove('is-invalid');
+                }
+
+            });
+
+        });
+
+
+
+        // drag and drop match image
+        const dragImage = document.querySelectorAll("#dragImage");
+
+        dragImage.forEach( drag => {
+
+            drag.addEventListener("dragstart", (event) => {
+                event.dataTransfer.setData("src", event.target.id);
+            }, false)
+
+            drag.addEventListener("dragover", (event) => {
+                event.preventDefault();
+            }, false)
+
+            drag.addEventListener("drop", (event) => {
+                event.preventDefault();
+
+                const elSrc = document.getElementById(event.dataTransfer.getData("src"));
+                const srcParent = elSrc.parentNode;
+                const targetPath = event.currentTarget.firstElementChild;
+            
+                event.currentTarget.replaceChild(elSrc, targetPath);
+                srcParent.appendChild(targetPath);
+
+                // const currentContainer = elSrc.parentElement.parentElement.previousElementSibling.firstElementChild;
+
+                // if(currentContainer.getAttribute('data-drag-ans') != event.dataTransfer.getData('src')) {
+                //     currentContainer.firstChild.classList.remove ('d-none');
+                //     currentContainer.firstChild.classList.add ('ans_show_incorrect');
+                //     currentContainer.firstChild.innerHTML = "WRONG IMAGE";
+                // }
+                // else {
+                //     currentContainer.firstChild.classList.remove ('d-none');
+                //     currentContainer.firstChild.classList.add ('ans_show_correct');
+                //     currentContainer.firstChild.innerHTML = "CORRECT IMAGE";
+                //     elSrc.parentElement.parentElement.classList.add ('mouse_pointer');
+                // }
+
+                const correctAnswers = ['img_8', 'img_9', 'img_10', 'img_11', 'img_12', 'img_13'];
+                const currentAnswerOrder = [].slice.call(document.querySelectorAll('#dragImage img')).map((element) => element.id);
+
+                var errorCount = 0;
+
+                const alert = document.querySelector("#error_check");
+                alert.classList.remove('d-none');
+
+                for (var i = 0; i < currentAnswerOrder.length ; i++) {
+                    if(correctAnswers[i] != currentAnswerOrder[i]) {
+                        errorCount = errorCount + 1;
+                        document.getElementById(currentAnswerOrder[i]).parentElement.parentElement.previousElementSibling.firstElementChild.firstElementChild.classList.remove ('d-none');
+                        document.getElementById(currentAnswerOrder[i]).parentElement.parentElement.previousElementSibling.firstElementChild.firstElementChild.classList.add ('ans_show_incorrect');
+                        document.getElementById(currentAnswerOrder[i]).parentElement.parentElement.previousElementSibling.firstElementChild.firstElementChild.classList.remove ('ans_show_correct');
+                        document.getElementById(currentAnswerOrder[i]).parentElement.parentElement.previousElementSibling.firstElementChild.firstElementChild.innerHTML = "WRONG IMAGE";
+                    }
+                    else {
+                        document.getElementById(currentAnswerOrder[i]).parentElement.parentElement.previousElementSibling.firstElementChild.firstElementChild.classList.remove ('d-none');
+                        document.getElementById(currentAnswerOrder[i]).parentElement.parentElement.previousElementSibling.firstElementChild.firstElementChild.classList.add ('ans_show_correct');
+                        document.getElementById(currentAnswerOrder[i]).parentElement.parentElement.previousElementSibling.firstElementChild.firstElementChild.classList.remove ('ans_show_inZSEW32Qcorrect');
+                        document.getElementById(currentAnswerOrder[i]).parentElement.parentElement.previousElementSibling.firstElementChild.firstElementChild.innerHTML = "CORRECT IMAGE";
+                    }
+                    if (errorCount > 0) {
+                        alert.className = 'alert alert-danger';
+                        alert.innerHTML = 'Try Again! <span class="material-icons">cancel</span>';
+                    }
+                    else {
+                        alert.className = 'alert alert-success';
+                        alert.innerHTML = 'Great Job! <span class="material-icons">verified</span>';
+                    }
+                }
+
+                // for (int i = 0; i < correctAnswers.length ; i++ ) {
+                //     if (correctAnswers[i] == currentAnswerOrder[i]) {
+                //         document.getElementById('_img_8').classList.remove ('d-none');
+                //         document.getElementById('_img_8').classList.add ('ans_show_correct');
+                //         document.getElementById('answerBar').innerHTML = "CORRECT IMAGE";
+                //         alert.className = 'alert alert-success';
+                //         alert.innerHTML = 'Great Job! <span class="material-icons">verified</span>';
+                //     }
+                //     else {
+                //     alert.className = 'alert alert-danger';
+                //     alert.innerHTML = 'Try Again! <span class="material-icons">cancel</span>';
+                //     }
+                // }
+
+                
+                // const alert = document.querySelector("#error_check");
+                // alert.classList.remove('d-none');
+                
+                // if(correctAnswers == currentAnswerOrder){
+                //     alert.className = 'alert alert-success';
+                //     alert.innerHTML = 'Great Job! <span class="material-icons">verified</span>';
+                // } else {
+                //     alert.className = 'alert alert-danger';
+                //     alert.innerHTML = 'Try Again! <span class="material-icons">cancel</span>';
+                // }
+
+            }, false)
+            
+        });
+
+// Scrollable 
+
+var stopX = true;
+var stopY = true;
+
+document.addEventListener('drag', function(e) {
+    if (event.target.classList.contains('draggable')) {
+        stopY = true;
+                    
+        // Handle Y
+        if (e.clientY < 150) {
+            stopY = false;
+            scroll(0,-100)
+        }
+
+        if ((e.clientY > ( document.documentElement.clientHeight - 150)) && !VerticalMaxed()) { 
+            stopY = false;
+            scroll(0,100) 
+        }
+    }
+
+});
+
+document.addEventListener('dragend', function(e) {
+    if (event.target.classList.contains('draggable')) {
+        stopY = true;
+        //stopY = true;
+    }
+});
+
+// On drag scroll, prevents page from growing with mobile safari rubber-band effect
+var VerticalMaxed = function(){ return (window.innerHeight + window.scrollY) >= document.body.offsetHeight}
+var HorizontalMaxed = function(){ return (window.pageXOffset) > (document.body.scrollWidth - document.body.clientWidth);}
+
+var scroll = function (stepX, stepY) {
+    var scrollY = document.documentElement.scrollTop || document.body.scrollTop;
+    var scrollX = document.documentElement.scrollLeft || document.body.scrollLeft;
+    window.scrollTo((scrollX + stepX), (scrollY + stepY));
+                
+    if (!stopY || !stopX) {
+        setTimeout(function () { scroll(stepX, stepY) }, 20);
+    }
+}
+
+// EMOJI
+
+var myFunction = function(value) {
+    if (value=='yes') {
+        document.getElementById('demo').src = "./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img15.png";
+    }
+    else {
+        document.getElementById('demo').src = "./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img16.png";
+    }
+};
+
+    </script>
+    <script src="https://m.fyioc.com/WhyNotScripts/js/VideoPlay.js"></script>
+    <script src="https://m.fyioc.com/WhyNotScripts/js/AudioPlay.js"></script>
+</body>
+</html>
