@@ -265,6 +265,104 @@
             height: 711px;
             width: 100%;
         }
+
+        /* section six */
+        .switch {
+            position: relative;
+            display: block;
+            width: 230px;
+            height: 32px;
+            padding: 0;
+            margin: 0 10px 10px 0;
+            background: linear-gradient(to bottom, #eeeeee, #FFFFFF 25px);
+            background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF 25px);
+            border-radius: 18px;
+            box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+        }
+        .switch-input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+        .switch-label {
+            position: relative;
+            display: block;
+            height: inherit;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: #eceeef;
+            border-radius: inherit;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+        }
+
+        .switch-label:before, .switch-label:after {
+            position: absolute;
+            top: 50%;
+            margin-top: -.5em;
+            line-height: 1;
+            -webkit-transition: inherit;
+            -moz-transition: inherit;
+            -o-transition: inherit;
+            transition: inherit;
+        }
+        .switch-label:before {
+            content: attr(data-off);
+            left: 40px;
+            color: #016d50;
+            text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+        }
+        .switch-label:after {
+            content: attr(data-on);
+            left: 40px;
+            font-weight: 700;
+            color: #016d50;
+            text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+        }
+        .switch-input:checked ~ .switch-label {
+            background: #c3ffef;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+        }
+        .switch-input:checked ~ .switch-label:before {
+            opacity: 0;
+        }
+        .switch-input:checked ~ .switch-label:after {
+            opacity: 1;
+        }
+        .switch-handle {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(to bottom, #00bd8b 40%, #04aa7e);
+            border-radius: 100%;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+        }
+        .switch-handle:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -6px 0 0 -6px;
+            width: 12px;
+            height: 12px;
+            background: linear-gradient(to bottom, #04ba89 40%, #06b888);
+            border-radius: 6px;
+            box-shadow: inset 0 1px rgba(0, 0, 0, 0.1);
+        }
+        .switch-input:checked ~ .switch-handle {
+            left: 200px;
+            box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+        }
+        /* Transition
+            ========================== */
+        .switch-label, .switch-handle {
+            transition: All 0.3s ease;
+        }
     </style>
 </head>
 
@@ -362,7 +460,7 @@
                     </div>
                     <div class="">
                         <div class="border" id="dragImage">
-                            <img id="img_9" draggable="true" height="199" width="380" class="draggable" src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img9.png">
+                            <img id="img_9" style="cursor: pointer;" draggable="true" height="199" width="380" class="draggable" src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img9.png">
                         </div>
                     </div>
                 </div>
@@ -372,7 +470,7 @@
                     </div>
                     <div class="">
                         <div class="border" id="dragImage">
-                            <img id="img_11" draggable="true" height="199" width="380" class="draggable" src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img11.png">
+                            <img id="img_11" style="cursor: pointer;" draggable="true" height="199" width="380" class="draggable" src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img11.png">
                         </div>
                     </div>
                 </div>
@@ -382,7 +480,7 @@
                     </div>
                     <div class="">
                         <div class="border" id="dragImage">
-                            <img id="img_13" draggable="true" height="199" width="380" class="draggable" src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img13.png">
+                            <img id="img_13" style="cursor: pointer;" draggable="true" height="199" width="380" class="draggable" src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img13.png">
                         </div>
                     </div>
                 </div>
@@ -392,7 +490,7 @@
                     </div>
                     <div class="">
                         <div class="border" id="dragImage">
-                            <img id="img_12" draggable="true" height="199" width="380" class="draggable" src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img12.png">
+                            <img id="img_12" style="cursor: pointer;" draggable="true" height="199" width="380" class="draggable" src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img12.png">
                         </div>
                     </div>
                 </div>
@@ -402,7 +500,7 @@
                     </div>
                     <div class="">
                         <div class="border" id="dragImage">
-                            <img id="img_8" draggable="true" height="199" width="380" class="draggable" src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img8.png">
+                            <img id="img_8" style="cursor: pointer;" draggable="true" height="199" width="380" class="draggable" src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img8.png">
                         </div>
                     </div>
                 </div>
@@ -412,7 +510,7 @@
                     </div>
                     <div class="">
                         <div class="border" id="dragImage">
-                            <img id="img_10" draggable="true" height="199" width="380" class="draggable" src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img10.png">
+                            <img id="img_10" style="cursor: pointer;" draggable="true" height="199" width="380" class="draggable" src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img10.png">
                         </div>
                     </div>
                 </div>
@@ -434,11 +532,11 @@
                 <ul class="YesNoBtn">
                     <li>
                         <input onclick="myFunction('yes')" type="radio" id="yes" name="YNButton" />
-                        <label for="yes">YES</label>
+                        <label style="cursor: pointer;" for="yes">YES</label>
                     </li>
                     <li>
                         <input onclick="myFunction('no')" type="radio" id="no" name="YNButton" />
-                        <label for="no">NO</label>
+                        <label style="cursor: pointer;" for="no">NO</label>
                     </li>
                 </ul>
             </div>
@@ -524,6 +622,173 @@
                     <p>Genetics is one of the hottest fields in biology today. The entire genetic code for humans has been mapped, and now we are learning what we can do with it. The future of medicine may rest upon our ability to figure out the genetic code.</p>
                 </div>
             </div>
+            <div class="mb-5 d-flex justify-content-center align-items-start w-100" style="gap:0px;">
+                <div class="col-6">
+                    <img src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img24.png" width="432" height="324" alt="">
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-start">
+                    <h3 class="mb-4" style="color:#000">HEARTBEAT</h3>
+                    <p>Physiology illustrates the connections between the structure of something and its function. A physiologist would be the one studying, for example, how the cells of the heart communicate with one another in order to pump the blood.</p>
+                </div>
+            </div>
+            <div class="mb-5 d-flex justify-content-center align-items-start w-100" style="gap:0px;">
+                <div class="col-6">
+                    <img src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img25.png" width="432" height="324" alt="">
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-start">
+                    <h3 class="mb-4" style="color:#000">LABRADOR</h3>
+                    <p>Animal behavior is the study of what animals do and why they do it. In this field, a behaviorist might study how animals communicate, why a spider eats her mate, or how a turtle can find the exact beach it was born on to lay its eggs.</p>
+                </div>
+            </div>
+            <div class="mb-5 d-flex justify-content-center align-items-start w-100" style="gap:0px;">
+                <div class="col-6">
+                    <img src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img26.png" width="432" height="324" alt="">
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-start">
+                    <h3 class="mb-4" style="color:#000">LEAF</h3>
+                    <p>Botany is the study of plants- how they make food, grow, reproduce, and use energy. Since many of our foods and medicines come from plants, this is a pretty valuable field.</p>
+                </div>
+            </div>
+            <div class="mb-5 d-flex justify-content-center align-items-start w-100" style="gap:0px;">
+                <div class="col-6">
+                    <img src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img27.png" width="432" height="324" alt="">
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-start">
+                    <h3 class="mb-4" style="color:#000">LEOPARD</h3>
+                    <p>Zoology is the study of animals. Jeff Corwin, Steve Irwin "Crocodile Hunter", and just about everyone you see on animal planet has a background in Zoology. This is a very broad field of study, and most people specialize within this field.</p>
+                </div>
+            </div>
+            <div class="mb-5 d-flex justify-content-center align-items-start w-100" style="gap:0px;">
+                <div class="col-6">
+                    <img src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img28.png" width="432" height="324" alt="">
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-start">
+                    <h3 class="mb-4" style="color:#000">RESEARCHER</h3>
+                    <p>Biochemistry involves learning about the chemical reactions that make it possible for life to exist. You might find a biochemist studying a protein – how it’s made, where it is used in an organism, and why it is necessary for life.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section seven -->
+    <section id="section-seven">
+        <div class="container pxy light_bg d-flex flex-column align-items-center justify-content-center">
+            <h2 class="mb-4">SELECT CORRECT ANSWER</h2>
+            <p class="mb-4 text-center">In your notes discuss your impressions of biology up to now. Here are twoquestions to write about:</p>
+            <div class="mb-5 d-flex justify-content-center align-items-center" style="gap:20px">
+                <div class="col-6 p-4" style="background: #00bd8b; border-radius: 17px;">
+                    <p class="mb-4" style="color: #fff;">1. Which field do you think is the most interesting?</p>
+                    <label class="switch mb-3">
+                        <input class="switch-input" type="checkbox" />
+                        <span class="switch-label" data-on="Microbiology" data-off="Microbiology">
+                        </span> <span class="switch-handle"></span> 
+                    </label>
+                    <label class="switch mb-3">
+                        <input class="switch-input" type="checkbox" />
+                        <span class="switch-label" data-on="BIOTECHNOLOGY" data-off="BIOTECHNOLOGY">
+                        </span> <span class="switch-handle"></span> 
+                    </label>
+                    <label class="switch mb-3">
+                        <input class="switch-input" type="checkbox" />
+                        <span class="switch-label" data-on="Genetics" data-off="Genetics">
+                        </span> <span class="switch-handle"></span> 
+                    </label>
+                    <label class="switch mb-3">
+                        <input class="switch-input" type="checkbox" />
+                        <span class="switch-label" data-on="Zoology" data-off="Zoology">
+                        </span> <span class="switch-handle"></span> 
+                    </label>
+                    <label class="switch mb-3">
+                        <input class="switch-input" type="checkbox" />
+                        <span class="switch-label" data-on="Anatomy" data-off="Anatomy">
+                        </span> <span class="switch-handle"></span> 
+                    </label>
+                    <label class="switch mb-3">
+                        <input class="switch-input" type="checkbox" />
+                        <span class="switch-label" data-on="Cellular Biology" data-off="Cellular Biology">
+                        </span> <span class="switch-handle"></span> 
+                    </label>
+                </div>
+                <div class="col-6 p-4" style="background: #00bd8b; border-radius: 17px;">
+                    <p class="mb-4"  style="color: #fff;">2. Which field do you think is most relevant in today's society?</p>
+                    <label class="switch mb-3">
+                        <input class="switch-input" type="checkbox" />
+                        <span class="switch-label" data-on="Microbiology" data-off="Microbiology">
+                        </span> <span class="switch-handle"></span> 
+                    </label>
+                    <label class="switch mb-3">
+                        <input class="switch-input" type="checkbox" />
+                        <span class="switch-label" data-on="BIOTECHNOLOGY" data-off="BIOTECHNOLOGY">
+                        </span> <span class="switch-handle"></span> 
+                    </label>
+                    <label class="switch mb-3">
+                        <input class="switch-input" type="checkbox" />
+                        <span class="switch-label" data-on="Genetics" data-off="Genetics">
+                        </span> <span class="switch-handle"></span> 
+                    </label>
+                    <label class="switch mb-3">
+                        <input class="switch-input" type="checkbox" />
+                        <span class="switch-label" data-on="Zoology" data-off="Zoology">
+                        </span> <span class="switch-handle"></span> 
+                    </label>
+                    <label class="switch mb-3">
+                        <input class="switch-input" type="checkbox" />
+                        <span class="switch-label" data-on="Anatomy" data-off="Anatomy">
+                        </span> <span class="switch-handle"></span> 
+                    </label>
+                    <label class="switch mb-3">
+                        <input class="switch-input" type="checkbox" />
+                        <span class="switch-label" data-on="Cellular Biology" data-off="Cellular Biology">
+                        </span> <span class="switch-handle"></span> 
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section eight -->
+    <section id="section-eight">
+        <div class="container pxy white_bg d-flex flex-column align-items-center justify-content-center">
+            <h2 class="mb-4" style="text-transform: uppercase;">Levels of Organization in Biology</h2>
+            <p class="mb-5 text-center">In your notes discuss your impressions of biology up to now. Here are two questions to write about:</p>
+            <img class="mb-5" src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img29.png" width="844" alt="">
+            <p class="mb-5 mt-3 text-center">You could start at the smallest level, the atom, and work your way to the highest level, the whole biosphere, which includes every living thing on the planet. Or, you could pick a level somewhere between, such as an organ. Take a look at the diagram that shows the levels of organization. Think about how each level builds on the previous level.</p>
+            <h2 class="mb-4 mt-5" style="text-transform: uppercase;">Classifying and Naming Organisms</h2>
+            <p class="mb-5 text-center">You are going to be looking at many living things within this course. We will begin by examining how biologists classify and name organisms. Just like the levels of organization, there is a hierarchy of classification which was created by Carl Linnaeus in the 1700s, and is still used today.</p>
+            <img src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img30.png" width="844" alt="" class="mb-5">
+            <p class="mb-5 text-center">This image illustrates the hierarchy of levels of organization for classifying organisms.</p>
+            <h2 class="mb-4 mt-5" style="text-transform: uppercase;">The Levels of Classification</h2>
+            <p class="mb-5 text-center">Organisms are classified at the following seven levels:</p>
+            <div class="mb-5 d-flex justify-content-center align-items-start" style="gap: 80px">
+                <div class="col-10">
+                    <img src="./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img31.png" width="725" alt="">
+                </div>
+                <div class="col-2">
+                    <p><span style="font-size: 42px;">K</span>ingdom</p>
+                    <p><span style="font-size: 42px;">P</span>hylum</p>
+                    <p><span style="font-size: 42px;">C</span>lass</p>
+                    <p><span style="font-size: 42px;">O</span>rder</p>
+                    <p><span style="font-size: 42px;">F</span>amily</p>
+                    <p><span style="font-size: 42px;">G</span>enus</p>
+                    <p><span style="font-size: 42px;">S</span>pecies</p>
+                </div>
+            </div>
+            <h2 class="mb-4 mt-5" style="text-transform: uppercase;">Hierarchical Classification</h2>
+            <h3 class="mb-4" style="font-weight: 400; color: #000; font-size: 37px;">Classification of life</h3>
+            <p class="mb-5 text-center">Life on Earth 002 - Classification</p>
+            <p class="mb-5 text-center">Paul Andersen explains the current classification system that we use in Biology.  He starts with a brief history of taxonomy.  He explains how the goal of classification is to reflect evolutionary relationships.  He then explains how each individual organism is classified according to genus and species.</p>
+            <div class="ratio ratio-16x9 mb-5 mt-4" style="width: 95%; box-shadow: 1px -1px 44px 11px rgba(0,0,0,0.5);;">
+                <video class="video-fluid" loop controls>
+                    <source src="https://m.fyioc.com/Spanish1/Lesson28/L28V1-REV5.mp4" type="video/mp4" />
+                </video>
+                <div class="play_button">
+                    <div id="play_vid">
+                        <span class="material-icons-outlined">play_arrow</span>
+                    </div>
+                </div>
+            </div>
+            <p class="mb-5 mt-5 text-center">Examine this Biology Classification to see how a grizzly bear is classified within the seven levels of classification. At each level, be aware of the characteristics the different organisms share.</p>
+            <h3 class="mb-5 mt-5 text-center" style="font-weight: 400; color: #006b5e; font-size: 37px;">The Biological Classification of <br>The Grizzly Bear</h3>
         </div>
     </section>
 
