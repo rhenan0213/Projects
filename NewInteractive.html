@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 6</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Swiper CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+  
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arvo', serif;
+    }
+
+    body {
+      font-family: 'montserrat', sans-serif;
+      background: #e1f9d0;
+      background-size: cover;
+      height: 100%;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .container {
+      max-width: 1080px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    .pxy {
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+
+    /* SECTION 1 */
+
+    .section-one {
+      background: url('https://drive.google.com/uc?export=view&id=1KxJz69vUD2WCrUW9Gloaiu_PyBuZO7qt');
+    }
+    .section-one .hero {
+      background: url('https://drive.google.com/uc?export=view&id=1smxGXHhejEtPJ66vgHfSluXJSp-D0Wib');
+      background-size: contain;
+      width: 100%;
+      height: 597px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding-top: 150px;
+      color: #fff;
+    }
+    .d-flex {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .flex-row-reverse {
+      flex-direction: row-reverse;
+    }
+    h1 {
+      font-size: 120px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    h2 {
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    h3 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 41px;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    /* SECTION 2 */
+    
+    .section-two .container {
+      position: relative;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      background: #fff;
+      height: 607px;
+      width: 100%;
+      padding-left: 60px;
+      padding-right: 30px;
+    }
+    .section-two img {
+      right: 0;
+      bottom: 0;
+      width: 518px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    .section-two .article {
+      margin-top: 60px;
+      width: 605px;
+    }
+    .section-two p {
+      font-size: 30px;
+      font-family: 'Roboto', sans-serif;
+      line-height: 38px;
+    }
+    label.form-check-label {
+    background: #ff6a00;
+    color: #fff;
+    width: 209px;
+    margin-bottom: 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px;
+    font-size: 13px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    }
+    input.swiper-item {
+      opacity: 0;
+      display: none;
+    }
+  </style>
+
+</head>
+<body>
+<div class="lesson_8">
+  <section class="section-one" >
+    <div class="container hero">
+      <h1>ENGLISH</h1>
+      <h2>VOCABULARY</h2>
+      <h3>Mango Street, Part 2</h3>
+    </div>
+  </section>    
+
+  <section class="section-two" >
+    <div class="container d-flex">
+      <img src="https://drive.google.com/uc?export=view&id=1-SDhDXqwe9dk0pkQEUOefvTvGRIoLlXn" alt=""> 
+      <div class="article">
+        <h3 style="color: #30b862;">THE HOUSE ON MANGO STREET</h3>
+        <p class="author" style="color: #30b862; margin-bottom: 28px;">written by Sandra Cisneros</p>
+        <p class="content">Here is the vocabulary list for this unit's vocabulary study. Read each word and its definition. Also, be sure to practice and use these words in your everyday written and <br>oral language. It's the best way to learn new vocabulary, especially in preparation for the SAT.</p>
+      </div>
+    </div>
+  </section>
+
+  <div id="section-three">
+    <div class="container pxy position-relative">
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide text-start mt-3 swiper-item-1 position-relative">
+            <div class="swiper_card d-flex flex-column justify-content-start align-items-start position-absolute">
+              <h2>ITEM 1</h2>
+              <div class="mb-4">
+                <p>Is there a civic virtue in this activity?</p>
+                    <input class="swiper-item" type="radio" name="item_1" data-value="yes" id="item_1_a">
+                    <label class="form-check-label" for="item_1_a">Is a civi virute.</label>
+                    <input class="swiper-item" type="radio" name="item_1" data-value="no" id="item_1_b">
+                    <label class="form-check-label" for="item_1_b">Is not a civi virute.</label>
+                    <input class="swiper-item" type="radio" name="item_1" data-value="no" id="item_1_c">
+                    <label class="form-check-label" for="item_1_c">It is difficult to know if it is a civi virute.</label>
+              </div>
+              <div class="swiper_reveal_item_1 d-none btn-1-1" id="swiper_reveal_item_1_a">
+                <h5>ITEM 1 A Answer</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At a magni impedit, ut aspernatur dignissimos id, sapiente, nostrum optio architecto voluptates! Vero, pariatur earum veniam quam eveniet quia itaque aut?</p>
+              </div>
+              <div class="swiper_reveal_item_1 d-none btn-1-2" id="swiper_reveal_item_1_b">
+                <h5>ITEM 1 B Answer</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At a magni impedit, ut aspernatur dignissimos id, sapiente, nostrum optio architecto voluptates! Vero, pariatur earum veniam quam eveniet quia itaque aut?</p>
+              </div>
+              <div class="swiper_reveal_item_1 d-none btn-1-3" id="swiper_reveal_item_1_c">
+                <h5>ITEM 1 C Answer</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At a magni impedit, ut aspernatur dignissimos id, sapiente, nostrum optio architecto voluptates! Vero, pariatur earum veniam quam eveniet quia itaque aut?!</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide text-start mt-3 swiper-item-2 position-relative">
+            <div class="swiper_card d-flex flex-column justify-content-start align-items-start position-absolute">
+              <h2>ITEM 2</h2>
+              <div class="mb-4">
+                <p>Is there a civic virtue in this activity?</p>
+                    <input class="swiper-item" type="radio" name="item_2" data-value="yes" id="item_2_a">
+                    <label class="form-check-label" for="item_2_a">Is a civi virute.</label>
+                    <input class="swiper-item" type="radio" name="item_2" data-value="no" id="item_2_b">
+                    <label class="form-check-label" for="item_2_b">Is not a civi virute.</label>
+                    <input class="swiper-item" type="radio" name="item_2" data-value="no" id="item_2_c">
+                    <label class="form-check-label" for="item_2_c">It is difficult to know if it is a civi virute.</label>
+              </div>
+              <div class="swiper_reveal_item_1 d-none btn-2-1" id="swiper_reveal_item_2_a">
+                <h5>ITEM 2 A Answer</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At a magni impedit, ut aspernatur dignissimos id, sapiente, nostrum optio architecto voluptates! Vero, pariatur earum veniam quam eveniet quia itaque aut?</p>
+              </div>
+              <div class="swiper_reveal_item_1 d-none btn-2-2" id="swiper_reveal_item_2_b">
+                <h5>ITEM 2 B Answer</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At a magni impedit, ut aspernatur dignissimos id, sapiente, nostrum optio architecto voluptates! Vero, pariatur earum veniam quam eveniet quia itaque aut?</p>
+              </div>
+              <div class="swiper_reveal_item_1 d-none btn-2-3" id="swiper_reveal_item_2_c">
+                <h5>ITEM 2 C Answer</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At a magni impedit, ut aspernatur dignissimos id, sapiente, nostrum optio architecto voluptates! Vero, pariatur earum veniam quam eveniet quia itaque aut?!</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="swiper-slide text-start mt-3 swiper-item-3 position-relative">
+            <div class="swiper_card d-flex flex-column justify-content-start align-items-start position-absolute">
+              <h2>ITEM 3</h2>
+              <div class="mb-4">
+                <p>Is there a civic virtue in this activity?</p>
+                    <input class="swiper-item" type="radio" name="item_3" data-value="yes" id="item_3_a">
+                    <label class="form-check-label" for="item_3_a">Is a civi virute.</label>
+                    <input class="swiper-item" type="radio" name="item_3" data-value="no" id="item_3_b">
+                    <label class="form-check-label" for="item_3_b">Is not a civi virute.</label>
+                    <input class="swiper-item" type="radio" name="item_3" data-value="no" id="item_3_c">
+                    <label class="form-check-label" for="item_3_c">It is difficult to know if it is a civi virute.</label>
+              </div>
+              <div class="swiper_reveal_item_3 d-none btn-3-1" id="swiper_reveal_item_3_a">
+                <h5>ITEM 3 A Answer</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At a magni impedit, ut aspernatur dignissimos id, sapiente, nostrum optio architecto voluptates! Vero, pariatur earum veniam quam eveniet quia itaque aut?</p>
+              </div>
+              <div class="swiper_reveal_item_3 d-none btn-3-2" id="swiper_reveal_item_3_b">
+                <h5>ITEM 3 B Answer</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At a magni impedit, ut aspernatur dignissimos id, sapiente, nostrum optio architecto voluptates! Vero, pariatur earum veniam quam eveniet quia itaque aut?</p>
+              </div>
+              <div class="swiper_reveal_item_3 d-none btn-3-3" id="swiper_reveal_item_3_c">
+                <h5>ITEM 3 C Answer</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At a magni impedit, ut aspernatur dignissimos id, sapiente, nostrum optio architecto voluptates! Vero, pariatur earum veniam quam eveniet quia itaque aut?!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+      </div>
+    </div>
+  </div>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 700px;
+    }
+
+    .swiper-slide {
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper_card {
+      width: 600px;
+      padding: 30px;
+      background: #e0dedeaa;
+      border-radius: 10px;
+      left: 50px;
+      top: 50px;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper-pagination-bullet {
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      line-height: 20px;
+      font-size: 12px;
+      color: #000;
+      opacity: 1;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .swiper-pagination-bullet-active {
+      color: #fff;
+      background: #cfe6ff;
+    }
+
+    .swiper-item-1 {
+      background: url('./ENGLISH1GU2L2-hero.png') no-repeat;
+      background-size: cover;
+    }
+
+    .swiper-item-2 {
+      background: url('./ACU1.L2/img_1.png') no-repeat;
+      background-size: cover;
+    }
+
+    .swiper-item-3 {
+      background: url('./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1-hero.png') no-repeat;
+      background-size: cover;
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+      color: rgb(255, 243, 243);
+    }
+    .swiper-button-next:after, .swiper-button-prev:after {
+      font-weight: 900;
+    }
+  </style>
+
+   <style>
+        #last_section{}
+        #last_section .container {padding-left: 0; padding-right: 0;}
+         #last_section{ font-size: 1.8rem; }
+        .last_section_inner{}
+        .last_section_inner li{ background: none; padding: 0; border: none; margin-bottom: 2rem; }
+        .last_section_inner_list{ position: relative; }
+        .last_section_inner_list::before{ position: absolute; content: attr(data-number); top: 0; left: 0; font-size: 3.5rem; font-weight: 700; display: flex;
+        justify-content: end; align-items: flex-end; height: 100%; line-height: 1; }
+        .last_section_inner_list_qs{ display: flex; padding-left: 3.5rem; }
+        .last_section_inner_list_qs.correct,
+        .last_section_inner_list_qs.incorrect{ position: relative;}
+        .last_section_inner_list_qs.correct::after{ position: absolute; left: -21px; bottom: -10px; content: ""; height: 67%; width: 67px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3E%3C/svg%3E"); }
+        .last_section_inner_list_qs.incorrect::after{ position: absolute; left: -21px; bottom: -10px; content: ""; height: 67%; width: 67px;  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none' stroke='%23dc3545'%3E%3Ccircle cx='6' cy='6' r='4.5'/%3E%3Cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3E%3Ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3E%3C/svg%3E"); }
+        .last_section_inner_list_qs_ans{ background: #c8e5bf; border: 3px solid #97c091; margin-right: 1rem; }
+        .last_section_inner_list_qs_ans_wrap{ padding: 1rem 2rem; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .last_section_inner_list_qs span.subject{ color: #2b3c26; font-size: 2rem; font-weight: 700; font-family: var(--font-two); border-bottom: 2px solid #2b3c26; }
+        .last_section_inner_list_qs span.topic{ color: #2b3c26; margin-top: .8rem; font-size: 1.3rem; }
+        .last_section_inner_list_qs span{ line-height: 1; pointer-events: none; }
+        #last_section .font-sans {font-family: var(--font-one);}
+        #last_section .font-sans strong {font-weight: 600;}
+        .heading_box {
+          background: #30b862;
+          color: #fff;
+          padding-top: 68px;
+          padding-bottom: 68px;
+        }
+        .heading_box h2 {
+          color: #fff;
+          font-size: 50px;
+          font-family: 'Roboto', sans-serif;
+        }
+        #last_section h2, #last_section p, #last_section label, #last_section strong {
+          font-family: 'Roboto', sans-serif;
+        }
+        #last_section p, #last_section label {
+          font-size: 25px;
+        }
+        #last_sectionlabel {
+          pointer-events: none;
+        }
+        .form-check-input.is-invalid~.form-check-label, .was-validated .form-check-input:invalid~.form-check-label {
+          text-decoration: line-through;
+        }
+    </style>
+    <section id="last_section">
+        <div class="container pb-5">
+            <div class="pb-5" style="background: #ffffff;">
+                <div class="heading_box">
+                  <h2 class="text-center">ASSIGNMENT</h2>
+                </div>
+                <div class="last_section_inner ps-5 pe-5">
+                    <p class="text-left mt-5 mb-5" style="font-size: 36px; line-height: 1.2;">
+                        Based on the words seen previously, read each sentence and select the word that makes sense in the blank space. Choose the correct answer.
+                    </p>
+                    <div class="mb-4">
+                        <p>1. This gilled ______________ generally remains in the water, with its aquatic organs of respiration, and also propagates itself there.</p>
+                        <div class="form-check fs-5">
+                            <input class="form-check-input" type="checkbox" data-value="yes" id="practice2">
+                            <label class="form-check-label" for="practice2">a. Salamander</label>
+                        </div>
+                        <div class="form-check fs-5">
+                            <input class="form-check-input" type="checkbox" data-value="no" id="practice2">
+                            <label class="form-check-label" for="practice2">b. Canteen</label>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p>2. If the blood is ____________, or thin, then both lips and nails are pale and dull.</p>
+                        <div class="form-check fs-5">
+                            <input class="form-check-input" type="checkbox" data-value="yes" id="practice2">
+                            <label class="form-check-label" for="practice2">a. Anemic</label>
+                        </div>
+                        <div class="form-check fs-5">
+                            <input class="form-check-input" type="checkbox" data-value="no" id="practice2">
+                            <label class="form-check-label" for="practice2">b. Holler</label>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p>3. It can only be preserved in ________, rock oil, or some other fluid hydrocarbon.</p>
+                        <div class="form-check fs-5">
+                            <input class="form-check-input" type="checkbox" data-value="yes" id="practice2">
+                            <label class="form-check-label" for="practice2">a. Napth</label>
+                        </div>
+                        <div class="form-check fs-5">
+                            <input class="form-check-input" type="checkbox" data-value="no" id="practice2">
+                            <label class="form-check-label" for="practice2">b. Sire</label>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p>4. I ___________ and stamp the snow away and pull it open with difficulty.</p>
+                        <div class="form-check fs-5">
+                            <input class="form-check-input" type="checkbox" data-value="yes" id="practice2">
+                            <label class="form-check-label" for="practice2">a. Scuff</label>
+                        </div>
+                        <div class="form-check fs-5">
+                            <input class="form-check-input" type="checkbox" data-value="no" id="practice2">
+                            <label class="form-check-label" for="practice2">b. Insipid</label>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p>5. Have I cropped the photo to eliminate _________ detail and focus the viewer's attention?</p>
+                        <div class="form-check fs-5">
+                            <input class="form-check-input" type="checkbox" data-value="yes" id="practice2">
+                            <label class="form-check-label" for="practice2">a. Extraneous</label>
+                        </div>
+                        <div class="form-check fs-5">
+                            <input class="form-check-input" type="checkbox" data-value="no" id="practice2">
+                            <label class="form-check-label" for="practice2">b. Coerce</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+		<!-- Assessment Quiz -->
+        <table style="width: 710px; height: auto; margin-left: auto; margin-right: auto;" border="1" cellpadding="20">
+            <tbody>
+            <tr>
+            <td style="background-color: white; width: 710px; ">
+            <b><span style="font-family: arial,helvetica,sans-serif;">&nbsp;  Answer the following questions.</span> </b>
+            <p><a:question index="1" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="2" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="3" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="4" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="5" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="6" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="7" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="8" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="9" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="10" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="11" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="12" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="13" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="14" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="15" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="16" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="17" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="18" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="19" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="20" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            </td>
+            </tr>
+            </tbody>
+        </table>
+            <!-- Assessment Quiz -->
+
+    <!-- audio player -->
+    <div id="audio_holder"></div>
+</div>
+
+    <script>
+        
+        // load first audio on the list as default
+        window.addEventListener("DOMContentLoaded", (event) => {
+            const pauseAudio8 = document.querySelector(".play_list_1 button");
+            //console.log(pauseAudio);
+            const audio_file8= 'Https://m.fyioc.com/Spanish2/Lesson8/'+pauseAudio8.getAttribute('data-audio')+'.mp3';
+            //console.log(audio_file);
+            audioLoad(audio_file8);
+        });
+
+        const btnContainer8 = document.querySelector(".lesson_8");
+        const btnPlay8 = btnContainer8.querySelectorAll("button");
+
+        btnPlay8.forEach(function(item, index) {
+
+            item.addEventListener("click", (event) => {
+
+                // get the button id ( btnPause,  btnPlayTone)
+                const id = event.target.id;
+                
+                // load audio file every click
+                const audio_file8 = 'Https://m.fyioc.com/Spanish2/Lesson8/'+event.target.getAttribute('data-audio')+'.mp3';
+                audioLoad(audio_file8);
+
+                // get audio id
+                const audioPlay8 = document.getElementById("audioPlay");
+                //console.log(audioPlay);
+                // audio play
+                if(id === "btnPlayTone"){
+                    event.target.classList.add("playing");
+                    btnContainer8.classList.add("audio_playing");
+                    audioPlay8.play();
+                    item.innerHTML = '<span class="material-icons d-flex">pause</span>';
+
+                    event.target.setAttribute("id", "btnPause");
+                }
+
+                // audio pause
+                if(id === "btnPause"){
+                    event.target.classList.remove("playing");
+                    audioPlay8.pause();
+                    btnContainer8.classList.remove("audio_playing");
+                    item.innerHTML = '<span class="material-icons d-flex">volume_up</span>';
+
+                    event.target.setAttribute("id", "btnPlayTone");
+                }
+            
+                // audio end
+                audioPlay8.onended = (event) => {    
+                    item.classList.remove("playing");
+                    audioPlay8.pause()
+                    btnContainer8.classList.remove("audio_playing");
+                    item.innerHTML = '<span class="material-icons d-flex">volume_up</span>';
+                }
+            
+            });
+
+        });
+
+        // load audio
+        function audioLoad(audio_url){
+            const audio_file8 = '<audio id="audioPlay" src="'+audio_url+'"></audio>';
+            document.getElementById("audio_holder").innerHTML = audio_file8;
+        }
+
+        // // practice Uno
+
+        // const practiceUno8 = document.querySelectorAll("#forth2_section_list_wrap_drag");
+
+        // practiceUno8.forEach( drag => {
+
+        //     drag.addEventListener("dragstart", (event) => {
+        //         event.dataTransfer.setData("src", event.target.id)
+        //     }, false)
+
+        //     drag.addEventListener("dragenter", (event) => {
+        //         event.target.classList.add("enter");
+        //     }, false)
+
+        //     drag.addEventListener("dragleave", (event) => {
+        //         event.target.classList.remove("enter");
+        //     }, false)
+
+        //     drag.addEventListener("dragover", (event) => {
+        //         event.preventDefault()
+        //     }, false)
+
+        //     drag.addEventListener("drop", (event) => {
+        //         event.preventDefault()
+
+        //         const dragSrc8 = document.getElementById(event.dataTransfer.getData("src"));
+        //         const srcParent8 = dragSrc8.parentNode;
+        //         const targetPath8 = event.currentTarget.firstElementChild;
+
+        //         event.currentTarget.replaceChild(dragSrc8, targetPath8);
+        //         srcParent8.appendChild(targetPath8);
+
+        //         const correctAnswers8 = ['¡Peztoso!', 'Sacamoko', '¡La salsa!', 'Me  voy a dar la vuelta a la manzana', '¡La naranjajajaja!'].toString();
+        //         // const currentAnswerOrder8 = [].slice.call(document.querySelectorAll('.forth2_section_list_wrap_box')).map((element) => element.id).toString();
+        //         // const currentAnswerOrder8 = document.querySelectorAll('.forth2_section_list_wrap_box').id;
+        //         const currentAnswerOrder8 = document.querySelectorAll(".forth2_section_list_wrap .forth2_section_list_wrap_box");
+        //         const alert8 = document.querySelector("#error_check2");
+        //         alert8.classList.remove('d-none');
+                
+        //         console.log(dragSrc8);
+        //         console.log(document.getElementById((event.currentTarget.id)).querySelectorAll(".todrop"));
+        //         if(correctAnswers8 == currentAnswerOrder8){
+        //             alert8.className = 'alert alert-success mt-5';
+        //             alert8.innerHTML = 'Great Job! <span class="material-icons">verified</span>';
+        //         } else {
+        //             alert8.className = 'alert alert-danger mt-5';
+        //             alert8.innerHTML = 'Try Again! <span class="material-icons">cancel</span>';
+        //         }
+
+        //         event.target.classList.remove("enter");
+
+        //     }, false)
+
+        // })
+
+        // practice 2
+
+        const checkList10 = document.querySelectorAll("#practice2");
+
+        checkList10.forEach(function(elem, index){
+
+            elem.addEventListener("click", function(event){
+
+                if(elem.checked){
+
+                    if(event.target.getAttribute('data-value') == "yes"){
+                        elem.classList.remove('is-invalid');
+                        elem.classList.add('is-valid');
+                    }
+
+                    if(event.target.getAttribute('data-value') == "no"){
+                        elem.classList.remove('is-valid');
+                        elem.classList.add('is-invalid');
+                    }
+
+                } else {
+                    elem.classList.remove('is-valid');
+                    elem.classList.remove('is-invalid');
+                }
+
+            });
+
+        });
+
+
+        // swiper
+
+        const swiperActivity = document.querySelectorAll(".swiper-item");
+
+        swiperActivity.forEach(function(rBtn, index){
+
+            rBtn.addEventListener("click", function(event){
+                if(rBtn.checked){
+
+                    if(event.target.getAttribute('data-value') == "yes"){
+                        rBtn.classList.remove('is-invalid');
+                        rBtn.classList.add('is-valid');
+                        let rootEl = rBtn.id;
+                        var strRoot = rootEl.split("_");
+                        itemNumber = strRoot[1];
+                        itemChoice = strRoot[2];
+                        for (i = 1; i<=3; i++) {
+                          let reveal = document.getElementsByClassName('btn-' + itemNumber + "-" + i)[0];
+                          reveal.classList.remove ('d-block');
+                          reveal.classList.add ('d-none');
+                        }
+                        let showMessage = document.getElementById('swiper_reveal_item_' + itemNumber + '_' + itemChoice);
+                        showMessage.classList.remove ('d-none');
+                        showMessage.classList.add ('d-block');
+                        console.log(showMessage);
+                    }
+
+                    if(event.target.getAttribute('data-value') == "no"){
+                        rBtn.classList.remove('is-valid');
+                        rBtn.classList.add('is-invalid');
+                        let rootEl = rBtn.id;
+                        var strRoot = rootEl.split("_");
+                        itemNumber = strRoot[1];
+                        itemChoice = strRoot[2];
+                        for (i = 1; i<=3; i++) {
+                          let reveal = document.getElementsByClassName('btn-' + itemNumber + "-" + i)[0];
+                          reveal.classList.remove ('d-block');
+                          reveal.classList.add ('d-none');
+                        }
+                        let showMessage = document.getElementById('swiper_reveal_item_' + itemNumber + '_' + itemChoice);
+                        console.showMessage;
+                        showMessage.classList.remove ('d-none');
+                        showMessage.classList.add ('d-block');
+                        console.log(showMessage); 
+                    }
+
+                } else {
+                    rBtn.classList.remove('is-valid');
+                    rBtn.classList.remove('is-invalid');
+                }
+
+            });
+
+        });
+
+        // practice dos
+
+        const practiceDos8 = document.querySelectorAll(".last_section_inner_list_qs_ans");
+
+        practiceDos8.forEach( match => {
+
+            // let dragParentId;
+
+            match.addEventListener("dragstart", (event) => {
+                event.dataTransfer.setData("src", event.target.id)
+                // dragParentId = event.target.parentElement.parentElement.id;
+            }, false)
+
+            match.addEventListener("dragover", (event) => {
+                event.preventDefault()
+            }, false)
+
+            match.addEventListener("drop", (event) => {
+                event.preventDefault()
+
+                const dragParentId8 = event.target.parentElement.parentElement.id
+
+                // console.log("#" + dragParentId + " .last_section_inner_list_qs_ans_wrap");
+
+                const dragSrc28 = document.getElementById(event.dataTransfer.getData("src"))
+                const srcParent28 = dragSrc28.parentNode
+                const targetPath28 = event.currentTarget.firstElementChild
+
+                event.currentTarget.replaceChild(dragSrc28, targetPath28)
+                srcParent28.appendChild(targetPath28)
+
+                const toArr8 = event.target.parentElement.parentElement.getAttribute("data-order").split(",")
+
+                const correctAnswers8 = toArr8.toString();
+                const currentAnswerOrder8 = [].slice.call(document.querySelectorAll("#" + dragParentId8 + " .last_section_inner_list_qs_ans_wrap")).map((element) => element.id).toString();
+
+                // console.log(currentAnswerOrder)
+
+                if(correctAnswers8 == currentAnswerOrder8){
+                    event.target.parentElement.parentElement.className = "last_section_inner_list_qs correct"
+                } else {
+                    event.target.parentElement.parentElement.className = "last_section_inner_list_qs incorrect"
+                }
+
+            }, false)
+
+        })
+
+
+        // DRAG AND SWAP SCRIPT
+        const toDrag = document.querySelectorAll(".swap_drop")
+        const toDrop = document.querySelectorAll(".swap_drop")
+
+        toDrag.forEach((elem) => {
+            elem.addEventListener("dragstart", (event) => {
+                event.dataTransfer.setData("answer", elem.id)
+            })
+        })
+
+        toDrop.forEach((elem) => {
+            this.dragValidation(elem)
+        })
+
+        function dragValidation(elem) {
+            elem.addEventListener("dragover", (event) => {
+                event.preventDefault()
+            })
+            elem.addEventListener("drop", (event) => {
+                event.preventDefault()
+                const answer = event.dataTransfer.getData("answer")
+                const correctAnswer = event.currentTarget.getAttribute("data-ans")
+                const dataText = event.currentTarget.getAttribute("data-text")
+
+                let adj1 = event.currentTarget.parentElement.parentElement.parentElement.querySelector('.swap_drop')
+                let adj2 = document.getElementById(answer).parentElement.parentElement.querySelector('.swap_drop')
+                
+                let getFromSwap = adj1.getAttribute("data-text")
+                let getToSwap = adj2.getAttribute("data-text")
+
+                adj1.setAttribute("data-text", getToSwap);
+                adj2.setAttribute("data-text", getFromSwap);
+
+                adj1.setAttribute("data-isdrag", "true");
+                adj2.setAttribute("data-isdrag", "true");
+
+                
+                this.dragCheckMatch();
+            })
+        }
+
+        function dragCheckMatch(){
+            toDrag.forEach((elem) => {
+                // console.log(elem.getAttribute("data-ans"));
+                // console.log(elem.getAttribute("data-text"));
+                if(elem.getAttribute("data-ans") == elem.getAttribute("data-text")){
+                    document.getElementById(elem.id).parentElement.querySelector('.practice-result-label').innerHTML = '<span class="material-icons fs-1">verified</span>';
+                    document.getElementById(elem.id).parentElement.querySelector('.practice-result-label').style.color = '#198754'
+                }else{
+                    if(elem.getAttribute("data-isdrag")){
+                        document.getElementById(elem.id).parentElement.querySelector('.practice-result-label').innerHTML = '<span class="material-icons fs-1">cancel</span>';
+                        document.getElementById(elem.id).parentElement.querySelector('.practice-result-label').style.color = '#dc3545'
+                    }
+                }
+            });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      // SWIPER
+      const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // // And if we need scrollbar
+      // scrollbar: {
+      //   el: '.swiper-scrollbar',
+      // },
+    });
+    </script>
+</body>
+</html>
