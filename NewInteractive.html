@@ -135,8 +135,8 @@
     border-radius: 10px;
     }
     input.swiper-item {
-      opacity: 0;
-      display: none;
+      opacity: 1;
+      display: block;
     }
   </style>
 
@@ -204,10 +204,9 @@
             </div>
           </div>
 
-
           <div class="swiper-slide text-start mt-3 swiper-item-3 position-relative">
             <div class="swiper_card d-flex flex-column justify-content-start align-items-start position-absolute">
-              <h2>ITEM 3</h2>
+              <h2>ITEM 2</h2>
               <div class="mb-4">
                 <p>Is there a civic virtue in this activity?</p>
                     <input class="swiper-item" type="radio" name="item_3" data-value="yes" id="item_3_a">
@@ -218,19 +217,49 @@
                     <label class="form-check-label" for="item_3_c">It is difficult to know if it is a civi virute.</label>
               </div>
               <div class="swiper_reveal_item_1 d-none btn-3-1" id="swiper_reveal_item_3_a">
-                <h5>ITEM 3 A Answer</h5>
+                <h5>ITEM 2 A Answer</h5>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At a magni impedit, ut aspernatur dignissimos id, sapiente, nostrum optio architecto voluptates! Vero, pariatur earum veniam quam eveniet quia itaque aut?</p>
               </div>
               <div class="swiper_reveal_item_1 d-none btn-3-2" id="swiper_reveal_item_3_b">
-                <h5>ITEM 3 B Answer</h5>
+                <h5>ITEM 2 B Answer</h5>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At a magni impedit, ut aspernatur dignissimos id, sapiente, nostrum optio architecto voluptates! Vero, pariatur earum veniam quam eveniet quia itaque aut?</p>
               </div>
               <div class="swiper_reveal_item_1 d-none btn-3-3" id="swiper_reveal_item_3_c">
-                <h5>ITEM 3 C Answer</h5>
+                <h5>ITEM 2 C Answer</h5>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At a magni impedit, ut aspernatur dignissimos id, sapiente, nostrum optio architecto voluptates! Vero, pariatur earum veniam quam eveniet quia itaque aut?!</p>
               </div>
             </div>
           </div>
+
+          <div class="swiper-slide text-start mt-3 swiper-item-4 position-relative">
+            <div class="swiper_card d-flex flex-column justify-content-start align-items-start position-absolute">
+              <h2>ITEM 2</h2>
+              <div class="mb-4">
+                <p>Is there a civic virtue in this activity?</p>
+                    <input class="swiper-item" type="radio" name="item_4" data-value="yes" id="item_4_a">
+                    <label class="form-check-label" for="item_4_a">Is a civi virute.</label>
+                    <input class="swiper-item" type="radio" name="item_4" data-value="no" id="item_4_b">
+                    <label class="form-check-label" for="item_4_b">Is not a civi virute.</label>
+                    <input class="swiper-item" type="radio" name="item_4" data-value="no" id="item_4_c">
+                    <label class="form-check-label" for="item_4_c">It is difficult to know if it is a civi virute.</label>
+              </div>
+              <div class="swiper_reveal_item_1 d-none btn-4-1" id="swiper_reveal_item_4_a">
+                <h5>ITEM 2 A Answer</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At a magni impedit, ut aspernatur dignissimos id, sapiente, nostrum optio architecto voluptates! Vero, pariatur earum veniam quam eveniet quia itaque aut?</p>
+              </div>
+              <div class="swiper_reveal_item_1 d-none btn-4-2" id="swiper_reveal_item_4_b">
+                <h5>ITEM 2 B Answer</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At a magni impedit, ut aspernatur dignissimos id, sapiente, nostrum optio architecto voluptates! Vero, pariatur earum veniam quam eveniet quia itaque aut?</p>
+              </div>
+              <div class="swiper_reveal_item_1 d-none btn-4-3" id="swiper_reveal_item_4_c">
+                <h5>ITEM 2 C Answer</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At a magni impedit, ut aspernatur dignissimos id, sapiente, nostrum optio architecto voluptates! Vero, pariatur earum veniam quam eveniet quia itaque aut?!</p>
+              </div>
+            </div>
+          </div>
+
+
+
         </div>
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
@@ -574,14 +603,12 @@
 
         const swiperActivity = document.querySelectorAll(".swiper-item");
 
-        swiperActivity.forEach(function(rBtn, index){
-
+        swiperActivity.forEach(function(rBtn){
+            console.log(swiperActivity);
             rBtn.addEventListener("click", function(event){
                 if(rBtn.checked){
-
+                    let i;
                     if(event.target.getAttribute('data-value') == "yes"){
-                        rBtn.classList.remove('is-invalid');
-                        rBtn.classList.add('is-valid');
                         let rootEl = rBtn.id;
                         var strRoot = rootEl.split("_");
                         itemNumber = strRoot[1];
@@ -597,9 +624,7 @@
                         console.log(showMessage);
                     }
 
-                    if(event.target.getAttribute('data-value') == "no"){
-                        rBtn.classList.remove('is-valid');
-                        rBtn.classList.add('is-invalid');
+                    else if(event.target.getAttribute('data-value') == "no"){
                         let rootEl = rBtn.id;
                         var strRoot = rootEl.split("_");
                         itemNumber = strRoot[1];
