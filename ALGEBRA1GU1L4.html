@@ -11,7 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+
+    <link href="https://m.fyioc.com/WhyNotScripts/css/VideoPlay.css" rel="stylesheet">
+    <link href="https://m.fyioc.com/WhyNotScripts/css/AudioPlay.css" rel="stylesheet">
+
     <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
         body {
             font-family: 'Montserrat', sans-serif;
             font-size: 16px;
@@ -58,7 +66,7 @@
         }
 
         h1,
-        h2, h3 {
+        h2, h3, h4 {
             font-weight: 700;
         }
 
@@ -67,9 +75,18 @@
             color: #000;
             font-size: 41px;
         }
+        h4 {
+            font-family: 'Roboto', sans-serif;
+            color: #000;
+            font-size: 27px;
+        }
 
         .bg_white {
             background: #fff;
+        }
+
+        .bg_cream {
+            background: #fcf1c4;
         }
 
         /* top_content */
@@ -94,9 +111,139 @@
             font-size: 58px;
             font-family: 'Roboto', sans-serif;
         }
-        .numbg {
-            background: url("ALGEBRA1U1L4MEDIA/ALGEBRA1U1L4_img2.png") no-repeat;
+
+        /* section-two */
+        #section-two .container {
+            background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.8)), url("ALGEBRA1U1L4MEDIA/ALGEBRA1U1L4_img2.png") no-repeat;
             background-size: cover;
+            background-position: bottom;
+        }
+
+        table {
+            font-family: 'Roboto', sans-serif;            
+        }
+
+        #section-table, #section-two table td, #section-two table th {
+            border: 2px solid #fff;
+        }
+
+        #section-two .table1 th {
+            height: 135px;
+            font-size: 27px;
+            width: 328px;
+            padding: 30px;
+            vertical-align: middle;
+        }
+        #section-two .table1 td {
+            background: #ffcd0155;
+            padding: 30px;
+            font-size: 20px;
+            font-weight: 700;
+            vertical-align: top;
+        }
+        #section-two .table1 tr th:first-child {
+            background: #ffcd01;
+        }
+        #section-two .table1 tr th:nth-child(2), #section-two .table1  tr td:nth-child(1) {
+            background: #ffcd01cc;
+        }
+        #section-two .table1 tr th:nth-child(3), #section-two .table1  tr td:nth-child(2) {
+            background: #ffcd0188;
+        }
+        #section-two .table1 td ul {
+            list-style-type: square;
+        }
+        #section-two .table1 td ul li {
+            font-size: 16px;
+            font-weight: 400;
+            margin-top: 10px;
+        }
+        #section-two .table1 td ul li::marker {
+            font-size: 27px;
+        }
+        
+        /* section-thre */
+        
+        #section-three table th {
+            height: 70px;
+            font-size: 20px;
+            width: 120px;
+            padding: 25px;
+            vertical-align: middle;
+        }
+        
+        #section-three table td {
+            padding: 15px;
+            font-size: 20px;
+            font-weight: 400;
+            vertical-align: top;
+        }
+
+        #section-three table th:first-child {
+            background: #373736;
+            color: #fff;
+        }
+        
+        #section-three table th:nth-child(2) {
+            background: #5c5c5c;
+            color: #fff;
+        }
+
+        #section-three table tr:nth-child(odd) td:first-child {
+            background: #373736b3;
+            color: #fff;
+        }
+        
+        #section-three table tr:nth-child(odd) td:nth-child(2) {
+            background: #5c5c5cb3;
+            color: #fff;
+        }
+
+        #section-three table tr:nth-child(even) td:first-child {
+            background: #37373666;
+            color: #fff;
+        }
+        
+        #section-three table tr:nth-child(even) td:nth-child(2) {
+            background: #5c5c5c66;
+            color: #fff;
+        }
+        sup {
+            font-size: 70%;
+        }
+        .fraction {
+            gap: 4px;
+        }
+        .fraction p {
+            font-weight: 700;
+        }
+        .fraction .bar {
+            width: 130%;
+            height: 2px;
+            background: #000;
+        }
+        #section-seven .table1 th {
+            font-size: 21px;
+            width: calc(865px / 3);
+            padding: 30px 20px;
+            vertical-align: top;
+            font-weight: 400;
+            border: 1px solid #fff;
+        }
+        #section-seven .table1 td {
+            background: #ffcd0155;
+            padding: 30px;
+            font-size: 20px;
+            vertical-align: top;
+        }
+        #section-seven .table1 tr th:first-child {
+            background: #ffe371;
+        }
+        #section-seven .table1 tr th:nth-child(2), #section-seven .table1  tr td:nth-child(1) {
+            background: #ffe98d;
+        }
+        #section-seven .table1 tr th:nth-child(3), #section-seven .table1  tr td:nth-child(2) {
+            background: #ffeeaa;
         }
     </style>
 </head>
@@ -112,29 +259,182 @@
     </section>
 
     <!-- section two -->
-    <section>
+    <section id="section-two">
         <div class="container pxy bg_white d-flex justify-content-center flex-column align-items-center">
             <h2 class="mb-4">EVALUATING AND TRANSLATING EQUATIONS</h2>
             <img class="mb-5" width="985" src="./ALGEBRA1U1L4MEDIA/ALGEBRA1U1L4_img1.png" alt="">
             <div style="padding-left: 20px; padding-right: 20px;">
                 <h2 class="mb-5">The Language of Algebra</h2>
                 <p class="mb-4">The language of algebra involves using symbols, numbers and letters. The symbols stand for mathematical operations to perform, such as multiplication; the letters represent unknown quantities called variables. A common theme in algebra is to execute operations with the quantities given in a problem in order to evaluate an expression or find a numerical solution for a variable in an equation.</p>
-                <div class="numbg">
+                <div class="numbg mb-5">
                     <p class="mb-4">For example: "seven decreased by the product of w and the square of the sum of x and y can be written in the language of algebra as:</p>
                     <p class="mb-4" style="font-size: 35px;">7-w[(x+y)2]</p>
                     <p class="mb-4">You can simplify this expression if values are substituted for all the variables.</p>
                     <p class="mb-4">Knowledge of this language will be helpful in many situations in our everyday lives, such as calculating how much money to leave for a tip in a restaurant. When we only have part of the information, we can use algebra to solve the unknown part. With algebra, we can solve such practical problems readily.</p>
-                    <table style="height:360px; margin-bottom: 50px;">
+                    <table class="mb-5 table1" style="width:990px;">
                         <thead>
-                            <tr>
-                                <th>1</th>
-                                <th>2</th>
-                                <th>3</th>
+                            <tr class="text-center">
+                                <th>WHAT YOU SHOULD KNOW</th>
+                                <th>LESSON EXPECTATIONS</th>
+                                <th>LESSON <br>KEYWORDS</th>
                             </tr>
                         </thead>
+                        <tbody>
+                            <tr>
+                                <td>Before you begin, you should:
+                                    <ul>
+                                        <li>Know how to write numerical	expressions for verbal expressions</li>
+                                        <li>Know how to write verbal expressions for numerical expressions</li>
+                                    </ul>
+                                </td>
+                                <td>By the end of this lesson, you should be able to:
+                                    <ul>
+                                        <li>Evaluate numerical and algebraic expressions</li>
+                                        <li>Apply the order of operations to evaluate expressions</li>
+                                    </ul> 
+                                </td>
+                                <td class="text-center">Algebraic expression <br><br>Evaluate <br><br>Order of operations<br><br>Variable</td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- section three -->
+    <section id="section-three">
+        <div class="container pxy bg_cream d-flex justify-content-center flex-column align-items-center">
+            <h3 class="mb-4">Let's Begin</h3>
+            <p class="text-center mb-4">In order to evaluate expressions, a certain "order" must be followed so that we can all arrive at the same answer. Take a look at the two ways in which this expression was evaluated.</p>
+            <table class="mb-5 table2" style="width:480px;">
+                <thead>
+                    <tr class="text-center">
+                        <th>RIGHT WAY</th>
+                        <th>WRONG WAY</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-center">
+                        <td>3 x 2<sup>2</sup> - 4</td>
+                        <td>3 x 2<sup>2</sup> - 4</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td>3 x 4 - 4</td>
+                        <td>6<sup>2</sup> - 4</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td>12 - 4</td>
+                        <td>36 - 4</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td>8</td>
+                        <td>32</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="mb-5">How can we arrive at two different answers? Although both appear to be mathematically correct, the order in which the operations were performed is different. The correct answer is 8. Certain rules of order must be followed to arrive at the one correct answer.</p>
+            <h3 class="mb-4 mt-4 text-uppercase">Evaluating and translating expressions</h3>
+            <p class="text-center mb-4 px-5">The following video will bring you some tips on how to perform the order of operations needed to evaluate a numerical or algebraic expression.</p>
+            <div class="ratio ratio-16x9 mb-5 mt-4" style="width: 95%; box-shadow: 1px 20px 34px 5px rgba(0,0,0,0.3);">
+                <video class="video-fluid" loop controls>
+                    <source src="https://m.fyioc.com/Spanish1/Lesson28/L28V1-REV5.mp4" type="video/mp4" />
+                </video>
+                <div class="play_button">
+                    <div id="play_vid">
+                        <span class="material-icons-outlined">play_arrow</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section three -->
+    <section id="section-three">
+        <div class="container pxy bg_white d-flex justify-content-center flex-column align-items-start">
+            <h4 class="mb-4 px-4">EXAMPLE 1</h4>
+            <p class="px-4" style="font-size: 35px;">3 [4 + (42 ÷ 7)<sup>2</sup> ] = 3 [4 + (6)<sup>2</sup> ] = 3 [4 + 36] = 3[40] = 120</p>
+        </div>
+    </section>
+
+    <!-- section four -->
+    <section id="section-four">
+        <div class="container pxy bg_cream d-flex justify-content-center flex-column align-items-start">
+            <h4 class="mb-2 px-4">EXAMPLE 2</h4>
+            <div class="px-4 d-flex justify-content-start align-items-start">
+                <div class="col-6 d-flex flex-column" style="gap:20px; padding-top: 20px;">
+                    <div class="first_row d-flex justify-content-start align-items-center">
+                        <div class="d-flex flex-column justify-content-center align-items-center me-3 fraction px-2">
+                            <p>2<sup>2</sup> x  3<sup>2</sup></p>
+                            <div class="bar"></div>
+                            <p>-7 + 5<sup>2</sup></p>
+                        </div>
+                        <p style="font-weight: 700;">which means (2<sup>2</sup> x 3<sup>2</sup>) ÷ (-7 + 5<sup>2</sup>)</p>
+                    </div>
+                    <div class="first_row d-flex justify-content-start align-items-center">
+                        <div class="d-flex flex-column justify-content-center align-items-center me-3 fraction px-2">
+                            <p>4 x 9</p>
+                            <div class="bar"></div>
+                            <p>-7 + 25<p>
+                        </div>
+                        <p style="font-weight: 700;">which means (2<sup>2</sup> x 3<sup>2</sup>) ÷ (-7 + 5<sup>2</sup>)</p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <p>First, we will evaluate the numerator. This is because everything in the top of the fraction is grouped together even though we don’t see any parentheses surrounding the numerator. Likewise, we will evaluate everything in the bottom of the fraction separately since it is all grouped together. Finally, we will divide the result from the numerator by the result from the denominator.</p>
+                </div>                
+            </div>
+        </div>
+    </section>
+    
+    <!-- section five -->
+    <section id="section-five">
+        <div class="container pxy bg_white d-flex justify-content-center flex-column align-items-start">
+            <h4 class="mb-5 px-4">EXAMPLE 3</h4>
+            <p class="px-4 mb-4" style="font-size: 35px;">x<sup>3</sup> - y<sup>2</sup></p>
+            <p class="px-4 mb-4">Evaluate the above expression when x = 2 and y = — 4.</p>
+            <p class="px-4 mb-4">First, plug in each value of the variable making sure to use parentheses around the number:
+            <br>(2)<sup>3</sup> — ( — 4)<sup>2</sup>.</p>
+            <p class="px-4 mb-4">Next, simplify the expression according to the correct order of operations. Since there is nothing to simplify within the parentheses, we will move on to exponents. 23 = 8 and ( — 4)2 = 16.</p>
+            <p class="px-4 mb-4">Now we have the expression <span style="font-size: 27px;">8 — 16, which equals —8.</span></p>
+            <p class="px-4 mb-4">Evaluate the above expression when x = —2 and y=3</p>
+            <p class="px-4 mb-4">Like before, let's substitute each value of the variable into the expression making sure to use parentheses around each value <span style="font-size: 27px;">( — 2)<sup>3</sup> — 3<sup>2</sup></span></p>
+            <p class="px-4 mb-4">Next, simplify the expression according to the correct order of operations. Again, since there is nothing to simplify within the parentheses, we will move on to the exponents.<br><span style="font-size: 27px;">( — 2)<sup>3</sup> = -8 and 3<sup>2</sup> = 9</span></p>
+            <p class="px-4 mb-4">Now we have the expression —8 — 9, which equals — 17.</p>
+        </div>
+    </section>
+
+    <!-- section six -->
+    <section id="section-six">
+        <div class="container bg_cream d-flex justify-content-center flex-column align-items-start" style="padding-top: 25px; padding-bottom: 25px;">
+            <h3 class="px-4">Take Note: —x<sup>2</sup>  ≠ (— x)<sup>2</sup></h3>
+        </div>
+    </section>
+
+    <!-- section seven -->
+    <section id="section-seven">
+        <div class="container pxy bg_white d-flex justify-content-center flex-column align-items-start" style="padding-top: 25px; padding-bottom: 55px;">
+            <table class="mx-4 mb-5 table1" style="width:865px;">
+                <thead>
+                    <tr class="text-start">
+                        <th>You must remember that when simplifying exponents, the number that immediately precedes the exponent is getting raised to that power.</th>
+                        <th>
+                            For instance,<br>
+                            <span style="font-size: 41px;"> -3<sup>2</sup> = - 9.</span>
+                           <br>
+                            Why is that? Because the 3 is the base that immediately precedes the exponent. You must square the 3 first and then multiply by the negative sign in front.
+                        </th>
+                        <th>
+                            On the contrary,<br>
+                            <span style="font-size: 41px;"> ( — 3)<sup>2</sup> = 9.</span>
+                           <br>
+                            Why is that? Because the -3 is the entire base because it is in parentheses, which are being raised to the second power. Therefore, we must square the entire -3 resulting in -3 times -3, which is positive 9.
+                           <br>
+                           <br>
+                        </th>
+                    </tr>
+                </thead>
+            </table>
         </div>
     </section>
 
@@ -367,5 +667,7 @@
         });
 
     </script>
+    <script src="https://m.fyioc.com/WhyNotScripts/js/VideoPlay.js"></script>
+    <script src="https://m.fyioc.com/WhyNotScripts/js/AudioPlay.js"></script>
 </body>
 </html>
