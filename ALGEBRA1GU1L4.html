@@ -79,6 +79,7 @@
             font-family: 'Roboto', sans-serif;
             color: #000;
             font-size: 27px;
+            line-height: 1.3;
         }
 
         .bg_white {
@@ -438,6 +439,420 @@
         </div>
     </section>
 
+
+    <!-- section eight -->
+    <section id="section-eight">
+        <div class="container pxy bg_cream d-flex justify-content-center flex-column align-items-center">
+            <h3 class="mb-4">EXTRA HELP</h3>
+            <p class="text-center mb-5">If you find that you need to see a few more examples of writing algebraic expressions from word problems, please watch the two videos that follow:</p>
+            <div class="video_cont d-flex justify-content-center align-items-start" style="gap:20px;">
+                <div class="col-6 bg_white p-3" style="width:500px;">
+                    <h4 class="mb-4">How to write algebraic expressions from word problems?</h4>
+                    <p class="mb-4" style="height:100px;">Learn how to write expressions with variables to describe situations described in word problems</p>
+                    <div class="ratio ratio-16x9 mb-5 mt-4" style="width: 100%; box-shadow: 1px 20px 34px 5px rgba(0,0,0,0.3);">
+                        <video class="video-fluid" loop controls>
+                            <source src="https://m.fyioc.com/Spanish1/Lesson28/L28V1-REV5.mp4" type="video/mp4" />
+                        </video>
+                        <div class="play_button">
+                            <div id="play_vid">
+                                <span class="material-icons-outlined">play_arrow</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 bg_white p-3" style="width:500px;">
+                    <h4 class="mb-4">Practice problems: Convert words to algebraic expressions</h4>
+                    <p class="mb-4" style="height:100px;">Learn how to translate and convert words into algebraic expressions and how to translate algebraic expressions and equations into words.</p>
+                    <div class="ratio ratio-16x9 mb-5 mt-4" style="width: 100%; box-shadow: 1px 20px 34px 5px rgba(0,0,0,0.3);">
+                        <video class="video-fluid" loop controls>
+                            <source src="https://m.fyioc.com/Spanish1/Lesson28/L28V1-REV5.mp4" type="video/mp4" />
+                        </video>
+                        <div class="play_button">
+                            <div id="play_vid">
+                                <span class="material-icons-outlined">play_arrow</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .item {
+            font-size: 20px;
+            font-weight: 500;
+            padding: 13px 15px 13px 40px;
+        }
+        .item-check.valid {
+            bottom: -14px;
+            left: 38px;
+            padding: 5px 10px;
+            background: #fff;
+            border: 1px solid #32cd32;
+            font-weight: 700;
+            color: #32cd32;
+            font-size: 10px;
+            display: none;
+        }
+        .item-check.invalid {
+            bottom: -14px;
+            left: 38px;
+            padding: 5px 10px;
+            background: #fff;
+            border: 1px solid #f00;
+            font-weight: 700;
+            color: #f00;
+            font-size: 10px;
+            display: none;
+        }
+        .item-letter {
+            left: -15px;
+            top: 7px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #000;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .p1-text {
+            width: 125px;
+            height: 53px;
+            background: #ffeeaa;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .item span {
+            display: none;
+        }
+        .item.is-valid span {
+            display: inline;
+        }
+        .item.is-valid {
+            font-size: 18px;
+            font-weight: 700;
+            pointer-events: none;
+        }
+        .item_cont:has(.item.is-valid) .item-letter{
+            background: #32cd32;
+            color: #FFF;
+            border: 1px solid #FFF;
+        }
+        .item_cont:has(.item.is-valid) {
+            background: #32cd32;
+        }
+        .item.is-invalid, .item.is-valid {
+            color: #fff;
+        }
+        .item_cont:has(.item.is-invalid) {
+            background: #f00;
+        }
+        .item_cont:has(.item.is-invalid) .item-letter{
+            background: #fff;
+            color: #f00;
+            border: 1px solid #f00;
+        }
+        .item_cont {
+            width: 290px;
+            height: 53px;
+            background: #ffc105;
+            border-radius: 50px;
+            margin-left: 15px;
+        }
+        .gray {
+            background: #32cd32;
+            color: #fff;
+            pointer-events: none;
+        }
+        .item_cont:has(.item.is-valid) .item-check.valid{
+            display: block;
+        }
+        .item_cont:has(.item.is-invalid) .item-check.invalid{
+            display: block;
+        }
+    </style>
+
+    <!-- section nine -->
+    <section id="section-nine" class="d-flex flex-column justify-content-center align-items-start">
+        <div class="container pxy d-flex justify-content-center flex-column align-items-center" style="background: #ffc105;">
+            <h3 class="mb-3">PRACTICE</h3>
+            <p style="font-size: 27px;">Order of Operations -- PEMDAS Practice Worksheets</p>
+        </div>
+        <div  id="nineth_section_inner" class="container pxy d-flex justify-content-start flex-column align-items-start bg_white">
+            <p class="mb-4 text-center w-100">Remember, PEMDAS (Please Excuse My Dear Aunt Sally) stands for:</p>
+            <p class="mb-5">
+                Parentheses<br>
+                Exponents<br>
+                Multiplication<br>
+                Division<br>
+                Addition<br>
+                Subtraction<br>
+            </p>  
+            <div class="d-flex justify-content-center align-items-start w-100">
+                <div class="col-4">
+                    <div class="item_cont position-relative mb-4">
+                        <div id="inputDrop" data-ans="169" class="item">
+                            14 + 18 ÷ 2 x 18 - 7<span> = 169</span>
+                        </div>
+                        <div class="item-letter position-absolute">a</div>
+                        <div class="item-check valid position-absolute">CORRECT</div>
+                        <div class="item-check invalid position-absolute">WRONG</div>
+                    </div>
+                    <div class="item_cont position-relative mb-4">
+                        <div id="inputDrop" data-ans="283" class="item">
+                            15 x 18 + 12 ÷ 3 + 9<span> = 283</span>
+                        </div>
+                        <div class="item-letter position-absolute">b</div>
+                        <div class="item-check valid position-absolute">CORRECT</div>
+                        <div class="item-check invalid position-absolute">WRONG</div>
+                    </div>
+                    <div class="item_cont position-relative mb-4">
+                        <div id="inputDrop" data-ans="50" class="item">
+                            8 x 4 ÷ 9 - 9 + 18<span> = 50</span>
+                        </div>
+                        <div class="item-letter position-absolute">c</div>
+                        <div class="item-check valid position-absolute">CORRECT</div>
+                        <div class="item-check invalid position-absolute">WRONG</div>
+                    </div>
+                    <div class="item_cont position-relative mb-4">
+                        <div id="inputDrop" data-ans="23" class="item">
+                            11x 11 - 6 x 17 ÷ 4<span> = 23</span>
+                        </div>
+                        <div class="item-letter position-absolute">d</div>
+                        <div class="item-check valid position-absolute">CORRECT</div>
+                        <div class="item-check invalid position-absolute">WRONG</div>
+                    </div>
+                    <div class="item_cont position-relative mb-4">
+                        <div id="inputDrop" data-ans="221" class="item">
+                            2 - 1 + 5 x 4 x 11<span> = 221</span>
+                        </div>
+                        <div class="item-letter position-absolute">e</div>
+                        <div class="item-check valid position-absolute">CORRECT</div>
+                        <div class="item-check invalid position-absolute">WRONG</div>
+                    </div>
+                    <div class="item_cont position-relative mb-4">
+                        <div id="inputDrop" data-ans="1208" class="item">
+                            16 x 7 x 15 ÷ 11 ÷ 17<span> = 1208</span>
+                        </div>
+                        <div class="item-letter position-absolute">f</div>
+                        <div class="item-check valid position-absolute">CORRECT</div>
+                        <div class="item-check invalid position-absolute">WRONG</div>
+                    </div>
+                    <div class="item_cont position-relative mb-4">
+                        <div id="inputDrop" data-ans="-152" class="item">
+                            10 - 9 x 24 ÷ 8 x 6<span> = -152</span>
+                        </div>
+                        <div class="item-letter position-absolute">g</div>
+                        <div class="item-check valid position-absolute">CORRECT</div>
+                        <div class="item-check invalid position-absolute">WRONG</div>
+                    </div>
+                    <div class="item_cont position-relative mb-4">
+                        <div id="inputDrop" data-ans="-87" class="item">
+                            10 ÷ 5 + 10 - 9 x 11<span> = -87</span>
+                        </div>
+                        <div class="item-letter position-absolute">h</div>
+                        <div class="item-check valid position-absolute">CORRECT</div>
+                        <div class="item-check invalid position-absolute">WRONG</div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="item_cont position-relative mb-4">
+                        <div id="inputDrop" data-ans="807" class="item">
+                            3 x 19 x 14 ÷ 18 ÷ 2<span> = 807</span>
+                        </div>
+                        <div class="item-letter position-absolute">i</div>
+                        <div class="item-check valid position-absolute">CORRECT</div>
+                        <div class="item-check invalid position-absolute">WRONG</div>
+                    </div>
+                    <div class="item_cont position-relative mb-4">
+                        <div id="inputDrop" data-ans="128" class="item">
+                            10 x 12 - 14 ÷ 2 + 15<span> = 128</span>
+                        </div>
+                        <div class="item-letter position-absolute">j</div>
+                        <div class="item-check valid position-absolute">CORRECT</div>
+                        <div class="item-check invalid position-absolute">WRONG</div>
+                    </div>
+                    <div class="item_cont position-relative mb-4">
+                        <div id="inputDrop" data-ans="9" class="item">
+                            14 ÷ 2 - 1 + 3<span> = 9</span>
+                        </div>
+                        <div class="item-letter position-absolute">k</div>
+                        <div class="item-check valid position-absolute">CORRECT</div>
+                        <div class="item-check invalid position-absolute">WRONG</div>
+                    </div>
+                    <div class="item_cont position-relative mb-4">
+                        <div id="inputDrop" data-ans="48" class="item">
+                            19 + 15 ÷ 5 x 13<span> = 48</span>
+                        </div>
+                        <div class="item-letter position-absolute">l</div>
+                        <div class="item-check valid position-absolute">CORRECT</div>
+                        <div class="item-check invalid position-absolute">WRONG</div>
+                    </div>
+                    <div class="item_cont position-relative mb-4">
+                        <div id="inputDrop" data-ans="58" class="item">
+                            12 ÷ 3 x 12 + 10<span> = 58</span>
+                        </div>
+                        <div class="item-letter position-absolute">m</div>
+                        <div class="item-check valid position-absolute">CORRECT</div>
+                        <div class="item-check invalid position-absolute">WRONG</div>
+                    </div>
+                    <div class="item_cont position-relative mb-4">
+                        <div id="inputDrop" data-ans="60" class="item">
+                            16 x 15 ÷ 5 + 12<span> = 60</span>
+                        </div>
+                        <div class="item-letter position-absolute">n</div>
+                        <div class="item-check valid position-absolute">CORRECT</div>
+                        <div class="item-check invalid position-absolute">WRONG</div>
+                    </div>
+                    <div class="item_cont position-relative mb-4">
+                        <div id="inputDrop" data-ans="22" class="item">
+                           2 x 10 + 10 - 8<span> = 22</span>
+                        </div>
+                        <div class="item-letter position-absolute">o</div>
+                        <div class="item-check valid position-absolute">CORRECT</div>
+                        <div class="item-check invalid position-absolute">WRONG</div>
+                    </div>
+                    <div class="item_cont position-relative mb-4">
+                        <div id="inputDrop" data-ans="34" class="item">
+                            24 ÷ 4 + 14 x 2<span> = 34</span>
+                        </div>
+                        <div class="item-letter position-absolute">p</div>
+                        <div class="item-check valid position-absolute">CORRECT</div>
+                        <div class="item-check invalid position-absolute">WRONG</div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div data-ans="221" draggable="true" class="p1-text mb-4 d-flex justify-content-center align-items-center">
+                        <div class="ans">221</div>
+                    </div>
+                    <div data-ans="169" draggable="true" class="p1-text mb-4 d-flex justify-content-center align-items-center">
+                        <div class="ans">169</div>
+                    </div>
+                    <div data-ans="-152" draggable="true" class="p1-text mb-4 d-flex justify-content-center align-items-center">
+                        <div class="ans">-152</div>
+                    </div>
+                    <div data-ans="807" draggable="true" class="p1-text mb-4 d-flex justify-content-center align-items-center">
+                        <div class="ans">807</div>
+                    </div>
+                    <div data-ans="23" draggable="true" class="p1-text mb-4 d-flex justify-content-center align-items-center">
+                        <div class="ans">23</div>
+                    </div>
+                    <div data-ans="22" draggable="true" class="p1-text mb-4 d-flex justify-content-center align-items-center">
+                        <div class="ans">22</div>
+                    </div>
+                    <div data-ans="9" draggable="true" class="p1-text mb-4 d-flex justify-content-center align-items-center">
+                        <div class="ans">9</div>
+                    </div>
+                    <div data-ans="60" draggable="true" class="p1-text mb-4 d-flex justify-content-center align-items-center">
+                        <div class="ans">60</div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div data-ans="50" draggable="true" class="p1-text mb-4 d-flex justify-content-center align-items-center">
+                        <div class="ans">50</div>
+                    </div>
+                    <div data-ans="1208" draggable="true" class="p1-text mb-4 d-flex justify-content-center align-items-center">
+                        <div class="ans">1208</div>
+                    </div>
+                    <div data-ans="283" draggable="true" class="p1-text mb-4 d-flex justify-content-center align-items-center">
+                        <div class="ans">283</div>
+                    </div>
+                    <div data-ans="-87" draggable="true" class="p1-text mb-4 d-flex justify-content-center align-items-center">
+                        <div class="ans">-87</div>
+                    </div>
+                    <div data-ans="128" draggable="true" class="p1-text mb-4 d-flex justify-content-center align-items-center">
+                        <div class="ans">128</div>
+                    </div>
+                    <div data-ans="48" draggable="true" class="p1-text mb-4 d-flex justify-content-center align-items-center">
+                        <div class="ans">48</div>
+                    </div>
+                    <div data-ans="34" draggable="true" class="p1-text mb-4 d-flex justify-content-center align-items-center">
+                        <div class="ans">34</div>
+                    </div>
+                    <div data-ans="58" draggable="true" class="p1-text mb-4 d-flex justify-content-center align-items-center">
+                        <div class="ans">58</div>
+                    </div>
+                </div>
+            </div>          
+        </div>
+    </section>
+
+    <style>
+        .practice-2 {
+            display: none;
+        }
+        label {
+            cursor: pointer;
+        }
+        input.is-valid + label, input.is-invalid + label {
+            font-weight: 700;
+        }
+        input.is-invalid + label {
+            text-decoration: line-through;
+        }
+    </style>
+
+    <!-- section nine -->
+    <section id="section-nine" class="d-flex flex-column justify-content-center align-items-start">
+        <div class="container bg_cream pxy d-flex justify-content-center flex-column align-items-center">
+            <h3 class="mb-2 text-uppercase">Writing Variable Expressions</h3>
+            <p class="mb-5" style="font-size: 27px;">Write a variable expression for each scenario.</p>
+            <div class="mb-4 px-5">
+                <p class="mb-4">1. You decide to purchase several $25 gift cards for your family during the holiday season. Write a variable expression to express the amount of money you will spend on holiday gift cards.</p>
+                <div class="form-check fs-5">
+                    <input class="form-check-input practice-2" type="checkbox" data-value="yes" id="item_1_a">
+                    <label class="form-check-label" for="item_1_a">a. 25x</label>
+                </div>
+                <div class="form-check fs-5">
+                    <input class="form-check-input practice-2" type="checkbox" data-value="no" id="item_1_b">
+                    <label class="form-check-label" for="item_1_b">b. 2525</label>
+                </div>
+                <div class="form-check fs-5">
+                    <input class="form-check-input practice-2" type="checkbox" data-value="no" id="item_1_c">
+                    <label class="form-check-label" for="item_1_c">c. 25x + 25</label>
+                </div>
+            </div>
+            <div class="mb-4 px-5">
+                <p class="mb-4">2. The local community college charges $68 per credit hour. There are additional course fees of $124 per semester per student. Write a variable expression for the cost of taking courses at the college for a semester.</p>
+                <div class="form-check fs-5">
+                    <input class="form-check-input practice-2" type="checkbox" data-value="no" id="item_2_a">
+                    <label class="form-check-label" for="item_2_a">a. 124x + 68</label>
+                </div>
+                <div class="form-check fs-5">
+                    <input class="form-check-input practice-2" type="checkbox" data-value="yes" id="item_2_b">
+                    <label class="form-check-label" for="item_2_b">b. 68x + 124</label>
+                </div>
+                <div class="form-check fs-5">
+                    <input class="form-check-input practice-2" type="checkbox" data-value="no" id="item_2_c">
+                    <label class="form-check-label" for="item_2_c">c. 124x + 68x</label>
+                </div>
+            </div>
+            <div class="mb-4 px-5">
+                <p class="mb-4">3. Your boss asks you to price out tables and chairs for a classroom. Tables cost $36 each and the chairs cost $12 each. Write a variable expression for the total cost spent on tables and chairs for the room.</p>
+                <div class="form-check fs-5">
+                    <input class="form-check-input practice-2" type="checkbox" data-value="no" id="item_2_a">
+                    <label class="form-check-label" for="item_2_a">a. 12x + x(36 + 12)</label>
+                </div>
+                <div class="form-check fs-5">
+                    <input class="form-check-input practice-2" type="checkbox" data-value="yes" id="item_2_b">
+                    <label class="form-check-label" for="item_2_b">b. x(36 + 12)</label>
+                </div>
+                <div class="form-check fs-5">
+                    <input class="form-check-input practice-2" type="checkbox" data-value="no" id="item_2_c">
+                    <label class="form-check-label" for="item_2_c">c. 2(12x) + 36x</label>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- fifth section -->
 		<!-- Assessment Quiz -->
         <table style="width: 710px; height: auto; margin-left: auto; margin-right: auto;" border="1" cellpadding="20">
@@ -639,7 +1054,7 @@
             }
         }
 
-        const checkList19 = document.querySelectorAll("#practice2");
+        const checkList19 = document.querySelectorAll(".practice-2");
 
         checkList19.forEach(function(elem, index){
 
@@ -664,6 +1079,49 @@
 
             });
 
+        });
+
+
+
+        const containerInput4 = document.querySelector("#nineth_section_inner");
+        const inputList4 = containerInput4.querySelectorAll("#inputDrop");
+        const pTextDrag = containerInput4.querySelectorAll(".p1-text");
+
+        var dragged;
+
+        pTextDrag.forEach(function(elem, index){
+            elem.addEventListener("dragstart", function(event){
+                dragged = event.target;
+            }, false);
+
+            elem.addEventListener("dragend", function(event){
+
+            }, false);
+        });
+
+        inputList4.forEach(function(elem, index){
+            elem.addEventListener('dragover', function(e){
+                event.preventDefault();
+            }, false)
+
+            elem.addEventListener('drop', function(event){
+                const backToGlow = (event) => {
+                    event.target.classList.remove('is-invalid')
+                }
+                
+                // console.log(event.target.getAttribute("class"));
+                if(event.target.getAttribute("data-ans") == dragged.getAttribute("data-ans")){
+                    event.target.classList.remove('is-invalid');
+                    event.target.classList.add('is-valid');
+                    dragged.setAttribute("draggable", "false");
+                    dragged.classList.add("gray")
+                    event.target.setAttribute("disabled", "true");
+                } else {
+                    event.target.classList.remove('is-valid');
+                    event.target.classList.add('is-invalid');
+                    setTimeout(() => backToGlow(event), 1000);
+                }
+            }, false)
         });
 
     </script>
