@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+
+    <link href="https://m.fyioc.com/WhyNotScripts/css/VideoPlay.css" rel="stylesheet">
+    <link href="https://m.fyioc.com/WhyNotScripts/css/AudioPlay.css" rel="stylesheet">
+
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            background: #dcba82;
+            background-size: cover;
+        }
+
+        section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        }
+
+        .container {
+            max-width: 1080px;
+            padding-left: 67px;
+            padding-right: 67px;
+        }
+
+        .pxy {
+            padding-top: 90px;
+            padding-bottom: 55px;
+        }
+
+        h1{
+            font-family: 'Arvo', serif;
+            margin: 0;
+            line-height: 1;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 84px;
+            color: #1c1c1c;
+            -webkit-text-stroke: 2px #fff;
+        }
+
+        h2 {
+            font-size: 55px;
+            color: #1c1c1c;
+            -webkit-text-stroke: 2px #fff;
+            font-weight: 700;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        h3 {
+            font-size: 40px;
+            color: #a97956;
+            font-weight: 700;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        p {
+            margin: 0;
+            font-size: 20px;
+            color: #1c1c1c;
+            font-weight: 400;
+            font-family: 'Roboto', sans-serif;
+            text-align: left;
+        }
+
+        h1,
+        h2 {
+            font-weight: 700;
+        }
+
+        .bg_cream {
+            background: #f8f1e6;
+        }
+
+        .bg_white {
+            background: #fff;
+        }
+
+        /* section one */
+        #section-one {
+            background: #cb9f68;
+        }
+        #section-one .hero {
+            background: url('./WORLDHISTORYS1CU1L3MEDIA/WORLDHISTORYS1CU1L3_hero.png') no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 598px;
+            padding-top: 90px;
+        }
+        #section-one p {
+            text-shadow: 0px 2px 0 #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 30px #fff;
+        }
+        p.bulleted {
+            text-indent: -20px;
+            margin-left: 20px;
+        }
+        .bulleted::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            background: #000;
+            display: inline-block;
+            margin-right: 10px;
+            vertical-align: middle;
+            margin-bottom: 5px;
+        }
+
+        /* section two */
+        #section-two .container {
+            background: url('./WORLDHISTORYS1CU1L3MEDIA/WORLDHISTORYS1CU1L3_img-1.png') no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 755px;
+            padding-top: 130px;
+        }
+        #section-two th {
+            background: rgba(147, 87, 44, 0.85); 
+            font-size: 28px; 
+            font-weight: 700; 
+            width: 403px;
+            color: #fff;
+            padding: 30px;
+            line-height: 33px;
+        }
+        #section-two td {
+            background: rgba(147, 87, 44, 0.6); 
+            font-size: 28px; 
+            font-weight: 700; 
+            width: 403px;
+            color: #fff;
+            padding: 20px 20px 40px;
+            line-height: 28px;
+        }
+        #section-two th:nth-child(2) {
+            background: rgba(195, 161, 136, .85); 
+            font-size: 28px; 
+            font-weight: 700; 
+            width: 400px;
+        }
+        #section-two td:nth-child(2) {
+            background: rgba(195, 161, 136, .6); 
+            font-size: 28px; 
+            font-weight: 700; 
+            width: 400px;
+        }
+        #section-two td:nth-child(2) p::after {
+            content: "";
+            display: block;
+            width: calc(100% + 30px);
+            border-bottom: 2px dashed #000;
+            margin-left: -30px;
+        }
+
+        /* section four */
+        #section-four .container {
+            background: url('./WORLDHISTORYS1CU1L3MEDIA/WORLDHISTORYS1CU1L3_img-3.png') no-repeat;
+            background-size: contain;
+            width: 100%;
+            height: 626px;
+        }
+
+        /* section seven */
+        #section-seven .container {
+            background: url('./WORLDHISTORYS1CU1L3MEDIA/WORLDHISTORYS1CU1L3_img-5.png') no-repeat;
+            background-size: contain;
+            width: 100%;
+            height: 660px;
+        }
+
+        /* section ten */
+        #section-ten .container {
+            background: url('./WORLDHISTORYS1CU1L3MEDIA/WORLDHISTORYS1CU1L3_img-6.png') no-repeat;
+            background-size: contain;
+            width: 100%;
+            height: 700px;
+        }
+
+        /* section eleven */
+        p.disc {
+            text-indent: -30px;
+            margin-left: 30px;
+        }
+        .disc::before {
+            content: "";
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: #000;
+            display: inline-block;
+            margin-right: 20px;
+            vertical-align: middle;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="lesson_20">
+    <!-- section one -->
+    <section id="section-one">
+        <div class="container hero d-flex flex-column align-items-end justify-content-start">
+            <div class="d-flex flex-column align-items-start justify-content-start" style="width:478px;">
+                <h1>WORLD HISTORY</h1>
+                <h2>MESOPOTAMIA</h2>
+                <p class="text-uppercase" style="font-weight: 700; font-size: 22px;">What You Should Know</p>
+                <p class="mb-4" style="font-size: 22px;">By the end of this lesson, you should be able to:</p>
+                <p class="bulleted mb-3" style="font-size: 22px;">Have an understanding of what civilized society is.</p>
+                <p class="bulleted" style="font-size: 22px;">Be familiar with the transition of humankind from nomadic tribes to societies.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- section two -->
+    <section id="section-two">
+        <div class="container d-flex flex-column align-items-start justify-content-start">
+        <table class="mb-5 table1" style="width:680px; margin-left: -45px;">
+        <thead>
+            <tr class="text-center">
+                <th>LESSON <br>EXPECTATIONS</th>
+                <th>LESSON <br>KEYWORDS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <p class="mb-3" style="font-weight: 700; font-size: 21px;">By the end of this lesson, you should be able to:</p>
+                    <p class="bulleted mb-4" style="font-size: 20px;">Discuss how the environment affected the civilizations in Mesopotamia.</p>
+                    <p class="bulleted mb-4" style="font-size: 20px;">Identify the characteristics of a city-state.</p>
+                    <p class="bulleted mb-4" style="font-size: 20px;">Identify the political, religious, economic, social and artistic structure in Mesopotamia.</p>
+                </td>
+                <td style="vertical-align: top;">
+                    <p class="bulleted mb-3" style="font-size: 20px;">City-state</p>
+                    <p class="bulleted mb-3" style="font-size: 20px;">Irrigation</p>
+                    <p class="bulleted mb-3" style="font-size: 20px;">Polytheism</p>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+        </div>
+    </section>
+
+    <!-- section three -->
+    <section id="section-three">
+        <div class="container pxy bg_cream d-flex flex-column align-items-center justify-content-start">
+            <h3 class="mb-5 text-uppercase">Mesopotamia</h3>
+            <div class="d-flex justify-content-center align-items-start" style="gap:10px;">
+                <div class="col-6">
+                    <p class="mb-4">
+                        Find the Tigris and Euphrates rivers on the map and notice the triangular land between. This is Mesopotamia, "the land between two rivers." Although many different people lived in that area, you will focus on one group, the Sumerians.
+                    </p>
+                    <p class="mb-4">
+                        As you continue through the lesson, consider what it was like to live in a fertile area between two rivers. 
+                    </p>
+                    <p class="mb-4">
+                        What was the soil like? <br>Did they worry about flooding? <br>What did they use to build their houses?
+                    </p>
+                </div>
+                <div class="col-6 d-flex justify-content-start align-items-start flex-column" style="padding-left: 30px;">
+                    <img src="./WORLDHISTORYS1CU1L3MEDIA/WORLDHISTORYS1CU1L3_img-2.png" width="420" alt="">
+                    <p style="font-size: 18px; text-align: center; margin-top: 10px;">Mesopotamia, "the land between two rivers," is considered the cradle of Western civilization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section four -->
+    <section id="section-four">
+        <div class="container pxy bg_cream d-flex align-items-start justify-content-center">
+            <div class="col-6 d-flex align-items-end" style="height: 424px; margin-top: 90px;">
+                <p style="color:#fff; font-weight: 700; line-height: 22px; font-size: 18px; width: 95%; text-shadow: 0px 2px 0 #000000aa, 0 0 5px #000000aa, 0 0 10px #000000aa, 0 0 30px #000000aa;">The Hanging Gardens of Babylon were listed as one of the Seven Wonders of the Ancient World.</p>
+             </div>
+            <div class="col-6">
+                <h3 class="mb-3 text-uppercase">Environment</h3>
+                <p class="mb-4" style="line-height: 24px;">Where do you live? A city? A suburb? A farm? Do you experience harsh winters or mild weather? Do people need to be able to drive to get to employment or is there a mass transit system? Some of these factors are your environment. Where you live and what the region is like impacts the way you live.</p>
+                <p class="mb-4" style="line-height: 24px;">Knowledge of the environment of a geographic region is essential to understanding the cultural, political, religious and technological development of a civilization.</p>
+                <p class="mb-4" style="line-height: 24px;">Was the environment of Mesopotamia a blessing or a burden?</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- section five -->
+    <section id="section-five">
+        <div class="container pxy bg_cream d-flex align-items-start justify-content-start">
+            <div class="col-6 d-flex flex-column justify-content-start">
+                <h3 class="mb-3 text-uppercase text-start">City-States</h3>
+                <p class="mb-4" style="line-height: 24px;">The Mesopotamian civilizations were organized in city-states, which typically were walled cities built of mud that included government buildings and homes. The land surrounding the city was called the state, and it was here that people developed agriculture. The people in the city-states shared a common culture, language, and religion, but they were not ruled by a single king or warlord. Each city-state had its own leader, and competition arose among the communities. Wars over food and other resources were not uncommon. The most important building in the city-state was the ziggurat, the temple to the gods.</p>
+                <p class="mb-4" style="line-height: 24px;">The Sumerians were instrumental in the invention of the wheel, plow, and an early written language called cuneiform. They also created irrigation processes that allowed them to control the amount of water reaching their crops. These vast networks made it possible for communities to rise, grow, and prosper in the Fertile Crescent.</p>
+            </div>
+            <div class="col-6 d-flex flex-column justify-content-start align-items-start" style="padding-left: 50px;">
+                <img class="mb-4" src="./WORLDHISTORYS1CU1L3MEDIA/WORLDHISTORYS1CU1L3_img-4.png" width="420" alt="" style="margin-top: -45px;"> 
+                <p class="mb-4" style="line-height: 22px; font-size: 18px;">The Sumerians developed an early written language known as cuneiform. Clay tablets were often used to record information and maintain records. This clay tablet contains a record of the Sumerian deities.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- section six -->
+    <section id="section-six">
+        <div class="container pxy bg_white flex-column d-flex align-items-center justify-content-start">
+            <h3 class="mb-5 text-uppercase text-start">Rise of Sumer: Cradle of Civilization.</h3>
+            <div class="mb-5 ratio ratio-16x9" style="border: 20px solid #8f542c;">
+                <video class="video-fluid" loop controls>
+                    <source src="Https://m.fyioc.com/Spanish1/Lesson28/L28V1-REV5.mp4" type="video/mp4" />
+                </video>
+                <div class="play_button">
+                    <div id="play_vid">
+                        <span class="material-icons-outlined">play_arrow</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section seven -->
+    <section id="section-seven">
+        <div class="container pxy bg_cream d-flex align-items-start justify-content-center">
+            <div class="col-6 d-flex align-items-end" style="height: 424px; margin-top: 120px;">
+                <div style=" background: #6d4422; margin-left: -65px; width: 480px; padding: 25px;">
+                    <p style="color:#fff; font-weight: 700; line-height: 22px; font-size: 18px; width: 95%; text-shadow: 0px 2px 0 #000000aa, 0 0 5px #000000aa, 0 0 10px #000000aa, 0 0 30px #000000aa;">The Choqa Zanbil ziggurat located near Shush in modern-day Iran. The Ziggurats served as temples used by the king (priest) to sacrifice food to satisfy the gods.</p>
+                </div>
+             </div>
+            <div class="col-6" style="margin-top: -50px;">
+                <h3 class="mb-3 text-uppercase">Government in Mesopotamia</h3>
+                <p class="mb-4" style="line-height: 24px;">Each Mesopotamian city-state was ruled by a king or warlord who created and enforced laws and collected taxes. People believed that the king was selected by the gods, and he often served both as king and religious leader. Other men and women were permitted to act as priests and priestesses, but generally, it was the king who ruled the city-state and acted as the mediator with the gods.</p>
+                <p class="mb-4" style="line-height: 24px;">The king protected the people within the walled cities from invaders, as well as protecting the surplus used for trading. The people were highly taxed by the king, and they were expected to donate the food they produced to the king. He then ensured that the gods were happy by organizing sacrifices and offering food to them twice each day. The remaining food was given back to the people, distributed in a manner to assure that everyone got enough to eat.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- section eight -->
+    <section id="section-eight">
+        <div class="container pxy bg_white flex-column d-flex align-items-center justify-content-start">
+            <h3 class="mb-5 text-uppercase text-start">Life and Society in Mesopotamia</h3>
+            <p class="mb-4" style="line-height: 24px;">The irrigation systems which were essential for agriculture required a great amount of physically hard work, complicated construction and the most important of all mobilization of sufficient labor force and good organization. Thus artificial irrigation eventually led to formation of larger communities and social stratification into three classes: nobility, free citizens and slaves. Nobility, priesthood and a priest-king as supreme religious and secular ruler were responsible for the construction, organization and maintenance of irrigation systems. Priest-kings called en, lugal or ensi were viewed as representatives of the city's patron god who belonged to all the land of the city. Priest-kings lived in the temples which were both religious and administrative centers of a particular irrigation system unit. Around the temples developed cities as administrative, religious and trade centers resulting in the emergence of Sumerian city-states also referred as the temple-states because of the leading role of priesthood in society.</p>
+            <p class="mb-4" style="line-height: 24px;">The Sumerian cities were inhabited by nobility executing the king's will and orders through a well organized administrative apparatus. The Sumerian priest-kings collected taxes usually in goods to sustain the governmental and administrative organization, while the Sumerian priest invented writing - the Cuneiform script to simplify state administration and trading. Besides priesthood and nobility, Sumerian city population consisted of merchants, craftsmen and others who were mostly engaged in trade. The middle class of merchants and craftsmen in Mesopotamia was very strong and relatively independent. Merchants and craftsmen in Mesopotamia were allowed to take initiative and did not only work on king’s orders like the Egyptian merchants and craftsmen. Farmers, shepherds, fishermen and hunters in Mesopotamia lived in the city surroundings and were the lower class of the Mesopotamian society. They took care of the food supply of the cities and were mostly poor but personally free. At the very bottom of social hierarchy in Mesopotamia were the slaves who were mostly prisoners of war. Slaves could be bought or sold but they were allowed to marry and to have families. Special positions in both administration and economy had the scribes.</p>
+        </div>
+    </section>
+
+    <!-- section nine -->
+    <section id="section-nine" class="d-flex justify-content-start align-items-center flex-column">
+        <div class="container flex-column d-flex align-items-center justify-content-start" style="background: #cb9f68; padding-top: 45px; padding-bottom: 45px;">
+            <h3 class="text-uppercase text-center" style="font-size: 60px; color: #fff; line-height: 66px; margin-bottom: 0;">ASSIGNMENT</h3>
+            <p style="color: #fff; font-weight: 400; font-size: 30px; line-height: 35px;">Read the text and drag the social classes with their related roles.</p>
+        </div>
+        <div id="nineth_section_inner" class="container flex-column d-flex align-items-center justify-content-start" style="background: #f8f1e6; padding-top: 45px; padding-bottom: 45px;">
+            <div class="d-flex flex-column justify-content-start align-items-center w-100 mb-5">
+                <div class="row_ d-flex justify-content-center align-items-center" style="gap:40px;">
+                    <div data-ans="ans-1" draggable="true" class="p1-text mb-4 d-flex justify-content-center align-items-center">
+                        <div class="ans">Nobility</div>
+                    </div>
+                    <div data-ans="ans-2" draggable="true" class="p1-text mb-4 d-flex justify-content-center align-items-center">
+                        <div class="ans">Free Citizens</div>
+                    </div>
+                    <div data-ans="ans-3" draggable="true" class="p1-text mb-4 d-flex justify-content-center align-items-center">
+                        <div class="ans">Slaves</div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center w-100 row_" style="margin-bottom: 3px;">
+                    <div class="col-6">
+                        <p style="margin: 0; font-size: 25px; line-height: 30px;">Responsible for the construction, organization and maintenance of irrigation systems.</p>
+                    </div>
+                    <div id="inputDrop" data-ans="ans-1" class="item col-6 Child-2">
+                        <div>
+                           <span>Nobility</span> <span style="text-align: center;">INCORRECT ANSWER <br>Try Again</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center w-100 row_" style="margin-bottom: 3px;">
+                    <div class="col-6">
+                        <p style="margin: 0; font-size: 25px; line-height: 30px;">Took care of the food supply of the cities and were mostly poor.</p>
+                    </div>
+                    <div id="inputDrop" data-ans="ans-2" class="item col-6 Child-2">
+                        <div>
+                           <span>Free Citizens</span> <span style="text-align: center;">INCORRECT ANSWER <br>Try Again</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center w-100 row_" style="margin-bottom: 3px;">
+                    <div class="col-6">
+                        <p style="margin: 0; font-size: 25px; line-height: 30px;">Were mostly prisoners of war.</p>
+                    </div>
+                    <div id="inputDrop" data-ans="ans-3" class="item col-6 Child-2">
+                        <div>
+                           <span>Slaves</span> <span style="text-align: center;">INCORRECT ANSWER <br>Try Again</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .p1-text {
+            background: #dcba82;
+            padding: 20px;
+            width: 275px;
+            cursor: pointer;
+        }
+        .p1-text div {
+            font-size: 30px;
+            font-weight: 400;
+            color: #fff;
+        }
+        #section-nine div .col-6:first-child {
+            background: #ebd1a7;
+            height: 130px;
+            position: relative;
+        }
+        #section-nine div .col-6:first-child::before {
+            content: "";
+            position: absolute;
+            display: block;
+            right: -20px;
+            top: calc(50% - 20px);
+            width: 0; 
+            height: 0; 
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent; 
+            border-left: 20px solid #ebd1a7; 
+        }
+        .Child-2 {
+            background: #f2e6d5;
+            height: 130px;
+        }
+        #section-nine .col-6 {
+            padding: 20px 30px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #inputDrop {
+            font-size: 25px;
+            font-weight: 700;
+            color: #6d4422;
+        }
+        #inputDrop div span {
+            display: none;
+        }
+        #inputDrop.is-valid div span:first-child {
+            display: block;
+        }
+        #inputDrop.is-valid {
+            pointer-events: none;
+            font-size: 40px;
+        }
+        #inputDrop.is-invalid {
+            background-color: red;
+            color: #fff;
+        }
+        #inputDrop.is-invalid span:nth-child(2) {
+            display: block;
+        }
+        div[draggable*="false"] {
+            cursor: default;
+            border: 4px solid #6d4422;
+            background: #f8f1e6;
+        }
+        div[draggable*="false"] div {
+            color: #6d4422;
+            font-weight: 700;
+        }
+    </style>
+
+    <!-- section ten -->
+    <section id="section-ten">
+        <div class="container pxy bg_white d-flex align-items-start justify-content-center">
+            <div class="col-6">
+                <h3 class="mb-5 text-uppercase text-start">Economic Life</h3>
+                <p class="mb-4" style="line-height: 24px;">As the early societies grew more adept at agriculture, they actually had surplus food to trade with each other and with people and communities further away. The city-states started trading for products that they needed. At the same time, artisans were growing more skilled. As they became further gifted, they needed better ingredients with which to make the products. This need created a demand for foreign articles, and this was yet another reason for increased trade.</p>
+            </div>
+            <div class="col-6">
+                <p class="mb-4" style="line-height: 24px; margin-top: 360px;">The Mesopotamian societies grew <br>grain crops that they were able to trade <br>with other societies for products and foods <br>that they could not grow or make themselves. <br>Wheat was among the most abundant crops <br>produced in this area between the two rivers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- section eleven -->
+    <section id="section-eleven">
+        <div class="container pxy bg_cream flex-column d-flex align-items-center justify-content-center">
+            <h3 class="text-uppercase text-start">Mesopotamia and the resources traded</h3>
+            <p style="font-size: 30px;">The people of Mesopotamia traded a variety of goods, including:</p>
+            <div class="d-flex flex-column align-items-start justify-content-start" style="padding: 40px 0px 40px 70px;">
+                <p class="disc mb-4"><strong>Agricultural products:</strong> Grains such as wheat and barley were grown in the fertile land of Mesopotamia and traded with neighboring regions.</p>
+                <p class="disc mb-4"><strong>Livestock::</strong> Sheep, goats, and cattle were raised for their meat, milk, and hides, and were also traded with other cultures.</p>
+                <p class="disc mb-4"><strong>Metals: </strong> Copper, tin, and iron were mined and used to make weapons, tools, and jewelry. They were also traded with other civilizations.</p>
+                <p class="disc mb-4"><strong>Textiles: </strong> Mesopotamian weavers were known for their skill in making cloth from wool and linen, which were then traded with other cultures.</p>
+                <p class="disc mb-5"><strong>Spices and herbs: </strong> Mesopotamia had access to a variety of spices and herbs, including cinnamon, cumin, and coriander, which were traded with other civilizations.</p>
+                <p class="mt-2">These goods were traded through a network of merchants and traders, both within Mesopotamia and with neighboring regions. The Tigris and Euphrates rivers served as important trade routes, connecting Mesopotamia to the Mediterranean world and beyond.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- section twelve -->
+    <section id="section-twelve" class="d-flex justify-content-start align-items-center flex-column">
+        <div class="container flex-column d-flex align-items-center justify-content-start" style="background: #cb9f68; padding-top: 45px; padding-bottom: 45px;">
+            <h3 class="text-uppercase text-center" style="font-size: 60px; color: #fff; line-height: 66px; margin-bottom: 0;">ASSIGNMENT</h3>
+            <p style="color: #fff; font-weight: 400; font-size: 30px; line-height: 35px;">Select the three pictures of resources that were traded back then.</p>
+        </div>
+        <div class="container bg_white d-flex flex-column justify-content-center align-items-center" style="padding-top: 60px; padding-bottom: 60px; gap: 20px;">
+            <div class="row-1">
+                <div class="d-flex align-items-center justify-content-around" style="gap: 20px;">
+                    <div class="form-check" style="padding-right:0; padding-left: 0;">
+                        <input class="form-check-input practice-2" type="checkbox" data-value="yes" id="item_1_a">
+                        <label class="form-check-label" for="item_1_a"><img width="320" src="./WORLDHISTORYS1CU1L3MEDIA/WORLDHISTORYS1CU1L3_img-7.png" alt=""><span class="remark">CORRECT</span></label>
+                    </div>
+                    <div class="form-check" style="padding-right:0; padding-left: 0;">
+                        <input class="form-check-input practice-2" type="checkbox" data-value="yes" id="item_1_b">
+                        <label class="form-check-label" for="item_1_b"><img width="320" src="./WORLDHISTORYS1CU1L3MEDIA/WORLDHISTORYS1CU1L3_img-8.png" alt=""><span class="remark">CORRECT</span></label>
+                    </div>
+                    <div class="form-check" style="padding-right:0; padding-left: 0;">
+                        <input class="form-check-input practice-2" type="checkbox" data-value="yes" id="item_1_c">
+                        <label class="form-check-label" for="item_1_c"><img width="320" src="./WORLDHISTORYS1CU1L3MEDIA/WORLDHISTORYS1CU1L3_img-9.png" alt=""><span class="remark">CORRECT</span></label>
+                    </div>
+                </div>
+            </div>
+            <div class="row-1">
+                <div class="d-flex align-items-center justify-content-around" style="gap: 20px;">
+                    <div class="form-check" style="padding-right:0; padding-left: 0;">
+                        <input class="form-check-input practice-2" type="checkbox" data-value="no" id="item_2_a">
+                        <label class="form-check-label" for="item_2_a"><img width="320" src="./WORLDHISTORYS1CU1L3MEDIA/WORLDHISTORYS1CU1L3_img-10.png" alt=""><span class="remark">INCORRECT</span></label>
+                    </div>
+                    <div class="form-check" style="padding-right:0; padding-left: 0;">
+                        <input class="form-check-input practice-2" type="checkbox" data-value="no" id="item_2_b">
+                        <label class="form-check-label" for="item_2_b"><img width="320" src="./WORLDHISTORYS1CU1L3MEDIA/WORLDHISTORYS1CU1L3_img-11.png" alt=""><span class="remark">INCORRECT</span></label>
+                    </div>
+                    <div class="form-check" style="padding-right:0; padding-left: 0;">
+                        <input class="form-check-input practice-2" type="checkbox" data-value="no" id="item_2_c">
+                        <label class="form-check-label" for="item_2_c"><img width="320" src="./WORLDHISTORYS1CU1L3MEDIA/WORLDHISTORYS1CU1L3_img-12.png" alt=""><span class="remark">INCORRECT</span></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        input.practice-2 {
+            opacity: 0;
+        }
+        input.practice-2.is-valid + label img {
+            border: 10px solid lime;
+        }
+        input.practice-2.is-invalid + label img {
+            border: 10px solid red;
+        }
+        .form-check label {
+            position: relative;
+            cursor: pointer;
+        }
+        .remark {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            display: none;
+        }
+        input.practice-2.is-valid + label .remark{
+            background: white;
+            color: lime;
+            padding: 5px 20px;
+            display: block;
+            font-weight: 700;
+        }
+        input.practice-2.is-invalid + label .remark{
+            background: white;
+            color: red;
+            padding: 5px 20px;
+            display: block;
+            font-weight: 700;
+        }
+    </style>
+
+    <!-- fifth section -->
+		<!-- Assessment Quiz -->
+        <table style="width: 710px; height: auto; margin-left: auto; margin-right: auto;" border="1" cellpadding="20">
+            <tbody>
+            <tr>
+            <td style="background-color: white; width: 710px; ">
+            <b><span style="font-family: arial,helvetica,sans-serif;">&nbsp;  Answer the following questions.</span> </b>
+            <p><a:question index="1" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="2" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="3" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="4" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="5" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="6" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="7" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="8" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="9" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="10" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="11" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="12" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="13" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="14" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="15" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="16" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="17" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="18" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="19" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="20" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            </td>
+            </tr>
+            </tbody>
+        </table>
+            <!-- Assessment Quiz -->
+
+    <div id="audio_holder"></div>
+</div>
+
+    <script>
+
+        // load first audio on the list as default
+        window.addEventListener("DOMContentLoaded", (event) => {
+            const pauseAudio20 = document.querySelector(".play_list_1 button");
+            //console.log(pauseAudio);
+            const audio_file20 = 'https://m.fyioc.com/Spanish2/Lesson20/'+pauseAudio20.getAttribute('data-audio')+'.mp3';
+            //console.log(audio_file);
+            audioLoad(audio_file20);
+        });
+
+        const container20 = document.querySelector(".lesson_20")
+        const btnContainer20 = document.querySelector(".lesson_20");
+        const btnPlay20 = btnContainer20.querySelectorAll("button[data-audio]");
+
+        btnPlay20.forEach(function(item, index) {
+
+            item.addEventListener("click", (event) => {
+
+                // get the button id ( btnPause,  btnPlayTone)
+                const id = event.target.id;
+                
+                // load audio file every click
+                const audio_file20 = 'https://m.fyioc.com/Spanish2/Lesson20/'+event.target.getAttribute('data-audio')+'.mp3';
+                audioLoad(audio_file20);
+
+                // get audio id
+                const audioPlay20 = document.getElementById("audioPlay");
+                //console.log(audioPlay);
+                // audio play
+                if(id === "btnPlayTone"){
+                    event.target.classList.add("playing");
+                    btnContainer20.classList.add("audio_playing");
+                    audioPlay20.play();
+                    item.innerHTML = '<span class="material-icons d-flex">pause</span>';
+
+                    event.target.setAttribute("id", "btnPause");
+                }
+
+                // audio pause
+                if(id === "btnPause"){
+                    event.target.classList.remove("playing");
+                    audioPlay20.pause();
+                    btnContainer20.classList.remove("audio_playing");
+                    item.innerHTML = '<span class="material-icons d-flex">volume_up</span>';
+
+                    event.target.setAttribute("id", "btnPlayTone");
+                }
+            
+                // audio end
+                audioPlay20.onended = (event) => {    
+                    item.classList.remove("playing");
+                    audioPlay20.pause()
+                    btnContainer20.classList.remove("audio_playing");
+                    item.innerHTML = '<span class="material-icons d-flex">volume_up</span>';
+                }
+            
+            });
+
+        });
+
+        function audioLoad(audio_url){
+            const audio_file20 = '<audio id="audioPlay" src="'+audio_url+'"></audio>';
+            document.getElementById("audio_holder").innerHTML = audio_file20;
+        }
+
+        const checkList20 = document.querySelectorAll("#practice1");
+
+        checkList20.forEach(function(elem, index){
+
+            elem.addEventListener("click", function(event){
+
+                if(elem.checked){
+
+                    if(event.target.getAttribute('data-value') == "yes"){
+                        elem.classList.remove('is-invalid');
+                        elem.classList.add('is-valid');
+                    }
+
+                    if(event.target.getAttribute('data-value') == "no"){
+                        elem.classList.remove('is-valid');
+                        elem.classList.add('is-invalid');
+                    }
+
+                } else {
+                    elem.classList.remove('is-valid');
+                    elem.classList.remove('is-invalid');
+                }
+
+            });
+
+        });
+
+        // New Validation Function
+        function checkInputs(){
+            const answerNumber = event.target.dataset.qs_count
+            const triesRemaining = event.target.dataset.error_counter
+            const selectorString = `quiz-2-answer${answerNumber}`
+            const selectorStringButton = `quiz-2-answer${answerNumber}btn`
+            const selectorStringAnswer = `answer-text${answerNumber}`
+            const quizTwoAnswer = document.getElementById(selectorString);
+            const quizTwoAnswerButton = document.getElementById(selectorStringButton)
+            const quizTwoAnswerText = document.getElementById(selectorStringAnswer)
+            const answer = quizTwoAnswer.getAttribute('data-ans')
+            const userAnswer = quizTwoAnswer.value.toLowerCase()
+            const correctAnswer = userAnswer === answer.toLowerCase() ? true : false
+            const backToGlow = (quizTwoAnswer, quizTwoAnswerButton) => {
+                quizTwoAnswerButton.classList.remove("glow-on-hover-success")
+                quizTwoAnswerButton.classList.remove("glow-on-hover-wrong")
+                quizTwoAnswerButton.classList.add('glow-on-hover')
+                quizTwoAnswerButton.innerText = 'Check'
+            }
+            if(correctAnswer){
+                quizTwoAnswer.classList.remove("is-invalid")
+                quizTwoAnswer.classList.add("is-valid")
+                quizTwoAnswerButton.innerText = 'Correct!'
+                quizTwoAnswerButton.classList.add("glow-on-hover-success")
+                quizTwoAnswerButton.classList.remove("glow-on-hover")
+                quizTwoAnswerButton.classList.remove('glow-on-hover-wrong')
+                quizTwoAnswerText.classList.remove('bg-danger')
+                quizTwoAnswerText.classList.add('bg-success')
+            } else {
+                quizTwoAnswerText.classList.remove('bg-success') 
+                quizTwoAnswerText.classList.add('bg-danger')
+                quizTwoAnswer.classList.remove("is-valid")
+                quizTwoAnswer.classList.add("is-invalid")
+                quizTwoAnswerButton.classList.remove("glow-on-hover-success")
+                quizTwoAnswerButton.classList.remove("glow-on-hover")
+                quizTwoAnswerButton.classList.add('glow-on-hover-wrong')
+                quizTwoAnswerButton.innerText = 'Wrong'
+                setTimeout(() => backToGlow(quizTwoAnswer,quizTwoAnswerButton), 1500);
+                let updateTries = ''
+                if(quizTwoAnswerButton.getAttribute('data-error_counter') == 0){
+                    updateTries = 0;
+                } else {
+                    updateTries = Number(triesRemaining) - 1;
+                }
+                document.getElementById(selectorStringButton).setAttribute('data-error_counter', updateTries)
+                if(quizTwoAnswerButton.getAttribute('data-error_counter') == 0 ){
+                    quizTwoAnswerText.innerHTML = `Answer: ${quizTwoAnswer.getAttribute('data-ans')}`
+                    quizTwoAnswerText.classList.remove('hidden')
+                }
+            }
+        }
+
+        const checkList19 = document.querySelectorAll(".practice-2");
+
+        checkList19.forEach(function(elem, index){
+
+            elem.addEventListener("click", function(event){
+
+                if(elem.checked){
+
+                    if(event.target.getAttribute('data-value') == "yes"){
+                        elem.classList.remove('is-invalid');
+                        elem.classList.add('is-valid');
+                    }
+
+                    if(event.target.getAttribute('data-value') == "no"){
+                        elem.classList.remove('is-valid');
+                        elem.classList.add('is-invalid');
+                    }
+
+                } else {
+                    elem.classList.remove('is-valid');
+                    elem.classList.remove('is-invalid');
+                }
+
+            });
+
+        });
+
+
+
+        const containerInput4 = document.querySelector("#nineth_section_inner");
+        const inputList4 = containerInput4.querySelectorAll("#inputDrop");
+        const pTextDrag = containerInput4.querySelectorAll(".p1-text");
+
+        var dragged;
+
+        pTextDrag.forEach(function(elem, index){
+            elem.addEventListener("dragstart", function(event){
+                dragged = event.target;
+            }, false);
+
+            elem.addEventListener("dragend", function(event){
+
+            }, false);
+        });
+
+        inputList4.forEach(function(elem, index){
+            elem.addEventListener('dragover', function(e){
+                event.preventDefault();
+            }, false)
+
+            elem.addEventListener('drop', function(event){
+                const backToGlow = (event) => {
+                    event.target.classList.remove('is-invalid');
+                }
+                
+                // console.log(event.target.getAttribute("class"));
+                if(event.target.getAttribute("data-ans") == dragged.getAttribute("data-ans")){
+                    event.target.classList.remove('is-invalid');
+                    event.target.classList.add('is-valid');
+                    dragged.setAttribute("draggable", "false");
+                    dragged.classList.add("gray")
+                    event.target.setAttribute("disabled", "true");
+                } else {
+                    event.target.classList.remove('is-valid');
+                    event.target.classList.add('is-invalid');
+                    setTimeout(() => backToGlow(event), 1000);
+                }
+            }, false)
+        });
+
+    </script>
+    <script src="https://m.fyioc.com/WhyNotScripts/js/VideoPlay.js"></script>
+    <script src="https://m.fyioc.com/WhyNotScripts/js/AudioPlay.js"></script>
+</body>
+</html>
