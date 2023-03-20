@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+    <link href="https://m.fyioc.com/WhyNotScripts/css/VideoPlay.css" rel="stylesheet">
+    <link href="https://m.fyioc.com/WhyNotScripts/css/AudioPlay.css" rel="stylesheet">
+
+    <style type="text/css">
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25.31px;
+            font-weight: 400;
+            background: #10399c;
+            background-size: cover;
+        }
+
+        section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        }
+
+        .container {
+            max-width: 1080px;
+            padding-left: 78px;
+            padding-right: 78px;
+        }
+
+        .pxy {
+            padding-top: 75px;
+            padding-bottom: 75px;
+        }
+
+        /* Background Color */
+
+        .white_bg {
+            background: #fff;
+        }
+
+        .light_bg {
+            background: #ecf8f5;
+        }
+
+        .gray_bg {
+            background: #cfd7eb;
+        }
+        /* Typography */
+
+        h1 {
+            font-family: 'Arvo', serif;
+            margin: 0;
+            line-height: 1;
+            color: #fff;
+            font-size: 81px;
+        }
+
+        h2 {
+            font-size: 40.5px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        h3 {
+            font-size: 33px;
+            font-family: 'Roboto', sans-serif;
+            color: #1f1f1f;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+        }
+        
+        p {
+            margin: 0;
+            font-size: 25.31px;
+            color: #1f1f1f;
+            font-weight: 400;
+            font-family: 'Roboto', sans-serif;
+            text-align: left;
+            line-height: 1.3;
+            margin-bottom: 33px;
+        }
+
+        h1,
+        h2, h3 {
+            font-weight: 700;
+        }
+
+        /* section 1 */
+        #section-one {
+            background: #030d55;
+        }
+        #section-one .hero {
+            background: url('./PSYCGU1L8MEDIA/PSYCGU1L8_hero.png') no-repeat;
+            background-size: contain;
+            width: 100%;
+            height: 599px;
+            padding-top: 165px;
+        }
+
+        /* section 2 */
+        #section-two .container {
+            background: url('./PSYCGU1L8MEDIA/PSYCGU1L8_img-1.png') no-repeat;
+            background-size: contain;
+            height: 522px;
+            padding-top: 59px;
+            width: 100%;
+        }
+
+        #section-two table th {
+            background: #030d55cc;
+            padding: 40px 50px;
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+            line-height: 30px;
+            font-size: 27px;
+            border: 1px solid #ffffff55;
+        }
+
+        #section-two table td {
+            background: #030d55dd;
+            padding: 40px 30px;
+            border: 1px solid #ffffff55;
+            vertical-align: top;
+        }
+
+        #section-two table td p {
+            text-align: left;
+            color: #fff;
+            line-height: 24px;
+            font-size: 20px;
+            position: relative;
+        }
+
+        #section-two table td:nth-child(3) {
+            position: relative;
+        }
+
+        #section-two table td:nth-child(3) p {
+            font-weight: 700;
+        }
+
+        #section-two table td:nth-child(3) p::after {
+            content: url("./PSYCGU1L8MEDIA/PSYCGU1L8_img-2.png");
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        p.bulleted {
+            text-indent: -30px;
+            margin-left: 30px;
+        }
+        .bulleted::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            display: inline-block;
+            margin-right: 20px;
+            vertical-align: middle;
+            margin-bottom: 5px;
+        }
+        .bulleted.black::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            background: #000;
+            display: inline-block;
+            margin-right: 20px;
+            vertical-align: middle;
+            margin-bottom: 5px;
+        }
+        .left, .left-even {
+            position: relative;
+        }
+        .left::before {
+            content: "";
+            position: absolute;
+            display: block;
+            left: -20px;
+            top: 25px;
+            width: 0; 
+            height: 0; 
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent; 
+            border-right: 20px solid #2553c1; 
+        }
+        .left-even::before {
+            content: "";
+            position: absolute;
+            display: block;
+            left: -20px;
+            top: 25px;
+            width: 0; 
+            height: 0; 
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent; 
+            border-right: 20px solid #3f6ad2; 
+        }
+    </style>
+</head>
+
+<body>
+<div class="lesson_20">
+    <!-- section one -->
+    <section id="section-one">
+        <div class="container hero d-flex flex-column align-items-end justify-content-start" style="padding-left: 50px; padding-right: 40px;">
+                <h1>PSYCHOLOGY</h1>
+                <h6 style="font-size: 58px; color: #fff; font-weight: 700; line-height: 1; margin-bottom: 0;" class="text-end">NERVOUS SYSTEM</h6>
+                <h6 style="font-size: 37px; color: #fff; font-weight: 400; margin-bottom: 0;" class="text-end">Neurotransmitters</h6>
+        </div>
+    </section>
+
+    <!-- section two -->
+    <section id="section-two">
+        <div class="container d-flex flex-column align-items-center justify-content-start" style="padding-left: 50px; padding-right: 40px;">
+            <table style="width: 999px;">
+                <thead>
+                    <tr>
+                        <th>What You Should Know?</th>
+                        <th>Lesson Expectations</th>
+                        <th>Lesson Keywords</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p class="mb-4">Before you begin, you should:</p>
+                            <p class="bulleted mb-2">Have a basic knowledge of biology. </p>
+                        </td>
+                        <td>
+                            <p class="bulleted mb-2">Identify some of the neurotransmitters and their systems. </p>
+                        </td>
+                        <td>
+                            <p class="mb-4">Neurotransmitter</p>
+                            <p class="mb-4">Refractory Period</p>
+                            <p class="mb-2">Synapse</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- section three -->
+    <section id="section-three">
+        <div class="container white_bg pxy d-flex flex-column align-items-start justify-content-start">
+            <h3>Neurotransmitters</h3>
+            <p>Neurotransmitters are chemical substances produced and stored in synaptic vesicles in the soma. Soma is the term for a neuron's cell body. Between the axon of one neuron and the dendrites of another is a tiny gap.</p>
+            <p>Neurotransmitters travel down the axon to the axon terminal where they are released into a tiny gap. Most of the communication in the brain takes place across these tiny gaps, or synapses.</p>
+            <p>Messages from a neuron “hop" over the synaptic gap to deliver the message from one cell to the next. This process is shown in the following illustration.</p>
+            <img src="./PSYCGU1L8MEDIA/PSYCGU1L8_img-3.png" width="918" alt="">
+            <p class="mt-5">Neurons generate an action potential when neurotransmitters' excitatory inputs exceed inhibitory inputs. This brief electrochemical charge in the axon depolarizes the cell and causes a domino-type of effect of depolarization all the way down the axon.</p>
+            <p class="mb-5">After binding of a neurotransmitter to a dendrite occurs and action potentials are fired, neurotransmitters are removed from the Synapse by the process of reuptake, or they are destroyed by enzymes.</p>
+        </div>
+    </section>
+
+    <!-- section four -->
+    <section id="section-four">
+        <div class="container gray_bg pxy d-flex flex-column align-items-start justify-content-start">
+            <h3 class="mb-5" style="font-size: 40px; text-transform: none; text-align: center;">For the synapse to work properly, six basic events need to happen:</h3>
+            <p style="margin-bottom: 0; font-size: 30px; font-weight: 700; color: #fff; padding: 30px 25px; background: #10399c; border-bottom: 3px solid #fff; width: 100%;">Production of neurotransmitters</p>
+            <p style="margin-bottom: 0; font-size: 30px; font-weight: 700; color: #fff; padding: 30px 25px; background: #2453c6; border-bottom: 3px solid #fff; width: 100%;">Storage of neurotransmitters</p>
+            <p style="margin-bottom: 0; font-size: 30px; font-weight: 700; color: #fff; padding: 30px 25px; background: #3568e3; border-bottom: 3px solid #fff; width: 100%;">Release of neurotransmitters</p>
+            <p style="margin-bottom: 0; font-size: 30px; font-weight: 700; color: #fff; padding: 30px 25px; background: #4378f7; border-bottom: 3px solid #fff; width: 100%;">Binding of neurotransmitters</p>
+            <p style="margin-bottom: 0; font-size: 30px; font-weight: 700; color: #fff; padding: 30px 25px; background: #5386ff; border-bottom: 3px solid #fff; width: 100%;">Generation of a new action potential</p>
+            <p class="mb-5" style="font-size: 30px; font-weight: 700; color: #fff; padding: 30px 25px; background: #6693ff; width: 100%;">Removal of neurotransmitters from the synapse</p>
+        </div>
+    </section>
+
+    <!-- section five -->
+    <section id="section-five">
+        <div class="container white_bg pxy d-flex flex-column align-items-start justify-content-start">
+            <h3 class="mb-5" style="font-size: 40px; text-transform: none; text-align: center!important; width: 100%;">It’s time to learn about Schwann cells</h3>
+            <h3>Schwann cells</h3>
+            <p>Schwann cells are found along the length of the axon. These cells wrap around the axon with <strong>small gaps</strong> between each cell. Axons end in a series or group of <strong>synaptic knobs</strong>. These structures stimulate other nerves or a target organ. This causes <strong>physical responses</strong>.</p>
+            <p>For example, an arm may move or a lid may close on an eye based on these synapses.</p>
+            <img class="mb-5 mt-4" src="./PSYCGU1L8MEDIA/PSYCGU1L8_img-4.png" width="918" alt="">
+        </div>
+    </section>
+
+    <!-- section six -->
+    <section id="section-six">
+        <div class="container gray_bg pxy d-flex flex-column align-items-start justify-content-start">
+            <h3 class="mb-5" style="font-size: 40px; text-transform: none; text-align: center;">Different sets of neurons use different types of neurotransmitters. </h3>
+            <p style="font-size: 30px; text-transform: none; text-align: center;">A group of neurons that <br>communicate with one another using the same neurotransmitter is called a neurotransmitter system. There are seven major neurotransmitters, let’s learn more about them:</p>
+            <div class="mt-4 d-flex flex-column justify-content-center align-items-center w-100">
+                <div class="rows w-100 d-flex" style="">
+                    <div class="col-6" style="padding: 35px 35px 0 35px; background: #10399c; font-weight: 700; font-size: 25px; color: #fff;">Acetylcholine</div>
+                    <div class="col-6 left" style="padding: 35px; background: #2553c1;">
+                        <p style="color: #fff;">Was the first compound to be identified as a neurotransmitter. This neurotransmitter is used by neurons to slow the heartbeat and activate the digestive system.</p>
+                        <p class="mb-4" style="color: #fff;">Problems with this system are linked to memory loss and eventual loss of mental powers (as exhibited in Alzheimer’s).</p>
+                    </div>
+                </div>
+                <div class="rows w-100 d-flex" style="">
+                    <div class="col-6" style="padding: 35px 35px 0 35px; background: #1542af; font-weight: 700; font-size: 25px; color: #fff;">Norepinephrine</div>
+                    <div class="col-6 left-even" style="padding: 35px; background: #3f6ad2;">
+                        <p class="mb-4" style="color: #fff;">These systems affect a person's mood, learning, wakefulness and arousal. Changes in this system have been linked to depression.</p>
+                    </div>
+                </div>  
+                <div class="rows w-100 d-flex" style="">
+                    <div class="col-6" style="padding: 35px 35px 0 35px; background: #10399c; font-weight: 700; font-size: 25px; color: #fff;">Serotonin</div>
+                    <div class="col-6 left" style="padding: 35px; background: #2553c1;">
+                        <p style="color: #fff;">Is similar to norepinephrine in that it affects both sleep and mood.</p>
+                        <p class="mb-4" style="color: #fff;">Serotonin has been linked to aggression and impulsive behaviors. Malfunction of the serotonin feedback system is suspected to be a major contributor to mood and appetite problems.</p>
+                    </div>
+                </div>
+                <div class="rows w-100 d-flex" style="">
+                    <div class="col-6" style="padding: 35px 35px 0 35px; background: #1542af; font-weight: 700; font-size: 25px; color: #fff;">Dopamine</div>
+                    <div class="col-6 left-even" style="padding: 35px; background: #3f6ad2;">
+                        <p style="color: #fff;">Is a neurotransmitter that is important to movement.</p>
+                        <p style="color: #fff;">Problems with the dopamine system are thought to be associated with the perceptual, thought and emotional disturbances of schizophrenia.</p>
+                        <p class="mb-4" style="color: #fff;">Dopamine also plays a role in the rewarding properties of many drugs, like cocaine.</p>
+                    </div>
+                </div>  
+                <div class="rows w-100 d-flex" style="">
+                    <div class="col-6" style="padding: 35px 35px 0 35px; background: #10399c; font-weight: 700; font-size: 25px; color: #fff;">GABA (gamma-aminobutyric acid)</div>
+                    <div class="col-6 left" style="padding: 35px; background: #2553c1;">
+                        <p style="color: #fff;">Is similar to norepinephrine in that it affects both sleep and mood.</p>
+                        <p class="mb-4" style="color: #fff;">Serotonin has been linked to aggression and impulsive behaviors. Malfunction of the serotonin feedback system is suspected to be a major contributor to mood and appetite problems.</p>
+                    </div>
+                </div>
+                <div class="rows w-100 d-flex" style="">
+                    <div class="col-6" style="padding: 35px 35px 0 35px; background: #1542af; font-weight: 700; font-size: 25px; color: #fff;">Glutamate</div>
+                    <div class="col-6 left-even" style="padding: 35px; background: #3f6ad2;">
+                        <p style="color: #fff;">Is used more by neurons than any of the other neurotransmitters. Glutamate enables the brain to reinforce its synaptic connections.</p>
+                        <p class="mb-4" style="color: #fff;">Glutamate can cause neurons to die if they are overused.</p>
+                    </div>
+                </div>  
+                <div class="rows w-100 d-flex" style="">
+                    <div class="col-6" style="padding: 35px 35px 0 35px; background: #10399c; font-weight: 700; font-size: 25px; color: #fff;">Endorphins</div>
+                    <div class="col-6 left" style="padding: 35px; background: #2553c1;">
+                        <p class="mb-4" style="color: #fff;">Endorphins, in this context, are often substances called opiates. Opiates like morphine or heroin, can relieve pain and produce intense feelings of happiness.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section seven -->
+    <section id="section-seven">
+        <div class="container white_bg pxy d-flex flex-column align-items-start justify-content-start">
+            <h3 class="mb-5" style="font-size: 40px; text-transform: none; text-align: center!important; width: 100%;">Let’s review how neurotransmitters affect <br>how our bodies work</h3>
+            <h3>Neurotransmitters</h3>
+            <p>Neurotransmitters affect a person’s mood, appetite and ability to reason.</p>
+            <p>Problems with our dopamine system can be linked to schizophrenia. Complications with our serotonin system have been linked to depression. <br>“It is important for psychologists and psychiatrists to know what neurons are being affected to prescribe the appropriate type of medication if therapeutic drugs are being used.”</p>
+            <p>Legal drugs such as alcohol, therapeutic drugs (those prescribed for sufferers of schizophrenia, depression, etc) and illegal drugs (cocaine and LSD) all affect our physiology and behavior. Many of the effects of the drugs can also affect us on the synaptic level.</p>
+        </div>
+    </section>
+
+    <!-- section nine -->
+    <section id="section-nine" class="d-flex justify-content-start align-items-center flex-column">
+        <div class="container flex-column d-flex align-items-center justify-content-start" style="background: #030d55; padding-top: 75px; padding-bottom: 75px;">
+            <h3 class="text-uppercase text-center" style="font-size: 40px; color: #fff; line-height: 46px; margin-bottom: 0;">ACTIVITY 1 <br>Neurotransmitters</h3>
+        </div>
+        <div id="nineth_section_inner" class="container gray_bg flex-column d-flex align-items-start justify-content-start" style="padding-top: 45px; padding-bottom: 45px;">
+            <p><strong>Direction:</strong> After checking the importance of neurotransmitters in our bodies, and the effects of the malfunction of each one of them, drag and drop the image next to the neurotransmitter. Remember, that image shows the consequences caused by the malfunction of that neurotransmitter.</p>
+            <h3 style="">Answer Bank</h3>
+            <div class="d-flex flex-column justify-content-start align-items-center w-100 mb-5">
+                <div class="sticky d-flex justify-content-center align-items-center flex-column mb-4">
+                    <div class="row_ d-flex justify-content-around align-items-start" style="background: #fff; width: 900px; padding: 20px 20px 10px;">
+                        <div class="col-3 d-flex justify-content-center align-items-center">
+                            <img data-ans="ans-1" draggable="true" class="p1-text" src="./PSYCGU1L8MEDIA/PSYCGU1L8_img-8.png" width="200" alt="">
+                        </div>
+                        <div class="col-3 d-flex justify-content-center align-items-center">
+                            <img data-ans="ans-2" draggable="true" class="p1-text" src="./PSYCGU1L8MEDIA/PSYCGU1L8_img-5.png" width="200" alt="">
+                        </div>
+                        <div class="col-3 d-flex justify-content-center align-items-center">
+                            <img data-ans="ans-3" draggable="true" class="p1-text" src="./PSYCGU1L8MEDIA/PSYCGU1L8_img-6.png" width="200" alt="">
+                        </div>
+                        <div class="col-3 d-flex justify-content-center align-items-center">
+                            <img data-ans="ans-4" draggable="true" class="p1-text" src="./PSYCGU1L8MEDIA/PSYCGU1L8_img-7.png" width="200" alt="">
+                        </div>
+                    </div>
+                    <div class="row_ d-flex justify-content-center align-items-start" style="background: #fff; width: 900px; padding: 10px 20px 20px; ">
+                        <div class="col-3 d-flex justify-content-center align-items-center">
+                            <img data-ans="ans-5" draggable="true" class="p1-text" src="./PSYCGU1L8MEDIA/PSYCGU1L8_img-9.png" width="200" alt="">
+                        </div>
+                        <div class="col-3 d-flex justify-content-center align-items-center">
+                            <img data-ans="ans-6" draggable="true" class="p1-text" src="./PSYCGU1L8MEDIA/PSYCGU1L8_img-10.png" width="200" alt="">
+                        </div>
+                        <div class="col-3 d-flex justify-content-center align-items-center">
+                            <img data-ans="ans-7" draggable="true" class="p1-text" src="./PSYCGU1L8MEDIA/PSYCGU1L8_img-11.png" width="200" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center row_" style="width: 900px;">
+                    <div class="col-6" style="background: #10399c;">
+                        <p style="margin: 0; font-size: 25px; line-height: 30px; font-weight: 700; color: #fff; text-transform: uppercase;">SEROTONIN</p>
+                    </div>
+                    <div id="inputDrop" data-ans="ans-1" class="item col-6 Child-2" style="background: #1641a9;">
+                        <div>
+                           <span><img src="./PSYCGU1L8MEDIA/PSYCGU1L8_img-8.png" width="230" alt=""></span> <span style="text-align: center;">INCORRECT ANSWER <br>Try Again</span>
+                        </div>
+                        <div></div>
+                        <span class="ans_correct">CORRECT</span>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center row_" style="width: 900px;">
+                    <div class="col-6" style="background: #1a46b2;">
+                        <p style="margin: 0; font-size: 25px; line-height: 30px; font-weight: 700; color: #fff; text-transform: uppercase;">Acetylcholine</p>
+                    </div>
+                    <div id="inputDrop" data-ans="ans-4" class="item col-6 Child-2" style="background: #2453c6;">
+                        <div>
+                           <span><img src="./PSYCGU1L8MEDIA/PSYCGU1L8_img-7.png" width="230" alt=""></span> <span style="text-align: center;">INCORRECT ANSWER <br>Try Again</span>
+                        </div>
+                        <div></div>
+                        <span class="ans_correct">CORRECT</span>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center row_" style="width: 900px;">
+                    <div class="col-6" style="background: #10399c;">
+                        <p style="margin: 0; font-size: 25px; line-height: 30px; font-weight: 700; color: #fff; text-transform: uppercase;">Dopamine</p>
+                    </div>
+                    <div id="inputDrop" data-ans="ans-2" class="item col-6 Child-2" style="background: #1641a9;">
+                        <div>
+                           <span><img src="./PSYCGU1L8MEDIA/PSYCGU1L8_img-5.png" width="230" alt=""></span> <span style="text-align: center;">INCORRECT ANSWER <br>Try Again</span>
+                        </div>
+                        <div></div>
+                        <span class="ans_correct">CORRECT</span>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center row_" style="width: 900px;">
+                    <div class="col-6" style="background: #1a46b2;">
+                        <p style="margin: 0; font-size: 25px; line-height: 30px; font-weight: 700; color: #fff; text-transform: uppercase;">GABA</p>
+                    </div>
+                    <div id="inputDrop" data-ans="ans-3" class="item col-6 Child-2" style="background: #2453c6;">
+                        <div>
+                           <span><img src="./PSYCGU1L8MEDIA/PSYCGU1L8_img-6.png" width="230" alt=""></span> <span style="text-align: center;">INCORRECT ANSWER <br>Try Again</span>
+                        </div>
+                        <div></div>
+                        <span class="ans_correct">CORRECT</span>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center row_" style="width: 900px;">
+                    <div class="col-6" style="background: #10399c;">
+                        <p style="margin: 0; font-size: 25px; line-height: 30px; font-weight: 700; color: #fff; text-transform: uppercase;">Norepinephrine</p>
+                    </div>
+                    <div id="inputDrop" data-ans="ans-6" class="item col-6 Child-2" style="background: #1641a9;">
+                        <div>
+                           <span><img src="./PSYCGU1L8MEDIA/PSYCGU1L8_img-10.png" width="230" alt=""></span> <span style="text-align: center;">INCORRECT ANSWER <br>Try Again</span>
+                        </div>
+                        <div></div>
+                        <span class="ans_correct">CORRECT</span>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center row_" style="width: 900px;">
+                    <div class="col-6" style="background: #1a46b2;">
+                        <p style="margin: 0; font-size: 25px; line-height: 30px; font-weight: 700; color: #fff; text-transform: uppercase;">Glutamate</p>
+                    </div>
+                    <div id="inputDrop" data-ans="ans-7" class="item col-6 Child-2" style="background: #2453c6;">
+                        <div>
+                           <span><img src="./PSYCGU1L8MEDIA/PSYCGU1L8_img-11.png" width="230" alt=""></span> <span style="text-align: center;">INCORRECT ANSWER <br>Try Again</span>
+                        </div>
+                        <div></div>
+                        <span class="ans_correct">CORRECT</span>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center row_" style="width: 900px;">
+                    <div class="col-6" style="background: #10399c;">
+                        <p style="margin: 0; font-size: 25px; line-height: 30px; font-weight: 700; color: #fff; text-transform: uppercase;">Endorphins</p>
+                    </div>
+                    <div id="inputDrop" data-ans="ans-5" class="item col-6 Child-2" style="background: #1641a9;">
+                        <div>
+                           <span><img src="./PSYCGU1L8MEDIA/PSYCGU1L8_img-9.png" width="230" alt=""></span> <span style="text-align: center;">INCORRECT ANSWER <br>Try Again</span>
+                        </div>
+                        <div></div>
+                        <span class="ans_correct">CORRECT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .p1-text {
+            cursor: pointer;
+        }
+        .p1-text div {
+            font-size: 30px;
+            font-weight: 400;
+            color: #fff;
+        }
+        #section-nine div .col-6:first-child {
+            background: #ebd1a7;
+            height: 285px;
+            position: relative;
+        }
+        .Child-2 {
+            background: #f2e6d5;
+            height: 285px;
+        }
+        #section-nine .col-6 {
+            padding: 20px 30px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #inputDrop {
+            font-size: 25px;
+            font-weight: 700;
+            color: #6d4422;
+            position: relative;
+            padding: 30px;
+        }
+        #inputDrop div span {
+            display: none;
+        }
+        #inputDrop.is-valid div span:first-child {
+            display: block;
+        }
+        #inputDrop.is-valid {
+            pointer-events: none;
+        }
+        #inputDrop .ans_correct {
+            display: none;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: lime;
+            color: #fff;
+            text-align: center;
+            font-size: 20px;
+        }
+        #inputDrop.is-valid .ans_correct {
+            display: block;
+        }
+        #inputDrop.is-invalid {
+            background-color: red!important;
+            color: #fff;
+        }
+        #inputDrop.is-invalid span:nth-child(2) {
+            display: block;
+        }
+        img[draggable*="false"] {
+            cursor: default;
+            border: 4px solid lime;
+        }
+    </style>
+
+
+    <!-- section ten -->
+    <section id="section-ten">
+        <div class="container pxy white_bg flex-column d-flex align-items-center justify-content-start">
+            <h3 class="mb-0 text-uppercase" style="font-size: 40px; font-weight: 700;">NERVOUS SYSTEM</h3>
+            <h3 class="mb-5 text-uppercase" style="font-size: 50px; font-weight: 700;">NEUROTRANSMITTERS</h3>
+            <div class="mb-5 ratio ratio-16x9" style="border: 20px solid #8f542c;">
+                <video class="video-fluid" loop controls>
+                    <source src="Https://m.fyioc.com/Spanish1/Lesson28/L28V1-REV5.mp4" type="video/mp4" />
+                </video>
+                <div class="play_button">
+                    <div id="play_vid">
+                        <span class="material-icons-outlined">play_arrow</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section eleven -->
+    <section id="section-eleven" class="d-flex justify-content-start align-items-center flex-column">
+        <div class="container flex-column d-flex align-items-center justify-content-start" style="background: #030d55; padding-top: 75px; padding-bottom: 75px;">
+            <h3 class="text-uppercase text-center" style="font-size: 60px; color: #fff; line-height: 46px; margin-bottom: 0;">SUMMARY</h3>
+        </div>
+        <div id="eleventh_section_inner" class="container gray_bg flex-column d-flex align-items-start justify-content-start" style="padding-top: 45px; padding-bottom: 45px;">
+            <p style="font-size: 27px;">In this lesson, you have covered:</p>
+            <p class="bulleted black">Neurotransmitters</p>
+        </div>
+    </section>
+
+    <!-- section assignment -->
+    <section id="section-assignment" class="d-flex flex-column">
+        <div class="container pxy d-flex flex-column align-items-center justify-content-start" style="padding: 50px 0px; background: #030d55;">
+            <h2 class="" style="color:#fff; font-size: 40px;">ASSIGNMENT 1</h2>
+            <h2 class="" style="color:#fff; font-size: 40px;">PSYCHOLOGY NERVOUS SYSTEM</h2>
+            <h2 class="" style="color:#fff; font-size: 40px;">PART 2. CROSSWORD</h2>
+        </div>
+        <div class="container pxy white_bg d-flex flex-column align-items-center justify-content-center">
+            <p><strong>Direction:</strong> Solve the following crossword puzzle using the information you learned in this lesson about neurotransmitters.</p>
+            <h3 style="">Answer Bank</h3>
+            <div id="leftBox" class="mb-4">
+                <table id="puzzel">
+                </table>
+            </div>
+            <div id="rightBox" class="mb-4 d-none">
+                <table>
+                    <tr><td><input class="butt"  type="submit" value="Clear All" onclick="clearAllClicked()"></td>
+                    <td><input class="butt"  type="submit" value="Check" onclick="checkClicked()"></td>
+                    <td><input class="butt"  type="submit" value="Solve" onclick="solveClicked()"></td>
+                    <td><input class="butt"  type="submit" value="Clue" onclick="clueClicked()"></td></tr>
+                </table>
+            </div>
+
+                <!-- function addHint(){
+        document.getElementById("txt_2_0").placeholder = "3";
+        document.getElementById("txt_8_0").placeholder = "6";
+        document.getElementById("txt_3_2").placeholder = "5";
+        document.getElementById("txt_12_1").placeholder = "7";
+        document.getElementById("txt_1_9").placeholder = "2";
+        document.getElementById("txt_1_6").placeholder = "1";
+        document.getElementById("txt_2_12").placeholder = "4";
+    } -->
+
+            <div id="hintsTable" class="mt-4 d-flex justify-content-center align-items-start" style="gap:0px;">
+                <div class="col-6">
+                    <div class="heading w-100">
+                        <h3 class="text-center" style="color: #fff; font-size: 25px; margin: 0;">ACROSS</h3>
+                    </div>
+                    <div class="clue">
+                        <div class="d-flex mb-5 w-100" id="ans_1_6_across">
+                            <button class="col-3 butt" data-error_counter ="3" id="across_1_6_across">Check Answer</button> 
+                            <span class="d-inline-block ms-2 col-9" style="font-size: 24px;">1. Probably contributes to epilepsy. <span id="ans_reveal_1_6_across" class="mt-2 answer hidden">Answer: GABA</span></span>
+                        </div>
+                        <div class="d-flex mb-5 w-100" id="ans_3_2_across">
+                            <button class="col-3 butt" data-error_counter ="3" id="across_3_2_across">Check Answer</button> 
+                            <span class="d-inline-block ms-2 col-9" style="font-size: 24px;">5. Is more used by neurons.<span id="ans_reveal_3_2_across" class="mt-2 answer hidden">Answer: Glutamate</span></span>
+                        </div>
+                        <div class="d-flex mb-5 w-100" id="ans_8_0_across">
+                            <button class="col-3 butt" data-error_counter ="3" id="across_8_0_across">Check Answer</button> 
+                            <span class="d-inline-block ms-2 col-9" style="font-size: 24px;">6. Affects a person's mood and learning.<span id="ans_reveal_8_0_across" class="mt-2 answer hidden">Answer: Norepinephrine</span></span>
+                        </div>
+                        <div class="d-flex mb-5 w-100" id="ans_12_1_across">
+                            <button class="col-3 butt" data-error_counter ="3" id="across_12_1_across">Check Answer</button> 
+                            <span class="d-inline-block ms-2 col-9" style="font-size: 24px;">7. Produce intense feelings of happiness.<span id="ans_reveal_12_1_across" class="mt-2 answer hidden">Answer: Evolution</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="heading w-100">
+                        <h3 class="text-center" style="color: #fff; font-size: 25px; margin: 0;">DOWN</h3>
+                    </div>
+                    <div class="clue">
+                        <div class="d-flex mb-5 w-100" id="ans_1_9_down">
+                            <button class="col-3 butt" data-error_counter ="3" id="down_1_9_down">Check Answer</button> 
+                            <span class="d-inline-block ms-2 col-9" style="font-size: 24px;">2. The first to be identified as a neurotransmitter.<span id="ans_reveal_1_9_down" class="mt-2 answer hidden">Answer: Acetylcholine</span></span>
+                        </div>
+                        <div class="d-flex mb-5 w-100" id="ans_2_0_down">
+                            <button class="col-3 butt" data-error_counter ="3" id="down_2_0_down">Check Answer</button>
+                            <span class="d-inline-block ms-2 col-9 " style="font-size: 24px;">3. Affects sleep and mood.<span id="ans_reveal_2_0_down" class="mt-2 answer hidden">Answer: Serotonin</span></span>
+                        </div>
+                        <div class="d-flex mb-5 w-100" id="ans_2_12_down">
+                            <button class="col-3 butt" data-error_counter ="3" id="down_2_12_down">Check Answer</button> 
+                            <span class="d-inline-block ms-2 col-9" style="font-size: 24px;">4. Is important to movement.<span id="ans_reveal_2_12_down" class="mt-2 answer hidden">Answer: Dopamine</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <style>
+        /* FOR CROSSWORD */
+        .heading {
+            background: #030d55;
+            padding: 20px 30px;
+            border: 2px solid #fff;
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .clue {
+            padding: 20px 30px;
+            background-color: #10399c;
+            border: 2px solid #fff;
+            height: 640px;
+        }
+        .clue span {
+            color: #fff;
+        }
+        .answer::after {
+            content: "";
+            background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='18' height='18' fill='%23ffffff' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e") no-repeat center;
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            position: absolute;
+            right: 5px;
+        }
+        .answer {
+            font-size: 12px;
+            font-weight: 700;
+            background: #f00;
+            padding: 6px;
+            color: #fff;
+            width: 70%;
+            text-align: left;
+            position: relative;
+            padding-left: 20px;
+            padding-right: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+        .invalid button {
+            background: red;
+        }
+        .invalid span {
+            color: red!important;
+            text-decoration: line-through;
+        }
+        #section-assignment #cross {
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        margin: 0;
+        padding: 0;
+        border-collapse: collapse;
+        border: 1px solid white;
+        }
+        #section-assignment #buttons {
+        width: 30%;
+        float: right;
+        }
+
+        #section-assignment tr {
+        margin: 0;
+        padding: 0;
+        border-collapse: collapse;
+        }
+
+        #section-assignment td {
+        height: 50px;
+        width: 50px;
+        border: 2px solid #1c1c1c;
+        }
+
+        #section-assignment #leftBox {
+        float: left;
+        }
+
+        #section-assignment #rightBox {
+        float: left;
+        clear: left;
+        }
+
+        #section-assignment .butt {
+        height: 45px;
+        width: 107px;
+        background: rgb(125, 187, 238);
+        border-radius: 10px;
+        border: 2px solid rgb(8, 123, 216);
+        font-size: 12px;
+        color: #fff;
+        margin-right: 5px;
+        }
+
+        #section-assignment .butt:hover {
+        background: rgb(8, 123, 216);
+        }
+
+        #section-assignment .butt:active {
+        background:  rgb(3, 91, 162);
+        }
+
+        #section-assignment #puzzel {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        border-collapse: collapse;
+        border: 1px solid black;
+        }
+
+        #section-assignment .inputBox {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        text-align: center;
+        font-size: 20px;
+        }
+
+        #section-assignment #hintsTable {
+        width: 100%;
+        float: left;
+        clear: left;
+        }
+        .wrong .butt {
+            background: #ff0000!important;
+            border: 2px solid #ff5656!important;
+        }
+        .correct .butt {
+            background: #08be08!important;
+            border: 2px solid #8aff8a!important;
+        }
+        .mouse_pointer {
+            pointer-events: none;
+        }
+    </style>
+
+    <!-- fifth section -->
+		<!-- Assessment Quiz -->
+        <table style="width: 710px; height: auto; margin-left: auto; margin-right: auto;" border="1" cellpadding="20">
+            <tbody>
+            <tr>
+            <td style="background-color: white; width: 710px; ">
+            <b><span style="font-family: arial,helvetica,sans-serif;">&nbsp;  Answer the following questions.</span> </b>
+            <p><a:question index="1" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="2" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="3" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="4" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="5" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="6" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="7" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="8" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="9" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="10" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="11" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="12" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="13" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="14" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="15" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="16" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="17" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="18" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="19" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="20" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            </td>
+            </tr>
+            </tbody>
+        </table>
+            <!-- Assessment Quiz -->
+
+    <div id="audio_holder"></div>
+</div>
+
+<script>
+    // FOR CROSSWORD
+    document.getElementsByTagName('body')[0].onload = function() {initializeScreen()};
+
+    //Adds the hint numbers
+    function addHint(){
+        document.getElementById("txt_2_0").placeholder = "3";
+        document.getElementById("txt_8_0").placeholder = "6";
+        document.getElementById("txt_3_2").placeholder = "5";
+        document.getElementById("txt_12_1").placeholder = "7";
+        document.getElementById("txt_1_9").placeholder = "2";
+        document.getElementById("txt_1_6").placeholder = "1";
+        document.getElementById("txt_2_12").placeholder = "4";
+    }
+
+    //Returns Array
+    function preparePuzzelArray(){
+    var items = [	
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 'g', 'a', 'b', 'a', 0, 0, 0, 0, 0],
+            ['s', 0, 0, 0, 0, 0, 0, 0, 0, 'c', 0, 0, 'd', 0, 0],
+            ['e', 0, 'g', 'l', 'u', 't', 'a', 'm', 'a', 't', 'e', 0, 'o', 0, 0],
+            ['r', 0, 0, 0, 0, 0, 0, 0, 0, 't', 0, 0, 'p', 0, 0],
+            ['o', 0, 0, 0, 0, 0, 0, 0, 0, 'y', 0, 0, 'a', 0, 0],
+            ['t', 0, 0, 0, 0, 0, 0, 0, 0, 'l', 0, 0, 'm', 0, 0],
+            ['o', 0, 0, 0, 0, 0, 0, 0, 0, 'c', 0, 0, 'i', 0, 0],
+            ['n', 'o', 'r', 'e', 'p', 'i', 'n', 'e', 'p', 'h', 'r', 'i', 'n', 'e', 0],
+            ['i', 0, 0, 0, 0, 0, 0, 0, 0, 'o', 0, 0, 'e', 0, 0],
+            ['n', 0, 0, 0, 0, 0, 0, 0, 0, 'l', 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 'i', 0, 0, 0, 0, 0],
+            [0, 'e', 'n', 'd', 'o', 'p', 'h', 'i', 'n', 's', 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 'e', 0, 0, 0, 0, 0]
+            ];
+    return items;
+    }
+
+//GlobalsJS
+var currentTextInput;
+var puzzelArrayData;
+
+//Loads the Crossword
+function initializeScreen(){
+	var puzzelTable = document.getElementById("puzzel");
+	puzzelArrayData = preparePuzzelArray();
+	for ( var i = 0; i < puzzelArrayData.length ; i++ ) {
+		var row = puzzelTable.insertRow(-1);
+		var rowData = puzzelArrayData[i];
+		for(var j = 0 ; j < rowData.length ; j++){
+			var cell = row.insertCell(-1);
+			if(rowData[j] != 0){
+				var txtID = String('txt' + '_' + i + '_' + j);
+				cell.innerHTML = '<input autocomplete="off" type="text" class="inputBox" maxlength="1" style="text-transform: lowercase" ' + 'id="' + txtID + '" onfocus="textInputFocus(' + "'" + txtID + "'"+ ')">';
+			}else{
+				cell.style.backgroundColor  = "#7dbbee";
+			}
+		}
+	}
+	addHint();
+}
+
+//Check button
+const buttonGroup = document.getElementById("hintsTable");
+
+const buttonGroupPressed = e => {
+    const triesRemaining = e.target.dataset.error_counter
+    var status = 0;
+    var token = e.target.id.split("_");
+    var answer_position = token[0];
+    var ans_row = token[1];
+    var ans_col = token[2];
+    var ans_dir = token[3];
+    if (answer_position == "down") {
+	    for ( var i = ans_row; i < puzzelArrayData.length ; i++ ) {
+            if (puzzelArrayData[i][ans_col] != 0) {
+                var selectedInputTextElement = document.getElementById('txt' + '_' + i + '_' + ans_col);
+				if(selectedInputTextElement.value.toLowerCase() != puzzelArrayData[i][ans_col]){
+					selectedInputTextElement.style.backgroundColor = 'red';
+                    status = status + 1;
+				}else{
+					selectedInputTextElement.style.backgroundColor = 'lime';
+				}
+            }
+            else {
+                break;
+            }
+        }
+        if (status > 0) {
+            console.log('ans' + '_' + ans_row + '_' + ans_col + '_' + ans_dir);
+            var item_quest = document.getElementById('ans' + '_' + ans_row + '_' + ans_col + '_' + ans_dir);
+            item_quest.classList.add ('invalid');
+            setTimeout(() => backToGlow(item_quest), 500);
+            const backToGlow = (item_quest) => {
+                item_quest.classList.remove('invalid');
+                for ( var i = ans_row; i < puzzelArrayData.length ; i++ ) {
+                    if (puzzelArrayData[i][ans_col] != 0) {
+                        var selectedInputTextElement = document.getElementById('txt' + '_' + i + '_' + ans_col);
+                        if(selectedInputTextElement.value.toLowerCase() != puzzelArrayData[i][ans_col]){
+                            selectedInputTextElement.style.backgroundColor = 'white';
+                            selectedInputTextElement.value = "";
+                        }else{
+                            selectedInputTextElement.style.backgroundColor = 'lime';
+                            selectedInputTextElement.setAttribute('disabled', true);
+                        }
+                    }
+                    else {
+                        break;
+                    }
+                }
+            }
+            if(document.getElementById(answer_position + '_' + ans_row + '_' + ans_col + '_' + ans_dir).getAttribute('data-error_counter') == 0){
+                    updateTries = 0;
+                } else {
+                    updateTries = Number(triesRemaining) - 1;
+                }
+            document.getElementById('down' + '_' + ans_row + '_' + ans_col + '_' + ans_dir).setAttribute('data-error_counter', updateTries);
+            if(document.getElementById(answer_position + '_' + ans_row + '_' + ans_col + '_' + ans_dir).getAttribute('data-error_counter') == 0 ){
+                for ( var i = ans_row; i < puzzelArrayData.length ; i++ ) {
+                    if (puzzelArrayData[i][ans_col] != 0) {
+                        var selectedInputTextElement = document.getElementById('txt' + '_' + i + '_' + ans_col);
+                        selectedInputTextElement.value = puzzelArrayData[i][ans_col];   
+                        selectedInputTextElement.setAttribute('disabled', true);
+                        document.getElementById('ans' + '_' + ans_row + '_' + ans_col + '_' + ans_dir).classList.add ('wrong');
+                        document.getElementById('ans_reveal' + '_' + ans_row + '_' + ans_col + '_' + ans_dir).classList.remove ('hidden');
+                        document.getElementById('ans_reveal' + '_' + ans_row + '_' + ans_col + '_' + ans_dir).classList.add ('d-block');
+                    }
+                    else {
+                        break;
+                    }
+                }
+                document.getElementById('down' + '_' + ans_row + '_' + ans_col + '_' + ans_dir).setAttribute('disabled', true);
+                document.getElementById('down' + '_' + ans_row + '_' + ans_col + '_' + ans_dir).innerHTML = "INCORRECT";
+            }
+        }
+        else if(status==0)  {
+            document.getElementById('ans' + '_' + ans_row + '_' + ans_col + '_' + ans_dir).classList.add ('correct');
+            document.getElementById('down' + '_' + ans_row + '_' + ans_col + '_' + ans_dir).innerHTML = "CORRECT";
+        }
+    }
+    else {
+	    for ( var j = ans_col; j < puzzelArrayData[ans_row].length; j++ ) {
+            if (puzzelArrayData[ans_row][j] != 0) {
+                var selectedInputTextElement = document.getElementById('txt' + '_' + ans_row + '_' + j);
+				if(selectedInputTextElement.value.toLowerCase() != puzzelArrayData[ans_row][j]){
+					selectedInputTextElement.style.backgroundColor = 'red';
+                    status = status + 1;
+				}else{
+					selectedInputTextElement.style.backgroundColor = 'lime';
+				}
+            }
+            else {
+                break;
+            }
+        }
+        if (status > 0) {
+                var item_quest = document.getElementById('ans' + '_' + ans_row + '_' + ans_col + '_' + ans_dir);
+
+            item_quest.classList.add ('invalid');
+            setTimeout(() => backToGlow(item_quest), 500);
+            const backToGlow = (item_quest) => {
+                item_quest.classList.remove('invalid');
+                for ( var j = ans_col; j < puzzelArrayData[ans_row].length ; j++ ) {
+                    if (puzzelArrayData[ans_row][j] != 0) {
+                        var selectedInputTextElement = document.getElementById('txt' + '_' + ans_row + '_' + j);
+                        if(selectedInputTextElement.value.toLowerCase() != puzzelArrayData[ans_row][j]){
+                            selectedInputTextElement.style.backgroundColor = 'white';
+                            selectedInputTextElement.value = "";
+                        }else{
+                            selectedInputTextElement.style.backgroundColor = 'lime';
+                            selectedInputTextElement.setAttribute('disabled', true);
+                        }
+                    }
+                    else {
+                        break;
+                    }
+                }
+            }
+            if(document.getElementById(answer_position + '_' + ans_row + '_' + ans_col + '_' + ans_dir).getAttribute('data-error_counter') == 0){
+                    updateTries = 0;
+                } else {
+                    updateTries = Number(triesRemaining) - 1;
+                }
+            document.getElementById('across' + '_' + ans_row + '_' + ans_col + '_' + ans_dir).setAttribute('data-error_counter', updateTries);
+            if(document.getElementById(answer_position + '_' + ans_row + '_' + ans_col + '_' + ans_dir).getAttribute('data-error_counter') == 0 ){
+                for ( var j = ans_col; j < puzzelArrayData[ans_row].length ; j++ ) {
+                    if (puzzelArrayData[ans_row][j] != 0) {
+                        var selectedInputTextElement = document.getElementById('txt' + '_' + ans_row + '_' + j);
+                        selectedInputTextElement.value = puzzelArrayData[ans_row][j];   
+                        selectedInputTextElement.setAttribute('disabled', true);
+                        document.getElementById('ans' + '_' + ans_row + '_' + ans_col + '_' + ans_dir).classList.add ('wrong');
+                        document.getElementById('ans_reveal' + '_' + ans_row + '_' + ans_col + '_' + ans_dir).classList.remove ('hidden');
+                        document.getElementById('ans_reveal' + '_' + ans_row + '_' + ans_col + '_' + ans_dir).classList.add ('d-block');
+                    }
+                    else {
+                        break;
+                    }
+                }
+                document.getElementById('across' + '_' + ans_row + '_' + ans_col + '_' + ans_dir).setAttribute('disabled', true);
+                document.getElementById('across' + '_' + ans_row + '_' + ans_col + '_' + ans_dir).innerHTML = "INCORRECT";
+            }
+        }
+        else if(status==0)  {
+            document.getElementById('ans' + '_' + ans_row + '_' + ans_col + '_' + ans_dir).classList.add ('correct');
+            document.getElementById('down' + '_' + ans_row + '_' + ans_col + '_' + ans_dir).innerHTML = "CORRECT";
+        }
+    }
+}
+buttonGroup.addEventListener("click", buttonGroupPressed);
+</script>
+
+    <script>
+
+        // load first audio on the list as default
+        window.addEventListener("DOMContentLoaded", (event) => {
+            const pauseAudio20 = document.querySelector(".play_list_1 button");
+            //console.log(pauseAudio);
+            const audio_file20 = 'https://m.fyioc.com/Spanish2/Lesson20/'+pauseAudio20.getAttribute('data-audio')+'.mp3';
+            //console.log(audio_file);
+            audioLoad(audio_file20);
+        });
+
+        const container20 = document.querySelector(".lesson_20")
+        const btnContainer20 = document.querySelector(".lesson_20");
+        const btnPlay20 = btnContainer20.querySelectorAll("button[data-audio]");
+
+        btnPlay20.forEach(function(item, index) {
+
+            item.addEventListener("click", (event) => {
+
+                // get the button id ( btnPause,  btnPlayTone)
+                const id = event.target.id;
+                
+                // load audio file every click
+                const audio_file20 = 'https://m.fyioc.com/Spanish2/Lesson20/'+event.target.getAttribute('data-audio')+'.mp3';
+                audioLoad(audio_file20);
+
+                // get audio id
+                const audioPlay20 = document.getElementById("audioPlay");
+                //console.log(audioPlay);
+                // audio play
+                if(id === "btnPlayTone"){
+                    event.target.classList.add("playing");
+                    btnContainer20.classList.add("audio_playing");
+                    audioPlay20.play();
+                    item.innerHTML = '<span class="material-icons d-flex">pause</span>';
+
+                    event.target.setAttribute("id", "btnPause");
+                }
+
+                // audio pause
+                if(id === "btnPause"){
+                    event.target.classList.remove("playing");
+                    audioPlay20.pause();
+                    btnContainer20.classList.remove("audio_playing");
+                    item.innerHTML = '<span class="material-icons d-flex">volume_up</span>';
+
+                    event.target.setAttribute("id", "btnPlayTone");
+                }
+            
+                // audio end
+                audioPlay20.onended = (event) => {    
+                    item.classList.remove("playing");
+                    audioPlay20.pause()
+                    btnContainer20.classList.remove("audio_playing");
+                    item.innerHTML = '<span class="material-icons d-flex">volume_up</span>';
+                }
+            
+            });
+
+        });
+
+        function audioLoad(audio_url){
+            const audio_file20 = '<audio id="audioPlay" src="'+audio_url+'"></audio>';
+            document.getElementById("audio_holder").innerHTML = audio_file20;
+        }
+
+        const checkList20 = document.querySelectorAll("#practice1");
+
+        checkList20.forEach(function(elem, index){
+
+            elem.addEventListener("click", function(event){
+
+                if(elem.checked){
+
+                    if(event.target.getAttribute('data-value') == "yes"){
+                        elem.classList.remove('is-invalid');
+                        elem.classList.add('is-valid');
+                    }
+
+                    if(event.target.getAttribute('data-value') == "no"){
+                        elem.classList.remove('is-valid');
+                        elem.classList.add('is-invalid');
+                    }
+
+                } else {
+                    elem.classList.remove('is-valid');
+                    elem.classList.remove('is-invalid');
+                }
+
+            });
+
+        });
+
+        // New Validation Function
+        function checkInputs(){
+            const answerNumber = event.target.dataset.qs_count
+            const triesRemaining = event.target.dataset.error_counter
+            const selectorString = `quiz-2-answer${answerNumber}`
+            const selectorStringButton = `quiz-2-answer${answerNumber}btn`
+            const selectorStringAnswer = `answer-text${answerNumber}`
+            const quizTwoAnswer = document.getElementById(selectorString);
+            const quizTwoAnswerButton = document.getElementById(selectorStringButton)
+            const quizTwoAnswerText = document.getElementById(selectorStringAnswer)
+            const answer = quizTwoAnswer.getAttribute('data-ans')
+            const userAnswer = quizTwoAnswer.value.toLowerCase()
+            const correctAnswer = userAnswer === answer.toLowerCase() ? true : false
+            const backToGlow = (quizTwoAnswer, quizTwoAnswerButton) => {
+                quizTwoAnswerButton.classList.remove("glow-on-hover-success")
+                quizTwoAnswerButton.classList.remove("glow-on-hover-wrong")
+                quizTwoAnswerButton.classList.add('glow-on-hover')
+                quizTwoAnswerButton.innerText = 'Check'
+            }
+            if(correctAnswer){
+                quizTwoAnswer.classList.remove("is-invalid")
+                quizTwoAnswer.classList.add("is-valid")
+                quizTwoAnswerButton.innerText = 'Correct!'
+                quizTwoAnswerButton.classList.add("glow-on-hover-success")
+                quizTwoAnswerButton.classList.remove("glow-on-hover")
+                quizTwoAnswerButton.classList.remove('glow-on-hover-wrong')
+                quizTwoAnswerText.classList.remove('bg-danger')
+                quizTwoAnswerText.classList.add('bg-success')
+            } else {
+                quizTwoAnswerText.classList.remove('bg-success') 
+                quizTwoAnswerText.classList.add('bg-danger')
+                quizTwoAnswer.classList.remove("is-valid")
+                quizTwoAnswer.classList.add("is-invalid")
+                quizTwoAnswerButton.classList.remove("glow-on-hover-success")
+                quizTwoAnswerButton.classList.remove("glow-on-hover")
+                quizTwoAnswerButton.classList.add('glow-on-hover-wrong')
+                quizTwoAnswerButton.innerText = 'Wrong'
+                setTimeout(() => backToGlow(quizTwoAnswer,quizTwoAnswerButton), 1500);
+                let updateTries = ''
+                if(quizTwoAnswerButton.getAttribute('data-error_counter') == 0){
+                    updateTries = 0;
+                } else {
+                    updateTries = Number(triesRemaining) - 1;
+                }
+                document.getElementById(selectorStringButton).setAttribute('data-error_counter', updateTries)
+                if(quizTwoAnswerButton.getAttribute('data-error_counter') == 0 ){
+                    quizTwoAnswerText.innerHTML = `Answer: ${quizTwoAnswer.getAttribute('data-ans')}`
+                    quizTwoAnswerText.classList.remove('hidden')
+                }
+            }
+        }
+
+        const checkList19 = document.querySelectorAll("#practice2");
+
+        checkList19.forEach(function(elem, index){
+
+            elem.addEventListener("click", function(event){
+
+                if(elem.checked){
+
+                    if(event.target.getAttribute('data-value') == "yes"){
+                        elem.classList.remove('is-invalid');
+                        elem.classList.add('is-valid');
+                    }
+
+                    if(event.target.getAttribute('data-value') == "no"){
+                        elem.classList.remove('is-valid');
+                        elem.classList.add('is-invalid');
+                    }
+
+                } else {
+                    elem.classList.remove('is-valid');
+                    elem.classList.remove('is-invalid');
+                }
+
+            });
+
+        });
+
+        const containerInput4 = document.querySelector("#nineth_section_inner");
+        const inputList4 = containerInput4.querySelectorAll("#inputDrop");
+        const pTextDrag = containerInput4.querySelectorAll(".p1-text");
+
+        var dragged;
+
+        pTextDrag.forEach(function(elem, index){
+            elem.addEventListener("dragstart", function(event){
+                dragged = event.target;
+            }, false);
+
+            elem.addEventListener("dragend", function(event){
+
+            }, false);
+        });
+
+        inputList4.forEach(function(elem, index){
+            elem.addEventListener('dragover', function(e){
+                event.preventDefault();
+            }, false)
+
+            elem.addEventListener('drop', function(event){
+                const backToGlow = (event) => {
+                    event.target.classList.remove('is-invalid');
+                }
+                
+                // console.log(event.target.getAttribute("class"));
+                if(event.target.getAttribute("data-ans") == dragged.getAttribute("data-ans")){
+                    event.target.classList.remove('is-invalid');
+                    event.target.classList.add('is-valid');
+                    dragged.setAttribute("draggable", "false");
+                    dragged.classList.add("gray")
+                    event.target.setAttribute("disabled", "true");
+                } else {
+                    event.target.classList.remove('is-valid');
+                    event.target.classList.add('is-invalid');
+                    setTimeout(() => backToGlow(event), 1000);
+                }
+            }, false)
+        });
+
+
+// Scrollable 
+
+var stopX = true;
+var stopY = true;
+
+document.addEventListener('drag', function(e) {
+    if (event.target.classList.contains('draggable')) {
+        stopY = true;
+                    
+        // Handle Y
+        if (e.clientY < 150) {
+            stopY = false;
+            scroll(0,-100)
+        }
+
+        if ((e.clientY > ( document.documentElement.clientHeight - 150)) && !VerticalMaxed()) { 
+            stopY = false;
+            scroll(0,100) 
+        }
+    }
+
+});
+
+document.addEventListener('dragend', function(e) {
+    if (event.target.classList.contains('draggable')) {
+        stopY = true;
+        //stopY = true;
+    }
+});
+
+// On drag scroll, prevents page from growing with mobile safari rubber-band effect
+var VerticalMaxed = function(){ return (window.innerHeight + window.scrollY) >= document.body.offsetHeight}
+var HorizontalMaxed = function(){ return (window.pageXOffset) > (document.body.scrollWidth - document.body.clientWidth);}
+
+var scroll = function (stepX, stepY) {
+    var scrollY = document.documentElement.scrollTop || document.body.scrollTop;
+    var scrollX = document.documentElement.scrollLeft || document.body.scrollLeft;
+    window.scrollTo((scrollX + stepX), (scrollY + stepY));
+                
+    if (!stopY || !stopX) {
+        setTimeout(function () { scroll(stepX, stepY) }, 20);
+    }
+}
+
+// EMOJI
+
+var myFunction = function(value) {
+    if (value=='yes') {
+        document.getElementById('demo').src = "./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img15.png";
+    }
+    else {
+        document.getElementById('demo').src = "./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img16.png";
+    }
+};
+
+    </script>
+    <script src="https://m.fyioc.com/WhyNotScripts/js/VideoPlay.js"></script>
+    <script src="https://m.fyioc.com/WhyNotScripts/js/AudioPlay.js"></script>
+</body>
+</html>
