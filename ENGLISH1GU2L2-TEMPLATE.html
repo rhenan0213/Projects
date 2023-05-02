@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <title>Lesson 2</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round" rel="stylesheet">
+
+        <link href="https://m.fyioc.com/WhyNotScripts/css/VideoPlay.css" rel="stylesheet">
+        <link href="https://m.fyioc.com/WhyNotScripts/css/AudioPlay.css" rel="stylesheet">
+
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+        <link href="https://m.fyioc.com/WhyNotScripts/css/interactive2.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            /* background: #44a1e5; */
+            background-size: cover;
+            color: #181818;
+        }
+
+        section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        }
+
+        .container {
+            max-width: 1080px;
+        }
+
+        .px {
+            padding-left: 132px;
+            padding-right: 132px;
+        }
+
+        .py {
+            padding-top: 58px;
+            padding-bottom: 58px;
+        }
+
+        .g-10 {
+            gap: 10px;
+        }
+
+        .gap-3 {
+            gap: 3rem;
+        }
+
+        .g-10 {
+            gap: 10px;
+        }
+
+        .g-30 {
+            gap: 30px;
+        }
+
+        .white {
+            color: #fff;
+        }
+
+        .white_bg {
+            background: #fff;
+        }
+
+        .black {
+            color: #272727;
+        }
+
+        .blue {
+            background: #25588d;
+        }
+
+        .light-blue {
+            background: #a8daf5;
+        }
+
+        .light-blue-2 {
+            background: #b5dee9;
+        }
+
+        .border-blue {
+            border: 4px solid #8cccdc;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 27px;
+            margin: 0;
+        }
+
+        .medium {
+            font-weight: 500;
+        }
+
+        .semibold {
+            font-weight: 600;
+        }
+
+        .bold {
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 80px;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 27px;
+            font-weight: 700;
+        }
+
+        .dflex-column {
+            flex-direction: column;
+        }
+        
+        .font-18 {
+            font-size: 18px;
+        }
+        
+        .font-22 {
+            font-size: 22px;
+            font-weight: 700;
+        }
+        
+        .font-23 {
+            font-size: 22px;
+        }
+        
+        .font-40 {
+            font-size: 40px;
+        }
+        
+        .h90 {
+            height: 90px;
+        }
+
+        .mb-20 {
+            margin-bottom: 20px;
+        }
+
+        .mb-30 {
+            margin-bottom: 30px;
+        }
+
+        .mb-50 {
+            margin-bottom: 50px;
+        }
+
+        .mb-10 {
+            margin-bottom: 10px;
+        }
+
+        .pl-20 {
+            padding-left: 20px;
+        }
+
+        .p-20 {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .pr-20 {
+            padding-right: 20px;
+        }
+
+        .pt-20 {
+            padding-top: 20px;
+        }
+
+        #pause_vid, #play_vid {
+            height: 100px;
+            width: 100px;
+            background: #4d4d4d;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 300ms all ease-in-out;
+        }
+
+        #pause_vid:hover span, #play_vid:hover span {
+            color: #fff;
+        }
+
+        #pause_vid:hover, #play_vid:hover {
+            background: #4d4d4d;;
+            border: 8px solid #fff;
+        }
+
+        td {
+            vertical-align: top;
+        }
+
+        .icon-box {
+            background: #3b96dc;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .icon-box-video {
+            background: #25588d;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .icon-box-video-2 {
+            background: #25588d;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        /* SECTION 1 */
+
+        #section-1 {
+            width: 100%;
+            background: #24588D;
+        }
+
+        #section-1 .hero {
+            background: url("./ENGLISH1U2L2RESOURCES/ENGLISH1U2L2_hero.png") no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 640px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        h1 span {
+            display: block;
+        }
+
+        h1 span:nth-child(2) {
+            font-size: 105px;
+            margin-top: -35px;
+        }
+
+        #section-1 p {
+            color: #fff;
+            font-size: 35px;
+            margin-top: -30px;
+            line-height: 1;
+        }
+
+        /* SECTION 2 */
+
+        #section-2 {
+            background: #25588d;
+            width: 100%;
+        }
+
+        #section-2 .container {
+            align-items: center;
+        }
+
+        #section-2 .cont {
+            gap: 35px;
+        }
+
+        /* SECTION 3 */
+
+        #section-3 {
+            background: linear-gradient(90deg, #fff 50%, #a8daf5 50%);;
+        }
+
+        .blue-line {
+            height: 9px;
+            width: 100%;
+            background: #25588d;
+        }
+
+        .white-line {
+            height: 9px;
+            width: 100%;
+            background: #fff;
+        }
+
+        .circle {
+            margin-top: 16px;
+            text-indent: -20px;
+            margin-left: 20px;
+        }
+
+        .circle:before {
+            content: "";
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #181818;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .circle.white:before {
+            content: "";
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        /* SECTION 4 */
+
+        #section-4 {
+            background: #0090CF;
+            width: 100%;
+        }
+
+        #section-4 .cont {
+            padding-right: 115px!important;
+        }
+
+
+        /* SECTION 5 */
+
+        #section-5 .cont.main-content {
+            background: url("./ENGLISH1U2L2RESOURCES/ENGLISH1U2L2_img3.png");
+            width: 100%;
+        }
+
+        #section-5 .container {
+            align-items: center;
+        }
+
+        .border-right {
+            border-right: 2px solid #3489b2;
+        }
+
+        .border-left {
+            border-left: 2px solid #3489b2;
+        }
+
+        /* SECTION 6 */
+
+        #section-6 {
+            background: #3b96dc;
+            border-top: 10px solid #fff;
+        }
+
+
+        /* SECTION 9 */
+
+        #section-9 .cont.main-content {
+            background: url("./ENGLISH1U2L2RESOURCES/ENGLISH1U2L2_img3.png");
+            width: 100%;
+        }
+
+        #section-9 .container {
+            align-items: center;
+        }
+        
+        /* SECTION 14 */
+
+        #section-14 {
+            background: #3b96dc;
+        }
+
+        #section-14 .cont.main-content {
+            background: #3b96dc;
+            width: 100%;
+            max-width: 1080px;
+        }
+
+        #section-14 .container {
+            align-items: center;
+        }
+
+        .blue_box {
+            width: 250px;
+            background: #fff;
+            border: 1px solid #181818;
+        }
+
+
+
+        @media only screen and (max-width: 900px) {
+            .px {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            h1 {
+                font-size: 80px;
+            }
+            h1 span:nth-child(2) {
+                font-size: 80px;
+                margin-top: -15px;
+            }
+            #section-1 p {
+                font-size: 40px;
+                margin-top: -15px;
+            }
+            .container {
+                max-width: 100%;
+                width: 100%;
+            }
+            #section-1 .hero {
+                background: linear-gradient(0deg, rgba(12, 126, 172, 0.7), rgba(12, 126, 172, 0.7)), url("./ALGEBRA1U1L2RESOURCES/ALGEBRA1U1L2_hero.png") no-repeat;
+                padding-left: 0;
+                padding-right: 0;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: auto;
+                background-size: cover;
+                background-position: center;
+                padding-top: 9rem;
+                padding-bottom: 9rem;
+            }          
+            #section-2 {
+                height: auto;
+            }  
+            #section-9 img {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (min-width: 601px) {
+            .sp-only {
+                display: none!important;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .pc-only {
+                display: none!important;
+            }
+            .sp-only {
+                display: flex;
+            }
+            .px {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .py {
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+            .mb-50 {
+                margin-bottom: 30px;
+            }
+            p {
+                font-size: 15px;
+            }
+            h1 {
+                font-size: 40px;
+            }
+            h2 {
+                font-size: 22px;
+            }
+            h1 span:nth-child(2) {
+                font-size: 40px;
+                margin-top: 0;
+            }
+            #section-1 p {
+                font-size: 20px;
+                margin-top: 0;
+            }
+            .container {
+                max-width: 100%;
+                width: 100%;
+            }
+            #section-1 .hero {
+                background-position: 100%;
+            }            
+            #section-2 {
+                background-position: 27%;
+            }
+            #section-2 .cont {
+                flex-direction: column;
+            }
+            #section-2 .cont > * {
+                width: 100%;
+            }
+            #section-3 .cont {
+                gap: 12px;
+            }
+            #section-3 .cont > * {
+                padding-left: 0;
+                padding-right: 10px;
+                width: 100%;
+            }
+            .font-22 {
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 1.3;
+            }
+            
+            #section-3 {
+                background: linear-gradient(180deg, #fff 52%, #e6f2f7 50%);;
+            }
+            #section-4 {
+                background-position:65%;
+                height: auto;
+            }
+            #section-4 .cont > .col-6{
+                width: 100%;
+            }
+
+        }
+    </style>
+    </head>
+    <body>
+        <section id="section-1">
+            <div class="container hero px">
+                <div class="main_title">
+                    <h1 class="white">
+                        Adjectives
+                    </h1>
+                </div>
+            </div>
+        </section>
+        <section id="section-2">
+            <div class="container px py d-flex dflex-column">
+                <h2 class="white mb-50">Adjectives</h2>
+                <div class="cont d-flex align-items-center">
+                    <p class="font-18 semibold white col-6 g-30">
+                        An adjective is a word that modifies or describes a noun or a pronoun. Adjectives enhance our writing by allowing us to describe a thought, an experience, or a situation in greater detail. When we write a sentence, we want people to imagine what we are describing. We want to paint a mental picture that the reader can "see".
+                    </p>
+                    <div class="ratio ratio-16x9" style="">
+                        <video class="video-fluid" loop controls>
+                            <source src="https://m.fyioc.com/WhyNotVideos/ALGU1L2V1.mp4" type="video/mp4" />
+                        </video>
+                        <div class="play_button">
+                            <div id="play_vid">
+                                <span class="material-icons-outlined">play_arrow</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section-3">
+            <div class="py d-flex dflex-column pc-only w-100">
+                <div class="container px d-flex w-100">
+                    <div class="col-6 p-20">
+                        <h2 class="black mb-20">What You <br>Should Know</h2>
+                    </div>
+                    <div class="col-6 p-20">
+                        <h2 class="black mb-20">Lesson <br>Expectation</h2>
+                    </div>
+                </div>
+                <div class="blue-line w-100"></div>
+                <div class="container px d-flex w-100">
+                    <div class="col-6 p-20 pt-20">
+                        <p class="font-22">Before you begin, you should know:</p>
+                        <p class="circle semibold mb-20">Have a basic understanding of parts of speech and sentence structure.</p>
+                        <p class="circle semibold">An understanding of the meanings of different adjectives.</p>
+                    </div>
+                    <div class="col-6 p-20 pt-20">
+                        <p class="font-22">Once you complete this lesson, you should know:</p>
+                        <p class="circle semibold mb-20">Recognize the adjectives in sentences.</p>
+                        <p class="circle semibold">Know the adjectives rules.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container py sp-only">
+                <div class="cont d-flex dflex-column w-100">
+                    <div class="col-6 p-20 ">
+                        <h2 class="black mb-10">What You <br>Should Know</h2>
+                        <p class="font-22">Before you begin, you should know:</p>
+                        <p class="circle semibold">Have a basic understanding of parts of speech and sentence structure.</p>
+                        <p class="circle semibold">An understanding of the meanings of different adjectives.</p>
+                    </div>
+                    <div class="col-6 p-20 pt-20">
+                        <h2 class="black mb-10 pt-5">Lesson <br>Expectation</h2>
+                        <p class="font-22">Once you complete this lesson, you should know:</p>
+                        <p class="circle semibold">Recognize the adjectives in sentences.</p>
+                        <p class="circle semibold">Know the adjectives rules.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section-4">
+            <div class="d-flex w-100 pt-4">
+                <div class="col-6 cont d-flex justify-content-end align-items-end px-5">
+                    <img src="./ENGLISH1U2L2RESOURCES/ENGLISH1U2L2_img1.png" width="374" height="456" alt="">
+                </div>
+                <div class="py col-6">
+                    <h2 class="white mb-30 pl-20">Lesson Keywords</h2>
+                    <div class="white-line w-100"></div>
+                    <table style="width: 430px;">
+                        <colgroup>
+                            <col style="width: 40%"></col>
+                            <col style="width: 60%"></col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p class="circle bold white font-18">Adjectives:</p>
+                                </td>
+                                <td>
+                                    <p class="white font-18" style="margin-top: 16px;">Words that describe or modify nouns or pronouns.</p>
+                                </td>
+                            </tr>
+                           <tr>
+                                <td>
+                                    <p class="circle bold white font-18">Relative	Pronouns</p>
+                                </td>
+                                <td>
+                                    <p class="white font-18" style="margin-top: 16px;">Words that introduce relative clauses in sentences.  </p>
+                                </td>
+                            </tr>
+                           <tr>
+                                <td>
+                                    <p class="circle bold white font-18">Relative	clauses</p>
+                                </td>
+                                <td>
+                                    <p class="white font-18" style="margin-top: 16px;">Clauses that provide additional information about a noun or pronoun in a sentence.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section id="section-5" class="d-flex dflex-column">
+            <div class="cont px py blue w-100">      
+                <div class="container d-flex g-30 px">
+                    <div class="icon-box">
+                        <img src="./ENGLISH1U2L2RESOURCES/ENGLISH1U2L2_img2.png" width="99" height="94" alt="">
+                    </div>
+                    <div class="heading">
+                        <h2 class="white">Adjectives occur in several forms</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="py cont main-content">
+                <div class="container px">
+                    <div class="white_bg">
+                        <div class="row white_bg ">
+                            <div class="col-6 text-center border-right px-3 py-5 d-flex align-items-center justify-content-center"><h5>Nouns</h5></div>
+                            <div class="col-6 pe-3 border-left px-3 py-5">
+                                <p class="mb-4">Nouns become adjectives when you add an ending like -ly, -ish, -en.</p>
+                                <p class="ps-5"><strong>EX.</strong> Manly, childish, silken</p>
+                            </div>
+                        </div>
+                        <div class="row light-blue ">
+                            <div class="col-6 text-center border-right px-3 py-5 d-flex align-items-center justify-content-center"><h5>Numbers</h5></div>
+                            <div class="col-6 pe-3 border-left px-3 py-5">
+                                <p class="mb-4">Numbers are considered adjectives.</p>
+                                <p class="ps-5"><strong>EX.</strong> Two apples</p>
+                            </div>
+                        </div>
+                        <div class="row white_bg ">
+                            <div class="col-6 text-center border-right px-3 py-5 d-flex align-items-center justify-content-center"><h5>Pronouns and Articles</h5></div>
+                            <div class="col-6 pe-3 border-left px-3 py-5">
+                                <p class="mb-4">Demonstrative and possessive pronouns and articles are considered adjectives.</p>
+                                <p class="ps-5"><strong>EX.</strong> This paper, his personality, the movie</p>
+                            </div>
+                        </div>
+                        <div class="row light-blue">
+                            <div class="col-6 text-center border-right px-3 py-5 d-flex align-items-center justify-content-center"><h5>Multiple</h5></div>
+                            <div class="col-6 pe-3 border-left px-3 py-5">
+                                <p class="mb-4">More than one adjective is often used to describe something.</p>
+                                <p class="ps-5"><strong>EX.</strong> The pretty green sweater</p>
+                            </div>
+                        </div>
+                        <div class="row white_bg ">
+                            <div class="col-6 text-center border-right px-3 py-5 d-flex align-items-center justify-content-center"><h5>Compound</h5></div>
+                            <div class="col-6 pe-3 border-left px-3 py-5">
+                                <p class="mb-4">Two adjectives are often combined to use as one adjective and are usually hyphenated.</p>
+                                <p class="ps-5"><strong>EX.</strong> The mild-mannered man</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section-6">
+            <div class="container px py d-flex dflex-column">
+                <div class="d-flex align-items-start g-30 mb-50">
+                    <div class="icon-box-video">
+                        <img src="./ALGEBRA1U1L2RESOURCES/ALGEBRA1U1L2_img5.png" width="35" alt="">
+                    </div>
+                    <div class="heading">
+                        <h2 class="white mb-30">Adjectives</h2>
+                        <p class="white semibold font-23">Now that we know how to recognize the adjectives in sentences, let's learn the adjective rules. This video gives a short but good explanation of adjectives.</p>
+                    </div>
+                </div>
+                        <div class="ratio ratio-16x9" style="">
+                            <video class="video-fluid" loop controls>
+                                <source src="https://m.fyioc.com/WhyNotVideos/ALGU1L2V1.mp4" type="video/mp4" />
+                            </video>
+                            <div class="play_button">
+                                <div id="play_vid">
+                                    <span class="material-icons-outlined">play_arrow</span>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+        </section>
+        <section id="section-9" class="d-flex dflex-column">
+            <div class="cont px py blue w-100">      
+                <div class="container align-items-center d-flex g-30 px">
+                    <div class="icon-box">
+                        <img src="./ENGLISH1U2L2RESOURCES/ENGLISH1U2L2_img2.png" width="99" height="94" alt="">
+                    </div>
+                    <div class="heading">
+                        <h2 class="white">The Rules</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="cont main-content">
+                <div class="container px py d-flex dflex-column">
+                    <div class="d-flex align-items-start g-30 mb-50">
+                        <div class="icon-box-video-2">
+                            <img src="./ALGEBRA1U1L2RESOURCES/ALGEBRA1U1L2_img8.png" width="30" alt="">
+                        </div>
+                        <div class="heading">
+                            <h2 class="white mb-30">Adjective Rules</h2>
+                            <div class="d-flex g-30 mb-10">
+                                <div class="col-6">
+                                    <p class="medium white font-18 mb-20">Adjectives modify nouns: We have already discussed this rule above. Adjectives follow  the verb ''to be'' when it modifies the noun preceding the verb.</p>
+                                    <p class="pl-20 medium white font-18 mb-20">EX. “Thomas was nervous.”</p>
+                                    <p class="medium white font-18">In this sentence, nervous describes Thomas</p>
+                                </div>
+                                <div class="col-5">
+                                    <div class="ratio ratio-16x9" >
+                                        <video class="video-fluid" loop controls>
+                                            <source src="https://m.fyioc.com/WhyNotVideos/ALGU1L2V1.mp4" type="video/mp4" />
+                                        </video>
+                                        <div class="play_button">
+                                            <div id="play_vid">
+                                                <span class="material-icons-outlined">play_arrow</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="medium white font-18 mb-20">An adjective always follows the following types of verbs when it modifies the noun before the verb: sense, appearance, feel, taste, smell, seem, appear, and look.</p>
+                            <p class="pl-20 medium white font-18 mb-20">EX. “Leslie's voice sounds harsh. Harsh is the adjective in the sentence. It describes Leslie's voice.”</p>
+                            <p class="medium white font-18 mb-10">Let's review quickly. Adjectives, in general, modify nouns. Adjectives also modify nouns that precede the verb "to be" and verbs of the senses. In addition, adjectives help us write clear and descriptive sentences. This allows us to demonstrate our idea, concept, situation, etc. with more detail.</p>
+                            <p class="medium white font-18 mb-10">This keeps those who read our sentences more interested in what we are writing about because of the expressive words used to portray our thoughts.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="white-line w-100"></div>
+                <div class="container px py d-flex dflex-column">
+                    <div class="d-flex align-items-start g-30 mb-50">
+                        <div class="icon-box-video-2">
+                            <img src="./ALGEBRA1U1L2RESOURCES/ALGEBRA1U1L2_img8.png" width="30" alt="">
+                        </div>
+                        <div class="heading">
+                            <h2 class="white mb-30">ADJECTIVE CLAUSES</h2>
+                            <div class="d-flex g-30 mb-10">
+                                <div class="col-5">
+                                    <div class="ratio ratio-16x9" >
+                                        <video class="video-fluid" loop controls>
+                                            <source src="https://m.fyioc.com/WhyNotVideos/ALGU1L2V1.mp4" type="video/mp4" />
+                                        </video>
+                                        <div class="play_button">
+                                            <div id="play_vid">
+                                                <span class="material-icons-outlined">play_arrow</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               <div class="col-6">
+                                    <p class="medium white font-18 mb-10">Remember when you learned that nouns can be transformed into a noun clause?</p>
+                                    <p class="medium white font-18 mb-10">This is also the case for adjectives.</p>
+                                    <p class="medium white font-18">Adjective clauses contain a subject and a verb, but serve as an adjective in a sentence. They are connected to the sentence by a relative pronoun.</p>
+                                </div>
+                            </div>
+                            <p class="medium white font-18 mb-10">Adjective clauses are also known as relative clauses. The terms are interchangeable.</p>
+                            <p class="medium white font-18 mb-20">Here are some examples. Notice how each italicized adjective/relative clause has its own subject and verb and describes a noun.</p>
+                            <p class="medium white font-18 mb-20">The man who just moved in enjoys gardening.</p>
+                            <p class="medium white font-18 mb-20">This is the bird that built a nest on our windowsill.</p>
+                            <p class="medium white font-18 mb-20">This is the field where Phillip scored the winning goal.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section-14" class="d-flex dflex-column align-items-center">
+            <div class="cont px py blue w-100">      
+                <div class="container d-flex g-30 px">
+                    <div class="icon-box">
+                        <img src="./ENGLISH1U2L2RESOURCES/ENGLISH1U2L2_img4.png" width="124" alt="">
+                    </div>
+                    <div class="heading">
+                        <h2 class="white">ACTIVITY</h2>
+                        <p class="white">Now complete the lesson assignment</p>
+                    </div>
+                </div>
+            </div>
+            <div class="py cont main-content d-flex justify-content-center px">
+                <p class="white medium">Read the Following paragraph carefully, consider the context of the paragraph and try to determine the appropriate word or phrase that would logically fit in each blank space, use what you have learned about grammar and vocabulary to fill in each blank with a word or phrase that makes sense in the context of the paragraph, review your completed paragraph to make sure that it flows smoothly and makes sense.</p>
+            </div>
+            <div class="white-line w-100"></div>
+            <div class="py cont main-content d-flex justify-content-center align-items-center px dflex-column">
+                <div class="d-flex justify-content-center align-items-center w-100" style="padding-left: 49px; padding-right: 49px;">
+                    <div class="col-6 d-flex flex-column gap-3 align-items-center">
+                        <div class="blue_box"><p class="d-block text-center p-2 bold">Math</p></div>
+                        <div class="blue_box"><p class="d-block text-center p-2 bold">Beautiful</p></div>
+                        <div class="blue_box"><p class="d-block text-center p-2 bold">Peaceful</p></div>
+                        <div class="blue_box"><p class="d-block text-center p-2 bold">Exhausted</p></div>
+                        <div class="blue_box"><p class="d-block text-center p-2 bold">Cold</p></div>
+                    </div>
+                    <div class="col-6 d-flex flex-column gap-3 align-items-center">
+                        <div class="blue_box"><p class="d-block text-center p-2 bold">Terrible</p></div>
+                        <div class="blue_box"><p class="d-block text-center p-2 bold">New</p></div>
+                        <div class="blue_box"><p class="d-block text-center p-2 bold">Eager</p></div>
+                        <div class="blue_box"><p class="d-block text-center p-2 bold">Adorable</p></div>
+                        <div class="blue_box"><p class="d-block text-center p-2 bold">Decent</p></div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div id="section-six_inner" class="mt-3">
+                        <div>
+                            <div class="section-six_inner_list">
+                                <ul class="list-group">
+                                    <li class="list-group-item mt-4">
+                                        <div class="section-six_inner_list_box_right">
+                                            <div class="section-six_inner_list_text_ans" id="item-1">
+                                                <div class="mb-5 d-inline" style="font-size:27px"><span>After</span> 
+                                                    <div class="d-inline mb-2">
+                                                        <div class="d-inline-flex position-relative">
+                                                            <input style="padding:5px;width: 250px;" type="text" class="d-inline" id="quiz-2-answer1" data-ans="Math">
+                                                            <button class="btn text-white bg-black d-inline" data-error_counter="3" data-qs_count="1" id="quiz-2-answer1btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                            <span style="bottom: 0px;font-size: 12px;" id="answer-text1" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                        </div>
+                                                    </div>
+                                                    <span>class, my friends and I were hanging out. We decided to go to the lake. The lake  looked</span>
+                                                    <div class="d-inline  mb-2">
+                                                        <div class="d-inline-flex position-relative">
+                                                            <input style="padding:5px;width: 250px;" type="text" class="d-inline" id="quiz-2-answer2" data-ans="beautiful">
+                                                            <button class="btn text-white bg-black d-inline" data-error_counter="3" data-qs_count="2" id="quiz-2-answer2btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                            <span style="bottom: 0px;font-size: 12px;" id="answer-text2" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                        </div>
+                                                    </div>
+                                                    <span>and</span>
+                                                    <div class="d-inline  mb-2">
+                                                        <div class="d-inline-flex position-relative">
+                                                            <input style="padding:5px;width: 250px;" type="text" class="d-inline" id="quiz-2-answer3" data-ans="Peaceful">
+                                                            <button class="btn text-white bg-black d-inline" data-error_counter="3" data-qs_count="3" id="quiz-2-answer3btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                            <span style="bottom: 0px;font-size: 12px;" id="answer-text3" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                        </div>
+                                                    </div>
+                                                    <span>Nevertheless, I wanted to go swimming in my</span>
+                                                    <div class="d-inline  mb-2">
+                                                        <div class="d-inline-flex position-relative">
+                                                            <input style="padding:5px;width: 250px;" type="text" class="d-inline" id="quiz-2-answer10" data-ans="New">
+                                                            <button class="btn text-white bg-black d-inline" data-error_counter="3" data-qs_count="10" id="quiz-2-answer10btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                            <span style="bottom: 0px;font-size: 12px;" id="answer-text10" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                        </div>
+                                                    </div>
+                                                    <span>bathing suit. My  friends were </span>
+                                                    <div class="d-inline  mb-2">
+                                                        <div class="d-inline-flex position-relative">
+                                                            <input style="padding:5px;width: 250px;" type="text" class="d-inline" id="quiz-2-answer4" data-ans="Eager">
+                                                            <button class="btn text-white bg-black d-inline" data-error_counter="3" data-qs_count="4" id="quiz-2-answer4btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                            <span style="bottom: 0px;font-size: 12px;" id="answer-text4" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                        </div>
+                                                    </div>
+                                                    <span>to go swimming too. My</span>
+                                                    <div class="d-inline  mb-2">
+                                                        <div class="d-inline-flex position-relative">
+                                                            <input style="padding:5px;width: 250px;" type="text" class="d-inline" id="quiz-2-answer5" data-ans="Adorable">
+                                                            <button class="btn text-white bg-black d-inline" data-error_counter="3" data-qs_count="5" id="quiz-2-answer5btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                            <span style="bottom: 0px;font-size: 12px;" id="answer-text5" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                        </div>
+                                                    </div>
+                                                    <span>dog was also going swimming. After we  finished swimming I was so</span>
+                                                    <div class="d-inline  mb-2">
+                                                        <div class="d-inline-flex position-relative">
+                                                            <input style="padding:5px;width: 250px;" type="text" class="d-inline" id="quiz-2-answer6" data-ans="exhausted">
+                                                            <button class="btn text-white bg-black d-inline" data-error_counter="3" data-qs_count="6" id="quiz-2-answer6btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                            <span style="bottom: 0px;font-size: 12px;" id="answer-text6" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                        </div>
+                                                    </div>
+                                                    <span>and</span>
+                                                    <div class="d-inline  mb-2">
+                                                        <div class="d-inline-flex position-relative">
+                                                            <input style="padding:5px;width: 250px;" type="text" class="d-inline" id="quiz-2-answer7" data-ans="Cold">
+                                                            <button class="btn text-white bg-black d-inline" data-error_counter="3" data-qs_count="7" id="quiz-2-answer7btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                            <span style="bottom: 0px;font-size: 12px;" id="answer-text7" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                        </div>
+                                                    </div>
+                                                    <span>,  but I had to be home by evening. When I got  home, my sister and I made dinner. Since I don’t know how to cook, it was</span>
+                                                    <div class="d-inline  mb-2">
+                                                        <div class="d-inline-flex position-relative">
+                                                            <input style="padding:5px;width: 250px;" type="text" class="d-inline" id="quiz-2-answer8" data-ans="Terrible">
+                                                            <button class="btn text-white bg-black d-inline" data-error_counter="3" data-qs_count="8" id="quiz-2-answer8btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                            <span style="bottom: 0px;font-size: 12px;" id="answer-text8" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                        </div>
+                                                    </div>
+                                                    <span>although my  parents told us we made a</span>
+                                                    <div class="d-inline  mb-2">
+                                                        <div class="d-inline-flex position-relative">
+                                                            <input style="padding:5px;width: 250px;" type="text" class="d-inline" id="quiz-2-answer9" data-ans="Decent">
+                                                            <button class="btn text-white bg-black d-inline" data-error_counter="3" data-qs_count="9" id="quiz-2-answer9btn" onclick="checkInputs(this)" type="button">Check</button>
+                                                            <span style="bottom: 0px;font-size: 12px;" id="answer-text9" class="hidden position-absolute error_mes bg-danger ps-1 pe-1 text-white"></span>
+                                                        </div>
+                                                    </div>
+                                                    <span>meal.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            <style>
+        /* section-six */
+        .section-six_inner_list_text_ans > div > span {
+            line-height: 80px;
+        }
+        input {
+            border-radius: 15px 0 0 15px;
+            line-height: 1!important;
+            border: 1px solid #00000066;
+            padding: 14px 5px!important;
+            text-align: center;
+        }
+        button {
+            margin-left: -3px;
+        }
+        .btn {
+            font-size: 23px;
+        }
+        input.is-invalid {
+            border-color: #dc3545!important;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right calc(0.375em + 0.1875rem) center;
+            background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+        }
+        input.is-valid {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right calc(0.375em + 0.1875rem) center;
+            background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+            color: #20c997!important;
+        }
+        input.is-invalid:has(+ button[data-qs_count].glow-on-hover-wrong )  {
+            color: #dc3545!important;
+            text-decoration: line-through;
+        }
+        input.is-valid:has(+ button[data-qs_count].glow-on-hover-success )  {
+            color: #20c997!important;
+        }
+        button[data-qs_count].glow-on-hover-success {
+            background: #20c997!important;
+        }
+        button[data-qs_count].glow-on-hover-wrong {
+            background: #dc3545!important;
+        }
+        #section-six h3{
+            letter-spacing: 2px;
+        }
+        #section-six h4{
+            font-size: 27px;
+            color: #151515;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+        #section-six p{ 
+            font-size: 1.7rem;
+            font-weight: 500;
+        }
+        #section-six_inner span {
+            color: #fff;
+        }
+        #section-six_inner .section-six_inner_list ul{}
+        #section-six_inner .section-six_inner_list ul li{
+            border: none;
+            padding: 0;
+            background: none;
+        }
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box button[data-qs_count]{
+            border-radius: 0px 10px 10px 0px!important;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box button[data-qs_count].glow-on-hover-success{
+            background: #20c997!important;
+        }
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box button[data-qs_count].glow-on-hover-wrong{
+            background: #ff5756!important;
+        }
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box span.error_mes {
+            font-size: 14px;
+            top: 37px;
+            z-index: 2;
+        }
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box input.is-valid{
+            border-color: #198754!important;
+        }
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box input.is-invalid{
+            border-color: #dc3545!important;
+        }
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box_right .section-six_inner_list_text_ans,
+        #section-six_inner .section-six_inner_list ul li .section-six_inner_list_box .section-six_inner_list_text{
+            font-size: 20px;
+            font-weight: 400;
+        }
+        .audio_playing button{
+        pointer-events: none;
+        opacity: 1;
+        }
+        .audio_playing button.playing{
+            pointer-events: visible!important;
+        }
+        
+        #btnPause span,
+        #btnPlayTone span{
+            pointer-events: none;
+        }
+
+        .fw-medium {
+            font-weight: 500 !important;
+        }
+        .list-group-item {
+            position: relative;
+            display: block;
+            padding: 0px;
+            color: #212529;
+            text-decoration: none;
+            background-color: #fff;
+            border: 0px solid rgba(0,0,0,.125);
+        }
+        label {
+            pointer-events: none;
+        }
+
+        .bg-black {
+            background: #181818;
+        }
+
+    </style>
+
+
+        <section id="section-16" class="d-flex dflex-column">
+            <div class="cont px py blue w-100">      
+                <div class="container align-items-center d-flex g-30 px">
+                    <div class="icon-box">
+                        <img src="./ENGLISH1U2L2RESOURCES/ENGLISH1U2L2_img5.png" width="73" alt="">
+                    </div>
+                    <div class="heading">
+                        <h2 class="white">QUIZ</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+    <script> var audiolink = "https://m.fyioc.com/Spanish1/Lesson28/";</script>
+    <script src="https://m.fyioc.com/WhyNotScripts/js/VideoPlay.js"></script>
+    <script src="https://m.fyioc.com/WhyNotScripts/js/AudioPlay.js"></script>
+    <script src="https://m.fyioc.com/WhyNotScripts/js/interactive2.js"></script>
+    <script>
+
+        function intr_12_CheckInputs(parentId){
+            const inputs = document.getElementById(parentId).querySelectorAll("input");
+            inputs.forEach((elem) => {
+                let value = elem.value.toLowerCase();
+                let answer = elem.getAttribute('data-ans').toLowerCase();
+
+                elem.classList.remove("is-invalid")
+                elem.classList.remove("is-valid")
+
+                if(value == answer){
+                    elem.classList.add("is-valid")
+                }else{
+                    elem.classList.add("is-invalid")
+                }
+
+                let inputError = elem.getAttribute('data-error_counter');
+                if(!inputError){
+                        console.log("no")
+                    elem.setAttribute('data-error_counter', 1);
+                }else{
+                    if(inputError == 3){
+                        elem.placeholder = answer;
+                    }else{
+                        elem.setAttribute('data-error_counter', parseInt(inputError) + 1)
+                    }
+                }
+            })
+        }
+
+        // DRAG AND SWAP SCRIPT
+        const toDrag = document.querySelectorAll(".swap_drop")
+        const toDrop = document.querySelectorAll(".swap_drop")
+
+        toDrag.forEach((elem) => {
+            elem.addEventListener("dragstart", (event) => {
+                event.dataTransfer.setData("answer", elem.id)
+            })
+        })
+
+        toDrop.forEach((elem) => {
+            this.dragValidation(elem)
+        })
+
+        function dragValidation(elem) {
+            elem.addEventListener("dragover", (event) => {
+                event.preventDefault()
+            })
+            elem.addEventListener("drop", (event) => {
+                event.preventDefault()
+                const answer = event.dataTransfer.getData("answer")
+                const correctAnswer = event.currentTarget.getAttribute("data-ans")
+                const dataText = event.currentTarget.getAttribute("data-text")
+
+                let adj1 = event.currentTarget
+                let adj2 = document.getElementById(answer)
+
+                let getFromSwap = adj1.parentElement.querySelector('.intr_11_choice').getAttribute("data-text")
+                let getToSwap = adj2.parentElement.querySelector('.intr_11_choice').getAttribute("data-text")
+
+                adj1.parentElement.querySelector('.intr_11_choice').setAttribute("data-text", getToSwap);
+                adj2.parentElement.querySelector('.intr_11_choice').setAttribute("data-text", getFromSwap);
+
+                adj1.setAttribute("data-isdrag", "true");
+                adj2.setAttribute("data-isdrag", "true");
+
+                this.dragCheckMatch();
+            })
+        }
+
+        function dragCheckMatch(){
+            toDrag.forEach((elem) => {
+                if(elem.querySelector('.intr_11_choice').getAttribute("data-ans") == elem.querySelector('.intr_11_choice').getAttribute("data-text")){
+                    document.getElementById(elem.id).parentElement.querySelector('.practice-result-label').innerHTML = '<span class="material-icons fs-1">verified</span>';
+                    document.getElementById(elem.id).parentElement.querySelector('.practice-result-label').style.color = '#198754'
+                }else{
+                    if(elem.getAttribute("data-isdrag")){
+                        document.getElementById(elem.id).parentElement.querySelector('.practice-result-label').innerHTML = '<span class="material-icons fs-1">cancel</span>';
+                        document.getElementById(elem.id).parentElement.querySelector('.practice-result-label').style.color = '#dc3545'
+                    }
+                }
+            });
+        }
+
+        function checkInputs(){
+            const answerNumber = event.target.dataset.qs_count
+            const triesRemaining = event.target.dataset.error_counter
+            const selectorString = `quiz-2-answer${answerNumber}`
+            const selectorStringButton = `quiz-2-answer${answerNumber}btn`
+            const selectorStringAnswer = `answer-text${answerNumber}`
+            const quizTwoAnswer = document.getElementById(selectorString);
+            const quizTwoAnswerButton = document.getElementById(selectorStringButton)
+            const quizTwoAnswerText = document.getElementById(selectorStringAnswer)
+            const answer = quizTwoAnswer.getAttribute('data-ans')
+            const userAnswer = quizTwoAnswer.value.toLowerCase()
+            const correctAnswer = userAnswer === answer.toLowerCase() ? true : false
+            const backToGlow = (quizTwoAnswer, quizTwoAnswerButton) => {
+                quizTwoAnswerButton.classList.remove("glow-on-hover-success")
+                quizTwoAnswerButton.classList.remove("glow-on-hover-wrong")
+                quizTwoAnswerButton.classList.add('glow-on-hover')
+                quizTwoAnswerButton.innerText = 'Check'
+            }
+            if(correctAnswer){
+                quizTwoAnswer.classList.remove("is-invalid")
+                quizTwoAnswer.classList.add("is-valid")
+                quizTwoAnswerButton.innerText = 'Correct!'
+                quizTwoAnswerButton.classList.add("glow-on-hover-success")
+                quizTwoAnswerButton.classList.remove("glow-on-hover")
+                quizTwoAnswerButton.classList.remove('glow-on-hover-wrong')
+                quizTwoAnswerText.classList.remove('bg-danger')
+                quizTwoAnswerText.classList.add('bg-success')
+            } else {
+                quizTwoAnswerText.classList.remove('bg-success') 
+                quizTwoAnswerText.classList.add('bg-danger')
+                quizTwoAnswer.classList.remove("is-valid")
+                quizTwoAnswer.classList.add("is-invalid")
+                quizTwoAnswerButton.classList.remove("glow-on-hover-success")
+                quizTwoAnswerButton.classList.remove("glow-on-hover")
+                quizTwoAnswerButton.classList.add('glow-on-hover-wrong')
+                quizTwoAnswerButton.innerText = 'Wrong'
+                setTimeout(() => backToGlow(quizTwoAnswer,quizTwoAnswerButton), 1500);
+                let updateTries = ''
+                if(quizTwoAnswerButton.getAttribute('data-error_counter') == 0){
+                    updateTries = 0;
+                } else {
+                    updateTries = Number(triesRemaining) - 1;
+                }
+                document.getElementById(selectorStringButton).setAttribute('data-error_counter', updateTries)
+                if(quizTwoAnswerButton.getAttribute('data-error_counter') == 0 ){
+                    quizTwoAnswerText.innerHTML = `Answer: ${quizTwoAnswer.getAttribute('data-ans')}`
+                    quizTwoAnswerText.classList.remove('hidden')
+                }
+            }
+        }
+    </script>
+</html>
