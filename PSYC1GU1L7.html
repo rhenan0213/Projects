@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+    <link href="https://m.fyioc.com/WhyNotScripts/css/VideoPlay.css" rel="stylesheet">
+    <link href="https://m.fyioc.com/WhyNotScripts/css/AudioPlay.css" rel="stylesheet">
+
+    <style type="text/css">
+        @font-face {
+            font-family: BebasNeueBold;
+            src: url('./PSYCGU1L7MEDIA/BebasNeueBold.ttf');
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif, sans-serif;
+            font-size: 25.31px;
+            font-weight: 400;
+            background: #4993ac;
+            background-size: cover;
+        }
+
+        section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        }
+
+        .container {
+            max-width: 1080px;
+            padding-left: 31px;
+            padding-right: 31px;
+        }
+
+        .pxy {
+            padding-top: 75px;
+            padding-bottom: 75px;
+        }
+
+        /* Background Color */
+
+        .white_bg {
+            background: #fff;
+        }
+
+        .light_bg {
+            background: #ecf8f5;
+        }
+
+        .blue_bg {
+            background: #293f6e;
+        }
+
+        /* Typography */
+
+        h1, h2, h4, h5 {
+            font-family: BebasNeueBold;
+            margin: 0;
+            line-height: 1;
+        }
+
+        h4 {
+            font-size: 54px;
+            color: #283f6e;
+            margin-bottom: 33px;
+        }
+
+        h5 {
+            color: #000;
+            font-size: 43px;
+        }
+        
+        p {
+            margin: 0;
+            font-size: 27px;
+            color: #1c1c1c;
+            font-weight: 400;
+            font-family: Arial, Helvetica, sans-serif, sans-serif;
+            text-align: left;
+            line-height: 1.3;
+            margin-bottom: 33px;
+        }
+
+        h1,
+        h2, h5 {
+            font-weight: 700;
+        }
+
+        /* section 1 */
+        #section-one {
+            background: #283f6e;
+        }
+        #section-one .hero {
+            background: url('./PSYCGU1L7MEDIA/PSYCGU1L7_hero.png') no-repeat;
+            background-size: contain;
+            width: 100%;
+            height: 599px;
+            padding-top: 165px;
+        }
+        .line {
+            background: #4b97b0;
+            width: 400px;
+            height: 5px;
+        }
+
+        /* section two */
+
+        .box_sec2 {
+            width: 494px;
+        }
+        .box_sec2 .box-title{
+            width: 494px;
+            padding: 30px;
+            background: #3b507b;
+        }
+        .box_sec2 .box-content {
+            width: 494px;
+            padding: 35px;
+            background: #687899;
+        }
+
+        p.disc {
+            text-indent: -30px;
+            margin-left: 30px;
+        }
+        .disc::before {
+            content: "";
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: #fff;
+            display: inline-block;
+            margin-right: 20px;
+            vertical-align: middle;
+            margin-bottom: 5px;
+        }
+
+        p.bulleted {
+            text-indent: -35px;
+            margin-left: 35px;
+        }
+        span.bulleted {
+            text-indent: -35px;
+            margin-left: 35px;
+            display: block;
+        }
+        .bulleted::before {
+            content: "";
+            width: 15px;
+            height: 15px;
+            background: #fff;
+            display: inline-block;
+            margin-right: 10px;
+            vertical-align: middle;
+            margin-bottom: 5px;
+        }
+
+        .bulleted.black::before {
+            background: #000;
+        }
+
+        /* section three */
+        #section-three .container {
+            background: url('./PSYCGU1L7MEDIA/PSYCGU1L7_img-2.png') no-repeat;
+            background-size: contain;
+            width: 100%;
+            height: 614px;
+        }
+
+        /* section four */
+        .blue {
+            color: #305eb2;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+<div class="lesson_20">
+    <!-- section one -->
+    <section id="section-one">
+        <div class="container hero d-flex flex-column align-items-end justify-content-start" style="padding:24px;">
+            <div class="white d-flex flex-column align-items-center justify-content-start" style="width: 606px; height: 556px; background: #ffffffb3; padding: 24px;">
+                <h1 style="font-size: 126px; color: #293f6e; line-height: 126px; margin-bottom: 10px;">Psychology</h1>
+                <div class="line"></div>
+                <h2 style="margin-top: 20px;font-size: 170px; color: #293f6e; text-align: center; line-height: 125px;">Nervous</h2>
+                <h2 style="margin-top: 20px;font-size: 170px; color: #293f6e; text-align: center; line-height: 125px;">System</h2>
+                <h2 style="margin-top: 10px;font-size: 65px; color: #dc9925;">Part 1</h2> 
+            </div>
+        </div>
+    </section>
+
+    <!-- section two -->
+    <section id="section-two">
+        <div class="container white_bg d-flex align-items-center justify-content-center" style="padding:57px 31px;">
+            <div class="col-6 d-flex flex-column align-items-center justify-content-center">
+                <div class="box_sec2 mb-5">
+                    <div class="box-title">
+                        <h2 class="text-center" style="font-size: 40px; color: #fff;">What You Should Know.</h2>
+                    </div>
+                    <div class="box-content">
+                        <p style="font-weight: 700; color: #fff;">Before you begin, you should:</p>
+                        <p class="disc" style="font-weight: 400; color: #fff; margin-bottom: 0;">Have a basic knowledge of Biology.</p>
+                    </div>
+                </div>
+                <div class="box_sec2">
+                    <div class="box-title">
+                        <h2 class="text-center" style="font-size: 40px; color: #fff;">Lesson Expectations.</h2>
+                    </div>
+                    <div class="box-content">
+                        <p style="font-weight: 700; color: #fff;">By the end of this lesson, you should be able to:</p>
+                        <p class="disc" style="font-weight: 400; color: #fff; margin-bottom: 0;">Define the term neuron.</p>
+                        <p class="disc" style="font-weight: 400; color: #fff; margin-bottom: 0;">Describe the process of communication between neurons.</p>
+                        <p class="disc" style="font-weight: 400; color: #fff; margin-bottom: 0;">Identify some of the neurotransmitters and their systems.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 d-flex justify-content-center align-items-center">
+                <img src="./PSYCGU1L7MEDIA/PSYCGU1L7_img-1.png" width="477" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- section three -->
+    <section id="section-three">
+        <div class="container d-flex align-items-start justify-content-center" style="padding:57px 31px; gap: 0px;">
+            <div class="col-7"></div>
+            <div class="col-5">
+                <h2 class="mb-5" style="font-size: 41px; font-weight: 700; color: #fff;">LESSON KEYWORDS</h2>
+                <p style="font-weight: 700; color: #fff; margin-bottom: 7px; border-bottom:  1px solid #fff; padding-bottom: 10px;">Action Potential</p>
+                <p style="font-weight: 700; color: #fff; margin-bottom: 7px; border-bottom:  1px solid #fff; padding-bottom: 10px;">Axon</p>
+                <p style="font-weight: 700; color: #fff; margin-bottom: 7px; border-bottom:  1px solid #fff; padding-bottom: 10px;">Biological Psychology</p>
+                <p style="font-weight: 700; color: #fff; margin-bottom: 7px; border-bottom:  1px solid #fff; padding-bottom: 10px;">Dendrites</p>
+                <p style="font-weight: 700; color: #fff; margin-bottom: 7px; border-bottom:  1px solid #fff; padding-bottom: 10px;">Glial Cells</p>
+                <p style="font-weight: 700; color: #fff; margin-bottom: 7px; border-bottom:  1px solid #fff; padding-bottom: 10px;">Mitochondrion</p>
+                <p style="font-weight: 700; color: #fff; margin-bottom: 7px; border-bottom:  1px solid #fff; padding-bottom: 10px;">Myelin</p>
+                <p style="font-weight: 700; color: #fff; margin-bottom: 7px; border-bottom:  0px solid #fff; padding-bottom: 10px;">Neurons</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- section four -->
+    <section id="section-four">
+        <div class="container d-flex align-items-start justify-content-start pxy white_bg" style="gap: 40px;">
+            <div style="width: 570px;">
+                <h5 class="mb-4">Disorders of the Nervous System</h5>
+                <p style="text-align: justify;">What did <span class="blue">Muhammad Ali</span> and <span class="blue">Michael J. Fox</span> have in common?</p>
+                <p style="text-align: justify;">Both of these men were diagnosed with a nervous system disorder that affects their behaviors.</p>
+                <p style="text-align: justify;"><strong>Muhammad Ali</strong> was once a boxer who performed with great precision and skill. The first indicators that something was wrong were infrequent problems maintaining his balance, deteriorating writing, slurred speech and fatigue. In 1984 Muhammad Ali was diagnosed with Parkinson’s disorder. Initially, Ali seemed to have responded well to treatment. <br>Unfortunately his condition worsened and it was later revealed that his disease had been caused by too many blows to the head from his boxing career.</p>
+                <p style="text-align: justify;"><strong>Michael J. Fox</strong> is a Canadian-American actor who was diagnosed with Parkinson's disease in 1991. Michael J. Fox has been an advocate for Parkinson's disease research and has raised significant funds for the Michael J. Fox Foundation, which is dedicated to finding a cure for the disease.</p>
+            </div>
+            <div style="width: 410px;">
+                <img class="mb-3" src="./PSYCGU1L7MEDIA/PSYCGU1L7_img-4.png" width="410" alt="">
+                <img src="./PSYCGU1L7MEDIA/PSYCGU1L7_img-3.png" width="410" alt="">
+            </div>
+        </div>
+    </section>
+    
+    <!-- section five -->
+    <section id="section-five" class="d-flex flex-column align-items-start justify-content-start">
+        <div class="container blue_bg flex-column d-flex align-items-center justify-content-center" style="padding: 31px;">
+            <p class="mb-2" style="font-size: 32px; margin-bottom: 0; color: #fff;">The first question to address about the nervous system is:</p>
+            <h2 style="font-size: 67px; color: #fff;">What is a neuron and what does it do?</h2>
+        </div>
+        <div class="container white_bg flex-column d-flex align-items-start justify-content-start pxy">
+            <h4>Neurons</h4>
+            <div class="mb-5 d-flex justify-content-center align-items-start" style="gap: 40px;">
+                <div style="width: 570px;">
+                    <p style="text-align: justify;">Every action in the body is somehow represented in the nervous system. The nervous system is a mechanism to gain access to information about what is going on inside and outside the body and how to respond accordingly. It is a network composed of cells that work together that allows us to see, hear, taste, think and move. That cells are called Neurons. A neuron is a specialized cell. It consists of a cell body, dendrites, and an axon, and is responsible for receiving, processing, and transmitting information. </p>
+                </div>
+                <div style="width: 410px;">
+                    <img class="mb-3" src="./PSYCGU1L7MEDIA/PSYCGU1L7_img-5.png" width="410" alt="">
+                </div>
+            </div>
+            <h4>Messengers of the Body</h4>
+            <p class="mb-5" style="text-align: justify;">Neurons are specialized cells in the body that send and receive messages. Most neurons are similar in structure but they can vary in shape, size, length and function.
+            <br>
+            For example, the neurons in your spine are longer than the neurons in your brain. Glial Cells are responsible for holding neurons together, for directing growth, keeping the chemical environment stable, secreting chemicals to help repair damage and modify the signals that are sent between neurons.
+            <br>
+            Cells contain a nucleus (with the genetic material of the cell) and mitochondria (cellular organelles that are found outside the nucleus). Neurons follow a structure similar to other cells.
+            <br>
+            The neuron has an outer membrane that allows some substances to pass through while others are denied.
+            <br>
+            Neurons have mitochondria that turn oxygen and glucose into energy.
+            </p>
+            <img class="mb-5" style="margin: 0 auto;" src="./PSYCGU1L7MEDIA/PSYCGU1L7_img-6.png" width="1018" alt="">
+            <h4 class="mb-5" style="margin: 0 auto;">Neuron has several parts, including:</h4>
+            <div class="mb-4 d-flex justify-content-center align-items-start" style="gap: 30px; height: 280px; width: 95%; margin: 0 auto;">
+                <div class="col-6 d-flex justify-content-center align-items-start">
+                    <img style="margin: 0 auto;" src="./PSYCGU1L7MEDIA/PSYCGU1L7_img-8.png" width="475" alt="">
+                </div>
+                <div class="col-6 d-flex justify-content-center align-items-start">
+                    <img style="margin: 0 auto;" src="./PSYCGU1L7MEDIA/PSYCGU1L7_img-7.png" width="475" alt="">
+                </div>
+            </div>
+            <div class="mb-5 d-flex justify-content-center align-items-start" style="gap: 30px; height: 140px; width: 95%; margin: 0 auto;">
+                <div class="col-6 d-flex justify-content-start align-items-start">
+                    <p class="bulleted black" style="text-align: justify;" >
+                        <strong>Dendrites:</strong> receive signals from other neurons and conduct them to the cell body.
+                    </p>
+                </div>
+                <div class="col-6 d-flex justify-content-start align-items-start">
+                    <p class="bulleted black" style="text-align: justify;" >
+                        <strong>Cell body (Soma):</strong> the central part of the neuron that contains the nucleus and other organelles.
+                    </p>
+                </div>
+            </div>
+            <div class="mb-4 d-flex justify-content-center align-items-start" style="gap: 30px; height: 280px; width: 95%; margin: 0 auto;">
+                <div class="col-6 d-flex justify-content-center align-items-start">
+                    <img style="margin: 0 auto;" src="./PSYCGU1L7MEDIA/PSYCGU1L7_img-9.png" width="475" alt="">
+                </div>
+                <div class="col-6 d-flex justify-content-center align-items-start">
+                    <img style="margin: 0 auto;" src="./PSYCGU1L7MEDIA/PSYCGU1L7_img-10.png" width="475" alt="">
+                </div>
+            </div>
+            <div class="mb-5 d-flex justify-content-center align-items-start" style="gap: 30px; height: 140px; width: 95%; margin: 0 auto;">
+                <div class="col-6 d-flex justify-content-start align-items-start">
+                    <p class="bulleted black" style="text-align: justify;" >
+                        <strong>Axon:</strong> a long, slender projection that carries signals away from the cell body to other neurons or muscles.
+                    </p>
+                </div>
+                <div class="col-6 d-flex justify-content-start align-items-start">
+                    <p class="bulleted black" style="text-align: justify;" >
+                        <strong>Myelin sheath:</strong> a fatty insulation around the axon that increases the speed of nerve impulses.
+                    </p>
+                </div>
+            </div>
+            <div class="mb-4 d-flex justify-content-center align-items-start" style="gap: 30px; height: 280px; width: 95%; margin: 0 auto;">
+                <div class="col-6 d-flex justify-content-center align-items-start">
+                    <img style="margin: 0 auto;" src="./PSYCGU1L7MEDIA/PSYCGU1L7_img-11.png" width="475" alt="">
+                </div>
+                <div class="col-6 d-flex justify-content-center align-items-start">
+                    <img style="margin: 0 auto;" src="./PSYCGU1L7MEDIA/PSYCGU1L7_img-12.png" width="475" alt="">
+                </div>
+            </div>
+            <div class="mb-5 d-flex justify-content-center align-items-start" style="gap: 30px; height: 140px; width: 95%; margin: 0 auto;">
+                <div class="col-6 d-flex justify-content-start align-items-start">
+                    <p class="bulleted black" style="text-align: justify;" >
+                        <strong>Terminal buttons:</strong> the tips of the axon that release neurotransmitters to communicate with other neurons or muscles.
+                    </p>
+                </div>
+                <div class="col-6 d-flex justify-content-start align-items-start">
+                    <p class="bulleted black" style="text-align: justify;" >
+                        <strong>Nodes of Ranvier:</strong> short gaps in the myelin sheath along the axon that allow for faster conduction of nerve impulses.
+                    </p>
+                </div>
+            </div>
+            <h4>Action Potential</h4>
+            <div class="mb-5 d-flex justify-content-start align-items-center" style="gap: 30px;">
+                <div class="col-6 d-flex justify-content-start align-items-start">
+                    <p style="text-align: justify;" >
+                        Neurons may have different shapes and sizes but they all have long, thin fibers that reach outward from the cell body. When these fibers get close to other neurons, communication between the cell bodies can occur.
+                        <br>The fibers that extend from the cell body are called dendrites and axons. An Action Potential is the communication signal between neurons that begins with an electrochemical pulse that shoots down the Axon.
+                        <br>Once a cell has fired, there is a short recovery period in which the cell cannot fire again. This recovery time is called the Refractory Period.
+                        <br>When the neurons fire, the Dendrites in the next cell can detect the message and pass the signal on to their cell body. 
+                        <br>How does a signal travel between neurons?
+                        <span class="bulleted black mb-4" style="margin-left: 60px; margin-top: 20px;">As a vibration.</span>
+                        <span class="bulleted black mb-4" style="margin-left: 60px; margin-top: 20px;">As an electrochemical pulse.</span>
+                    </p>
+                </div>
+                <div class="col-5 d-flex justify-content-start align-items-center" style="margin-left: 30px;">
+                    <img style="margin: 0 auto;" src="./PSYCGU1L7MEDIA/PSYCGU1L7_img-13.png" width="300" alt="">
+                </div>
+            </div>
+            <h4>How Biology Affects Psychology</h4>
+            <p class="mb-5" style="text-align: justify;">Biological factors are closely related to behavior and mental processes. How biology has an impact on behavior is the question that scientists attempt to answer through biological psychology.
+            <br>
+            Biological psychology is the study of cells, genes, and organs of the body and the physical, hormonal, and chemical changes involved in behavior and mental processes.
+            <br>
+            It has been argued that the environment influences behavior and mental processes, but that biology is the main contributing factor.
+            <br>
+            This means that some people simply have a predisposition to respond a certain way.
+            </p>
+        </div>
+    </section>
+
+    <!-- fifth section -->
+		<!-- Assessment Quiz -->
+        <table style="width: 710px; height: auto; margin-left: auto; margin-right: auto;" border="1" cellpadding="20">
+            <tbody>
+            <tr>
+            <td style="background-color: white; width: 710px; ">
+            <b><span style="font-family: arial,helvetica,sans-serif;">&nbsp;  Answer the following questions.</span> </b>
+            <p><a:question index="1" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="2" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="3" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="4" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="5" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="6" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="7" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="8" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="9" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="10" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="11" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="12" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="13" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="14" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="15" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="16" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="17" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="18" /></p> 
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="19" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            <p><a:question index="20" /></p>
+            <p>&nbsp;</p>  <!--  adds a blank line between questions. -->
+            </td>
+            </tr>
+            </tbody>
+        </table>
+            <!-- Assessment Quiz -->
+
+    <div id="audio_holder"></div>
+</div>
+
+    <script>
+
+        // load first audio on the list as default
+        window.addEventListener("DOMContentLoaded", (event) => {
+            const pauseAudio20 = document.querySelector(".play_list_1 button");
+            //console.log(pauseAudio);
+            const audio_file20 = 'https://m.fyioc.com/Spanish2/Lesson20/'+pauseAudio20.getAttribute('data-audio')+'.mp3';
+            //console.log(audio_file);
+            audioLoad(audio_file20);
+        });
+
+        const container20 = document.querySelector(".lesson_20")
+        const btnContainer20 = document.querySelector(".lesson_20");
+        const btnPlay20 = btnContainer20.querySelectorAll("button[data-audio]");
+
+        btnPlay20.forEach(function(item, index) {
+
+            item.addEventListener("click", (event) => {
+
+                // get the button id ( btnPause,  btnPlayTone)
+                const id = event.target.id;
+                
+                // load audio file every click
+                const audio_file20 = 'https://m.fyioc.com/Spanish2/Lesson20/'+event.target.getAttribute('data-audio')+'.mp3';
+                audioLoad(audio_file20);
+
+                // get audio id
+                const audioPlay20 = document.getElementById("audioPlay");
+                //console.log(audioPlay);
+                // audio play
+                if(id === "btnPlayTone"){
+                    event.target.classList.add("playing");
+                    btnContainer20.classList.add("audio_playing");
+                    audioPlay20.play();
+                    item.innerHTML = '<span class="material-icons d-flex">pause</span>';
+
+                    event.target.setAttribute("id", "btnPause");
+                }
+
+                // audio pause
+                if(id === "btnPause"){
+                    event.target.classList.remove("playing");
+                    audioPlay20.pause();
+                    btnContainer20.classList.remove("audio_playing");
+                    item.innerHTML = '<span class="material-icons d-flex">volume_up</span>';
+
+                    event.target.setAttribute("id", "btnPlayTone");
+                }
+            
+                // audio end
+                audioPlay20.onended = (event) => {    
+                    item.classList.remove("playing");
+                    audioPlay20.pause()
+                    btnContainer20.classList.remove("audio_playing");
+                    item.innerHTML = '<span class="material-icons d-flex">volume_up</span>';
+                }
+            
+            });
+
+        });
+
+        function audioLoad(audio_url){
+            const audio_file20 = '<audio id="audioPlay" src="'+audio_url+'"></audio>';
+            document.getElementById("audio_holder").innerHTML = audio_file20;
+        }
+
+        const checkList20 = document.querySelectorAll("#practice1");
+
+        checkList20.forEach(function(elem, index){
+
+            elem.addEventListener("click", function(event){
+
+                if(elem.checked){
+
+                    if(event.target.getAttribute('data-value') == "yes"){
+                        elem.classList.remove('is-invalid');
+                        elem.classList.add('is-valid');
+                    }
+
+                    if(event.target.getAttribute('data-value') == "no"){
+                        elem.classList.remove('is-valid');
+                        elem.classList.add('is-invalid');
+                    }
+
+                } else {
+                    elem.classList.remove('is-valid');
+                    elem.classList.remove('is-invalid');
+                }
+
+            });
+
+        });
+
+        // New Validation Function
+        function checkInputs(){
+            const answerNumber = event.target.dataset.qs_count
+            const triesRemaining = event.target.dataset.error_counter
+            const selectorString = `quiz-2-answer${answerNumber}`
+            const selectorStringButton = `quiz-2-answer${answerNumber}btn`
+            const selectorStringAnswer = `answer-text${answerNumber}`
+            const quizTwoAnswer = document.getElementById(selectorString);
+            const quizTwoAnswerButton = document.getElementById(selectorStringButton)
+            const quizTwoAnswerText = document.getElementById(selectorStringAnswer)
+            const answer = quizTwoAnswer.getAttribute('data-ans')
+            const userAnswer = quizTwoAnswer.value.toLowerCase()
+            const correctAnswer = userAnswer === answer.toLowerCase() ? true : false
+            const backToGlow = (quizTwoAnswer, quizTwoAnswerButton) => {
+                quizTwoAnswerButton.classList.remove("glow-on-hover-success")
+                quizTwoAnswerButton.classList.remove("glow-on-hover-wrong")
+                quizTwoAnswerButton.classList.add('glow-on-hover')
+                quizTwoAnswerButton.innerText = 'Check'
+            }
+            if(correctAnswer){
+                quizTwoAnswer.classList.remove("is-invalid")
+                quizTwoAnswer.classList.add("is-valid")
+                quizTwoAnswerButton.innerText = 'Correct!'
+                quizTwoAnswerButton.classList.add("glow-on-hover-success")
+                quizTwoAnswerButton.classList.remove("glow-on-hover")
+                quizTwoAnswerButton.classList.remove('glow-on-hover-wrong')
+                quizTwoAnswerText.classList.remove('bg-danger')
+                quizTwoAnswerText.classList.add('bg-success')
+            } else {
+                quizTwoAnswerText.classList.remove('bg-success') 
+                quizTwoAnswerText.classList.add('bg-danger')
+                quizTwoAnswer.classList.remove("is-valid")
+                quizTwoAnswer.classList.add("is-invalid")
+                quizTwoAnswerButton.classList.remove("glow-on-hover-success")
+                quizTwoAnswerButton.classList.remove("glow-on-hover")
+                quizTwoAnswerButton.classList.add('glow-on-hover-wrong')
+                quizTwoAnswerButton.innerText = 'Wrong'
+                setTimeout(() => backToGlow(quizTwoAnswer,quizTwoAnswerButton), 1500);
+                let updateTries = ''
+                if(quizTwoAnswerButton.getAttribute('data-error_counter') == 0){
+                    updateTries = 0;
+                } else {
+                    updateTries = Number(triesRemaining) - 1;
+                }
+                document.getElementById(selectorStringButton).setAttribute('data-error_counter', updateTries)
+                if(quizTwoAnswerButton.getAttribute('data-error_counter') == 0 ){
+                    quizTwoAnswerText.innerHTML = `Answer: ${quizTwoAnswer.getAttribute('data-ans')}`
+                    quizTwoAnswerText.classList.remove('hidden')
+                }
+            }
+        }
+
+        const checkList19 = document.querySelectorAll("#practice2");
+
+        checkList19.forEach(function(elem, index){
+
+            elem.addEventListener("click", function(event){
+
+                if(elem.checked){
+
+                    if(event.target.getAttribute('data-value') == "yes"){
+                        elem.classList.remove('is-invalid');
+                        elem.classList.add('is-valid');
+                    }
+
+                    if(event.target.getAttribute('data-value') == "no"){
+                        elem.classList.remove('is-valid');
+                        elem.classList.add('is-invalid');
+                    }
+
+                } else {
+                    elem.classList.remove('is-valid');
+                    elem.classList.remove('is-invalid');
+                }
+
+            });
+
+        });
+
+
+
+        // drag and drop match image
+        const dragImage = document.querySelectorAll("#dragImage");
+
+        dragImage.forEach( drag => {
+
+            drag.addEventListener("dragstart", (event) => {
+                event.dataTransfer.setData("src", event.target.id);
+            }, false)
+
+            drag.addEventListener("dragover", (event) => {
+                event.preventDefault();
+            }, false)
+
+            drag.addEventListener("drop", (event) => {
+                event.preventDefault();
+
+                const elSrc = document.getElementById(event.dataTransfer.getData("src"));
+                const srcParent = elSrc.parentNode;
+                const targetPath = event.currentTarget.firstElementChild;
+            
+                event.currentTarget.replaceChild(elSrc, targetPath);
+                srcParent.appendChild(targetPath);
+
+                // const currentContainer = elSrc.parentElement.parentElement.previousElementSibling.firstElementChild;
+
+                // if(currentContainer.getAttribute('data-drag-ans') != event.dataTransfer.getData('src')) {
+                //     currentContainer.firstChild.classList.remove ('d-none');
+                //     currentContainer.firstChild.classList.add ('ans_show_incorrect');
+                //     currentContainer.firstChild.innerHTML = "WRONG IMAGE";
+                // }
+                // else {
+                //     currentContainer.firstChild.classList.remove ('d-none');
+                //     currentContainer.firstChild.classList.add ('ans_show_correct');
+                //     currentContainer.firstChild.innerHTML = "CORRECT IMAGE";
+                //     elSrc.parentElement.parentElement.classList.add ('mouse_pointer');
+                // }
+
+                const correctAnswers = ['img_8', 'img_9', 'img_10', 'img_11', 'img_12', 'img_13'];
+                const currentAnswerOrder = [].slice.call(document.querySelectorAll('#dragImage img')).map((element) => element.id);
+
+                var errorCount = 0;
+
+                const alert = document.querySelector("#error_check");
+                alert.classList.remove('d-none');
+
+                for (var i = 0; i < currentAnswerOrder.length ; i++) {
+                    if(correctAnswers[i] != currentAnswerOrder[i]) {
+                        errorCount = errorCount + 1;
+                        document.getElementById(currentAnswerOrder[i]).parentElement.parentElement.previousElementSibling.firstElementChild.firstElementChild.classList.remove ('d-none');
+                        document.getElementById(currentAnswerOrder[i]).parentElement.parentElement.previousElementSibling.firstElementChild.firstElementChild.classList.add ('ans_show_incorrect');
+                        document.getElementById(currentAnswerOrder[i]).parentElement.parentElement.previousElementSibling.firstElementChild.firstElementChild.classList.remove ('ans_show_correct');
+                        document.getElementById(currentAnswerOrder[i]).parentElement.parentElement.previousElementSibling.firstElementChild.firstElementChild.innerHTML = "WRONG IMAGE";
+                    }
+                    else {
+                        document.getElementById(currentAnswerOrder[i]).parentElement.parentElement.previousElementSibling.firstElementChild.firstElementChild.classList.remove ('d-none');
+                        document.getElementById(currentAnswerOrder[i]).parentElement.parentElement.previousElementSibling.firstElementChild.firstElementChild.classList.add ('ans_show_correct');
+                        document.getElementById(currentAnswerOrder[i]).parentElement.parentElement.previousElementSibling.firstElementChild.firstElementChild.classList.remove ('ans_show_inZSEW32Qcorrect');
+                        document.getElementById(currentAnswerOrder[i]).parentElement.parentElement.previousElementSibling.firstElementChild.firstElementChild.innerHTML = "CORRECT IMAGE";
+                    }
+                    if (errorCount > 0) {
+                        alert.className = 'alert alert-danger';
+                        alert.innerHTML = 'Try Again! <span class="material-icons">cancel</span>';
+                    }
+                    else {
+                        alert.className = 'alert alert-success';
+                        alert.innerHTML = 'Great Job! <span class="material-icons">verified</span>';
+                    }
+                }
+
+                // for (int i = 0; i < correctAnswers.length ; i++ ) {
+                //     if (correctAnswers[i] == currentAnswerOrder[i]) {
+                //         document.getElementById('_img_8').classList.remove ('d-none');
+                //         document.getElementById('_img_8').classList.add ('ans_show_correct');
+                //         document.getElementById('answerBar').innerHTML = "CORRECT IMAGE";
+                //         alert.className = 'alert alert-success';
+                //         alert.innerHTML = 'Great Job! <span class="material-icons">verified</span>';
+                //     }
+                //     else {
+                //     alert.className = 'alert alert-danger';
+                //     alert.innerHTML = 'Try Again! <span class="material-icons">cancel</span>';
+                //     }
+                // }
+
+                
+                // const alert = document.querySelector("#error_check");
+                // alert.classList.remove('d-none');
+                
+                // if(correctAnswers == currentAnswerOrder){
+                //     alert.className = 'alert alert-success';
+                //     alert.innerHTML = 'Great Job! <span class="material-icons">verified</span>';
+                // } else {
+                //     alert.className = 'alert alert-danger';
+                //     alert.innerHTML = 'Try Again! <span class="material-icons">cancel</span>';
+                // }
+
+            }, false)
+            
+        });
+
+// Scrollable 
+
+var stopX = true;
+var stopY = true;
+
+document.addEventListener('drag', function(e) {
+    if (event.target.classList.contains('draggable')) {
+        stopY = true;
+                    
+        // Handle Y
+        if (e.clientY < 150) {
+            stopY = false;
+            scroll(0,-100)
+        }
+
+        if ((e.clientY > ( document.documentElement.clientHeight - 150)) && !VerticalMaxed()) { 
+            stopY = false;
+            scroll(0,100) 
+        }
+    }
+
+});
+
+document.addEventListener('dragend', function(e) {
+    if (event.target.classList.contains('draggable')) {
+        stopY = true;
+        //stopY = true;
+    }
+});
+
+// On drag scroll, prevents page from growing with mobile safari rubber-band effect
+var VerticalMaxed = function(){ return (window.innerHeight + window.scrollY) >= document.body.offsetHeight}
+var HorizontalMaxed = function(){ return (window.pageXOffset) > (document.body.scrollWidth - document.body.clientWidth);}
+
+var scroll = function (stepX, stepY) {
+    var scrollY = document.documentElement.scrollTop || document.body.scrollTop;
+    var scrollX = document.documentElement.scrollLeft || document.body.scrollLeft;
+    window.scrollTo((scrollX + stepX), (scrollY + stepY));
+                
+    if (!stopY || !stopX) {
+        setTimeout(function () { scroll(stepX, stepY) }, 20);
+    }
+}
+
+// EMOJI
+
+var myFunction = function(value) {
+    if (value=='yes') {
+        document.getElementById('demo').src = "./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img15.png";
+    }
+    else {
+        document.getElementById('demo').src = "./BIOLOGY1U1L1MEDIA/BIOLOGY1U1L1_img16.png";
+    }
+};
+
+    </script>
+    <script src="https://m.fyioc.com/WhyNotScripts/js/VideoPlay.js"></script>
+    <script src="https://m.fyioc.com/WhyNotScripts/js/AudioPlay.js"></script>
+</body>
+</html>
